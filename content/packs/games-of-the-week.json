@@ -1,0 +1,2371 @@
+{
+  "format": 1,
+  "id": "games-of-the-week",
+  "name": "Games of the Week",
+  "version": "1.0.0",
+  "author": "Bad Ideas Works",
+  "description": "Small, sharp ideas you can actually finish before Sunday.",
+  "items": {
+    "genre": [
+      {
+        "id": "arcade",
+        "label": "Arcade",
+        "forms": {
+          "adj": "arcade",
+          "noun": "arcade game"
+        },
+        "tags": [
+          "tiny",
+          "action",
+          "timing"
+        ],
+        "affinity": [
+          "action",
+          "timing"
+        ],
+        "weirdness": 0.05,
+        "silliness": 0.4,
+        "scope": [
+          0,
+          1
+        ]
+      },
+      {
+        "id": "one-button",
+        "label": "One-button",
+        "forms": {
+          "adj": "one-button",
+          "noun": "one-button game"
+        },
+        "tags": [
+          "tiny",
+          "timing",
+          "action"
+        ],
+        "affinity": [
+          "timing"
+        ],
+        "weirdness": 0.15,
+        "silliness": 0.45,
+        "scope": [
+          0,
+          1
+        ]
+      },
+      {
+        "id": "minimalist-puzzle",
+        "label": "Minimalist puzzle",
+        "forms": {
+          "adj": "minimalist",
+          "noun": "minimalist puzzle game"
+        },
+        "tags": [
+          "tiny",
+          "puzzle"
+        ],
+        "affinity": [
+          "puzzle"
+        ],
+        "weirdness": 0.1,
+        "silliness": 0.2,
+        "scope": [
+          0,
+          1
+        ]
+      }
+    ],
+    "subgenre": [
+      {
+        "id": "endless-runner",
+        "label": "Endless runner",
+        "forms": {
+          "noun": "endless runner"
+        },
+        "tags": [
+          "tiny",
+          "action",
+          "timing"
+        ],
+        "affinity": [
+          "action"
+        ],
+        "weirdness": 0.05,
+        "silliness": 0.35,
+        "scope": [
+          0,
+          1
+        ]
+      },
+      {
+        "id": "score-attack",
+        "label": "Score attack",
+        "forms": {
+          "noun": "score attack"
+        },
+        "tags": [
+          "tiny",
+          "action",
+          "timing"
+        ],
+        "affinity": [
+          "action"
+        ],
+        "weirdness": 0.05,
+        "silliness": 0.35,
+        "scope": [
+          0,
+          1
+        ]
+      },
+      {
+        "id": "single-screen-puzzler",
+        "label": "Single-screen puzzler",
+        "forms": {
+          "noun": "single-screen puzzler"
+        },
+        "tags": [
+          "tiny",
+          "puzzle"
+        ],
+        "affinity": [
+          "puzzle"
+        ],
+        "weirdness": 0.1,
+        "silliness": 0.25,
+        "scope": [
+          0,
+          1
+        ]
+      },
+      {
+        "id": "toy",
+        "label": "Toy",
+        "forms": {
+          "noun": "toy"
+        },
+        "tags": [
+          "tiny",
+          "physics",
+          "cozy"
+        ],
+        "affinity": [
+          "physics"
+        ],
+        "weirdness": 0.25,
+        "silliness": 0.4,
+        "scope": [
+          0,
+          1
+        ]
+      }
+    ],
+    "setting": [
+      {
+        "id": "single-screen-arena",
+        "label": "Single-screen arena",
+        "forms": {
+          "noun": "single-screen arena",
+          "in": "in a single-screen arena with nowhere to hide"
+        },
+        "tags": [
+          "tiny",
+          "action",
+          "combat"
+        ],
+        "affinity": [
+          "action",
+          "combat"
+        ],
+        "weirdness": 0.05,
+        "silliness": 0.3,
+        "scope": [
+          0,
+          1
+        ]
+      },
+      {
+        "id": "kitchen-counter",
+        "label": "Kitchen counter",
+        "forms": {
+          "noun": "cluttered kitchen counter",
+          "in": "on one cluttered kitchen counter"
+        },
+        "tags": [
+          "tiny",
+          "food",
+          "mundane",
+          "cooking"
+        ],
+        "affinity": [
+          "cooking",
+          "food",
+          "physics"
+        ],
+        "weirdness": 0.3,
+        "silliness": 0.5,
+        "scope": [
+          0,
+          1
+        ]
+      },
+      {
+        "id": "busy-elevator",
+        "label": "Busy elevator",
+        "forms": {
+          "noun": "very busy elevator",
+          "in": "inside one very busy elevator"
+        },
+        "tags": [
+          "tiny",
+          "urban",
+          "mundane",
+          "puzzle"
+        ],
+        "affinity": [
+          "puzzle",
+          "social"
+        ],
+        "weirdness": 0.35,
+        "silliness": 0.55,
+        "scope": [
+          0,
+          1
+        ]
+      },
+      {
+        "id": "one-screen-island",
+        "label": "One-screen island",
+        "forms": {
+          "noun": "island exactly one screen wide",
+          "in": "on an island exactly one screen wide"
+        },
+        "tags": [
+          "tiny",
+          "water",
+          "nature"
+        ],
+        "affinity": [
+          "survival",
+          "nature"
+        ],
+        "weirdness": 0.2,
+        "silliness": 0.3,
+        "scope": [
+          0,
+          1
+        ]
+      },
+      {
+        "id": "night-parking-lot",
+        "label": "Night parking lot",
+        "forms": {
+          "noun": "empty parking lot",
+          "in": "in an empty parking lot at night"
+        },
+        "tags": [
+          "tiny",
+          "urban",
+          "cars",
+          "mundane"
+        ],
+        "affinity": [
+          "cars",
+          "racing"
+        ],
+        "weirdness": 0.15,
+        "silliness": 0.25,
+        "scope": [
+          0,
+          1
+        ]
+      },
+      {
+        "id": "fish-tank",
+        "label": "Fish tank",
+        "forms": {
+          "noun": "fish tank",
+          "in": "inside a fish tank on someone's desk"
+        },
+        "tags": [
+          "tiny",
+          "water",
+          "animals"
+        ],
+        "affinity": [
+          "animals",
+          "water"
+        ],
+        "weirdness": 0.4,
+        "silliness": 0.5,
+        "scope": [
+          0,
+          1
+        ]
+      },
+      {
+        "id": "stormy-rooftop",
+        "label": "Stormy rooftop",
+        "forms": {
+          "noun": "rooftop in a thunderstorm",
+          "in": "on a single rooftop during a thunderstorm"
+        },
+        "tags": [
+          "tiny",
+          "urban",
+          "weather"
+        ],
+        "affinity": [
+          "weather",
+          "action"
+        ],
+        "weirdness": 0.2,
+        "silliness": 0.3,
+        "scope": [
+          0,
+          1
+        ]
+      },
+      {
+        "id": "giant-chessboard",
+        "label": "Giant chessboard",
+        "forms": {
+          "noun": "giant chessboard",
+          "in": "on a giant chessboard"
+        },
+        "tags": [
+          "tiny",
+          "strategy",
+          "puzzle"
+        ],
+        "affinity": [
+          "strategy",
+          "puzzle"
+        ],
+        "weirdness": 0.3,
+        "silliness": 0.35,
+        "scope": [
+          0,
+          1
+        ]
+      },
+      {
+        "id": "messy-desk-drawer",
+        "label": "Messy desk drawer",
+        "forms": {
+          "noun": "messy desk drawer",
+          "in": "inside a messy desk drawer"
+        },
+        "tags": [
+          "tiny",
+          "office",
+          "mundane",
+          "absurd"
+        ],
+        "affinity": [
+          "office",
+          "puzzle"
+        ],
+        "weirdness": 0.5,
+        "silliness": 0.6,
+        "scope": [
+          0,
+          1
+        ]
+      },
+      {
+        "id": "lamp-room",
+        "label": "Lamp room",
+        "forms": {
+          "noun": "lighthouse lamp room",
+          "in": "inside a lighthouse lamp room"
+        },
+        "tags": [
+          "tiny",
+          "nautical",
+          "cold"
+        ],
+        "affinity": [
+          "nautical",
+          "timing"
+        ],
+        "weirdness": 0.2,
+        "silliness": 0.2,
+        "scope": [
+          0,
+          1
+        ]
+      }
+    ],
+    "era": [
+      {
+        "id": "one-long-minute",
+        "label": "One long minute",
+        "forms": {
+          "in": "during one very long minute"
+        },
+        "tags": [
+          "tiny",
+          "time"
+        ],
+        "affinity": [
+          "time",
+          "timing"
+        ],
+        "weirdness": 0.4,
+        "silliness": 0.4,
+        "scope": [
+          0,
+          1
+        ]
+      },
+      {
+        "id": "a-lunch-break",
+        "label": "A lunch break",
+        "forms": {
+          "in": "during a single lunch break"
+        },
+        "tags": [
+          "tiny",
+          "mundane",
+          "time"
+        ],
+        "affinity": [
+          "mundane",
+          "office"
+        ],
+        "weirdness": 0.3,
+        "silliness": 0.5,
+        "scope": [
+          0,
+          1
+        ]
+      }
+    ],
+    "perspective": [
+      {
+        "id": "fixed-single-screen",
+        "label": "Fixed single screen",
+        "forms": {
+          "noun": "fixed single-screen view"
+        },
+        "tags": [
+          "tiny"
+        ],
+        "affinity": [
+          "puzzle",
+          "action"
+        ],
+        "weirdness": 0.0,
+        "silliness": 0.3,
+        "scope": [
+          0,
+          1
+        ]
+      },
+      {
+        "id": "side-on-single-screen",
+        "label": "Side-on single screen",
+        "forms": {
+          "noun": "side-on single-screen view"
+        },
+        "tags": [
+          "tiny"
+        ],
+        "affinity": [
+          "action",
+          "timing"
+        ],
+        "weirdness": 0.0,
+        "silliness": 0.3,
+        "scope": [
+          0,
+          1
+        ]
+      }
+    ],
+    "protagonist": [
+      {
+        "id": "ambitious-bouncing-ball",
+        "label": "Ambitious bouncing ball",
+        "forms": {
+          "noun": "bouncing ball with a dream"
+        },
+        "tags": [
+          "tiny",
+          "physics",
+          "comedy"
+        ],
+        "affinity": [
+          "physics"
+        ],
+        "weirdness": 0.45,
+        "silliness": 0.6,
+        "scope": [
+          0,
+          1
+        ]
+      },
+      {
+        "id": "lonely-snowplough",
+        "label": "Lonely snowplough",
+        "forms": {
+          "noun": "lonely snowplough"
+        },
+        "tags": [
+          "tiny",
+          "cold",
+          "cars",
+          "melancholy"
+        ],
+        "affinity": [
+          "cold",
+          "cars"
+        ],
+        "weirdness": 0.35,
+        "silliness": 0.4,
+        "scope": [
+          0,
+          1
+        ]
+      },
+      {
+        "id": "pixel-sized-knight",
+        "label": "Pixel-sized knight",
+        "forms": {
+          "noun": "pixel-sized knight"
+        },
+        "tags": [
+          "tiny",
+          "combat",
+          "medieval"
+        ],
+        "affinity": [
+          "combat"
+        ],
+        "weirdness": 0.25,
+        "silliness": 0.45,
+        "scope": [
+          0,
+          1
+        ]
+      },
+      {
+        "id": "pizza-delivery-cyclist",
+        "label": "Pizza delivery cyclist",
+        "forms": {
+          "noun": "pizza delivery cyclist"
+        },
+        "tags": [
+          "tiny",
+          "food",
+          "racing",
+          "urban"
+        ],
+        "affinity": [
+          "racing",
+          "urban",
+          "food"
+        ],
+        "weirdness": 0.1,
+        "silliness": 0.4,
+        "scope": [
+          0,
+          1
+        ]
+      },
+      {
+        "id": "grappling-frog",
+        "label": "Grappling frog",
+        "forms": {
+          "noun": "frog with a grappling tongue"
+        },
+        "tags": [
+          "tiny",
+          "animals",
+          "physics"
+        ],
+        "affinity": [
+          "physics",
+          "animals"
+        ],
+        "weirdness": 0.4,
+        "silliness": 0.6,
+        "scope": [
+          0,
+          1
+        ]
+      },
+      {
+        "id": "wind-up-toy-robot",
+        "label": "Wind-up toy robot",
+        "forms": {
+          "noun": "wind-up toy robot"
+        },
+        "tags": [
+          "tiny",
+          "robots"
+        ],
+        "affinity": [
+          "robots",
+          "physics"
+        ],
+        "weirdness": 0.3,
+        "silliness": 0.45,
+        "scope": [
+          0,
+          1
+        ]
+      },
+      {
+        "id": "lost-balloon",
+        "label": "Lost balloon",
+        "forms": {
+          "noun": "lost balloon"
+        },
+        "tags": [
+          "tiny",
+          "sky",
+          "weather",
+          "melancholy"
+        ],
+        "affinity": [
+          "sky",
+          "weather"
+        ],
+        "weirdness": 0.35,
+        "silliness": 0.4,
+        "scope": [
+          0,
+          1
+        ]
+      },
+      {
+        "id": "overwhelmed-beekeeper",
+        "label": "Overwhelmed beekeeper",
+        "forms": {
+          "noun": "overwhelmed beekeeper"
+        },
+        "tags": [
+          "tiny",
+          "animals",
+          "nature",
+          "farming"
+        ],
+        "affinity": [
+          "animals",
+          "nature"
+        ],
+        "weirdness": 0.2,
+        "silliness": 0.5,
+        "scope": [
+          0,
+          1
+        ]
+      }
+    ],
+    "objective": [
+      {
+        "id": "survive-sixty-seconds",
+        "label": "Survive sixty seconds",
+        "forms": {
+          "verb": "survive for sixty seconds"
+        },
+        "tags": [
+          "tiny",
+          "survival",
+          "timing"
+        ],
+        "affinity": [
+          "action"
+        ],
+        "weirdness": 0.05,
+        "silliness": 0.3,
+        "scope": [
+          0,
+          1
+        ]
+      },
+      {
+        "id": "beat-your-high-score",
+        "label": "Beat your high score",
+        "forms": {
+          "verb": "beat your own high score"
+        },
+        "tags": [
+          "tiny",
+          "action"
+        ],
+        "affinity": [
+          "action",
+          "timing"
+        ],
+        "weirdness": 0.05,
+        "silliness": 0.3,
+        "scope": [
+          0,
+          1
+        ]
+      },
+      {
+        "id": "keep-the-plates-spinning",
+        "label": "Keep the plates spinning",
+        "forms": {
+          "verb": "keep every plate spinning at once"
+        },
+        "tags": [
+          "tiny",
+          "timing",
+          "chaos"
+        ],
+        "affinity": [
+          "timing"
+        ],
+        "weirdness": 0.3,
+        "silliness": 0.5,
+        "scope": [
+          0,
+          1
+        ]
+      },
+      {
+        "id": "pizzas-before-cold",
+        "label": "Pizzas before cold",
+        "forms": {
+          "verb": "deliver every pizza before it goes cold"
+        },
+        "tags": [
+          "tiny",
+          "food",
+          "racing"
+        ],
+        "affinity": [
+          "food",
+          "racing"
+        ],
+        "weirdness": 0.1,
+        "silliness": 0.45,
+        "scope": [
+          0,
+          1
+        ]
+      },
+      {
+        "id": "clear-in-fewest-moves",
+        "label": "Clear in fewest moves",
+        "forms": {
+          "verb": "clear the screen in as few moves as possible"
+        },
+        "tags": [
+          "tiny",
+          "puzzle"
+        ],
+        "affinity": [
+          "puzzle"
+        ],
+        "weirdness": 0.05,
+        "silliness": 0.2,
+        "scope": [
+          0,
+          1
+        ]
+      },
+      {
+        "id": "keep-the-lamp-lit",
+        "label": "Keep the lamp lit",
+        "forms": {
+          "verb": "keep the lamp lit until morning"
+        },
+        "tags": [
+          "tiny",
+          "survival",
+          "nautical"
+        ],
+        "affinity": [
+          "nautical",
+          "cold"
+        ],
+        "weirdness": 0.15,
+        "silliness": 0.2,
+        "scope": [
+          0,
+          1
+        ]
+      },
+      {
+        "id": "get-the-balloon-home",
+        "label": "Get the balloon home",
+        "forms": {
+          "verb": "get the balloon home in one piece"
+        },
+        "tags": [
+          "tiny",
+          "sky",
+          "physics"
+        ],
+        "affinity": [
+          "sky"
+        ],
+        "weirdness": 0.3,
+        "silliness": 0.4,
+        "scope": [
+          0,
+          1
+        ]
+      },
+      {
+        "id": "land-the-platform",
+        "label": "Land the platform",
+        "forms": {
+          "verb": "keep landing on the moving platform"
+        },
+        "tags": [
+          "tiny",
+          "timing",
+          "physics"
+        ],
+        "affinity": [
+          "timing"
+        ],
+        "weirdness": 0.1,
+        "silliness": 0.3,
+        "scope": [
+          0,
+          1
+        ]
+      }
+    ],
+    "loop": [
+      {
+        "id": "tap-die-retry",
+        "label": "Tap, die, retry",
+        "forms": {
+          "verb": "tap to jump, die, and retry instantly"
+        },
+        "tags": [
+          "tiny",
+          "timing",
+          "action"
+        ],
+        "affinity": [
+          "action",
+          "timing"
+        ],
+        "weirdness": 0.05,
+        "silliness": 0.35,
+        "scope": [
+          0,
+          1
+        ]
+      },
+      {
+        "id": "plan-and-watch",
+        "label": "Plan and watch",
+        "forms": {
+          "verb": "plan a move, watch it play out, and rewind if it fails"
+        },
+        "tags": [
+          "tiny",
+          "puzzle"
+        ],
+        "affinity": [
+          "puzzle"
+        ],
+        "weirdness": 0.1,
+        "silliness": 0.2,
+        "scope": [
+          0,
+          1
+        ]
+      },
+      {
+        "id": "dodge-and-bank",
+        "label": "Dodge and bank",
+        "forms": {
+          "verb": "dodge, collect and bank your score every thirty seconds"
+        },
+        "tags": [
+          "tiny",
+          "action"
+        ],
+        "affinity": [
+          "action"
+        ],
+        "weirdness": 0.1,
+        "silliness": 0.3,
+        "scope": [
+          0,
+          1
+        ]
+      },
+      {
+        "id": "stack-until-it-falls",
+        "label": "Stack until it falls",
+        "forms": {
+          "verb": "build a tower one block at a time until it falls over"
+        },
+        "tags": [
+          "tiny",
+          "physics",
+          "building"
+        ],
+        "affinity": [
+          "physics"
+        ],
+        "weirdness": 0.15,
+        "silliness": 0.4,
+        "scope": [
+          0,
+          1
+        ]
+      },
+      {
+        "id": "wave-and-upgrade",
+        "label": "Wave and upgrade",
+        "forms": {
+          "verb": "clear a wave, pick one upgrade and go again"
+        },
+        "tags": [
+          "tiny",
+          "combat",
+          "action"
+        ],
+        "affinity": [
+          "combat"
+        ],
+        "weirdness": 0.05,
+        "silliness": 0.25,
+        "scope": [
+          0,
+          1
+        ]
+      },
+      {
+        "id": "sort-falling-things",
+        "label": "Sort falling things",
+        "forms": {
+          "verb": "sort falling things into the right bins"
+        },
+        "tags": [
+          "tiny",
+          "puzzle",
+          "timing",
+          "mundane"
+        ],
+        "affinity": [
+          "timing"
+        ],
+        "weirdness": 0.2,
+        "silliness": 0.45,
+        "scope": [
+          0,
+          1
+        ]
+      }
+    ],
+    "mechanic": [
+      {
+        "id": "one-button-jumping",
+        "label": "One-button jumping",
+        "forms": {
+          "noun": "one-button jumping",
+          "verb": "press to jump and hold to jump higher"
+        },
+        "tags": [
+          "tiny",
+          "timing",
+          "action"
+        ],
+        "affinity": [
+          "timing"
+        ],
+        "weirdness": 0.05,
+        "silliness": 0.3,
+        "scope": [
+          0,
+          1
+        ]
+      },
+      {
+        "id": "beat-tapping",
+        "label": "Beat tapping",
+        "forms": {
+          "noun": "beat tapping",
+          "verb": "tap in time with the beat"
+        },
+        "tags": [
+          "tiny",
+          "rhythm",
+          "music",
+          "timing"
+        ],
+        "affinity": [
+          "music",
+          "rhythm"
+        ],
+        "weirdness": 0.1,
+        "silliness": 0.35,
+        "scope": [
+          0,
+          1
+        ]
+      },
+      {
+        "id": "gravity-flipping",
+        "label": "Gravity flipping",
+        "forms": {
+          "noun": "gravity flipping",
+          "verb": "flip gravity with a single tap"
+        },
+        "tags": [
+          "tiny",
+          "physics",
+          "timing"
+        ],
+        "affinity": [
+          "physics"
+        ],
+        "weirdness": 0.3,
+        "silliness": 0.35,
+        "scope": [
+          0,
+          1
+        ]
+      },
+      {
+        "id": "whole-board-sliding",
+        "label": "Whole-board sliding",
+        "forms": {
+          "noun": "whole-board sliding",
+          "verb": "slide every tile on the board at once"
+        },
+        "tags": [
+          "tiny",
+          "puzzle"
+        ],
+        "affinity": [
+          "puzzle"
+        ],
+        "weirdness": 0.2,
+        "silliness": 0.25,
+        "scope": [
+          0,
+          1
+        ]
+      },
+      {
+        "id": "three-second-rewind",
+        "label": "Three-second rewind",
+        "forms": {
+          "noun": "three-second rewinds",
+          "verb": "rewind the last three seconds when it goes wrong"
+        },
+        "tags": [
+          "tiny",
+          "time",
+          "puzzle"
+        ],
+        "affinity": [
+          "time"
+        ],
+        "weirdness": 0.3,
+        "silliness": 0.3,
+        "scope": [
+          0,
+          1
+        ]
+      },
+      {
+        "id": "wobbly-stacking",
+        "label": "Wobbly stacking",
+        "forms": {
+          "noun": "wobbly stacking",
+          "verb": "drop blocks onto a stack that wobbles more every turn"
+        },
+        "tags": [
+          "tiny",
+          "physics",
+          "building"
+        ],
+        "affinity": [
+          "physics"
+        ],
+        "weirdness": 0.15,
+        "silliness": 0.4,
+        "scope": [
+          0,
+          1
+        ]
+      },
+      {
+        "id": "lane-switching",
+        "label": "Lane switching",
+        "forms": {
+          "noun": "three-lane switching",
+          "verb": "switch between three lanes"
+        },
+        "tags": [
+          "tiny",
+          "action",
+          "racing"
+        ],
+        "affinity": [
+          "racing"
+        ],
+        "weirdness": 0.05,
+        "silliness": 0.25,
+        "scope": [
+          0,
+          1
+        ]
+      },
+      {
+        "id": "pull-and-release",
+        "label": "Pull and release",
+        "forms": {
+          "noun": "pull-and-release aiming",
+          "verb": "pull back, aim and let go"
+        },
+        "tags": [
+          "tiny",
+          "physics",
+          "action"
+        ],
+        "affinity": [
+          "physics"
+        ],
+        "weirdness": 0.1,
+        "silliness": 0.3,
+        "scope": [
+          0,
+          1
+        ]
+      },
+      {
+        "id": "shadow-platforms",
+        "label": "Shadow platforms",
+        "forms": {
+          "noun": "shadow platforms",
+          "verb": "move a lamp so the shadows become platforms"
+        },
+        "tags": [
+          "tiny",
+          "puzzle",
+          "physics"
+        ],
+        "affinity": [
+          "puzzle"
+        ],
+        "weirdness": 0.45,
+        "silliness": 0.3,
+        "scope": [
+          0,
+          1
+        ]
+      }
+    ],
+    "progression": [
+      {
+        "id": "one-new-hazard",
+        "label": "One new hazard",
+        "forms": {
+          "verb": "unlock one new hazard per level"
+        },
+        "tags": [
+          "tiny",
+          "action"
+        ],
+        "affinity": [
+          "action"
+        ],
+        "weirdness": 0.05,
+        "silliness": 0.25,
+        "scope": [
+          0,
+          1
+        ]
+      },
+      {
+        "id": "daily-leaderboard",
+        "label": "Daily leaderboard",
+        "forms": {
+          "verb": "climb a daily leaderboard"
+        },
+        "tags": [
+          "tiny",
+          "social"
+        ],
+        "affinity": [
+          "action"
+        ],
+        "weirdness": 0.05,
+        "silliness": 0.3,
+        "scope": [
+          0,
+          1
+        ]
+      },
+      {
+        "id": "tiny-hats",
+        "label": "Tiny hats",
+        "forms": {
+          "verb": "unlock tiny cosmetic hats"
+        },
+        "tags": [
+          "tiny",
+          "comedy"
+        ],
+        "affinity": [
+          "comedy"
+        ],
+        "weirdness": 0.3,
+        "silliness": 0.7,
+        "scope": [
+          0,
+          1
+        ]
+      }
+    ],
+    "threat": [
+      {
+        "id": "ticking-timer",
+        "label": "Ticking timer",
+        "forms": {
+          "noun": "a ticking timer",
+          "clause": "the timer never stops ticking"
+        },
+        "tags": [
+          "tiny",
+          "time",
+          "tense"
+        ],
+        "affinity": [
+          "timing"
+        ],
+        "weirdness": 0.05,
+        "silliness": 0.2,
+        "scope": [
+          0,
+          1
+        ]
+      },
+      {
+        "id": "rising-lava",
+        "label": "Rising lava",
+        "forms": {
+          "noun": "rising lava",
+          "clause": "the floor fills up with lava from below"
+        },
+        "tags": [
+          "tiny",
+          "heat",
+          "action"
+        ],
+        "affinity": [
+          "action"
+        ],
+        "weirdness": 0.15,
+        "silliness": 0.3,
+        "scope": [
+          0,
+          1
+        ]
+      },
+      {
+        "id": "speed-creep",
+        "label": "Speed creep",
+        "forms": {
+          "noun": "speed creep",
+          "clause": "everything gets a little faster every ten seconds"
+        },
+        "tags": [
+          "tiny",
+          "timing",
+          "tense"
+        ],
+        "affinity": [
+          "action",
+          "timing"
+        ],
+        "weirdness": 0.05,
+        "silliness": 0.25,
+        "scope": [
+          0,
+          1
+        ]
+      },
+      {
+        "id": "one-hit-death",
+        "label": "One-hit death",
+        "forms": {
+          "noun": "one-hit death",
+          "clause": "one touch of anything ends the run"
+        },
+        "tags": [
+          "tiny",
+          "action",
+          "tense"
+        ],
+        "affinity": [
+          "action"
+        ],
+        "weirdness": 0.05,
+        "silliness": 0.25,
+        "scope": [
+          0,
+          1
+        ]
+      },
+      {
+        "id": "closing-darkness",
+        "label": "Closing darkness",
+        "forms": {
+          "noun": "the closing darkness",
+          "clause": "the edges of the screen darken a little more each second"
+        },
+        "tags": [
+          "tiny",
+          "horror",
+          "tense"
+        ],
+        "affinity": [
+          "horror"
+        ],
+        "weirdness": 0.3,
+        "silliness": 0.15,
+        "scope": [
+          0,
+          1
+        ]
+      },
+      {
+        "id": "giant-swatting-hand",
+        "label": "Giant swatting hand",
+        "forms": {
+          "noun": "a giant swatting hand",
+          "clause": "a giant hand keeps trying to swat you"
+        },
+        "tags": [
+          "tiny",
+          "absurd",
+          "action"
+        ],
+        "affinity": [
+          "action",
+          "animals"
+        ],
+        "weirdness": 0.5,
+        "silliness": 0.6,
+        "scope": [
+          0,
+          1
+        ]
+      },
+      {
+        "id": "shifting-wind",
+        "label": "Shifting wind",
+        "forms": {
+          "noun": "shifting wind",
+          "clause": "the wind keeps changing direction"
+        },
+        "tags": [
+          "tiny",
+          "weather",
+          "physics"
+        ],
+        "affinity": [
+          "physics",
+          "sky"
+        ],
+        "weirdness": 0.15,
+        "silliness": 0.25,
+        "scope": [
+          0,
+          1
+        ]
+      }
+    ],
+    "resource": [
+      {
+        "id": "seconds-on-the-clock",
+        "label": "Seconds on the clock",
+        "forms": {
+          "noun": "seconds on the clock"
+        },
+        "tags": [
+          "tiny",
+          "time"
+        ],
+        "affinity": [
+          "timing"
+        ],
+        "weirdness": 0.05,
+        "silliness": 0.25,
+        "scope": [
+          0,
+          1
+        ]
+      },
+      {
+        "id": "extra-lives",
+        "label": "Extra lives",
+        "forms": {
+          "noun": "extra lives"
+        },
+        "tags": [
+          "tiny",
+          "action"
+        ],
+        "affinity": [
+          "action"
+        ],
+        "weirdness": 0.05,
+        "silliness": 0.3,
+        "scope": [
+          0,
+          1
+        ]
+      },
+      {
+        "id": "jump-charges",
+        "label": "Jump charges",
+        "forms": {
+          "noun": "jump charges"
+        },
+        "tags": [
+          "tiny",
+          "timing"
+        ],
+        "affinity": [
+          "timing",
+          "physics"
+        ],
+        "weirdness": 0.1,
+        "silliness": 0.3,
+        "scope": [
+          0,
+          1
+        ]
+      }
+    ],
+    "mood": [
+      {
+        "id": "snappy",
+        "label": "Snappy",
+        "forms": {
+          "adj": "snappy"
+        },
+        "tags": [
+          "tiny",
+          "action",
+          "comedy"
+        ],
+        "affinity": [
+          "action"
+        ],
+        "weirdness": 0.05,
+        "silliness": 0.4,
+        "scope": [
+          0,
+          1
+        ]
+      },
+      {
+        "id": "calm-and-minimal",
+        "label": "Calm and minimal",
+        "forms": {
+          "adj": "calm and minimal"
+        },
+        "tags": [
+          "tiny",
+          "cozy"
+        ],
+        "affinity": [
+          "puzzle"
+        ],
+        "weirdness": 0.05,
+        "silliness": 0.2,
+        "scope": [
+          0,
+          1
+        ]
+      },
+      {
+        "id": "frantic",
+        "label": "Frantic",
+        "forms": {
+          "adj": "frantic"
+        },
+        "tags": [
+          "tiny",
+          "chaos",
+          "tense"
+        ],
+        "affinity": [
+          "action",
+          "chaos"
+        ],
+        "weirdness": 0.15,
+        "silliness": 0.5,
+        "scope": [
+          0,
+          1
+        ]
+      },
+      {
+        "id": "zen",
+        "label": "Zen",
+        "forms": {
+          "adj": "zen"
+        },
+        "tags": [
+          "tiny",
+          "cozy",
+          "wholesome"
+        ],
+        "affinity": [
+          "puzzle",
+          "nature"
+        ],
+        "weirdness": 0.1,
+        "silliness": 0.2,
+        "scope": [
+          0,
+          1
+        ]
+      },
+      {
+        "id": "cheerfully-cruel",
+        "label": "Cheerfully cruel",
+        "forms": {
+          "adj": "cheerfully cruel"
+        },
+        "tags": [
+          "tiny",
+          "comedy",
+          "grim"
+        ],
+        "affinity": [
+          "action"
+        ],
+        "weirdness": 0.3,
+        "silliness": 0.6,
+        "scope": [
+          0,
+          1
+        ]
+      }
+    ],
+    "visual": [
+      {
+        "id": "three-colour-shapes",
+        "label": "Three-colour shapes",
+        "forms": {
+          "noun": "flat shapes in exactly three colours"
+        },
+        "tags": [
+          "tiny",
+          "art"
+        ],
+        "affinity": [
+          "puzzle"
+        ],
+        "weirdness": 0.05,
+        "silliness": 0.25,
+        "scope": [
+          0,
+          1
+        ]
+      },
+      {
+        "id": "1-bit-pixels",
+        "label": "1-bit pixels",
+        "forms": {
+          "noun": "crisp 1-bit pixel art"
+        },
+        "tags": [
+          "tiny",
+          "retro",
+          "art"
+        ],
+        "affinity": [
+          "retro"
+        ],
+        "weirdness": 0.05,
+        "silliness": 0.25,
+        "scope": [
+          0,
+          1
+        ]
+      },
+      {
+        "id": "neon-outlines",
+        "label": "Neon outlines",
+        "forms": {
+          "noun": "neon outlines on pure black"
+        },
+        "tags": [
+          "tiny",
+          "retro",
+          "art"
+        ],
+        "affinity": [
+          "action",
+          "music"
+        ],
+        "weirdness": 0.1,
+        "silliness": 0.3,
+        "scope": [
+          0,
+          1
+        ]
+      },
+      {
+        "id": "lined-paper-doodles",
+        "label": "Lined-paper doodles",
+        "forms": {
+          "noun": "ballpoint doodles on lined paper"
+        },
+        "tags": [
+          "tiny",
+          "art",
+          "school"
+        ],
+        "affinity": [
+          "school",
+          "comedy"
+        ],
+        "weirdness": 0.25,
+        "silliness": 0.5,
+        "scope": [
+          0,
+          1
+        ]
+      },
+      {
+        "id": "sticky-note-cutouts",
+        "label": "Sticky-note cutouts",
+        "forms": {
+          "noun": "sticky-note paper cutouts"
+        },
+        "tags": [
+          "tiny",
+          "art",
+          "office"
+        ],
+        "affinity": [
+          "office"
+        ],
+        "weirdness": 0.3,
+        "silliness": 0.5,
+        "scope": [
+          0,
+          1
+        ]
+      }
+    ],
+    "twist": [
+      {
+        "id": "rotating-controls",
+        "label": "Rotating controls",
+        "forms": {
+          "clause": "the controls rotate every ten seconds"
+        },
+        "tags": [
+          "tiny",
+          "chaos",
+          "timing"
+        ],
+        "affinity": [
+          "action"
+        ],
+        "weirdness": 0.45,
+        "silliness": 0.55,
+        "scope": [
+          0,
+          1
+        ]
+      },
+      {
+        "id": "level-is-the-title-screen",
+        "label": "Level is the title screen",
+        "forms": {
+          "clause": "the level is the title screen and the logo is solid ground"
+        },
+        "tags": [
+          "tiny",
+          "weird"
+        ],
+        "affinity": [
+          "puzzle"
+        ],
+        "weirdness": 0.6,
+        "silliness": 0.5,
+        "scope": [
+          0,
+          1
+        ]
+      },
+      {
+        "id": "play-the-obstacle",
+        "label": "Play the obstacle",
+        "forms": {
+          "clause": "you play the obstacle, not the hero"
+        },
+        "tags": [
+          "tiny",
+          "absurd"
+        ],
+        "affinity": [
+          "action"
+        ],
+        "weirdness": 0.5,
+        "silliness": 0.5,
+        "scope": [
+          0,
+          1
+        ]
+      },
+      {
+        "id": "deaths-become-platforms",
+        "label": "Deaths become platforms",
+        "forms": {
+          "clause": "every death leaves a platform behind for the next attempt"
+        },
+        "tags": [
+          "tiny",
+          "death",
+          "puzzle"
+        ],
+        "affinity": [
+          "puzzle",
+          "death"
+        ],
+        "weirdness": 0.4,
+        "silliness": 0.4,
+        "scope": [
+          0,
+          1
+        ]
+      },
+      {
+        "id": "shrinking-screen",
+        "label": "Shrinking screen",
+        "forms": {
+          "clause": "the screen gets smaller every time you score"
+        },
+        "tags": [
+          "tiny",
+          "chaos"
+        ],
+        "affinity": [
+          "action"
+        ],
+        "weirdness": 0.45,
+        "silliness": 0.45,
+        "scope": [
+          0,
+          1
+        ]
+      },
+      {
+        "id": "music-is-the-level",
+        "label": "Music is the level",
+        "forms": {
+          "clause": "the music is the level and the level is the music"
+        },
+        "tags": [
+          "tiny",
+          "music",
+          "rhythm"
+        ],
+        "affinity": [
+          "music",
+          "rhythm"
+        ],
+        "weirdness": 0.4,
+        "silliness": 0.3,
+        "scope": [
+          0,
+          1
+        ]
+      },
+      {
+        "id": "score-is-health",
+        "label": "Score is health",
+        "forms": {
+          "clause": "your score is also your health bar"
+        },
+        "tags": [
+          "tiny",
+          "tense"
+        ],
+        "affinity": [
+          "action"
+        ],
+        "weirdness": 0.3,
+        "silliness": 0.35,
+        "scope": [
+          0,
+          1
+        ]
+      }
+    ],
+    "titleFirst": [
+      {
+        "id": "tiny",
+        "label": "Tiny",
+        "tags": [
+          "tiny",
+          "cozy"
+        ],
+        "weirdness": 0.05,
+        "silliness": 0.35
+      },
+      {
+        "id": "one",
+        "label": "One",
+        "tags": [
+          "tiny",
+          "timing"
+        ],
+        "weirdness": 0.05,
+        "silliness": 0.2
+      },
+      {
+        "id": "micro",
+        "label": "Micro",
+        "tags": [
+          "tiny",
+          "puzzle"
+        ],
+        "weirdness": 0.05,
+        "silliness": 0.3
+      },
+      {
+        "id": "pocket",
+        "label": "Pocket",
+        "tags": [
+          "tiny",
+          "cozy"
+        ],
+        "weirdness": 0.05,
+        "silliness": 0.3
+      },
+      {
+        "id": "quick",
+        "label": "Quick",
+        "tags": [
+          "tiny",
+          "action",
+          "timing"
+        ],
+        "weirdness": 0.05,
+        "silliness": 0.3
+      },
+      {
+        "id": "pixel",
+        "label": "Pixel",
+        "tags": [
+          "tiny",
+          "retro",
+          "art"
+        ],
+        "weirdness": 0.05,
+        "silliness": 0.3
+      },
+      {
+        "id": "tap",
+        "label": "Tap",
+        "tags": [
+          "tiny",
+          "timing",
+          "rhythm"
+        ],
+        "weirdness": 0.05,
+        "silliness": 0.35
+      },
+      {
+        "id": "mini",
+        "label": "Mini",
+        "tags": [
+          "tiny",
+          "cozy",
+          "comedy"
+        ],
+        "weirdness": 0.05,
+        "silliness": 0.35
+      },
+      {
+        "id": "bit",
+        "label": "Bit",
+        "tags": [
+          "tiny",
+          "retro",
+          "tech"
+        ],
+        "weirdness": 0.05,
+        "silliness": 0.25
+      },
+      {
+        "id": "hop",
+        "label": "Hop",
+        "tags": [
+          "tiny",
+          "animals",
+          "timing"
+        ],
+        "weirdness": 0.1,
+        "silliness": 0.45
+      },
+      {
+        "id": "bounce",
+        "label": "Bounce",
+        "tags": [
+          "tiny",
+          "physics"
+        ],
+        "weirdness": 0.1,
+        "silliness": 0.45
+      },
+      {
+        "id": "snap",
+        "label": "Snap",
+        "tags": [
+          "tiny",
+          "timing",
+          "action"
+        ],
+        "weirdness": 0.05,
+        "silliness": 0.3
+      },
+      {
+        "id": "loop",
+        "label": "Loop",
+        "tags": [
+          "tiny",
+          "time"
+        ],
+        "weirdness": 0.1,
+        "silliness": 0.25
+      },
+      {
+        "id": "little",
+        "label": "Little",
+        "tags": [
+          "tiny",
+          "cozy",
+          "wholesome"
+        ],
+        "weirdness": 0.05,
+        "silliness": 0.35
+      },
+      {
+        "id": "jam",
+        "label": "Jam",
+        "tags": [
+          "tiny",
+          "music",
+          "food",
+          "comedy"
+        ],
+        "weirdness": 0.15,
+        "silliness": 0.45
+      }
+    ],
+    "titleLast": [
+      {
+        "id": "dash",
+        "label": "Dash",
+        "tags": [
+          "tiny",
+          "action",
+          "racing"
+        ],
+        "weirdness": 0.05,
+        "silliness": 0.3
+      },
+      {
+        "id": "rush",
+        "label": "Rush",
+        "tags": [
+          "tiny",
+          "action",
+          "timing"
+        ],
+        "weirdness": 0.05,
+        "silliness": 0.3
+      },
+      {
+        "id": "run",
+        "label": "Run",
+        "tags": [
+          "tiny",
+          "action"
+        ],
+        "weirdness": 0.05,
+        "silliness": 0.25
+      },
+      {
+        "id": "stack",
+        "label": "Stack",
+        "tags": [
+          "tiny",
+          "physics",
+          "building"
+        ],
+        "weirdness": 0.05,
+        "silliness": 0.3
+      },
+      {
+        "id": "drop",
+        "label": "Drop",
+        "tags": [
+          "tiny",
+          "physics",
+          "puzzle"
+        ],
+        "weirdness": 0.05,
+        "silliness": 0.3
+      },
+      {
+        "id": "sprint",
+        "label": "Sprint",
+        "tags": [
+          "tiny",
+          "racing"
+        ],
+        "weirdness": 0.05,
+        "silliness": 0.25
+      },
+      {
+        "id": "minute",
+        "label": "Minute",
+        "tags": [
+          "tiny",
+          "time"
+        ],
+        "weirdness": 0.1,
+        "silliness": 0.25
+      },
+      {
+        "id": "blitz",
+        "label": "Blitz",
+        "tags": [
+          "tiny",
+          "action",
+          "chaos"
+        ],
+        "weirdness": 0.05,
+        "silliness": 0.35
+      },
+      {
+        "id": "squares",
+        "label": "Squares",
+        "tags": [
+          "tiny",
+          "puzzle"
+        ],
+        "weirdness": 0.1,
+        "silliness": 0.3
+      },
+      {
+        "id": "toss",
+        "label": "Toss",
+        "tags": [
+          "tiny",
+          "physics",
+          "comedy"
+        ],
+        "weirdness": 0.1,
+        "silliness": 0.45
+      },
+      {
+        "id": "hustle",
+        "label": "Hustle",
+        "tags": [
+          "tiny",
+          "action",
+          "food"
+        ],
+        "weirdness": 0.1,
+        "silliness": 0.4
+      },
+      {
+        "id": "spin",
+        "label": "Spin",
+        "tags": [
+          "tiny",
+          "physics",
+          "chaos"
+        ],
+        "weirdness": 0.1,
+        "silliness": 0.35
+      },
+      {
+        "id": "flip",
+        "label": "Flip",
+        "tags": [
+          "tiny",
+          "physics"
+        ],
+        "weirdness": 0.1,
+        "silliness": 0.3
+      },
+      {
+        "id": "seconds",
+        "label": "Seconds",
+        "tags": [
+          "tiny",
+          "time",
+          "tense"
+        ],
+        "weirdness": 0.05,
+        "silliness": 0.2
+      },
+      {
+        "id": "arcade",
+        "label": "Arcade",
+        "tags": [
+          "tiny",
+          "action",
+          "retro"
+        ],
+        "weirdness": 0.05,
+        "silliness": 0.3
+      }
+    ],
+    "creep": [
+      {
+        "id": "daily-seed",
+        "label": "Daily seed",
+        "kind": "system",
+        "complexity": 2,
+        "forms": {
+          "pitch": "Add a daily challenge where everyone plays the same seed.",
+          "connects": "Same seed, same {threat.noun}, wildly different excuses."
+        },
+        "tags": [
+          "tiny",
+          "social"
+        ],
+        "affinity": [
+          "action"
+        ],
+        "weirdness": 0.1,
+        "silliness": 0.3
+      },
+      {
+        "id": "online-leaderboards",
+        "label": "Online leaderboards",
+        "kind": "system",
+        "complexity": 3,
+        "forms": {
+          "pitch": "Add online leaderboards, with ghost replays of the top runs."
+        },
+        "tags": [
+          "tiny",
+          "social",
+          "internet"
+        ],
+        "affinity": [
+          "action"
+        ],
+        "weirdness": 0.1,
+        "silliness": 0.25
+      },
+      {
+        "id": "hat-shop",
+        "label": "Hat shop",
+        "kind": "content",
+        "complexity": 2,
+        "forms": {
+          "pitch": "Add a hat shop. The hats do nothing. Players will love them."
+        },
+        "tags": [
+          "tiny",
+          "comedy"
+        ],
+        "affinity": [
+          "comedy"
+        ],
+        "weirdness": 0.3,
+        "silliness": 0.75
+      },
+      {
+        "id": "mirror-boss",
+        "label": "Mirror boss",
+        "kind": "loop",
+        "complexity": 4,
+        "forms": {
+          "pitch": "Every fifth level, a boss shows up and uses {mechanic.noun} against you."
+        },
+        "tags": [
+          "tiny",
+          "combat"
+        ],
+        "affinity": [
+          "combat",
+          "action"
+        ],
+        "weirdness": 0.3,
+        "silliness": 0.4
+      },
+      {
+        "id": "level-editor",
+        "label": "Level editor",
+        "kind": "system",
+        "complexity": 6,
+        "forms": {
+          "pitch": "Let players build and share their own levels.",
+          "connects": "Within a week someone will make a level where you {mechanic.verb} for an hour straight."
+        },
+        "tags": [
+          "tiny",
+          "building",
+          "social"
+        ],
+        "affinity": [
+          "puzzle"
+        ],
+        "weirdness": 0.2,
+        "silliness": 0.35
+      },
+      {
+        "id": "screen-shake-slider",
+        "label": "Screen-shake slider",
+        "kind": "whyNot",
+        "complexity": 1,
+        "forms": {
+          "pitch": "Add a screen-shake slider that goes all the way to eleven."
+        },
+        "tags": [
+          "tiny",
+          "chaos",
+          "comedy"
+        ],
+        "affinity": [
+          "action"
+        ],
+        "weirdness": 0.3,
+        "silliness": 0.7
+      },
+      {
+        "id": "endless-mode",
+        "label": "Endless mode",
+        "kind": "loop",
+        "complexity": 2,
+        "forms": {
+          "pitch": "Add an endless mode that runs until {threat.noun} finally wins."
+        },
+        "tags": [
+          "tiny",
+          "action"
+        ],
+        "affinity": [
+          "action",
+          "timing"
+        ],
+        "weirdness": 0.05,
+        "silliness": 0.25
+      },
+      {
+        "id": "twelve-chapter-story",
+        "label": "Twelve-chapter story",
+        "kind": "content",
+        "complexity": 7,
+        "forms": {
+          "pitch": "Add a twelve-chapter story mode with a cast of forty, explaining why you {mechanic.verb}."
+        },
+        "tags": [
+          "tiny",
+          "narrative"
+        ],
+        "affinity": [
+          "narrative"
+        ],
+        "weirdness": 0.5,
+        "silliness": 0.65
+      }
+    ]
+  },
+  "templates": {
+    "hook": [
+      {
+        "id": "one-screen",
+        "text": "One screen, one button, one goal: [a] {protagonist.noun} must {objective.verb}.",
+        "weight": 0.6,
+        "scopes": [
+          0,
+          1
+        ],
+        "tagsAny": [
+          "tiny"
+        ]
+      }
+    ],
+    "mightWork": [
+      {
+        "id": "sharp-core",
+        "text": "But {mechanic.noun} is small enough to polish properly in a week, and polish is what people remember.",
+        "weight": 1,
+        "tagsAny": [
+          "tiny"
+        ]
+      }
+    ],
+    "scopeNote": [
+      {
+        "id": "week-plan",
+        "text": "Plan the week: {mechanic.noun} on Monday, {threat.noun} on Tuesday, juice on Wednesday, then playtest until Sunday.",
+        "weight": 1.5,
+        "scopes": [
+          0,
+          1
+        ]
+      },
+      {
+        "id": "grey-boxes",
+        "text": "Prototype {mechanic.noun} with grey boxes before drawing a single pixel. If it isn't fun as squares, it won't be fun as art.",
+        "weight": 1.5,
+        "scopes": [
+          0,
+          1
+        ]
+      },
+      {
+        "id": "one-sentence",
+        "text": "If you can't explain how you {mechanic.verb} in one sentence, cut it down until you can.",
+        "weight": 1,
+        "scopes": [
+          0,
+          1
+        ]
+      },
+      {
+        "id": "instant-restart",
+        "text": "Keep everything on one screen and make restarting take under a second. Let {threat.noun} be your whole difficulty curve.",
+        "weight": 1,
+        "scopes": [
+          0
+        ]
+      },
+      {
+        "id": "no-menus",
+        "text": "Skip the menus. A title, a score and a restart button are a complete game.",
+        "weight": 1,
+        "scopes": [
+          0
+        ]
+      },
+      {
+        "id": "sound-first",
+        "text": "Give {mechanic.noun} a great sound effect before you add a single extra level. Ship on day five, polish on day six, sleep on day seven.",
+        "weight": 1,
+        "scopes": [
+          0,
+          1
+        ]
+      }
+    ]
+  }
+}

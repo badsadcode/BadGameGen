@@ -1,0 +1,2308 @@
+{
+  "format": 1,
+  "id": "fantasy",
+  "name": "Fantasy Follies",
+  "version": "1.0.0",
+  "author": "Bad Ideas Works",
+  "description": "Dragons, guilds, cursed kingdoms and wizards who forgot their password.",
+  "items": {
+    "genre": [
+      {
+        "id": "dungeon-crawl",
+        "label": "Dungeon crawl",
+        "forms": {
+          "adj": "dungeon-crawling",
+          "noun": "dungeon crawler"
+        },
+        "tags": [
+          "fantasy",
+          "combat",
+          "exploration",
+          "underground"
+        ],
+        "affinity": [
+          "medieval",
+          "magic"
+        ],
+        "weirdness": 0.1,
+        "silliness": 0.3
+      },
+      {
+        "id": "high-fantasy",
+        "label": "High fantasy",
+        "forms": {
+          "adj": "high-fantasy",
+          "noun": "high-fantasy epic"
+        },
+        "tags": [
+          "fantasy",
+          "epic",
+          "magic",
+          "medieval"
+        ],
+        "affinity": [
+          "medieval",
+          "magic",
+          "war"
+        ],
+        "weirdness": 0.1,
+        "silliness": 0.2
+      },
+      {
+        "id": "sword-and-sorcery",
+        "label": "Sword and sorcery",
+        "forms": {
+          "adj": "sword-and-sorcery",
+          "noun": "sword-and-sorcery adventure"
+        },
+        "tags": [
+          "fantasy",
+          "combat",
+          "magic",
+          "action"
+        ],
+        "affinity": [
+          "medieval",
+          "combat"
+        ],
+        "weirdness": 0.15,
+        "silliness": 0.3
+      },
+      {
+        "id": "fairy-tale",
+        "label": "Fairy tale",
+        "forms": {
+          "adj": "fairy-tale",
+          "noun": "fairy-tale adventure"
+        },
+        "tags": [
+          "fantasy",
+          "magic",
+          "narrative",
+          "forest"
+        ],
+        "affinity": [
+          "forest",
+          "animals",
+          "cozy"
+        ],
+        "weirdness": 0.2,
+        "silliness": 0.4
+      }
+    ],
+    "subgenre": [
+      {
+        "id": "kingdom-builder",
+        "label": "Kingdom builder",
+        "forms": {
+          "noun": "kingdom builder"
+        },
+        "tags": [
+          "fantasy",
+          "building",
+          "strategy",
+          "medieval"
+        ],
+        "affinity": [
+          "medieval",
+          "management",
+          "town"
+        ],
+        "weirdness": 0.1,
+        "silliness": 0.3
+      },
+      {
+        "id": "tavern-sim",
+        "label": "Tavern sim",
+        "forms": {
+          "noun": "tavern sim"
+        },
+        "tags": [
+          "fantasy",
+          "management",
+          "food",
+          "social",
+          "cozy"
+        ],
+        "affinity": [
+          "food",
+          "town",
+          "social"
+        ],
+        "weirdness": 0.15,
+        "silliness": 0.45
+      },
+      {
+        "id": "spell-slinging-roguelite",
+        "label": "Spell-slinging roguelite",
+        "forms": {
+          "noun": "spell-slinging roguelite"
+        },
+        "tags": [
+          "fantasy",
+          "magic",
+          "combat",
+          "action"
+        ],
+        "affinity": [
+          "magic",
+          "underground"
+        ],
+        "weirdness": 0.2,
+        "silliness": 0.35
+      },
+      {
+        "id": "monster-taming-rpg",
+        "label": "Monster-taming RPG",
+        "forms": {
+          "noun": "monster-taming RPG"
+        },
+        "tags": [
+          "fantasy",
+          "animals",
+          "magic",
+          "exploration"
+        ],
+        "affinity": [
+          "animals",
+          "nature"
+        ],
+        "weirdness": 0.2,
+        "silliness": 0.4
+      }
+    ],
+    "setting": [
+      {
+        "id": "cursed-kingdom",
+        "label": "Cursed kingdom",
+        "forms": {
+          "noun": "cursed kingdom",
+          "in": "in a kingdom under a very specific curse"
+        },
+        "tags": [
+          "fantasy",
+          "magic",
+          "medieval",
+          "mystery"
+        ],
+        "affinity": [
+          "magic",
+          "mystery",
+          "narrative"
+        ],
+        "excludes": [
+          "space"
+        ],
+        "weirdness": 0.3,
+        "silliness": 0.35
+      },
+      {
+        "id": "crumbling-wizard-s-tower",
+        "label": "Crumbling wizard's tower",
+        "forms": {
+          "noun": "crumbling wizard's tower",
+          "in": "inside a crumbling wizard's tower with forty-one floors"
+        },
+        "tags": [
+          "fantasy",
+          "magic",
+          "building",
+          "exploration"
+        ],
+        "affinity": [
+          "magic",
+          "puzzle"
+        ],
+        "excludes": [
+          "space"
+        ],
+        "weirdness": 0.3,
+        "silliness": 0.4
+      },
+      {
+        "id": "adventurers-guild-hall",
+        "label": "Adventurers' guild hall",
+        "forms": {
+          "noun": "adventurers' guild hall",
+          "in": "in an overbooked adventurers' guild hall"
+        },
+        "tags": [
+          "fantasy",
+          "social",
+          "management",
+          "town",
+          "medieval"
+        ],
+        "affinity": [
+          "management",
+          "social",
+          "bureaucracy"
+        ],
+        "weirdness": 0.2,
+        "silliness": 0.45
+      },
+      {
+        "id": "dragon-s-hoard",
+        "label": "Dragon's hoard",
+        "forms": {
+          "noun": "dragon's hoard",
+          "in": "inside a dragon's hoard, somewhere between the coins"
+        },
+        "tags": [
+          "fantasy",
+          "underground",
+          "magic"
+        ],
+        "affinity": [
+          "trade",
+          "stealth"
+        ],
+        "weirdness": 0.45,
+        "silliness": 0.5
+      },
+      {
+        "id": "opinionated-enchanted-forest",
+        "label": "Opinionated enchanted forest",
+        "forms": {
+          "noun": "enchanted forest with opinions",
+          "in": "in an enchanted forest that has opinions about you"
+        },
+        "tags": [
+          "fantasy",
+          "forest",
+          "nature",
+          "magic",
+          "weird"
+        ],
+        "affinity": [
+          "nature",
+          "animals",
+          "plants"
+        ],
+        "excludes": [
+          "space",
+          "urban"
+        ],
+        "weirdness": 0.5,
+        "silliness": 0.55
+      },
+      {
+        "id": "goblin-night-market",
+        "label": "Goblin night market",
+        "forms": {
+          "noun": "goblin night market",
+          "in": "at a goblin night market that only takes teeth"
+        },
+        "tags": [
+          "fantasy",
+          "trade",
+          "social",
+          "crime"
+        ],
+        "affinity": [
+          "trade",
+          "social"
+        ],
+        "weirdness": 0.5,
+        "silliness": 0.55
+      },
+      {
+        "id": "floating-castle",
+        "label": "Floating castle",
+        "forms": {
+          "noun": "castle that floats slightly too high",
+          "in": "in a castle that floats slightly too high"
+        },
+        "tags": [
+          "fantasy",
+          "sky",
+          "magic",
+          "medieval"
+        ],
+        "affinity": [
+          "sky",
+          "magic"
+        ],
+        "weirdness": 0.4,
+        "silliness": 0.45
+      },
+      {
+        "id": "starter-dungeon",
+        "label": "Starter dungeon",
+        "forms": {
+          "noun": "starter dungeon",
+          "in": "in the starter dungeon outside a sleepy village"
+        },
+        "tags": [
+          "fantasy",
+          "underground",
+          "combat"
+        ],
+        "affinity": [
+          "combat",
+          "exploration"
+        ],
+        "weirdness": 0.15,
+        "silliness": 0.4
+      },
+      {
+        "id": "witch-haunted-swamp",
+        "label": "Witch-haunted swamp",
+        "forms": {
+          "noun": "witch-haunted swamp",
+          "in": "in a witch-haunted swamp"
+        },
+        "tags": [
+          "fantasy",
+          "water",
+          "nature",
+          "horror",
+          "magic"
+        ],
+        "affinity": [
+          "horror",
+          "crafting"
+        ],
+        "excludes": [
+          "space",
+          "desert"
+        ],
+        "weirdness": 0.3,
+        "silliness": 0.3
+      },
+      {
+        "id": "underfunded-magic-academy",
+        "label": "Underfunded magic academy",
+        "forms": {
+          "noun": "underfunded magic academy",
+          "in": "at an underfunded magic academy"
+        },
+        "tags": [
+          "fantasy",
+          "school",
+          "magic",
+          "bureaucracy"
+        ],
+        "affinity": [
+          "school",
+          "social",
+          "bureaucracy"
+        ],
+        "weirdness": 0.3,
+        "silliness": 0.5
+      }
+    ],
+    "era": [
+      {
+        "id": "age-of-dragons",
+        "label": "Age of Dragons",
+        "forms": {
+          "in": "in the Age of Dragons"
+        },
+        "tags": [
+          "fantasy",
+          "historical",
+          "epic"
+        ],
+        "affinity": [
+          "epic"
+        ],
+        "weirdness": 0.2,
+        "silliness": 0.2
+      },
+      {
+        "id": "dark-lord-s-tax-reform",
+        "label": "Dark Lord's tax reform",
+        "forms": {
+          "in": "during the Dark Lord's third tax reform"
+        },
+        "tags": [
+          "fantasy",
+          "bureaucracy",
+          "comedy"
+        ],
+        "affinity": [
+          "bureaucracy",
+          "management"
+        ],
+        "weirdness": 0.45,
+        "silliness": 0.65
+      },
+      {
+        "id": "after-the-hero-retired",
+        "label": "After the hero retired",
+        "forms": {
+          "in": "a hundred years after the hero retired"
+        },
+        "tags": [
+          "fantasy",
+          "melancholy"
+        ],
+        "affinity": [
+          "narrative"
+        ],
+        "weirdness": 0.3,
+        "silliness": 0.35
+      },
+      {
+        "id": "twilight-of-magic",
+        "label": "Twilight of magic",
+        "forms": {
+          "in": "as the last of the magic runs out"
+        },
+        "tags": [
+          "fantasy",
+          "melancholy",
+          "magic"
+        ],
+        "affinity": [
+          "survival",
+          "magic"
+        ],
+        "weirdness": 0.3,
+        "silliness": 0.2
+      }
+    ],
+    "protagonist": [
+      {
+        "id": "retired-dragon-slayer",
+        "label": "Retired dragon slayer",
+        "forms": {
+          "noun": "retired dragon slayer with a bad knee"
+        },
+        "tags": [
+          "fantasy",
+          "combat",
+          "melancholy"
+        ],
+        "affinity": [
+          "combat",
+          "medieval"
+        ],
+        "weirdness": 0.2,
+        "silliness": 0.45
+      },
+      {
+        "id": "locked-out-wizard",
+        "label": "Locked-out wizard",
+        "forms": {
+          "noun": "wizard locked out of their own spellbook"
+        },
+        "tags": [
+          "fantasy",
+          "magic",
+          "tech",
+          "comedy"
+        ],
+        "affinity": [
+          "magic",
+          "puzzle",
+          "bureaucracy"
+        ],
+        "weirdness": 0.45,
+        "silliness": 0.6
+      },
+      {
+        "id": "goblin-accountant",
+        "label": "Goblin accountant",
+        "forms": {
+          "noun": "goblin accountant"
+        },
+        "tags": [
+          "fantasy",
+          "management",
+          "trade",
+          "comedy"
+        ],
+        "affinity": [
+          "trade",
+          "management",
+          "office"
+        ],
+        "weirdness": 0.5,
+        "silliness": 0.65
+      },
+      {
+        "id": "apprentice-necromancer",
+        "label": "Apprentice necromancer",
+        "forms": {
+          "noun": "apprentice necromancer"
+        },
+        "tags": [
+          "fantasy",
+          "magic",
+          "death"
+        ],
+        "affinity": [
+          "death",
+          "horror",
+          "magic"
+        ],
+        "weirdness": 0.35,
+        "silliness": 0.45
+      },
+      {
+        "id": "dungeon-receptionist",
+        "label": "Dungeon receptionist",
+        "forms": {
+          "noun": "dungeon receptionist"
+        },
+        "tags": [
+          "fantasy",
+          "underground",
+          "office",
+          "social"
+        ],
+        "affinity": [
+          "underground",
+          "management"
+        ],
+        "weirdness": 0.55,
+        "silliness": 0.65
+      },
+      {
+        "id": "knight-afraid-of-horses",
+        "label": "Knight afraid of horses",
+        "forms": {
+          "noun": "knight with a fear of horses"
+        },
+        "tags": [
+          "fantasy",
+          "combat",
+          "medieval",
+          "comedy"
+        ],
+        "affinity": [
+          "medieval",
+          "animals"
+        ],
+        "weirdness": 0.35,
+        "silliness": 0.65
+      },
+      {
+        "id": "gold-allergic-dragon",
+        "label": "Gold-allergic dragon",
+        "forms": {
+          "noun": "dragon who is allergic to gold"
+        },
+        "tags": [
+          "fantasy",
+          "animals",
+          "absurd"
+        ],
+        "affinity": [
+          "trade",
+          "magic"
+        ],
+        "weirdness": 0.65,
+        "silliness": 0.75
+      },
+      {
+        "id": "village-blacksmith",
+        "label": "Village blacksmith",
+        "forms": {
+          "noun": "village blacksmith"
+        },
+        "tags": [
+          "fantasy",
+          "crafting",
+          "medieval",
+          "town"
+        ],
+        "affinity": [
+          "crafting",
+          "trade"
+        ],
+        "weirdness": 0.05,
+        "silliness": 0.2
+      },
+      {
+        "id": "edge-of-the-map-tavern-keeper",
+        "label": "Edge-of-the-map tavern keeper",
+        "forms": {
+          "noun": "tavern keeper at the edge of the map"
+        },
+        "tags": [
+          "fantasy",
+          "food",
+          "social"
+        ],
+        "affinity": [
+          "food",
+          "social",
+          "management"
+        ],
+        "weirdness": 0.25,
+        "silliness": 0.35
+      }
+    ],
+    "objective": [
+      {
+        "id": "lift-the-curse",
+        "label": "Lift the curse",
+        "forms": {
+          "verb": "lift the curse before the coronation"
+        },
+        "tags": [
+          "fantasy",
+          "magic",
+          "mystery"
+        ],
+        "affinity": [
+          "magic",
+          "mystery"
+        ],
+        "weirdness": 0.25,
+        "silliness": 0.25
+      },
+      {
+        "id": "recover-the-archmage-s-password",
+        "label": "Recover the archmage's password",
+        "forms": {
+          "verb": "recover the archmage's lost password"
+        },
+        "tags": [
+          "fantasy",
+          "magic",
+          "puzzle",
+          "tech"
+        ],
+        "affinity": [
+          "magic",
+          "puzzle"
+        ],
+        "weirdness": 0.55,
+        "silliness": 0.6
+      },
+      {
+        "id": "pay-off-the-dragon-s-mortgage",
+        "label": "Pay off the dragon's mortgage",
+        "forms": {
+          "verb": "pay off the dragon's mortgage"
+        },
+        "tags": [
+          "fantasy",
+          "trade",
+          "management"
+        ],
+        "affinity": [
+          "trade",
+          "bureaucracy"
+        ],
+        "weirdness": 0.6,
+        "silliness": 0.7
+      },
+      {
+        "id": "unite-the-guilds",
+        "label": "Unite the guilds",
+        "forms": {
+          "verb": "unite the squabbling guilds"
+        },
+        "tags": [
+          "fantasy",
+          "social",
+          "strategy"
+        ],
+        "affinity": [
+          "social",
+          "management"
+        ],
+        "weirdness": 0.2,
+        "silliness": 0.3
+      },
+      {
+        "id": "return-the-stolen-crown",
+        "label": "Return the stolen crown",
+        "forms": {
+          "verb": "return the stolen crown before anyone notices it was gone"
+        },
+        "tags": [
+          "fantasy",
+          "stealth",
+          "crime"
+        ],
+        "affinity": [
+          "stealth",
+          "crime"
+        ],
+        "weirdness": 0.3,
+        "silliness": 0.45
+      },
+      {
+        "id": "run-a-profitable-dungeon",
+        "label": "Run a profitable dungeon",
+        "forms": {
+          "verb": "keep the dungeon running at a profit"
+        },
+        "tags": [
+          "fantasy",
+          "management",
+          "underground"
+        ],
+        "affinity": [
+          "management",
+          "underground"
+        ],
+        "weirdness": 0.4,
+        "silliness": 0.5
+      },
+      {
+        "id": "slay-or-file",
+        "label": "Slay or file",
+        "forms": {
+          "verb": "slay the dragon, or at least file the paperwork"
+        },
+        "tags": [
+          "fantasy",
+          "combat",
+          "bureaucracy"
+        ],
+        "affinity": [
+          "combat",
+          "bureaucracy"
+        ],
+        "weirdness": 0.45,
+        "silliness": 0.65
+      },
+      {
+        "id": "find-a-worthy-hero",
+        "label": "Find a worthy hero",
+        "forms": {
+          "verb": "find a hero worth writing a prophecy about"
+        },
+        "tags": [
+          "fantasy",
+          "narrative",
+          "social"
+        ],
+        "affinity": [
+          "narrative"
+        ],
+        "weirdness": 0.4,
+        "silliness": 0.5
+      }
+    ],
+    "loop": [
+      {
+        "id": "quest-and-patch",
+        "label": "Quest and patch",
+        "forms": {
+          "verb": "take quests by day and patch your armour by night"
+        },
+        "tags": [
+          "fantasy",
+          "combat",
+          "crafting"
+        ],
+        "affinity": [
+          "combat",
+          "crafting"
+        ],
+        "weirdness": 0.1,
+        "silliness": 0.25
+      },
+      {
+        "id": "brew-sell-apologise",
+        "label": "Brew, sell, apologise",
+        "forms": {
+          "verb": "brew potions, sell them, and deal with the side effects"
+        },
+        "tags": [
+          "fantasy",
+          "crafting",
+          "trade"
+        ],
+        "affinity": [
+          "crafting",
+          "trade"
+        ],
+        "weirdness": 0.3,
+        "silliness": 0.55
+      },
+      {
+        "id": "dive-and-haggle",
+        "label": "Dive and haggle",
+        "forms": {
+          "verb": "clear a dungeon floor, then haggle over the loot in town"
+        },
+        "tags": [
+          "fantasy",
+          "exploration",
+          "trade",
+          "underground"
+        ],
+        "affinity": [
+          "underground",
+          "trade"
+        ],
+        "weirdness": 0.15,
+        "silliness": 0.3
+      },
+      {
+        "id": "reset-the-traps",
+        "label": "Reset the traps",
+        "forms": {
+          "verb": "reset the dungeon traps after every adventuring party"
+        },
+        "tags": [
+          "fantasy",
+          "management",
+          "building",
+          "underground"
+        ],
+        "affinity": [
+          "underground",
+          "management"
+        ],
+        "weirdness": 0.4,
+        "silliness": 0.5
+      },
+      {
+        "id": "cast-and-report",
+        "label": "Cast and report",
+        "forms": {
+          "verb": "cast spells, then fill out the spell-usage forms"
+        },
+        "tags": [
+          "fantasy",
+          "magic",
+          "bureaucracy"
+        ],
+        "affinity": [
+          "magic",
+          "bureaucracy",
+          "office"
+        ],
+        "weirdness": 0.5,
+        "silliness": 0.6
+      },
+      {
+        "id": "pour-and-eavesdrop",
+        "label": "Pour and eavesdrop",
+        "forms": {
+          "verb": "pour ale and eavesdrop for rumours of treasure"
+        },
+        "tags": [
+          "fantasy",
+          "social",
+          "food"
+        ],
+        "affinity": [
+          "social",
+          "food"
+        ],
+        "weirdness": 0.2,
+        "silliness": 0.35
+      },
+      {
+        "id": "rebuild-after-the-dragon",
+        "label": "Rebuild after the dragon",
+        "forms": {
+          "verb": "rebuild the village after each dragon visit"
+        },
+        "tags": [
+          "fantasy",
+          "building",
+          "survival"
+        ],
+        "affinity": [
+          "building",
+          "town"
+        ],
+        "weirdness": 0.3,
+        "silliness": 0.45
+      }
+    ],
+    "mechanic": [
+      {
+        "id": "rune-drawing",
+        "label": "Rune drawing",
+        "forms": {
+          "noun": "rune drawing",
+          "verb": "trace glowing runes to cast spells"
+        },
+        "tags": [
+          "fantasy",
+          "magic",
+          "puzzle"
+        ],
+        "affinity": [
+          "magic"
+        ],
+        "weirdness": 0.2,
+        "silliness": 0.2
+      },
+      {
+        "id": "spell-slot-juggling",
+        "label": "Spell slot juggling",
+        "forms": {
+          "noun": "spell slot juggling",
+          "verb": "juggle a tiny pool of spell slots"
+        },
+        "tags": [
+          "fantasy",
+          "magic",
+          "strategy"
+        ],
+        "affinity": [
+          "magic",
+          "combat"
+        ],
+        "weirdness": 0.15,
+        "silliness": 0.25
+      },
+      {
+        "id": "potion-mixing",
+        "label": "Potion mixing",
+        "forms": {
+          "noun": "potion mixing",
+          "verb": "mix volatile potions by colour, smell and hope"
+        },
+        "tags": [
+          "fantasy",
+          "crafting",
+          "magic"
+        ],
+        "affinity": [
+          "crafting"
+        ],
+        "weirdness": 0.25,
+        "silliness": 0.4
+      },
+      {
+        "id": "hoard-stacking",
+        "label": "Hoard stacking",
+        "forms": {
+          "noun": "hoard stacking",
+          "verb": "stack the dragon's gold into piles that won't topple"
+        },
+        "tags": [
+          "fantasy",
+          "physics",
+          "building"
+        ],
+        "affinity": [
+          "physics",
+          "trade"
+        ],
+        "weirdness": 0.45,
+        "silliness": 0.55
+      },
+      {
+        "id": "guild-politics",
+        "label": "Guild politics",
+        "forms": {
+          "noun": "guild politics",
+          "verb": "play the rival guilds against each other"
+        },
+        "tags": [
+          "fantasy",
+          "social",
+          "strategy"
+        ],
+        "affinity": [
+          "social",
+          "bureaucracy"
+        ],
+        "weirdness": 0.2,
+        "silliness": 0.3
+      },
+      {
+        "id": "true-name-binding",
+        "label": "True-name binding",
+        "forms": {
+          "noun": "true-name binding",
+          "verb": "bind creatures by guessing their true names"
+        },
+        "tags": [
+          "fantasy",
+          "magic",
+          "deduction"
+        ],
+        "affinity": [
+          "magic",
+          "mystery",
+          "animals"
+        ],
+        "weirdness": 0.35,
+        "silliness": 0.3
+      },
+      {
+        "id": "curse-bookkeeping",
+        "label": "Curse bookkeeping",
+        "forms": {
+          "noun": "curse bookkeeping",
+          "verb": "keep track of which curses are active and on whom"
+        },
+        "tags": [
+          "fantasy",
+          "magic",
+          "management",
+          "deduction"
+        ],
+        "affinity": [
+          "magic",
+          "bureaucracy"
+        ],
+        "weirdness": 0.45,
+        "silliness": 0.5
+      },
+      {
+        "id": "familiar-commands",
+        "label": "Familiar commands",
+        "forms": {
+          "noun": "familiar commands",
+          "verb": "boss around a sarcastic familiar who mostly ignores you"
+        },
+        "tags": [
+          "fantasy",
+          "animals",
+          "magic",
+          "comedy"
+        ],
+        "affinity": [
+          "animals",
+          "magic"
+        ],
+        "weirdness": 0.4,
+        "silliness": 0.6
+      },
+      {
+        "id": "prophecy-rewriting",
+        "label": "Prophecy rewriting",
+        "forms": {
+          "noun": "prophecy rewriting",
+          "verb": "edit the prophecy so it technically comes true"
+        },
+        "tags": [
+          "fantasy",
+          "narrative",
+          "magic",
+          "puzzle"
+        ],
+        "affinity": [
+          "narrative",
+          "time"
+        ],
+        "weirdness": 0.6,
+        "silliness": 0.55
+      }
+    ],
+    "progression": [
+      {
+        "id": "spellbook-pages",
+        "label": "Spellbook pages",
+        "forms": {
+          "verb": "fill your spellbook one dog-eared page at a time"
+        },
+        "tags": [
+          "fantasy",
+          "magic"
+        ],
+        "affinity": [
+          "magic"
+        ],
+        "weirdness": 0.1,
+        "silliness": 0.3
+      },
+      {
+        "id": "guild-ranks",
+        "label": "Guild ranks",
+        "forms": {
+          "verb": "climb the guild ranks for better quest boards"
+        },
+        "tags": [
+          "fantasy",
+          "social"
+        ],
+        "affinity": [
+          "social",
+          "management"
+        ],
+        "weirdness": 0.1,
+        "silliness": 0.3
+      },
+      {
+        "id": "tower-floors",
+        "label": "Tower floors",
+        "forms": {
+          "verb": "rebuild your tower floor by floor"
+        },
+        "tags": [
+          "fantasy",
+          "building",
+          "magic"
+        ],
+        "affinity": [
+          "building"
+        ],
+        "weirdness": 0.2,
+        "silliness": 0.3
+      },
+      {
+        "id": "dragon-vocabulary",
+        "label": "Dragon vocabulary",
+        "forms": {
+          "verb": "learn the dragon's language one rude word at a time"
+        },
+        "tags": [
+          "fantasy",
+          "social",
+          "animals",
+          "comedy"
+        ],
+        "affinity": [
+          "animals",
+          "social"
+        ],
+        "weirdness": 0.5,
+        "silliness": 0.65
+      }
+    ],
+    "threat": [
+      {
+        "id": "hungry-dragon",
+        "label": "Hungry dragon",
+        "forms": {
+          "noun": "a hungry dragon",
+          "clause": "a dragon circles a little closer every night"
+        },
+        "tags": [
+          "fantasy",
+          "animals",
+          "combat"
+        ],
+        "affinity": [
+          "medieval",
+          "town"
+        ],
+        "weirdness": 0.2,
+        "silliness": 0.3
+      },
+      {
+        "id": "spreading-curse",
+        "label": "Spreading curse",
+        "forms": {
+          "noun": "a spreading curse",
+          "clause": "the curse claims one more villager every dawn"
+        },
+        "tags": [
+          "fantasy",
+          "magic",
+          "horror"
+        ],
+        "affinity": [
+          "magic",
+          "horror"
+        ],
+        "weirdness": 0.3,
+        "silliness": 0.2
+      },
+      {
+        "id": "dark-lord-s-tax-collectors",
+        "label": "Dark Lord's tax collectors",
+        "forms": {
+          "noun": "the Dark Lord's tax collectors",
+          "clause": "the Dark Lord's tax collectors arrive every full moon"
+        },
+        "tags": [
+          "fantasy",
+          "bureaucracy",
+          "comedy"
+        ],
+        "affinity": [
+          "management",
+          "trade",
+          "bureaucracy"
+        ],
+        "weirdness": 0.45,
+        "silliness": 0.6
+      },
+      {
+        "id": "wild-magic",
+        "label": "Wild magic",
+        "forms": {
+          "noun": "wild magic",
+          "clause": "wild magic leaks out of every unattended spell"
+        },
+        "tags": [
+          "fantasy",
+          "magic",
+          "chaos"
+        ],
+        "affinity": [
+          "magic",
+          "chaos"
+        ],
+        "weirdness": 0.45,
+        "silliness": 0.4
+      },
+      {
+        "id": "adventurer-strike",
+        "label": "Adventurer strike",
+        "forms": {
+          "noun": "an adventurers' strike",
+          "clause": "the adventurers' union is threatening to strike"
+        },
+        "tags": [
+          "fantasy",
+          "social",
+          "bureaucracy"
+        ],
+        "affinity": [
+          "management",
+          "social"
+        ],
+        "weirdness": 0.55,
+        "silliness": 0.65
+      },
+      {
+        "id": "rival-wizard",
+        "label": "Rival wizard",
+        "forms": {
+          "noun": "a petty rival wizard",
+          "clause": "a rival wizard keeps renaming all of your spells"
+        },
+        "tags": [
+          "fantasy",
+          "magic",
+          "social",
+          "comedy"
+        ],
+        "affinity": [
+          "magic"
+        ],
+        "weirdness": 0.45,
+        "silliness": 0.65
+      },
+      {
+        "id": "prophecy-deadline",
+        "label": "Prophecy deadline",
+        "forms": {
+          "noun": "an expiring prophecy",
+          "clause": "the prophecy expires at the end of the week"
+        },
+        "tags": [
+          "fantasy",
+          "time",
+          "narrative",
+          "magic"
+        ],
+        "affinity": [
+          "time",
+          "narrative"
+        ],
+        "weirdness": 0.4,
+        "silliness": 0.45
+      },
+      {
+        "id": "unionised-goblins",
+        "label": "Unionised goblins",
+        "forms": {
+          "noun": "a goblin labour dispute",
+          "clause": "the goblins have unionised and they want dental"
+        },
+        "tags": [
+          "fantasy",
+          "social",
+          "absurd"
+        ],
+        "affinity": [
+          "management",
+          "underground"
+        ],
+        "weirdness": 0.65,
+        "silliness": 0.75
+      }
+    ],
+    "resource": [
+      {
+        "id": "mana",
+        "label": "Mana",
+        "forms": {
+          "noun": "mana"
+        },
+        "tags": [
+          "fantasy",
+          "magic"
+        ],
+        "affinity": [
+          "magic"
+        ],
+        "weirdness": 0.05,
+        "silliness": 0.2
+      },
+      {
+        "id": "dragon-gold",
+        "label": "Dragon gold",
+        "forms": {
+          "noun": "dragon gold"
+        },
+        "tags": [
+          "fantasy",
+          "trade"
+        ],
+        "affinity": [
+          "trade",
+          "animals"
+        ],
+        "weirdness": 0.2,
+        "silliness": 0.35
+      },
+      {
+        "id": "potion-reagents",
+        "label": "Potion reagents",
+        "forms": {
+          "noun": "potion reagents"
+        },
+        "tags": [
+          "fantasy",
+          "crafting",
+          "magic"
+        ],
+        "affinity": [
+          "crafting"
+        ],
+        "weirdness": 0.1,
+        "silliness": 0.25
+      },
+      {
+        "id": "guild-favours",
+        "label": "Guild favours",
+        "forms": {
+          "noun": "guild favours"
+        },
+        "tags": [
+          "fantasy",
+          "social"
+        ],
+        "affinity": [
+          "social"
+        ],
+        "weirdness": 0.2,
+        "silliness": 0.3
+      }
+    ],
+    "mood": [
+      {
+        "id": "whimsical",
+        "label": "Whimsical",
+        "forms": {
+          "adj": "whimsical"
+        },
+        "tags": [
+          "fantasy",
+          "cozy",
+          "comedy"
+        ],
+        "affinity": [
+          "cozy",
+          "forest"
+        ],
+        "weirdness": 0.15,
+        "silliness": 0.6
+      },
+      {
+        "id": "mock-epic",
+        "label": "Mock-epic",
+        "forms": {
+          "adj": "mock-epic"
+        },
+        "tags": [
+          "fantasy",
+          "comedy",
+          "epic"
+        ],
+        "affinity": [
+          "epic"
+        ],
+        "weirdness": 0.25,
+        "silliness": 0.7
+      },
+      {
+        "id": "grimly-enchanting",
+        "label": "Grimly enchanting",
+        "forms": {
+          "adj": "grimly enchanting"
+        },
+        "tags": [
+          "fantasy",
+          "grim",
+          "magic"
+        ],
+        "affinity": [
+          "horror",
+          "forest"
+        ],
+        "weirdness": 0.2,
+        "silliness": 0.15
+      },
+      {
+        "id": "heroically-incompetent",
+        "label": "Heroically incompetent",
+        "forms": {
+          "adj": "heroically incompetent"
+        },
+        "tags": [
+          "fantasy",
+          "comedy",
+          "absurd"
+        ],
+        "affinity": [
+          "combat"
+        ],
+        "weirdness": 0.4,
+        "silliness": 0.85
+      },
+      {
+        "id": "earnestly-heroic",
+        "label": "Earnestly heroic",
+        "forms": {
+          "adj": "earnestly heroic"
+        },
+        "tags": [
+          "fantasy",
+          "epic",
+          "wholesome"
+        ],
+        "affinity": [
+          "epic"
+        ],
+        "weirdness": 0.05,
+        "silliness": 0.25
+      },
+      {
+        "id": "fairy-tale-bittersweet",
+        "label": "Fairy-tale bittersweet",
+        "forms": {
+          "adj": "fairy-tale bittersweet"
+        },
+        "tags": [
+          "fantasy",
+          "melancholy"
+        ],
+        "affinity": [
+          "narrative",
+          "forest"
+        ],
+        "weirdness": 0.15,
+        "silliness": 0.2
+      }
+    ],
+    "visual": [
+      {
+        "id": "manuscript-margins",
+        "label": "Manuscript margins",
+        "forms": {
+          "noun": "illuminated-manuscript margin doodles"
+        },
+        "tags": [
+          "fantasy",
+          "art",
+          "historical",
+          "medieval"
+        ],
+        "affinity": [
+          "medieval",
+          "comedy"
+        ],
+        "weirdness": 0.4,
+        "silliness": 0.55
+      },
+      {
+        "id": "storybook-watercolours",
+        "label": "Storybook watercolours",
+        "forms": {
+          "noun": "storybook watercolours"
+        },
+        "tags": [
+          "fantasy",
+          "art",
+          "cozy"
+        ],
+        "affinity": [
+          "cozy",
+          "forest"
+        ],
+        "weirdness": 0.1,
+        "silliness": 0.3
+      },
+      {
+        "id": "glowy-pixel-art",
+        "label": "Glowy pixel art",
+        "forms": {
+          "noun": "chunky pixel art with glowing spell effects"
+        },
+        "tags": [
+          "fantasy",
+          "retro",
+          "magic"
+        ],
+        "affinity": [
+          "magic"
+        ],
+        "weirdness": 0.1,
+        "silliness": 0.35
+      },
+      {
+        "id": "stained-glass",
+        "label": "Stained glass",
+        "forms": {
+          "noun": "stained-glass panels that shatter on every hit"
+        },
+        "tags": [
+          "fantasy",
+          "art",
+          "religion"
+        ],
+        "affinity": [
+          "epic"
+        ],
+        "weirdness": 0.35,
+        "silliness": 0.4
+      },
+      {
+        "id": "candlelit-miniatures",
+        "label": "Candlelit miniatures",
+        "forms": {
+          "noun": "tabletop miniatures under candlelight"
+        },
+        "tags": [
+          "fantasy",
+          "art",
+          "cozy"
+        ],
+        "affinity": [
+          "strategy"
+        ],
+        "weirdness": 0.2,
+        "silliness": 0.3
+      },
+      {
+        "id": "felt-puppets",
+        "label": "Felt puppets",
+        "forms": {
+          "noun": "felt-and-yarn puppetry"
+        },
+        "tags": [
+          "fantasy",
+          "art",
+          "comedy"
+        ],
+        "affinity": [
+          "cozy",
+          "comedy"
+        ],
+        "weirdness": 0.4,
+        "silliness": 0.7
+      }
+    ],
+    "twist": [
+      {
+        "id": "dragon-read-the-contract",
+        "label": "Dragon read the contract",
+        "forms": {
+          "clause": "the dragon is the only one who actually read the contract"
+        },
+        "tags": [
+          "fantasy",
+          "bureaucracy",
+          "comedy"
+        ],
+        "affinity": [
+          "bureaucracy",
+          "trade"
+        ],
+        "weirdness": 0.5,
+        "silliness": 0.65
+      },
+      {
+        "id": "former-intern",
+        "label": "Former intern",
+        "forms": {
+          "clause": "you used to be the Dark Lord's intern"
+        },
+        "tags": [
+          "fantasy",
+          "narrative",
+          "office"
+        ],
+        "affinity": [
+          "office",
+          "narrative"
+        ],
+        "weirdness": 0.5,
+        "silliness": 0.6
+      },
+      {
+        "id": "clerical-chosen-one",
+        "label": "Clerical chosen one",
+        "forms": {
+          "clause": "the chosen one was chosen because of a clerical error"
+        },
+        "tags": [
+          "fantasy",
+          "bureaucracy",
+          "narrative"
+        ],
+        "affinity": [
+          "bureaucracy"
+        ],
+        "weirdness": 0.45,
+        "silliness": 0.6
+      },
+      {
+        "id": "spells-age-the-teacher",
+        "label": "Spells age the teacher",
+        "forms": {
+          "clause": "every spell you cast ages the wizard who taught it to you"
+        },
+        "tags": [
+          "fantasy",
+          "magic",
+          "melancholy"
+        ],
+        "affinity": [
+          "magic",
+          "death"
+        ],
+        "weirdness": 0.5,
+        "silliness": 0.25
+      },
+      {
+        "id": "dragon-s-dream",
+        "label": "Dragon's dream",
+        "forms": {
+          "clause": "the whole kingdom is a dragon's dream and the dragon is waking up"
+        },
+        "tags": [
+          "fantasy",
+          "magic",
+          "cosmic"
+        ],
+        "affinity": [
+          "magic",
+          "mystery"
+        ],
+        "weirdness": 0.75,
+        "silliness": 0.3
+      },
+      {
+        "id": "princess-hired-the-dragon",
+        "label": "Princess hired the dragon",
+        "forms": {
+          "clause": "the princess hired the dragon and has excellent reasons"
+        },
+        "tags": [
+          "fantasy",
+          "narrative",
+          "romance"
+        ],
+        "affinity": [
+          "narrative",
+          "social"
+        ],
+        "weirdness": 0.5,
+        "silliness": 0.5
+      },
+      {
+        "id": "dungeon-wants-a-promotion",
+        "label": "Dungeon wants a promotion",
+        "forms": {
+          "clause": "the dungeon is alive and it wants a promotion"
+        },
+        "tags": [
+          "fantasy",
+          "underground",
+          "absurd",
+          "office"
+        ],
+        "affinity": [
+          "underground",
+          "management"
+        ],
+        "weirdness": 0.75,
+        "silliness": 0.75
+      }
+    ],
+    "titleFirst": [
+      {
+        "id": "dragon",
+        "label": "Dragon",
+        "tags": [
+          "fantasy",
+          "animals",
+          "epic",
+          "combat"
+        ],
+        "weirdness": 0.05,
+        "silliness": 0.2
+      },
+      {
+        "id": "crown",
+        "label": "Crown",
+        "tags": [
+          "fantasy",
+          "medieval",
+          "epic",
+          "social"
+        ],
+        "weirdness": 0.05,
+        "silliness": 0.15
+      },
+      {
+        "id": "hex",
+        "label": "Hex",
+        "tags": [
+          "fantasy",
+          "magic",
+          "horror"
+        ],
+        "weirdness": 0.15,
+        "silliness": 0.2
+      },
+      {
+        "id": "rune",
+        "label": "Rune",
+        "tags": [
+          "fantasy",
+          "magic",
+          "puzzle"
+        ],
+        "weirdness": 0.1,
+        "silliness": 0.15
+      },
+      {
+        "id": "wyrm",
+        "label": "Wyrm",
+        "tags": [
+          "fantasy",
+          "animals",
+          "epic",
+          "underground"
+        ],
+        "weirdness": 0.1,
+        "silliness": 0.15
+      },
+      {
+        "id": "goblin",
+        "label": "Goblin",
+        "tags": [
+          "fantasy",
+          "comedy",
+          "underground",
+          "trade"
+        ],
+        "weirdness": 0.3,
+        "silliness": 0.6
+      },
+      {
+        "id": "cursed",
+        "label": "Cursed",
+        "tags": [
+          "fantasy",
+          "magic",
+          "horror",
+          "mystery"
+        ],
+        "weirdness": 0.15,
+        "silliness": 0.2
+      },
+      {
+        "id": "gilded",
+        "label": "Gilded",
+        "tags": [
+          "fantasy",
+          "trade",
+          "epic"
+        ],
+        "weirdness": 0.1,
+        "silliness": 0.2
+      },
+      {
+        "id": "thorn",
+        "label": "Thorn",
+        "tags": [
+          "fantasy",
+          "forest",
+          "nature",
+          "grim"
+        ],
+        "weirdness": 0.15,
+        "silliness": 0.15
+      },
+      {
+        "id": "wizard",
+        "label": "Wizard",
+        "tags": [
+          "fantasy",
+          "magic",
+          "comedy"
+        ],
+        "weirdness": 0.1,
+        "silliness": 0.4
+      },
+      {
+        "id": "ember",
+        "label": "Ember",
+        "tags": [
+          "fantasy",
+          "magic",
+          "combat",
+          "heat"
+        ],
+        "weirdness": 0.1,
+        "silliness": 0.15
+      },
+      {
+        "id": "iron",
+        "label": "Iron",
+        "tags": [
+          "fantasy",
+          "combat",
+          "medieval",
+          "crafting"
+        ],
+        "weirdness": 0.05,
+        "silliness": 0.1
+      },
+      {
+        "id": "moonlit",
+        "label": "Moonlit",
+        "tags": [
+          "fantasy",
+          "magic",
+          "forest",
+          "melancholy"
+        ],
+        "weirdness": 0.15,
+        "silliness": 0.15
+      },
+      {
+        "id": "spellbound",
+        "label": "Spellbound",
+        "tags": [
+          "fantasy",
+          "magic",
+          "romance"
+        ],
+        "weirdness": 0.2,
+        "silliness": 0.3
+      },
+      {
+        "id": "tavern",
+        "label": "Tavern",
+        "tags": [
+          "fantasy",
+          "food",
+          "social",
+          "cozy"
+        ],
+        "weirdness": 0.15,
+        "silliness": 0.45
+      }
+    ],
+    "titleLast": [
+      {
+        "id": "hoard",
+        "label": "Hoard",
+        "tags": [
+          "fantasy",
+          "trade",
+          "animals"
+        ],
+        "weirdness": 0.1,
+        "silliness": 0.25
+      },
+      {
+        "id": "quest",
+        "label": "Quest",
+        "tags": [
+          "fantasy",
+          "exploration",
+          "epic"
+        ],
+        "weirdness": 0.05,
+        "silliness": 0.3
+      },
+      {
+        "id": "grimoire",
+        "label": "Grimoire",
+        "tags": [
+          "fantasy",
+          "magic",
+          "mystery"
+        ],
+        "weirdness": 0.1,
+        "silliness": 0.15
+      },
+      {
+        "id": "crown",
+        "label": "Crown",
+        "tags": [
+          "fantasy",
+          "medieval",
+          "social",
+          "epic"
+        ],
+        "weirdness": 0.05,
+        "silliness": 0.15
+      },
+      {
+        "id": "curse",
+        "label": "Curse",
+        "tags": [
+          "fantasy",
+          "magic",
+          "horror"
+        ],
+        "weirdness": 0.1,
+        "silliness": 0.15
+      },
+      {
+        "id": "tower",
+        "label": "Tower",
+        "tags": [
+          "fantasy",
+          "magic",
+          "building"
+        ],
+        "weirdness": 0.05,
+        "silliness": 0.15
+      },
+      {
+        "id": "guild",
+        "label": "Guild",
+        "tags": [
+          "fantasy",
+          "social",
+          "management"
+        ],
+        "weirdness": 0.05,
+        "silliness": 0.25
+      },
+      {
+        "id": "saga",
+        "label": "Saga",
+        "tags": [
+          "fantasy",
+          "epic",
+          "narrative"
+        ],
+        "weirdness": 0.05,
+        "silliness": 0.15
+      },
+      {
+        "id": "familiar",
+        "label": "Familiar",
+        "tags": [
+          "fantasy",
+          "animals",
+          "magic"
+        ],
+        "weirdness": 0.15,
+        "silliness": 0.3
+      },
+      {
+        "id": "dungeon",
+        "label": "Dungeon",
+        "tags": [
+          "fantasy",
+          "underground",
+          "combat"
+        ],
+        "weirdness": 0.05,
+        "silliness": 0.2
+      },
+      {
+        "id": "oath",
+        "label": "Oath",
+        "tags": [
+          "fantasy",
+          "combat",
+          "medieval",
+          "epic"
+        ],
+        "weirdness": 0.05,
+        "silliness": 0.1
+      },
+      {
+        "id": "ledger",
+        "label": "Ledger",
+        "tags": [
+          "fantasy",
+          "trade",
+          "bureaucracy",
+          "comedy"
+        ],
+        "weirdness": 0.3,
+        "silliness": 0.5
+      },
+      {
+        "id": "prophecy",
+        "label": "Prophecy",
+        "tags": [
+          "fantasy",
+          "magic",
+          "narrative",
+          "time"
+        ],
+        "weirdness": 0.15,
+        "silliness": 0.2
+      },
+      {
+        "id": "squire",
+        "label": "Squire",
+        "tags": [
+          "fantasy",
+          "medieval",
+          "comedy"
+        ],
+        "weirdness": 0.15,
+        "silliness": 0.45
+      },
+      {
+        "id": "kingdom",
+        "label": "Kingdom",
+        "tags": [
+          "fantasy",
+          "medieval",
+          "strategy",
+          "building"
+        ],
+        "weirdness": 0.05,
+        "silliness": 0.15
+      }
+    ],
+    "creep": [
+      {
+        "id": "dragon-courtship",
+        "label": "Dragon courtship",
+        "kind": "whyNot",
+        "complexity": 4,
+        "forms": {
+          "pitch": "The dragon develops feelings for your {protagonist.noun} and expects to be taken on dates.",
+          "connects": "Every date costs {resource.noun}, and every rejection costs the village."
+        },
+        "tags": [
+          "fantasy",
+          "romance",
+          "animals",
+          "social"
+        ],
+        "affinity": [
+          "romance",
+          "animals"
+        ],
+        "weirdness": 0.6,
+        "silliness": 0.75
+      },
+      {
+        "id": "guild-reputation",
+        "label": "Guild reputation",
+        "kind": "system",
+        "complexity": 5,
+        "forms": {
+          "pitch": "Every guild tracks how much it likes you, and all of them gossip.",
+          "connects": "Running short on {resource.noun} becomes a political scandal."
+        },
+        "tags": [
+          "fantasy",
+          "social",
+          "strategy"
+        ],
+        "affinity": [
+          "social",
+          "management"
+        ],
+        "weirdness": 0.2,
+        "silliness": 0.3
+      },
+      {
+        "id": "tavern-between-quests",
+        "label": "Tavern between quests",
+        "kind": "loop",
+        "complexity": 5,
+        "forms": {
+          "pitch": "Run a tavern between quests and serve drinks to the people you just rescued.",
+          "connects": "Rumours overheard at the bar make it easier to {objective.verb}."
+        },
+        "tags": [
+          "fantasy",
+          "food",
+          "social",
+          "management"
+        ],
+        "affinity": [
+          "food",
+          "social"
+        ],
+        "weirdness": 0.25,
+        "silliness": 0.4
+      },
+      {
+        "id": "a-hundred-more-spells",
+        "label": "A hundred more spells",
+        "kind": "content",
+        "complexity": 6,
+        "forms": {
+          "pitch": "Add a hundred more spells, most of them variations on \"fireball, but sideways\"."
+        },
+        "tags": [
+          "fantasy",
+          "magic",
+          "combat"
+        ],
+        "affinity": [
+          "magic"
+        ],
+        "weirdness": 0.3,
+        "silliness": 0.6
+      },
+      {
+        "id": "spell-side-effects",
+        "label": "Spell side effects",
+        "kind": "system",
+        "complexity": 4,
+        "forms": {
+          "pitch": "Every spell gets a random side effect, logged in a growing bestiary of mistakes.",
+          "connects": "The side effects make {threat.noun} wildly unpredictable."
+        },
+        "tags": [
+          "fantasy",
+          "magic",
+          "chaos"
+        ],
+        "affinity": [
+          "magic"
+        ],
+        "weirdness": 0.45,
+        "silliness": 0.55
+      },
+      {
+        "id": "rhyming-bard-narrator",
+        "label": "Rhyming bard narrator",
+        "kind": "whyNot",
+        "complexity": 3,
+        "forms": {
+          "pitch": "A bard follows your {protagonist.noun} everywhere and narrates every move, inaccurately, in rhyme."
+        },
+        "tags": [
+          "fantasy",
+          "music",
+          "narrative",
+          "comedy"
+        ],
+        "affinity": [
+          "music",
+          "comedy"
+        ],
+        "weirdness": 0.5,
+        "silliness": 0.8
+      },
+      {
+        "id": "build-the-next-dungeon",
+        "label": "Build the next dungeon",
+        "kind": "loop",
+        "complexity": 7,
+        "forms": {
+          "pitch": "Between runs, you design the dungeon the next {protagonist.noun} will have to raid.",
+          "connects": "Your own traps come back to haunt you when you {loop.verb}."
+        },
+        "tags": [
+          "fantasy",
+          "building",
+          "underground"
+        ],
+        "affinity": [
+          "underground",
+          "building"
+        ],
+        "weirdness": 0.35,
+        "silliness": 0.4
+      },
+      {
+        "id": "mount-stable",
+        "label": "Mount stable",
+        "kind": "system",
+        "complexity": 5,
+        "forms": {
+          "pitch": "Breed, feed and name a stable of mounts, including one deeply unsuitable goose."
+        },
+        "tags": [
+          "fantasy",
+          "animals",
+          "management"
+        ],
+        "affinity": [
+          "animals",
+          "farming"
+        ],
+        "weirdness": 0.35,
+        "silliness": 0.6
+      },
+      {
+        "id": "prophecy-calendar",
+        "label": "Prophecy calendar",
+        "kind": "content",
+        "complexity": 3,
+        "forms": {
+          "pitch": "A calendar of prophecies, each one a deadline you never agreed to.",
+          "connects": "Each fulfilled prophecy changes how {threat.noun} behaves."
+        },
+        "tags": [
+          "fantasy",
+          "time",
+          "narrative",
+          "magic"
+        ],
+        "affinity": [
+          "time",
+          "narrative"
+        ],
+        "weirdness": 0.4,
+        "silliness": 0.45
+      }
+    ]
+  },
+  "templates": {
+    "hook": [
+      {
+        "id": "once-upon",
+        "text": "Once upon a time, {setting.in}, [a] {protagonist.noun} had to {objective.verb}. It's [a] {genre.adj} {subgenre.noun}, and it does not end happily ever after.",
+        "weight": 0.9,
+        "tagsAny": [
+          "fantasy"
+        ]
+      },
+      {
+        "id": "hear-ye",
+        "text": "Hear ye: [a] {protagonist.noun} must {objective.verb} while {threat.clause}.",
+        "weight": 1,
+        "tagsAny": [
+          "fantasy"
+        ]
+      }
+    ],
+    "badIdea": [
+      {
+        "id": "wizards-complain",
+        "text": "The wizards' guild has already filed seventeen complaints about {mechanic.noun}.",
+        "weight": 1,
+        "tagsAny": [
+          "fantasy"
+        ]
+      }
+    ],
+    "mightWork": [
+      {
+        "id": "grudge",
+        "text": "But fantasy players love [a] {protagonist.noun} with a grudge, and {mechanic.noun} reads at a glance.",
+        "weight": 1,
+        "tagsAny": [
+          "fantasy"
+        ]
+      }
+    ]
+  }
+}

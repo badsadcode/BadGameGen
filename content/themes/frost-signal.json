@@ -1,0 +1,23 @@
+{
+  "id": "frost-signal",
+  "name": "Frost Signal",
+  "description": "Icy blues for long Baltic nights and crackling radios.",
+  "dark": true,
+  "colors": {
+    "bg": "#070d14",
+    "bgGlow": "#0c2236",
+    "surface": "#0f1924",
+    "surfaceRaised": "#16232f",
+    "border": "#24394b",
+    "text": "#e8f3fb",
+    "textMuted": "#8aa5b8",
+    "accent": "#3fb4e8",
+    "accentStrong": "#7fe0ff",
+    "accent2": "#6c8cff",
+    "glow": "rgba(127,224,255,0.3)",
+    "success": "#5fdcb4",
+    "warning": "#ffd27a",
+    "danger": "#ff6b7d",
+    "onAccent": "#04121c"
+  }
+}

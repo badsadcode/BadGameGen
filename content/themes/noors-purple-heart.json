@@ -1,0 +1,22 @@
+{
+  "id": "noors-purple-heart",
+  "name": "Noor's Purple Heart",
+  "description": "Lavender, violet and an unreasonable number of purple hearts. 💜",
+  "dark": true,
+  "colors": {
+    "bg": "#0e0a18",
+    "bgGlow": "#24154a",
+    "surface": "#171127",
+    "surfaceRaised": "#211936",
+    "border": "#382b5c",
+    "text": "#f1edff",
+    "textMuted": "#a89cc9",
+    "accent": "#9d6bff",
+    "accentStrong": "#c39bff",
+    "accent2": "#ff7bd5",
+    "glow": "rgba(195,155,255,0.35)",
+    "success": "#6fe3b0",
+    "warning": "#ffd479",
+    "danger": "#ff6d8a"
+  }
+}

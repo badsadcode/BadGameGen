@@ -1,0 +1,54 @@
+# Ideas & Roadmap
+
+## Shipped in v0.1.0, beyond the brief (Sage's creep 😏)
+
+- **Colour schemes.** Six built-in themes as JSON, and users can add their own.
+- **Recipe codes** (`BGG1-…`). Shareable codes that reproduce an idea exactly, including locks,
+  rerolls and accepted creep. Paste one into the seed box.
+- **Word seeds.** "crab office" is a perfectly valid seed.
+- **Bad Idea of the Day** (☀ button). The same idea for everyone with the same packs.
+- **Procedural cover art.** A seeded scene in theme colours that reacts to the concept: water
+  gets waves, towns get skylines, horror gets an eclipse. There's no image AI involved.
+- **Keep-on-reroll.** Rerolling one field changes exactly that field.
+- **Race sampling.** Enabling a new pack doesn't scramble everyone's old seeds.
+- **Reword.** Same ingredients, different sentences.
+- **Banish.** Exclude an item forever from the picker.
+- **Session history.** Back and forward through the ideas from this session.
+- **Codename** (`BG-418920-MC`). Encodes the seed, the scope letter and a creep flag.
+- **Creep kind filters.** The four chips on the Feature Creep card.
+- **Keyboard-first.** `G` generate, `R` reroll, `F` creep, `S` save, `?` for the rest.
+- **CLI** (`bgg`). For batch generation, plus pack validation in CI.
+
+## v0.2.x: smarter combinations
+
+- **Library editor in-app:** add or edit items with live form previews ("reads as: *set in a
+  half-flooded Baltic fishing town*").
+- **Per-category grammar checks:** warn when a protagonist starts with an article, a verb form
+  isn't base form, and so on.
+- **Weighted "themes" control:** slide Horror up and Cozy down without disabling packs.
+- **Constraint explanations:** "Space station excluded *drowning* because of `space` ↔ `water`".
+- **More templates per section:** about 10 hooks and 6 per pitch section, so wording varies more.
+- **Second-order creep:** creep items that react to *other accepted creep* ("Your boat system
+  now needs a harbour").
+
+## v0.3.x: packs and vault quality
+
+- Pack versions with migration notes. The vault already flags ideas whose packs changed.
+- Generation history log, plus "restore the idea I had 20 minutes ago".
+- Vault collections or boards, e.g. "Games of the Week shortlist".
+- Bulk export of the vault to one Markdown file.
+
+## Later / optional
+
+- **AI elaboration** (opt-in, never required): turn a saved concept into a one-page design doc.
+- **Games of the Week brief export:** a schedule-shaped template with day-by-day build steps
+  from the scope note.
+- **Mashup:** breed two vault ideas into a child concept that inherits locked fields from each.
+  *Very* on brand.
+- **Pitch roulette for streams:** a big-screen mode that spins ingredients like a slot machine.
+- **Noor Mode** 💜: Feature Creep is permanently on, and every idea gets a purple heart.
+
+## Out of scope (per the brief)
+
+Accounts, cloud sync, multiplayer, compulsory LLM calls, giant node graphs, project-management
+suites, automatic game creation, and generated artwork for every concept.

@@ -1,0 +1,11 @@
+bin/
+obj/
+node_modules/
+frontend/dist/
+.devdata/
+*.user
+.vs/
+.vscode/
+TestResults/
+src/BadGameGen.Desktop/wwwroot/
+src/BadGameGen.DevServer/wwwroot/

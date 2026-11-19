@@ -1,0 +1,22 @@
+{
+  "id": "arcade-sunset",
+  "name": "Arcade Sunset",
+  "description": "Synthwave orange and hot pink, straight out of a cabinet that eats coins.",
+  "dark": true,
+  "colors": {
+    "bg": "#120a10",
+    "bgGlow": "#3a1420",
+    "surface": "#1d1118",
+    "surfaceRaised": "#281821",
+    "border": "#45263a",
+    "text": "#fff0ea",
+    "textMuted": "#c09aa6",
+    "accent": "#ff6a3d",
+    "accentStrong": "#ffb03d",
+    "accent2": "#ff3d8b",
+    "glow": "rgba(255,138,61,0.32)",
+    "success": "#5fdc9a",
+    "warning": "#ffd23d",
+    "danger": "#ff4d5e"
+  }
+}

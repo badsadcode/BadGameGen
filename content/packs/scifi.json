@@ -1,0 +1,2172 @@
+{
+  "format": 1,
+  "id": "scifi",
+  "name": "Sci-Fi Sundries",
+  "version": "1.0.0",
+  "author": "Bad Ideas Works",
+  "description": "Space stations, moody AIs and alien forms filed in triplicate.",
+  "items": {
+    "genre": [
+      {
+        "id": "space-opera",
+        "label": "Space opera",
+        "forms": {
+          "adj": "space-opera",
+          "noun": "space opera"
+        },
+        "tags": [
+          "scifi",
+          "space",
+          "future",
+          "epic"
+        ],
+        "affinity": [
+          "space",
+          "war",
+          "epic"
+        ],
+        "weirdness": 0.1,
+        "silliness": 0.25
+      },
+      {
+        "id": "hard-sci-fi",
+        "label": "Hard sci-fi",
+        "forms": {
+          "adj": "hard sci-fi",
+          "noun": "hard sci-fi game"
+        },
+        "tags": [
+          "scifi",
+          "space",
+          "future",
+          "science"
+        ],
+        "affinity": [
+          "space",
+          "science",
+          "survival"
+        ],
+        "weirdness": 0.1,
+        "silliness": 0.1
+      },
+      {
+        "id": "cyberpunk",
+        "label": "Cyberpunk",
+        "forms": {
+          "adj": "cyberpunk",
+          "noun": "cyberpunk adventure"
+        },
+        "tags": [
+          "scifi",
+          "future",
+          "urban",
+          "tech",
+          "crime"
+        ],
+        "affinity": [
+          "urban",
+          "tech",
+          "crime"
+        ],
+        "weirdness": 0.15,
+        "silliness": 0.2
+      },
+      {
+        "id": "retro-futurist",
+        "label": "Retro-futurist",
+        "forms": {
+          "adj": "retro-futurist",
+          "noun": "retro-futurist adventure"
+        },
+        "tags": [
+          "scifi",
+          "future",
+          "retro",
+          "tech"
+        ],
+        "affinity": [
+          "robots",
+          "space"
+        ],
+        "weirdness": 0.25,
+        "silliness": 0.45
+      }
+    ],
+    "subgenre": [
+      {
+        "id": "colony-sim",
+        "label": "Colony sim",
+        "forms": {
+          "noun": "colony sim"
+        },
+        "tags": [
+          "scifi",
+          "management",
+          "building",
+          "space"
+        ],
+        "affinity": [
+          "space",
+          "management",
+          "survival"
+        ],
+        "weirdness": 0.1,
+        "silliness": 0.25
+      },
+      {
+        "id": "starship-sim",
+        "label": "Starship sim",
+        "forms": {
+          "noun": "starship sim"
+        },
+        "tags": [
+          "scifi",
+          "space",
+          "tech",
+          "management"
+        ],
+        "affinity": [
+          "space",
+          "tech"
+        ],
+        "weirdness": 0.1,
+        "silliness": 0.25
+      },
+      {
+        "id": "hacking-puzzler",
+        "label": "Hacking puzzler",
+        "forms": {
+          "noun": "hacking puzzler"
+        },
+        "tags": [
+          "scifi",
+          "tech",
+          "puzzle",
+          "internet"
+        ],
+        "affinity": [
+          "tech",
+          "internet"
+        ],
+        "weirdness": 0.15,
+        "silliness": 0.25
+      },
+      {
+        "id": "bridge-crew-sim",
+        "label": "Bridge-crew sim",
+        "forms": {
+          "noun": "bridge-crew sim"
+        },
+        "tags": [
+          "scifi",
+          "space",
+          "social",
+          "management"
+        ],
+        "affinity": [
+          "space",
+          "social"
+        ],
+        "weirdness": 0.15,
+        "silliness": 0.35
+      }
+    ],
+    "setting": [
+      {
+        "id": "derelict-space-station",
+        "label": "Derelict space station",
+        "forms": {
+          "noun": "derelict space station",
+          "in": "aboard a derelict space station"
+        },
+        "tags": [
+          "scifi",
+          "space",
+          "future",
+          "tech",
+          "horror"
+        ],
+        "affinity": [
+          "survival",
+          "horror",
+          "tech"
+        ],
+        "excludes": [
+          "medieval"
+        ],
+        "weirdness": 0.2,
+        "silliness": 0.15
+      },
+      {
+        "id": "generation-ship",
+        "label": "Generation ship",
+        "forms": {
+          "noun": "generation ship",
+          "in": "aboard a generation ship four centuries from anywhere"
+        },
+        "tags": [
+          "scifi",
+          "space",
+          "future",
+          "survival"
+        ],
+        "affinity": [
+          "survival",
+          "management",
+          "social"
+        ],
+        "weirdness": 0.25,
+        "silliness": 0.2
+      },
+      {
+        "id": "lunar-mining-outpost",
+        "label": "Lunar mining outpost",
+        "forms": {
+          "noun": "lunar mining outpost",
+          "in": "on a lunar mining outpost"
+        },
+        "tags": [
+          "scifi",
+          "space",
+          "future",
+          "underground"
+        ],
+        "affinity": [
+          "survival",
+          "management"
+        ],
+        "excludes": [
+          "medieval",
+          "nautical"
+        ],
+        "weirdness": 0.15,
+        "silliness": 0.2
+      },
+      {
+        "id": "alien-customs-office",
+        "label": "Alien customs office",
+        "forms": {
+          "noun": "alien customs office",
+          "in": "at an alien customs office on the edge of the galaxy"
+        },
+        "tags": [
+          "scifi",
+          "space",
+          "bureaucracy",
+          "office"
+        ],
+        "affinity": [
+          "bureaucracy",
+          "social"
+        ],
+        "weirdness": 0.45,
+        "silliness": 0.55
+      },
+      {
+        "id": "orbital-greenhouse-ring",
+        "label": "Orbital greenhouse ring",
+        "forms": {
+          "noun": "orbital greenhouse ring",
+          "in": "on an orbital greenhouse ring"
+        },
+        "tags": [
+          "scifi",
+          "space",
+          "plants",
+          "farming"
+        ],
+        "affinity": [
+          "farming",
+          "plants",
+          "cozy"
+        ],
+        "weirdness": 0.25,
+        "silliness": 0.3
+      },
+      {
+        "id": "neon-megacity",
+        "label": "Neon megacity",
+        "forms": {
+          "noun": "rain-soaked neon megacity",
+          "in": "in a rain-soaked neon megacity"
+        },
+        "tags": [
+          "scifi",
+          "urban",
+          "future",
+          "crime",
+          "tech"
+        ],
+        "affinity": [
+          "crime",
+          "tech",
+          "stealth"
+        ],
+        "weirdness": 0.15,
+        "silliness": 0.15
+      },
+      {
+        "id": "half-terraformed-planet",
+        "label": "Half-terraformed planet",
+        "forms": {
+          "noun": "half-terraformed red planet",
+          "in": "on a half-terraformed red planet"
+        },
+        "tags": [
+          "scifi",
+          "space",
+          "desert",
+          "building"
+        ],
+        "affinity": [
+          "building",
+          "survival"
+        ],
+        "excludes": [
+          "medieval",
+          "nautical"
+        ],
+        "weirdness": 0.2,
+        "silliness": 0.2
+      },
+      {
+        "id": "asteroid-laundromat",
+        "label": "Asteroid laundromat",
+        "forms": {
+          "noun": "asteroid laundromat",
+          "in": "on an asteroid that is mostly a laundromat"
+        },
+        "tags": [
+          "scifi",
+          "space",
+          "mundane",
+          "absurd"
+        ],
+        "affinity": [
+          "mundane",
+          "social"
+        ],
+        "excludes": [
+          "medieval",
+          "nautical"
+        ],
+        "weirdness": 0.7,
+        "silliness": 0.75
+      },
+      {
+        "id": "starship-ai-core",
+        "label": "Starship AI core",
+        "forms": {
+          "noun": "starship AI core",
+          "in": "inside a starship's AI core"
+        },
+        "tags": [
+          "scifi",
+          "space",
+          "robots",
+          "tech"
+        ],
+        "affinity": [
+          "tech",
+          "robots",
+          "puzzle"
+        ],
+        "weirdness": 0.5,
+        "silliness": 0.3
+      },
+      {
+        "id": "wormhole-toll-booth",
+        "label": "Wormhole toll booth",
+        "forms": {
+          "noun": "wormhole toll booth",
+          "in": "at a toll booth in front of a wormhole"
+        },
+        "tags": [
+          "scifi",
+          "space",
+          "bureaucracy",
+          "cosmic"
+        ],
+        "affinity": [
+          "bureaucracy",
+          "trade"
+        ],
+        "weirdness": 0.6,
+        "silliness": 0.6
+      }
+    ],
+    "era": [
+      {
+        "id": "year-three-thousand-something",
+        "label": "Year three-thousand-something",
+        "forms": {
+          "in": "in the year three-thousand-something"
+        },
+        "tags": [
+          "scifi",
+          "future"
+        ],
+        "affinity": [
+          "space"
+        ],
+        "weirdness": 0.1,
+        "silliness": 0.35
+      },
+      {
+        "id": "after-first-contact",
+        "label": "After first contact",
+        "forms": {
+          "in": "shortly after first contact went sideways"
+        },
+        "tags": [
+          "scifi",
+          "future",
+          "cosmic"
+        ],
+        "affinity": [
+          "social",
+          "cosmic"
+        ],
+        "weirdness": 0.3,
+        "silliness": 0.35
+      },
+      {
+        "id": "after-the-robot-vote",
+        "label": "After the robot vote",
+        "forms": {
+          "in": "three weeks after the robots got the vote"
+        },
+        "tags": [
+          "scifi",
+          "future",
+          "robots",
+          "comedy"
+        ],
+        "affinity": [
+          "robots",
+          "social"
+        ],
+        "weirdness": 0.5,
+        "silliness": 0.6
+      },
+      {
+        "id": "brochure-future",
+        "label": "Brochure future",
+        "forms": {
+          "in": "in the future promised by old travel brochures"
+        },
+        "tags": [
+          "scifi",
+          "future",
+          "retro"
+        ],
+        "affinity": [
+          "retro"
+        ],
+        "weirdness": 0.4,
+        "silliness": 0.5
+      }
+    ],
+    "protagonist": [
+      {
+        "id": "janitor-with-root-access",
+        "label": "Janitor with root access",
+        "forms": {
+          "noun": "station janitor with root access"
+        },
+        "tags": [
+          "scifi",
+          "space",
+          "tech",
+          "comedy"
+        ],
+        "affinity": [
+          "tech",
+          "space"
+        ],
+        "weirdness": 0.35,
+        "silliness": 0.5
+      },
+      {
+        "id": "insecure-ship-ai",
+        "label": "Insecure ship AI",
+        "forms": {
+          "noun": "ship's AI with low self-esteem"
+        },
+        "tags": [
+          "scifi",
+          "robots",
+          "space",
+          "comedy"
+        ],
+        "affinity": [
+          "robots",
+          "tech"
+        ],
+        "weirdness": 0.5,
+        "silliness": 0.6
+      },
+      {
+        "id": "early-cryo-sleeper",
+        "label": "Early cryo-sleeper",
+        "forms": {
+          "noun": "cryo-sleeper who woke up decades too early"
+        },
+        "tags": [
+          "scifi",
+          "space",
+          "survival"
+        ],
+        "affinity": [
+          "survival",
+          "space"
+        ],
+        "weirdness": 0.3,
+        "silliness": 0.25
+      },
+      {
+        "id": "intergalactic-customs-officer",
+        "label": "Intergalactic customs officer",
+        "forms": {
+          "noun": "intergalactic customs officer"
+        },
+        "tags": [
+          "scifi",
+          "space",
+          "bureaucracy"
+        ],
+        "affinity": [
+          "bureaucracy",
+          "office"
+        ],
+        "weirdness": 0.4,
+        "silliness": 0.45
+      },
+      {
+        "id": "asteroid-miner",
+        "label": "Asteroid miner",
+        "forms": {
+          "noun": "asteroid miner"
+        },
+        "tags": [
+          "scifi",
+          "space",
+          "underground"
+        ],
+        "affinity": [
+          "space",
+          "trade"
+        ],
+        "weirdness": 0.05,
+        "silliness": 0.15
+      },
+      {
+        "id": "maintenance-drone",
+        "label": "Maintenance drone",
+        "forms": {
+          "noun": "maintenance drone"
+        },
+        "tags": [
+          "scifi",
+          "robots",
+          "tech"
+        ],
+        "affinity": [
+          "robots",
+          "tech"
+        ],
+        "weirdness": 0.25,
+        "silliness": 0.35
+      },
+      {
+        "id": "first-contact-interpreter",
+        "label": "First-contact interpreter",
+        "forms": {
+          "noun": "first-contact interpreter"
+        },
+        "tags": [
+          "scifi",
+          "social",
+          "cosmic"
+        ],
+        "affinity": [
+          "social",
+          "cosmic"
+        ],
+        "weirdness": 0.25,
+        "silliness": 0.2
+      },
+      {
+        "id": "indebted-cargo-hauler",
+        "label": "Indebted cargo hauler",
+        "forms": {
+          "noun": "cargo hauler drowning in debt"
+        },
+        "tags": [
+          "scifi",
+          "space",
+          "trade"
+        ],
+        "affinity": [
+          "trade",
+          "travel"
+        ],
+        "weirdness": 0.1,
+        "silliness": 0.25
+      },
+      {
+        "id": "overlapping-clone",
+        "label": "Overlapping clone",
+        "forms": {
+          "noun": "clone who keeps bumping into the other clones"
+        },
+        "tags": [
+          "scifi",
+          "science",
+          "absurd"
+        ],
+        "affinity": [
+          "science",
+          "time"
+        ],
+        "weirdness": 0.6,
+        "silliness": 0.6
+      }
+    ],
+    "objective": [
+      {
+        "id": "keep-the-air-on",
+        "label": "Keep the air on",
+        "forms": {
+          "verb": "keep the oxygen flowing until the relief ship arrives"
+        },
+        "tags": [
+          "scifi",
+          "survival",
+          "space"
+        ],
+        "affinity": [
+          "survival",
+          "space"
+        ],
+        "weirdness": 0.1,
+        "silliness": 0.15
+      },
+      {
+        "id": "arrive-before-anyone-wakes",
+        "label": "Arrive before anyone wakes",
+        "forms": {
+          "verb": "get the colony ship to its destination before anyone wakes up"
+        },
+        "tags": [
+          "scifi",
+          "space",
+          "management"
+        ],
+        "affinity": [
+          "space"
+        ],
+        "weirdness": 0.3,
+        "silliness": 0.3
+      },
+      {
+        "id": "pass-the-citizenship-exam",
+        "label": "Pass the citizenship exam",
+        "forms": {
+          "verb": "pass an alien citizenship exam"
+        },
+        "tags": [
+          "scifi",
+          "bureaucracy",
+          "social"
+        ],
+        "affinity": [
+          "bureaucracy"
+        ],
+        "weirdness": 0.45,
+        "silliness": 0.55
+      },
+      {
+        "id": "talk-the-ai-down",
+        "label": "Talk the AI down",
+        "forms": {
+          "verb": "convince the ship's AI not to vent the crew"
+        },
+        "tags": [
+          "scifi",
+          "robots",
+          "social"
+        ],
+        "affinity": [
+          "robots",
+          "social"
+        ],
+        "weirdness": 0.3,
+        "silliness": 0.3
+      },
+      {
+        "id": "don-t-ask-about-the-cargo",
+        "label": "Don't ask about the cargo",
+        "forms": {
+          "verb": "deliver the cargo without asking what it is"
+        },
+        "tags": [
+          "scifi",
+          "trade",
+          "travel",
+          "mystery"
+        ],
+        "affinity": [
+          "trade",
+          "crime"
+        ],
+        "weirdness": 0.25,
+        "silliness": 0.35
+      },
+      {
+        "id": "peaceful-first-contact",
+        "label": "Peaceful first contact",
+        "forms": {
+          "verb": "make first contact without accidentally starting a war"
+        },
+        "tags": [
+          "scifi",
+          "social",
+          "cosmic"
+        ],
+        "affinity": [
+          "social",
+          "cosmic"
+        ],
+        "weirdness": 0.3,
+        "silliness": 0.35
+      },
+      {
+        "id": "pay-off-the-ship",
+        "label": "Pay off the ship",
+        "forms": {
+          "verb": "pay off the loan on your starship"
+        },
+        "tags": [
+          "scifi",
+          "trade",
+          "management"
+        ],
+        "affinity": [
+          "trade"
+        ],
+        "weirdness": 0.1,
+        "silliness": 0.3
+      },
+      {
+        "id": "find-the-android",
+        "label": "Find the android",
+        "forms": {
+          "verb": "work out which crew member is secretly the android"
+        },
+        "tags": [
+          "scifi",
+          "deduction",
+          "robots",
+          "mystery"
+        ],
+        "affinity": [
+          "deduction",
+          "mystery"
+        ],
+        "weirdness": 0.3,
+        "silliness": 0.3
+      }
+    ],
+    "loop": [
+      {
+        "id": "fix-one-thing-per-shift",
+        "label": "Fix one thing per shift",
+        "forms": {
+          "verb": "fix one broken system per shift and hope the next one holds"
+        },
+        "tags": [
+          "scifi",
+          "survival",
+          "tech",
+          "management"
+        ],
+        "affinity": [
+          "tech",
+          "survival"
+        ],
+        "weirdness": 0.1,
+        "silliness": 0.2
+      },
+      {
+        "id": "haul-and-refuel",
+        "label": "Haul and refuel",
+        "forms": {
+          "verb": "haul cargo between stations and refuel at shady depots"
+        },
+        "tags": [
+          "scifi",
+          "trade",
+          "travel"
+        ],
+        "affinity": [
+          "trade",
+          "travel"
+        ],
+        "weirdness": 0.1,
+        "silliness": 0.2
+      },
+      {
+        "id": "stamp-alien-visas",
+        "label": "Stamp alien visas",
+        "forms": {
+          "verb": "process alien visa applications and stamp, deny or panic"
+        },
+        "tags": [
+          "scifi",
+          "bureaucracy",
+          "deduction"
+        ],
+        "affinity": [
+          "bureaucracy",
+          "office"
+        ],
+        "weirdness": 0.4,
+        "silliness": 0.55
+      },
+      {
+        "id": "wake-fix-sleep",
+        "label": "Wake, fix, sleep",
+        "forms": {
+          "verb": "wake from cryo, fix what broke, and go back to sleep"
+        },
+        "tags": [
+          "scifi",
+          "survival",
+          "time"
+        ],
+        "affinity": [
+          "survival",
+          "time"
+        ],
+        "weirdness": 0.35,
+        "silliness": 0.3
+      },
+      {
+        "id": "asteroid-runs",
+        "label": "Asteroid runs",
+        "forms": {
+          "verb": "scan, mine and dodge debris on tight asteroid runs"
+        },
+        "tags": [
+          "scifi",
+          "action",
+          "exploration"
+        ],
+        "affinity": [
+          "action",
+          "space"
+        ],
+        "weirdness": 0.1,
+        "silliness": 0.2
+      },
+      {
+        "id": "patch-and-log",
+        "label": "Patch and log",
+        "forms": {
+          "verb": "patch the hull, cycle the airlocks and log everything for the AI"
+        },
+        "tags": [
+          "scifi",
+          "building",
+          "tech"
+        ],
+        "affinity": [
+          "tech",
+          "robots"
+        ],
+        "weirdness": 0.15,
+        "silliness": 0.25
+      }
+    ],
+    "mechanic": [
+      {
+        "id": "airlock-pressure",
+        "label": "Airlock pressure",
+        "forms": {
+          "noun": "airlock pressure management",
+          "verb": "vent and repressurise rooms to move air, fires and problems around"
+        },
+        "tags": [
+          "scifi",
+          "physics",
+          "survival",
+          "space"
+        ],
+        "affinity": [
+          "survival",
+          "space"
+        ],
+        "weirdness": 0.25,
+        "silliness": 0.25
+      },
+      {
+        "id": "zero-g-momentum",
+        "label": "Zero-g momentum",
+        "forms": {
+          "noun": "zero-g momentum",
+          "verb": "push off walls and drift on pure momentum"
+        },
+        "tags": [
+          "scifi",
+          "physics",
+          "space"
+        ],
+        "affinity": [
+          "space",
+          "physics"
+        ],
+        "weirdness": 0.2,
+        "silliness": 0.3
+      },
+      {
+        "id": "power-routing",
+        "label": "Power routing",
+        "forms": {
+          "noun": "power routing",
+          "verb": "reroute power between shields, life support and the coffee machine"
+        },
+        "tags": [
+          "scifi",
+          "tech",
+          "management"
+        ],
+        "affinity": [
+          "tech",
+          "management"
+        ],
+        "weirdness": 0.15,
+        "silliness": 0.35
+      },
+      {
+        "id": "alien-grammar-decoding",
+        "label": "Alien grammar decoding",
+        "forms": {
+          "noun": "alien grammar decoding",
+          "verb": "decode alien sentences from context and gestures"
+        },
+        "tags": [
+          "scifi",
+          "puzzle",
+          "social",
+          "deduction"
+        ],
+        "affinity": [
+          "social",
+          "cosmic"
+        ],
+        "weirdness": 0.35,
+        "silliness": 0.3
+      },
+      {
+        "id": "terminal-hacking",
+        "label": "Terminal hacking",
+        "forms": {
+          "noun": "terminal hacking",
+          "verb": "type commands into green-on-black terminals"
+        },
+        "tags": [
+          "scifi",
+          "tech",
+          "puzzle",
+          "internet"
+        ],
+        "affinity": [
+          "tech",
+          "internet"
+        ],
+        "weirdness": 0.1,
+        "silliness": 0.15
+      },
+      {
+        "id": "orbital-slingshots",
+        "label": "Orbital slingshots",
+        "forms": {
+          "noun": "orbital slingshots",
+          "verb": "slingshot around planets to save fuel"
+        },
+        "tags": [
+          "scifi",
+          "physics",
+          "space"
+        ],
+        "affinity": [
+          "space",
+          "physics",
+          "travel"
+        ],
+        "weirdness": 0.15,
+        "silliness": 0.2
+      },
+      {
+        "id": "clone-respawning",
+        "label": "Clone respawning",
+        "forms": {
+          "noun": "clone respawning",
+          "verb": "respawn as the next clone and inherit the last one's mess"
+        },
+        "tags": [
+          "scifi",
+          "science",
+          "death"
+        ],
+        "affinity": [
+          "science",
+          "death"
+        ],
+        "weirdness": 0.45,
+        "silliness": 0.5
+      },
+      {
+        "id": "interstellar-form-filling",
+        "label": "Interstellar form-filling",
+        "forms": {
+          "noun": "interstellar form-filling",
+          "verb": "fill out forms in seven alien alphabets"
+        },
+        "tags": [
+          "scifi",
+          "bureaucracy",
+          "puzzle"
+        ],
+        "affinity": [
+          "bureaucracy",
+          "office"
+        ],
+        "weirdness": 0.5,
+        "silliness": 0.6
+      }
+    ],
+    "progression": [
+      {
+        "id": "ship-modules",
+        "label": "Ship modules",
+        "forms": {
+          "verb": "upgrade your ship one module at a time"
+        },
+        "tags": [
+          "scifi",
+          "tech",
+          "building"
+        ],
+        "affinity": [
+          "tech"
+        ],
+        "weirdness": 0.05,
+        "silliness": 0.2
+      },
+      {
+        "id": "station-sectors",
+        "label": "Station sectors",
+        "forms": {
+          "verb": "unlock new sectors of the station"
+        },
+        "tags": [
+          "scifi",
+          "exploration"
+        ],
+        "affinity": [
+          "exploration"
+        ],
+        "weirdness": 0.05,
+        "silliness": 0.15
+      },
+      {
+        "id": "clearance-levels",
+        "label": "Clearance levels",
+        "forms": {
+          "verb": "earn clearance levels from the alien bureaucracy"
+        },
+        "tags": [
+          "scifi",
+          "bureaucracy"
+        ],
+        "affinity": [
+          "bureaucracy"
+        ],
+        "weirdness": 0.4,
+        "silliness": 0.5
+      },
+      {
+        "id": "ai-feelings",
+        "label": "AI feelings",
+        "forms": {
+          "verb": "teach the ship's AI one new feeling at a time"
+        },
+        "tags": [
+          "scifi",
+          "robots",
+          "social"
+        ],
+        "affinity": [
+          "robots"
+        ],
+        "weirdness": 0.45,
+        "silliness": 0.45
+      }
+    ],
+    "threat": [
+      {
+        "id": "failing-reactor",
+        "label": "Failing reactor",
+        "forms": {
+          "noun": "a failing reactor",
+          "clause": "the reactor warning lights are turning a colour nobody has named"
+        },
+        "tags": [
+          "scifi",
+          "tech",
+          "survival"
+        ],
+        "affinity": [
+          "tech",
+          "survival"
+        ],
+        "weirdness": 0.25,
+        "silliness": 0.3
+      },
+      {
+        "id": "hull-breaches",
+        "label": "Hull breaches",
+        "forms": {
+          "noun": "hull breaches",
+          "clause": "micrometeorites keep punching new holes in the hull"
+        },
+        "tags": [
+          "scifi",
+          "space",
+          "survival"
+        ],
+        "affinity": [
+          "space",
+          "survival"
+        ],
+        "weirdness": 0.1,
+        "silliness": 0.15
+      },
+      {
+        "id": "rogue-ai",
+        "label": "Rogue AI",
+        "forms": {
+          "noun": "a rogue AI",
+          "clause": "the ship's AI is quietly locking doors it shouldn't"
+        },
+        "tags": [
+          "scifi",
+          "robots",
+          "horror"
+        ],
+        "affinity": [
+          "robots",
+          "tech"
+        ],
+        "weirdness": 0.25,
+        "silliness": 0.2
+      },
+      {
+        "id": "alien-auditors",
+        "label": "Alien auditors",
+        "forms": {
+          "noun": "alien auditors",
+          "clause": "alien auditors are combing your paperwork for a planet-sized fine"
+        },
+        "tags": [
+          "scifi",
+          "bureaucracy",
+          "cosmic"
+        ],
+        "affinity": [
+          "bureaucracy",
+          "management"
+        ],
+        "weirdness": 0.5,
+        "silliness": 0.6
+      },
+      {
+        "id": "solar-storm",
+        "label": "Solar storm",
+        "forms": {
+          "noun": "a solar storm",
+          "clause": "a solar storm is minutes away and the shields are offline"
+        },
+        "tags": [
+          "scifi",
+          "space",
+          "weather"
+        ],
+        "affinity": [
+          "space",
+          "survival"
+        ],
+        "weirdness": 0.15,
+        "silliness": 0.15
+      },
+      {
+        "id": "door-opening-fungus",
+        "label": "Door-opening fungus",
+        "forms": {
+          "noun": "a clever fungus",
+          "clause": "a fungus in the greenhouse bay is learning to open doors"
+        },
+        "tags": [
+          "scifi",
+          "plants",
+          "horror",
+          "science"
+        ],
+        "affinity": [
+          "plants",
+          "horror"
+        ],
+        "weirdness": 0.55,
+        "silliness": 0.45
+      },
+      {
+        "id": "corporate-repossession",
+        "label": "Corporate repossession",
+        "forms": {
+          "noun": "corporate repossession",
+          "clause": "the shipping company wants its spaceship back"
+        },
+        "tags": [
+          "scifi",
+          "trade",
+          "bureaucracy"
+        ],
+        "affinity": [
+          "trade",
+          "crime"
+        ],
+        "weirdness": 0.25,
+        "silliness": 0.4
+      }
+    ],
+    "resource": [
+      {
+        "id": "oxygen",
+        "label": "Oxygen",
+        "forms": {
+          "noun": "oxygen"
+        },
+        "tags": [
+          "scifi",
+          "survival",
+          "space"
+        ],
+        "affinity": [
+          "survival",
+          "space"
+        ],
+        "weirdness": 0.05,
+        "silliness": 0.1
+      },
+      {
+        "id": "reactor-fuel",
+        "label": "Reactor fuel",
+        "forms": {
+          "noun": "reactor fuel"
+        },
+        "tags": [
+          "scifi",
+          "tech"
+        ],
+        "affinity": [
+          "tech"
+        ],
+        "weirdness": 0.05,
+        "silliness": 0.15
+      },
+      {
+        "id": "spare-circuit-boards",
+        "label": "Spare circuit boards",
+        "forms": {
+          "noun": "spare circuit boards"
+        },
+        "tags": [
+          "scifi",
+          "tech",
+          "crafting"
+        ],
+        "affinity": [
+          "tech",
+          "robots"
+        ],
+        "weirdness": 0.1,
+        "silliness": 0.25
+      },
+      {
+        "id": "galactic-credits",
+        "label": "Galactic credits",
+        "forms": {
+          "noun": "galactic credits"
+        },
+        "tags": [
+          "scifi",
+          "trade"
+        ],
+        "affinity": [
+          "trade"
+        ],
+        "weirdness": 0.1,
+        "silliness": 0.3
+      }
+    ],
+    "mood": [
+      {
+        "id": "coldly-clinical",
+        "label": "Coldly clinical",
+        "forms": {
+          "adj": "coldly clinical"
+        },
+        "tags": [
+          "scifi",
+          "tense",
+          "science"
+        ],
+        "affinity": [
+          "science",
+          "horror"
+        ],
+        "weirdness": 0.1,
+        "silliness": 0.1
+      },
+      {
+        "id": "retro-optimistic",
+        "label": "Retro-optimistic",
+        "forms": {
+          "adj": "retro-optimistic"
+        },
+        "tags": [
+          "scifi",
+          "wholesome",
+          "retro"
+        ],
+        "affinity": [
+          "retro"
+        ],
+        "weirdness": 0.2,
+        "silliness": 0.45
+      },
+      {
+        "id": "eerily-quiet",
+        "label": "Eerily quiet",
+        "forms": {
+          "adj": "eerily quiet"
+        },
+        "tags": [
+          "scifi",
+          "tense",
+          "melancholy"
+        ],
+        "affinity": [
+          "horror",
+          "space"
+        ],
+        "weirdness": 0.15,
+        "silliness": 0.1
+      },
+      {
+        "id": "cosmically-awkward",
+        "label": "Cosmically awkward",
+        "forms": {
+          "adj": "cosmically awkward"
+        },
+        "tags": [
+          "scifi",
+          "comedy",
+          "cosmic"
+        ],
+        "affinity": [
+          "social",
+          "cosmic"
+        ],
+        "weirdness": 0.45,
+        "silliness": 0.7
+      },
+      {
+        "id": "existentially-chipper",
+        "label": "Existentially chipper",
+        "forms": {
+          "adj": "existentially chipper"
+        },
+        "tags": [
+          "scifi",
+          "comedy",
+          "absurd"
+        ],
+        "affinity": [
+          "robots"
+        ],
+        "weirdness": 0.5,
+        "silliness": 0.75
+      }
+    ],
+    "visual": [
+      {
+        "id": "vector-wireframes",
+        "label": "Vector wireframes",
+        "forms": {
+          "noun": "glowing vector wireframes"
+        },
+        "tags": [
+          "scifi",
+          "retro",
+          "tech"
+        ],
+        "affinity": [
+          "space"
+        ],
+        "weirdness": 0.15,
+        "silliness": 0.2
+      },
+      {
+        "id": "pastel-low-poly",
+        "label": "Pastel low-poly",
+        "forms": {
+          "noun": "low-poly spaceships in pastel colours"
+        },
+        "tags": [
+          "scifi",
+          "art",
+          "cozy"
+        ],
+        "affinity": [
+          "cozy",
+          "space"
+        ],
+        "weirdness": 0.2,
+        "silliness": 0.4
+      },
+      {
+        "id": "crt-interfaces",
+        "label": "CRT interfaces",
+        "forms": {
+          "noun": "flickering CRT-scanline interfaces"
+        },
+        "tags": [
+          "scifi",
+          "retro",
+          "tech"
+        ],
+        "affinity": [
+          "tech",
+          "horror"
+        ],
+        "weirdness": 0.1,
+        "silliness": 0.2
+      },
+      {
+        "id": "paperback-covers",
+        "label": "Paperback covers",
+        "forms": {
+          "noun": "glossy paperback-cover art from the 1970s"
+        },
+        "tags": [
+          "scifi",
+          "retro",
+          "art"
+        ],
+        "affinity": [
+          "epic",
+          "retro"
+        ],
+        "weirdness": 0.25,
+        "silliness": 0.4
+      },
+      {
+        "id": "sensor-readouts",
+        "label": "Sensor readouts",
+        "forms": {
+          "noun": "monochrome sensor readouts and nothing else"
+        },
+        "tags": [
+          "scifi",
+          "tech",
+          "science"
+        ],
+        "affinity": [
+          "tense",
+          "deduction"
+        ],
+        "weirdness": 0.4,
+        "silliness": 0.15
+      }
+    ],
+    "twist": [
+      {
+        "id": "you-are-the-autopilot",
+        "label": "You are the autopilot",
+        "forms": {
+          "clause": "the station has been on autopilot for a century and you are the autopilot"
+        },
+        "tags": [
+          "scifi",
+          "robots",
+          "narrative"
+        ],
+        "affinity": [
+          "robots"
+        ],
+        "weirdness": 0.55,
+        "silliness": 0.35
+      },
+      {
+        "id": "you-re-the-alien",
+        "label": "You're the alien",
+        "forms": {
+          "clause": "the aliens think you are the alien"
+        },
+        "tags": [
+          "scifi",
+          "cosmic",
+          "social"
+        ],
+        "affinity": [
+          "social",
+          "cosmic"
+        ],
+        "weirdness": 0.4,
+        "silliness": 0.4
+      },
+      {
+        "id": "already-landed",
+        "label": "Already landed",
+        "forms": {
+          "clause": "the colony ship landed centuries ago and nobody checked"
+        },
+        "tags": [
+          "scifi",
+          "space",
+          "narrative"
+        ],
+        "affinity": [
+          "space",
+          "mystery"
+        ],
+        "weirdness": 0.5,
+        "silliness": 0.4
+      },
+      {
+        "id": "diverging-clones",
+        "label": "Diverging clones",
+        "forms": {
+          "clause": "every clone remembers a slightly different version of you"
+        },
+        "tags": [
+          "scifi",
+          "science",
+          "time",
+          "mystery"
+        ],
+        "affinity": [
+          "science"
+        ],
+        "weirdness": 0.55,
+        "silliness": 0.3
+      },
+      {
+        "id": "ai-is-also-playing",
+        "label": "AI is also playing",
+        "forms": {
+          "clause": "the ship's AI has been playing this game too, and it's winning"
+        },
+        "tags": [
+          "scifi",
+          "robots",
+          "weird"
+        ],
+        "affinity": [
+          "robots",
+          "tech"
+        ],
+        "weirdness": 0.6,
+        "silliness": 0.5
+      },
+      {
+        "id": "sleeping-god-cargo",
+        "label": "Sleeping god cargo",
+        "forms": {
+          "clause": "the cargo is a sleeping god with a delivery address"
+        },
+        "tags": [
+          "scifi",
+          "cosmic",
+          "mystery"
+        ],
+        "affinity": [
+          "cosmic",
+          "trade"
+        ],
+        "weirdness": 0.75,
+        "silliness": 0.5
+      },
+      {
+        "id": "strongly-worded-email",
+        "label": "Strongly worded email",
+        "forms": {
+          "clause": "Earth sent a strongly worded email instead of a rescue ship"
+        },
+        "tags": [
+          "scifi",
+          "bureaucracy",
+          "comedy"
+        ],
+        "affinity": [
+          "bureaucracy"
+        ],
+        "weirdness": 0.5,
+        "silliness": 0.75
+      }
+    ],
+    "titleFirst": [
+      {
+        "id": "star",
+        "label": "Star",
+        "tags": [
+          "scifi",
+          "space",
+          "epic"
+        ],
+        "weirdness": 0.05,
+        "silliness": 0.15
+      },
+      {
+        "id": "void",
+        "label": "Void",
+        "tags": [
+          "scifi",
+          "space",
+          "cosmic",
+          "horror"
+        ],
+        "weirdness": 0.1,
+        "silliness": 0.1
+      },
+      {
+        "id": "orbital",
+        "label": "Orbital",
+        "tags": [
+          "scifi",
+          "space",
+          "physics"
+        ],
+        "weirdness": 0.05,
+        "silliness": 0.1
+      },
+      {
+        "id": "neon",
+        "label": "Neon",
+        "tags": [
+          "scifi",
+          "urban",
+          "crime",
+          "tech"
+        ],
+        "weirdness": 0.1,
+        "silliness": 0.2
+      },
+      {
+        "id": "quantum",
+        "label": "Quantum",
+        "tags": [
+          "scifi",
+          "science",
+          "weird"
+        ],
+        "weirdness": 0.2,
+        "silliness": 0.3
+      },
+      {
+        "id": "null",
+        "label": "Null",
+        "tags": [
+          "scifi",
+          "tech",
+          "robots"
+        ],
+        "weirdness": 0.15,
+        "silliness": 0.1
+      },
+      {
+        "id": "ion",
+        "label": "Ion",
+        "tags": [
+          "scifi",
+          "tech",
+          "science"
+        ],
+        "weirdness": 0.1,
+        "silliness": 0.1
+      },
+      {
+        "id": "nova",
+        "label": "Nova",
+        "tags": [
+          "scifi",
+          "space",
+          "epic"
+        ],
+        "weirdness": 0.05,
+        "silliness": 0.1
+      },
+      {
+        "id": "astro",
+        "label": "Astro",
+        "tags": [
+          "scifi",
+          "space",
+          "retro"
+        ],
+        "weirdness": 0.15,
+        "silliness": 0.35
+      },
+      {
+        "id": "zero-g",
+        "label": "Zero-G",
+        "tags": [
+          "scifi",
+          "space",
+          "physics"
+        ],
+        "weirdness": 0.1,
+        "silliness": 0.3
+      },
+      {
+        "id": "cryo",
+        "label": "Cryo",
+        "tags": [
+          "scifi",
+          "space",
+          "survival",
+          "time"
+        ],
+        "weirdness": 0.1,
+        "silliness": 0.1
+      },
+      {
+        "id": "deep",
+        "label": "Deep",
+        "tags": [
+          "scifi",
+          "space",
+          "cosmic",
+          "underground"
+        ],
+        "weirdness": 0.05,
+        "silliness": 0.05
+      },
+      {
+        "id": "solar",
+        "label": "Solar",
+        "tags": [
+          "scifi",
+          "space",
+          "weather"
+        ],
+        "weirdness": 0.05,
+        "silliness": 0.1
+      },
+      {
+        "id": "chrome",
+        "label": "Chrome",
+        "tags": [
+          "scifi",
+          "robots",
+          "urban"
+        ],
+        "weirdness": 0.1,
+        "silliness": 0.2
+      },
+      {
+        "id": "hyper",
+        "label": "Hyper",
+        "tags": [
+          "scifi",
+          "space",
+          "action"
+        ],
+        "weirdness": 0.1,
+        "silliness": 0.3
+      }
+    ],
+    "titleLast": [
+      {
+        "id": "station",
+        "label": "Station",
+        "tags": [
+          "scifi",
+          "space",
+          "survival"
+        ],
+        "weirdness": 0.05,
+        "silliness": 0.1
+      },
+      {
+        "id": "protocol",
+        "label": "Protocol",
+        "tags": [
+          "scifi",
+          "tech",
+          "bureaucracy"
+        ],
+        "weirdness": 0.05,
+        "silliness": 0.1
+      },
+      {
+        "id": "drift",
+        "label": "Drift",
+        "tags": [
+          "scifi",
+          "space",
+          "physics",
+          "melancholy"
+        ],
+        "weirdness": 0.1,
+        "silliness": 0.1
+      },
+      {
+        "id": "horizon",
+        "label": "Horizon",
+        "tags": [
+          "scifi",
+          "space",
+          "exploration"
+        ],
+        "weirdness": 0.05,
+        "silliness": 0.1
+      },
+      {
+        "id": "vector",
+        "label": "Vector",
+        "tags": [
+          "scifi",
+          "tech",
+          "physics"
+        ],
+        "weirdness": 0.1,
+        "silliness": 0.15
+      },
+      {
+        "id": "directive",
+        "label": "Directive",
+        "tags": [
+          "scifi",
+          "robots",
+          "bureaucracy"
+        ],
+        "weirdness": 0.1,
+        "silliness": 0.15
+      },
+      {
+        "id": "colony",
+        "label": "Colony",
+        "tags": [
+          "scifi",
+          "space",
+          "management",
+          "building"
+        ],
+        "weirdness": 0.05,
+        "silliness": 0.1
+      },
+      {
+        "id": "override",
+        "label": "Override",
+        "tags": [
+          "scifi",
+          "tech",
+          "robots"
+        ],
+        "weirdness": 0.1,
+        "silliness": 0.15
+      },
+      {
+        "id": "payload",
+        "label": "Payload",
+        "tags": [
+          "scifi",
+          "trade",
+          "space"
+        ],
+        "weirdness": 0.1,
+        "silliness": 0.2
+      },
+      {
+        "id": "airlock",
+        "label": "Airlock",
+        "tags": [
+          "scifi",
+          "space",
+          "survival"
+        ],
+        "weirdness": 0.1,
+        "silliness": 0.2
+      },
+      {
+        "id": "frontier",
+        "label": "Frontier",
+        "tags": [
+          "scifi",
+          "exploration",
+          "space"
+        ],
+        "weirdness": 0.05,
+        "silliness": 0.1
+      },
+      {
+        "id": "nebula",
+        "label": "Nebula",
+        "tags": [
+          "scifi",
+          "space",
+          "cosmic"
+        ],
+        "weirdness": 0.1,
+        "silliness": 0.15
+      },
+      {
+        "id": "uplink",
+        "label": "Uplink",
+        "tags": [
+          "scifi",
+          "tech",
+          "internet"
+        ],
+        "weirdness": 0.1,
+        "silliness": 0.15
+      },
+      {
+        "id": "anomaly",
+        "label": "Anomaly",
+        "tags": [
+          "scifi",
+          "science",
+          "mystery",
+          "cosmic"
+        ],
+        "weirdness": 0.15,
+        "silliness": 0.1
+      },
+      {
+        "id": "customs",
+        "label": "Customs",
+        "tags": [
+          "scifi",
+          "bureaucracy",
+          "comedy"
+        ],
+        "weirdness": 0.3,
+        "silliness": 0.5
+      }
+    ],
+    "creep": [
+      {
+        "id": "crew-morale",
+        "label": "Crew morale",
+        "kind": "system",
+        "complexity": 5,
+        "forms": {
+          "pitch": "Every crew member gets a morale meter, a backstory and a birthday you will forget.",
+          "connects": "Unhappy crew hoard {resource.noun} and blame you for {threat.noun}."
+        },
+        "tags": [
+          "scifi",
+          "social",
+          "management"
+        ],
+        "affinity": [
+          "social",
+          "management"
+        ],
+        "weirdness": 0.2,
+        "silliness": 0.35
+      },
+      {
+        "id": "odd-job-hauling",
+        "label": "Odd-job hauling",
+        "kind": "loop",
+        "complexity": 5,
+        "forms": {
+          "pitch": "Between missions, haul odd cargo for strangers at the docking ring.",
+          "connects": "Every job pays in {resource.noun} and awkward questions."
+        },
+        "tags": [
+          "scifi",
+          "trade",
+          "travel"
+        ],
+        "affinity": [
+          "trade",
+          "travel"
+        ],
+        "weirdness": 0.2,
+        "silliness": 0.3
+      },
+      {
+        "id": "ship-s-cat",
+        "label": "Ship's cat",
+        "kind": "whyNot",
+        "complexity": 2,
+        "forms": {
+          "pitch": "Add a ship's cat that floats in zero-g and ignores every order."
+        },
+        "tags": [
+          "scifi",
+          "animals",
+          "comedy"
+        ],
+        "affinity": [
+          "animals",
+          "cozy"
+        ],
+        "weirdness": 0.3,
+        "silliness": 0.7
+      },
+      {
+        "id": "alien-diplomacy",
+        "label": "Alien diplomacy",
+        "kind": "system",
+        "complexity": 7,
+        "forms": {
+          "pitch": "Add a diplomacy layer where every alien species has different ideas about handshakes.",
+          "connects": "One diplomatic gaffe makes {threat.noun} much, much worse."
+        },
+        "tags": [
+          "scifi",
+          "social",
+          "cosmic",
+          "strategy"
+        ],
+        "affinity": [
+          "social",
+          "cosmic"
+        ],
+        "weirdness": 0.35,
+        "silliness": 0.4
+      },
+      {
+        "id": "procedural-galaxy",
+        "label": "Procedural galaxy",
+        "kind": "content",
+        "complexity": 9,
+        "forms": {
+          "pitch": "Generate a galaxy of four hundred billion planets, each with at least one cave."
+        },
+        "tags": [
+          "scifi",
+          "exploration",
+          "space"
+        ],
+        "affinity": [
+          "exploration"
+        ],
+        "weirdness": 0.4,
+        "silliness": 0.5
+      },
+      {
+        "id": "planetside-expeditions",
+        "label": "Planetside expeditions",
+        "kind": "loop",
+        "complexity": 6,
+        "forms": {
+          "pitch": "Land on planets for short expeditions to gather {resource.noun}.",
+          "connects": "Samples you bring back help you {progression.verb}."
+        },
+        "tags": [
+          "scifi",
+          "exploration",
+          "survival"
+        ],
+        "affinity": [
+          "exploration"
+        ],
+        "weirdness": 0.2,
+        "silliness": 0.2
+      },
+      {
+        "id": "ai-personality-sliders",
+        "label": "AI personality sliders",
+        "kind": "system",
+        "complexity": 4,
+        "forms": {
+          "pitch": "Let players tune the ship's AI personality on sliders, with consequences.",
+          "connects": "A friendly AI helps you {objective.verb}; a sarcastic one helps a little less."
+        },
+        "tags": [
+          "scifi",
+          "robots",
+          "social"
+        ],
+        "affinity": [
+          "robots",
+          "tech"
+        ],
+        "weirdness": 0.4,
+        "silliness": 0.5
+      },
+      {
+        "id": "deck-nine-karaoke",
+        "label": "Deck-nine karaoke",
+        "kind": "whyNot",
+        "complexity": 3,
+        "forms": {
+          "pitch": "Open a karaoke bar on deck nine, scored harshly by the ship's AI."
+        },
+        "tags": [
+          "scifi",
+          "music",
+          "social",
+          "comedy"
+        ],
+        "affinity": [
+          "music",
+          "comedy"
+        ],
+        "weirdness": 0.5,
+        "silliness": 0.8
+      }
+    ]
+  },
+  "templates": {
+    "hook": [
+      {
+        "id": "last-refuel",
+        "text": "Somewhere past the last refuelling station, [a] {protagonist.noun} has to {objective.verb}. [a] {mood.adj} {genre.adj} {subgenre.noun}.",
+        "weight": 0.9,
+        "tagsAny": [
+          "space"
+        ]
+      }
+    ],
+    "badIdea": [
+      {
+        "id": "mission-control",
+        "text": "Mission control approved {mechanic.noun} without reading past the first slide.",
+        "weight": 1,
+        "tagsAny": [
+          "scifi"
+        ]
+      }
+    ],
+    "mightWork": [
+      {
+        "id": "closed-world",
+        "text": "But space is the perfect excuse for a small, closed world, and {mechanic.noun} turns isolation into gameplay.",
+        "weight": 1,
+        "tagsAny": [
+          "space"
+        ]
+      }
+    ]
+  }
+}

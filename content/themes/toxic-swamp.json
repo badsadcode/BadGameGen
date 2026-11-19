@@ -1,0 +1,23 @@
+{
+  "id": "toxic-swamp",
+  "name": "Toxic Swamp",
+  "description": "Acid green on black. Do not lick the screen.",
+  "dark": true,
+  "colors": {
+    "bg": "#070b07",
+    "bgGlow": "#142a10",
+    "surface": "#101710",
+    "surfaceRaised": "#172117",
+    "border": "#2a3d26",
+    "text": "#eaf7e4",
+    "textMuted": "#93ad8a",
+    "accent": "#8bdc2e",
+    "accentStrong": "#c6ff3d",
+    "accent2": "#3ddc9b",
+    "glow": "rgba(198,255,61,0.28)",
+    "success": "#3ddc9b",
+    "warning": "#ffd23d",
+    "danger": "#ff5d5d",
+    "onAccent": "#071006"
+  }
+}

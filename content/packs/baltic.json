@@ -1,0 +1,2392 @@
+{
+  "format": 1,
+  "id": "baltic",
+  "name": "Baltic Bangers",
+  "version": "1.0.0",
+  "author": "Bad Ideas Works",
+  "description": "Herring, saunas, ferries and long dark winters, straight from the studio's own shoreline.",
+  "items": {
+    "genre": [
+      {
+        "id": "folk-horror",
+        "label": "Folk horror",
+        "forms": {
+          "adj": "folk-horror",
+          "noun": "folk-horror game"
+        },
+        "tags": [
+          "baltic",
+          "horror",
+          "forest",
+          "mystery"
+        ],
+        "affinity": [
+          "forest",
+          "rural",
+          "religion"
+        ],
+        "weirdness": 0.3,
+        "silliness": 0.15
+      },
+      {
+        "id": "slice-of-life",
+        "label": "Slice of life",
+        "forms": {
+          "adj": "slice-of-life",
+          "noun": "slice-of-life game"
+        },
+        "tags": [
+          "baltic",
+          "cozy",
+          "mundane",
+          "narrative"
+        ],
+        "affinity": [
+          "town",
+          "rural",
+          "cozy"
+        ],
+        "weirdness": 0.05,
+        "silliness": 0.3
+      },
+      {
+        "id": "fishing",
+        "label": "Fishing",
+        "forms": {
+          "adj": "fishing",
+          "noun": "fishing game"
+        },
+        "tags": [
+          "baltic",
+          "water",
+          "nautical",
+          "nature"
+        ],
+        "affinity": [
+          "water",
+          "nautical",
+          "cold"
+        ],
+        "weirdness": 0.05,
+        "silliness": 0.3
+      },
+      {
+        "id": "seafaring",
+        "label": "Seafaring",
+        "forms": {
+          "adj": "seafaring",
+          "noun": "seafaring adventure"
+        },
+        "tags": [
+          "baltic",
+          "nautical",
+          "water",
+          "exploration",
+          "travel"
+        ],
+        "affinity": [
+          "nautical",
+          "trade",
+          "weather"
+        ],
+        "weirdness": 0.1,
+        "silliness": 0.2
+      }
+    ],
+    "subgenre": [
+      {
+        "id": "ferry-sim",
+        "label": "Ferry sim",
+        "forms": {
+          "noun": "ferry sim"
+        },
+        "tags": [
+          "baltic",
+          "nautical",
+          "management",
+          "travel"
+        ],
+        "affinity": [
+          "nautical",
+          "water",
+          "travel"
+        ],
+        "weirdness": 0.2,
+        "silliness": 0.4
+      },
+      {
+        "id": "village-sim",
+        "label": "Village sim",
+        "forms": {
+          "noun": "village sim"
+        },
+        "tags": [
+          "baltic",
+          "management",
+          "rural",
+          "town",
+          "cozy"
+        ],
+        "affinity": [
+          "rural",
+          "town",
+          "farming"
+        ],
+        "weirdness": 0.1,
+        "silliness": 0.3
+      },
+      {
+        "id": "sauna-management-game",
+        "label": "Sauna management game",
+        "forms": {
+          "noun": "sauna management game"
+        },
+        "tags": [
+          "baltic",
+          "management",
+          "heat",
+          "social"
+        ],
+        "affinity": [
+          "heat",
+          "social",
+          "cold"
+        ],
+        "weirdness": 0.4,
+        "silliness": 0.6
+      },
+      {
+        "id": "fishing-roguelike",
+        "label": "Fishing roguelike",
+        "forms": {
+          "noun": "fishing roguelike"
+        },
+        "tags": [
+          "baltic",
+          "water",
+          "nautical",
+          "survival"
+        ],
+        "affinity": [
+          "water",
+          "cold"
+        ],
+        "weirdness": 0.25,
+        "silliness": 0.4
+      }
+    ],
+    "setting": [
+      {
+        "id": "herring-village",
+        "label": "Herring village",
+        "forms": {
+          "noun": "herring village",
+          "in": "in a herring village at the end of a gravel road"
+        },
+        "tags": [
+          "baltic",
+          "water",
+          "nautical",
+          "rural",
+          "town",
+          "cold"
+        ],
+        "affinity": [
+          "nautical",
+          "food",
+          "trade"
+        ],
+        "excludes": [
+          "space",
+          "desert"
+        ],
+        "weirdness": 0.1,
+        "silliness": 0.2
+      },
+      {
+        "id": "overnight-ferry",
+        "label": "Overnight ferry",
+        "forms": {
+          "noun": "overnight ferry",
+          "in": "aboard an overnight ferry between two sleepy capitals"
+        },
+        "tags": [
+          "baltic",
+          "nautical",
+          "water",
+          "travel",
+          "social"
+        ],
+        "affinity": [
+          "social",
+          "travel",
+          "music"
+        ],
+        "weirdness": 0.25,
+        "silliness": 0.4
+      },
+      {
+        "id": "archipelago",
+        "label": "Archipelago",
+        "forms": {
+          "noun": "archipelago of a thousand tiny islands",
+          "in": "in an archipelago of a thousand tiny islands"
+        },
+        "tags": [
+          "baltic",
+          "water",
+          "nautical",
+          "exploration",
+          "nature"
+        ],
+        "affinity": [
+          "exploration",
+          "nautical"
+        ],
+        "weirdness": 0.15,
+        "silliness": 0.2
+      },
+      {
+        "id": "soviet-era-apartment-block",
+        "label": "Soviet-era apartment block",
+        "forms": {
+          "noun": "Soviet-era apartment block",
+          "in": "in a nine-storey Soviet-era apartment block"
+        },
+        "tags": [
+          "baltic",
+          "urban",
+          "modern",
+          "historical",
+          "social"
+        ],
+        "affinity": [
+          "social",
+          "mundane"
+        ],
+        "excludes": [
+          "space"
+        ],
+        "weirdness": 0.15,
+        "silliness": 0.3
+      },
+      {
+        "id": "frozen-lakeside-sauna",
+        "label": "Frozen lakeside sauna",
+        "forms": {
+          "noun": "lakeside sauna at minus twenty",
+          "in": "in a lakeside sauna at minus twenty"
+        },
+        "tags": [
+          "baltic",
+          "cold",
+          "heat",
+          "water",
+          "nature"
+        ],
+        "affinity": [
+          "social",
+          "survival"
+        ],
+        "weirdness": 0.3,
+        "silliness": 0.45
+      },
+      {
+        "id": "hanseatic-port",
+        "label": "Hanseatic port",
+        "forms": {
+          "noun": "Hanseatic trading port",
+          "in": "in a bustling Hanseatic trading port"
+        },
+        "tags": [
+          "baltic",
+          "historical",
+          "trade",
+          "town",
+          "nautical",
+          "medieval"
+        ],
+        "affinity": [
+          "trade",
+          "strategy"
+        ],
+        "weirdness": 0.1,
+        "silliness": 0.2
+      },
+      {
+        "id": "amber-beach",
+        "label": "Amber beach",
+        "forms": {
+          "noun": "windswept amber beach",
+          "in": "on a windswept amber beach"
+        },
+        "tags": [
+          "baltic",
+          "water",
+          "nature",
+          "weather"
+        ],
+        "affinity": [
+          "exploration",
+          "crafting"
+        ],
+        "weirdness": 0.15,
+        "silliness": 0.25
+      },
+      {
+        "id": "storied-birch-forest",
+        "label": "Storied birch forest",
+        "forms": {
+          "noun": "birch forest full of old stories",
+          "in": "deep in a birch forest full of old stories"
+        },
+        "tags": [
+          "baltic",
+          "forest",
+          "nature",
+          "mystery"
+        ],
+        "affinity": [
+          "mystery",
+          "horror",
+          "magic"
+        ],
+        "weirdness": 0.3,
+        "silliness": 0.2
+      },
+      {
+        "id": "iced-in-lighthouse-island",
+        "label": "Iced-in lighthouse island",
+        "forms": {
+          "noun": "lighthouse island",
+          "in": "on a lighthouse island cut off by sea ice"
+        },
+        "tags": [
+          "baltic",
+          "cold",
+          "water",
+          "nautical",
+          "survival"
+        ],
+        "affinity": [
+          "survival",
+          "radio"
+        ],
+        "weirdness": 0.2,
+        "silliness": 0.15
+      },
+      {
+        "id": "summer-cottage",
+        "label": "Summer cottage",
+        "forms": {
+          "noun": "summer cottage with no running water",
+          "in": "at a summer cottage with no running water"
+        },
+        "tags": [
+          "baltic",
+          "rural",
+          "cozy",
+          "nature",
+          "family"
+        ],
+        "affinity": [
+          "family",
+          "cozy"
+        ],
+        "weirdness": 0.15,
+        "silliness": 0.4
+      },
+      {
+        "id": "midsummer-meadow",
+        "label": "Midsummer meadow",
+        "forms": {
+          "noun": "midsummer meadow",
+          "in": "in a meadow on midsummer's eve"
+        },
+        "tags": [
+          "baltic",
+          "nature",
+          "magic",
+          "rural",
+          "music"
+        ],
+        "affinity": [
+          "magic",
+          "romance",
+          "music"
+        ],
+        "weirdness": 0.35,
+        "silliness": 0.35
+      },
+      {
+        "id": "coastal-radio-station",
+        "label": "Coastal radio station",
+        "forms": {
+          "noun": "coastal radio station",
+          "in": "in a tiny radio station broadcasting to fishing boats"
+        },
+        "tags": [
+          "baltic",
+          "radio",
+          "music",
+          "nautical"
+        ],
+        "affinity": [
+          "radio",
+          "music"
+        ],
+        "weirdness": 0.2,
+        "silliness": 0.3
+      }
+    ],
+    "era": [
+      {
+        "id": "hanseatic-heyday",
+        "label": "Hanseatic heyday",
+        "forms": {
+          "in": "during the Hanseatic heyday"
+        },
+        "tags": [
+          "baltic",
+          "historical",
+          "medieval",
+          "trade"
+        ],
+        "affinity": [
+          "trade"
+        ],
+        "weirdness": 0.1,
+        "silliness": 0.2
+      },
+      {
+        "id": "darkest-week-of-december",
+        "label": "Darkest week of December",
+        "forms": {
+          "in": "in the darkest week of December"
+        },
+        "tags": [
+          "baltic",
+          "cold",
+          "melancholy"
+        ],
+        "affinity": [
+          "survival",
+          "cold"
+        ],
+        "weirdness": 0.1,
+        "silliness": 0.15
+      },
+      {
+        "id": "the-wild-early-nineties",
+        "label": "The wild early nineties",
+        "forms": {
+          "in": "in the wild early 1990s"
+        },
+        "tags": [
+          "baltic",
+          "historical",
+          "modern"
+        ],
+        "affinity": [
+          "trade",
+          "radio"
+        ],
+        "weirdness": 0.2,
+        "silliness": 0.35
+      },
+      {
+        "id": "longest-day-of-the-year",
+        "label": "Longest day of the year",
+        "forms": {
+          "in": "on the longest day of the year"
+        },
+        "tags": [
+          "baltic",
+          "nature",
+          "music"
+        ],
+        "affinity": [
+          "romance",
+          "music",
+          "magic"
+        ],
+        "weirdness": 0.25,
+        "silliness": 0.35
+      }
+    ],
+    "protagonist": [
+      {
+        "id": "herring-fisher",
+        "label": "Herring fisher",
+        "forms": {
+          "noun": "herring fisher"
+        },
+        "tags": [
+          "baltic",
+          "nautical",
+          "water",
+          "food"
+        ],
+        "affinity": [
+          "nautical",
+          "water"
+        ],
+        "weirdness": 0.05,
+        "silliness": 0.25
+      },
+      {
+        "id": "ferry-deckhand",
+        "label": "Ferry deckhand",
+        "forms": {
+          "noun": "ferry deckhand"
+        },
+        "tags": [
+          "baltic",
+          "nautical",
+          "travel"
+        ],
+        "affinity": [
+          "nautical",
+          "social"
+        ],
+        "weirdness": 0.05,
+        "silliness": 0.25
+      },
+      {
+        "id": "sauna-master",
+        "label": "Sauna master",
+        "forms": {
+          "noun": "sauna master"
+        },
+        "tags": [
+          "baltic",
+          "heat",
+          "social"
+        ],
+        "affinity": [
+          "heat",
+          "social"
+        ],
+        "weirdness": 0.25,
+        "silliness": 0.5
+      },
+      {
+        "id": "lighthouse-keeper",
+        "label": "Lighthouse keeper",
+        "forms": {
+          "noun": "lighthouse keeper"
+        },
+        "tags": [
+          "baltic",
+          "nautical",
+          "melancholy"
+        ],
+        "affinity": [
+          "cold",
+          "radio"
+        ],
+        "weirdness": 0.05,
+        "silliness": 0.15
+      },
+      {
+        "id": "amber-collector",
+        "label": "Amber collector",
+        "forms": {
+          "noun": "amber collector"
+        },
+        "tags": [
+          "baltic",
+          "exploration",
+          "trade"
+        ],
+        "affinity": [
+          "water",
+          "trade"
+        ],
+        "weirdness": 0.15,
+        "silliness": 0.3
+      },
+      {
+        "id": "hanseatic-apprentice",
+        "label": "Hanseatic apprentice",
+        "forms": {
+          "noun": "Hanseatic merchant's apprentice"
+        },
+        "tags": [
+          "baltic",
+          "historical",
+          "trade"
+        ],
+        "affinity": [
+          "trade",
+          "medieval"
+        ],
+        "weirdness": 0.1,
+        "silliness": 0.25
+      },
+      {
+        "id": "night-shift-radio-dj",
+        "label": "Night-shift radio DJ",
+        "forms": {
+          "noun": "night-shift radio DJ"
+        },
+        "tags": [
+          "baltic",
+          "radio",
+          "music"
+        ],
+        "affinity": [
+          "radio",
+          "music",
+          "melancholy"
+        ],
+        "weirdness": 0.15,
+        "silliness": 0.35
+      },
+      {
+        "id": "legendary-allotment-grandmother",
+        "label": "Legendary allotment grandmother",
+        "forms": {
+          "noun": "grandmother with a legendary allotment"
+        },
+        "tags": [
+          "baltic",
+          "farming",
+          "family",
+          "plants"
+        ],
+        "affinity": [
+          "farming",
+          "plants",
+          "family"
+        ],
+        "weirdness": 0.25,
+        "silliness": 0.5
+      },
+      {
+        "id": "probationary-forest-spirit",
+        "label": "Probationary forest spirit",
+        "forms": {
+          "noun": "forest spirit on probation"
+        },
+        "tags": [
+          "baltic",
+          "magic",
+          "forest",
+          "bureaucracy"
+        ],
+        "affinity": [
+          "forest",
+          "magic"
+        ],
+        "weirdness": 0.65,
+        "silliness": 0.6
+      },
+      {
+        "id": "apartment-block-caretaker",
+        "label": "Apartment-block caretaker",
+        "forms": {
+          "noun": "apartment-block caretaker"
+        },
+        "tags": [
+          "baltic",
+          "urban",
+          "mundane",
+          "building"
+        ],
+        "affinity": [
+          "building",
+          "social"
+        ],
+        "weirdness": 0.1,
+        "silliness": 0.35
+      }
+    ],
+    "objective": [
+      {
+        "id": "everyone-to-the-bonfire",
+        "label": "Everyone to the bonfire",
+        "forms": {
+          "verb": "get the whole village to the midsummer bonfire"
+        },
+        "tags": [
+          "baltic",
+          "social",
+          "music"
+        ],
+        "affinity": [
+          "social"
+        ],
+        "weirdness": 0.2,
+        "silliness": 0.45
+      },
+      {
+        "id": "ferry-through-the-storm",
+        "label": "Ferry through the storm",
+        "forms": {
+          "verb": "keep the ferry on schedule through an autumn storm"
+        },
+        "tags": [
+          "baltic",
+          "nautical",
+          "weather"
+        ],
+        "affinity": [
+          "nautical",
+          "weather"
+        ],
+        "weirdness": 0.15,
+        "silliness": 0.25
+      },
+      {
+        "id": "smoke-for-winter",
+        "label": "Smoke for winter",
+        "forms": {
+          "verb": "smoke enough fish to last the winter"
+        },
+        "tags": [
+          "baltic",
+          "survival",
+          "food"
+        ],
+        "affinity": [
+          "survival",
+          "food",
+          "cold"
+        ],
+        "weirdness": 0.05,
+        "silliness": 0.25
+      },
+      {
+        "id": "uncle-in-amber",
+        "label": "Uncle in amber",
+        "forms": {
+          "verb": "find the piece of amber with the mosquito that looks like your uncle"
+        },
+        "tags": [
+          "baltic",
+          "exploration",
+          "absurd",
+          "family"
+        ],
+        "affinity": [
+          "exploration"
+        ],
+        "weirdness": 0.6,
+        "silliness": 0.75
+      },
+      {
+        "id": "last-one-in-the-sauna",
+        "label": "Last one in the sauna",
+        "forms": {
+          "verb": "keep the sauna hot until the last guest gives up"
+        },
+        "tags": [
+          "baltic",
+          "heat",
+          "social"
+        ],
+        "affinity": [
+          "heat"
+        ],
+        "weirdness": 0.35,
+        "silliness": 0.55
+      },
+      {
+        "id": "fix-the-heating",
+        "label": "Fix the heating",
+        "forms": {
+          "verb": "fix the building's heating before the first frost"
+        },
+        "tags": [
+          "baltic",
+          "building",
+          "cold"
+        ],
+        "affinity": [
+          "building",
+          "cold"
+        ],
+        "weirdness": 0.1,
+        "silliness": 0.3
+      },
+      {
+        "id": "out-trade-the-hansa-houses",
+        "label": "Out-trade the Hansa houses",
+        "forms": {
+          "verb": "out-trade the rival merchant houses along the coast"
+        },
+        "tags": [
+          "baltic",
+          "trade",
+          "strategy"
+        ],
+        "affinity": [
+          "trade",
+          "historical"
+        ],
+        "weirdness": 0.1,
+        "silliness": 0.2
+      },
+      {
+        "id": "stay-on-the-air",
+        "label": "Stay on the air",
+        "forms": {
+          "verb": "keep the island's radio station on the air all winter"
+        },
+        "tags": [
+          "baltic",
+          "radio",
+          "survival"
+        ],
+        "affinity": [
+          "radio",
+          "cold"
+        ],
+        "weirdness": 0.15,
+        "silliness": 0.25
+      },
+      {
+        "id": "find-the-fern-flower",
+        "label": "Find the fern flower",
+        "forms": {
+          "verb": "find the fern flower on midsummer's night"
+        },
+        "tags": [
+          "baltic",
+          "magic",
+          "forest",
+          "mystery"
+        ],
+        "affinity": [
+          "magic",
+          "forest"
+        ],
+        "weirdness": 0.45,
+        "silliness": 0.3
+      }
+    ],
+    "loop": [
+      {
+        "id": "fish-smoke-sell",
+        "label": "Fish, smoke, sell",
+        "forms": {
+          "verb": "fish at dawn, smoke the catch at noon and sell it at the harbour before dark"
+        },
+        "tags": [
+          "baltic",
+          "food",
+          "trade",
+          "nautical"
+        ],
+        "affinity": [
+          "food",
+          "trade"
+        ],
+        "weirdness": 0.05,
+        "silliness": 0.2
+      },
+      {
+        "id": "ferry-and-mediate",
+        "label": "Ferry and mediate",
+        "forms": {
+          "verb": "ferry passengers between islands and settle their arguments on the way"
+        },
+        "tags": [
+          "baltic",
+          "nautical",
+          "social"
+        ],
+        "affinity": [
+          "social",
+          "travel"
+        ],
+        "weirdness": 0.2,
+        "silliness": 0.4
+      },
+      {
+        "id": "chop-heat-plunge",
+        "label": "Chop, heat, plunge",
+        "forms": {
+          "verb": "chop wood, heat the sauna and jump into the frozen lake"
+        },
+        "tags": [
+          "baltic",
+          "heat",
+          "cold",
+          "survival"
+        ],
+        "affinity": [
+          "cold",
+          "heat"
+        ],
+        "weirdness": 0.25,
+        "silliness": 0.5
+      },
+      {
+        "id": "forage-without-getting-lost",
+        "label": "Forage without getting lost",
+        "forms": {
+          "verb": "pick mushrooms and berries without getting lost in the forest"
+        },
+        "tags": [
+          "baltic",
+          "forest",
+          "nature",
+          "exploration"
+        ],
+        "affinity": [
+          "forest",
+          "nature"
+        ],
+        "weirdness": 0.15,
+        "silliness": 0.3
+      },
+      {
+        "id": "coastal-trading",
+        "label": "Coastal trading",
+        "forms": {
+          "verb": "trade amber, salt and herring along the coast"
+        },
+        "tags": [
+          "baltic",
+          "trade",
+          "nautical"
+        ],
+        "affinity": [
+          "trade",
+          "nautical"
+        ],
+        "weirdness": 0.1,
+        "silliness": 0.2
+      },
+      {
+        "id": "spin-and-take-calls",
+        "label": "Spin and take calls",
+        "forms": {
+          "verb": "spin records and take call-ins from lonely fishermen"
+        },
+        "tags": [
+          "baltic",
+          "radio",
+          "music",
+          "social"
+        ],
+        "affinity": [
+          "radio",
+          "music"
+        ],
+        "weirdness": 0.2,
+        "silliness": 0.4
+      },
+      {
+        "id": "shovel-fix-gossip",
+        "label": "Shovel, fix, gossip",
+        "forms": {
+          "verb": "shovel snow, fix pipes and gossip in the stairwell"
+        },
+        "tags": [
+          "baltic",
+          "mundane",
+          "social",
+          "cold"
+        ],
+        "affinity": [
+          "mundane",
+          "social"
+        ],
+        "weirdness": 0.15,
+        "silliness": 0.45
+      }
+    ],
+    "mechanic": [
+      {
+        "id": "sauna-steam-timing",
+        "label": "Sauna steam timing",
+        "forms": {
+          "noun": "sauna steam timing",
+          "verb": "throw water on the stones at exactly the right moment"
+        },
+        "tags": [
+          "baltic",
+          "heat",
+          "timing"
+        ],
+        "affinity": [
+          "heat",
+          "timing",
+          "social"
+        ],
+        "weirdness": 0.3,
+        "silliness": 0.5
+      },
+      {
+        "id": "ice-hole-fishing",
+        "label": "Ice-hole fishing",
+        "forms": {
+          "noun": "ice-hole fishing",
+          "verb": "drill holes in the ice and wait patiently"
+        },
+        "tags": [
+          "baltic",
+          "cold",
+          "water",
+          "timing"
+        ],
+        "affinity": [
+          "cold",
+          "water"
+        ],
+        "weirdness": 0.1,
+        "silliness": 0.25
+      },
+      {
+        "id": "mushroom-identification",
+        "label": "Mushroom identification",
+        "forms": {
+          "noun": "mushroom identification",
+          "verb": "tell edible mushrooms from very bad ones"
+        },
+        "tags": [
+          "baltic",
+          "forest",
+          "deduction",
+          "nature"
+        ],
+        "affinity": [
+          "forest",
+          "nature"
+        ],
+        "weirdness": 0.15,
+        "silliness": 0.3
+      },
+      {
+        "id": "ice-reading",
+        "label": "Ice reading",
+        "forms": {
+          "noun": "ice reading",
+          "verb": "read the sea ice to know where it's safe to walk"
+        },
+        "tags": [
+          "baltic",
+          "cold",
+          "deduction",
+          "survival"
+        ],
+        "affinity": [
+          "cold",
+          "survival"
+        ],
+        "weirdness": 0.2,
+        "silliness": 0.15
+      },
+      {
+        "id": "smokehouse-timing",
+        "label": "Smokehouse timing",
+        "forms": {
+          "noun": "smokehouse timing",
+          "verb": "tend the smokehouse fires so nothing burns"
+        },
+        "tags": [
+          "baltic",
+          "food",
+          "timing",
+          "cooking"
+        ],
+        "affinity": [
+          "food",
+          "cooking"
+        ],
+        "weirdness": 0.1,
+        "silliness": 0.3
+      },
+      {
+        "id": "harbour-haggling",
+        "label": "Harbour haggling",
+        "forms": {
+          "noun": "harbour haggling",
+          "verb": "haggle over herring prices at the harbour"
+        },
+        "tags": [
+          "baltic",
+          "trade",
+          "social"
+        ],
+        "affinity": [
+          "trade",
+          "social"
+        ],
+        "weirdness": 0.1,
+        "silliness": 0.35
+      },
+      {
+        "id": "dial-tuning",
+        "label": "Dial tuning",
+        "forms": {
+          "noun": "dial tuning",
+          "verb": "tune the dial between weather reports and folk songs"
+        },
+        "tags": [
+          "baltic",
+          "radio",
+          "music"
+        ],
+        "affinity": [
+          "radio",
+          "music"
+        ],
+        "weirdness": 0.2,
+        "silliness": 0.3
+      },
+      {
+        "id": "stairwell-diplomacy",
+        "label": "Stairwell diplomacy",
+        "forms": {
+          "noun": "stairwell diplomacy",
+          "verb": "negotiate with the neighbours over the shared drying room"
+        },
+        "tags": [
+          "baltic",
+          "social",
+          "mundane"
+        ],
+        "affinity": [
+          "social",
+          "urban"
+        ],
+        "weirdness": 0.35,
+        "silliness": 0.55
+      },
+      {
+        "id": "bonfire-stacking",
+        "label": "Bonfire stacking",
+        "forms": {
+          "noun": "bonfire stacking",
+          "verb": "stack the midsummer bonfire so it burns all night"
+        },
+        "tags": [
+          "baltic",
+          "building",
+          "physics",
+          "heat"
+        ],
+        "affinity": [
+          "building"
+        ],
+        "weirdness": 0.25,
+        "silliness": 0.35
+      }
+    ],
+    "progression": [
+      {
+        "id": "rowboat-to-trawler",
+        "label": "Rowboat to trawler",
+        "forms": {
+          "verb": "upgrade your rowing boat into a proper trawler"
+        },
+        "tags": [
+          "baltic",
+          "nautical",
+          "building"
+        ],
+        "affinity": [
+          "nautical"
+        ],
+        "weirdness": 0.05,
+        "silliness": 0.2
+      },
+      {
+        "id": "village-trust",
+        "label": "Village trust",
+        "forms": {
+          "verb": "earn the village's trust one fish at a time"
+        },
+        "tags": [
+          "baltic",
+          "social"
+        ],
+        "affinity": [
+          "social"
+        ],
+        "weirdness": 0.15,
+        "silliness": 0.35
+      },
+      {
+        "id": "coastal-trading-house",
+        "label": "Coastal trading house",
+        "forms": {
+          "verb": "expand your trading house from port to port"
+        },
+        "tags": [
+          "baltic",
+          "trade",
+          "building"
+        ],
+        "affinity": [
+          "trade"
+        ],
+        "weirdness": 0.05,
+        "silliness": 0.15
+      },
+      {
+        "id": "stairwell-renovation",
+        "label": "Stairwell renovation",
+        "forms": {
+          "verb": "renovate the apartment block one stairwell at a time"
+        },
+        "tags": [
+          "baltic",
+          "building",
+          "urban"
+        ],
+        "affinity": [
+          "building"
+        ],
+        "weirdness": 0.1,
+        "silliness": 0.3
+      }
+    ],
+    "threat": [
+      {
+        "id": "the-long-dark",
+        "label": "The long dark",
+        "forms": {
+          "noun": "the long dark winter",
+          "clause": "the days keep getting shorter and the nights colder"
+        },
+        "tags": [
+          "baltic",
+          "cold",
+          "melancholy"
+        ],
+        "affinity": [
+          "cold",
+          "survival"
+        ],
+        "weirdness": 0.05,
+        "silliness": 0.1
+      },
+      {
+        "id": "closing-sea-ice",
+        "label": "Closing sea ice",
+        "forms": {
+          "noun": "closing sea ice",
+          "clause": "the sea ice is closing the shipping lane"
+        },
+        "tags": [
+          "baltic",
+          "cold",
+          "water",
+          "nautical"
+        ],
+        "affinity": [
+          "nautical",
+          "cold"
+        ],
+        "weirdness": 0.1,
+        "silliness": 0.1
+      },
+      {
+        "id": "autumn-storm",
+        "label": "Autumn storm",
+        "forms": {
+          "noun": "an autumn storm",
+          "clause": "an autumn storm is rolling in from the west"
+        },
+        "tags": [
+          "baltic",
+          "weather",
+          "water"
+        ],
+        "affinity": [
+          "nautical",
+          "weather"
+        ],
+        "weirdness": 0.05,
+        "silliness": 0.1
+      },
+      {
+        "id": "offended-forest-spirits",
+        "label": "Offended forest spirits",
+        "forms": {
+          "noun": "offended forest spirits",
+          "clause": "the forest spirits are offended by your mushroom picking"
+        },
+        "tags": [
+          "baltic",
+          "forest",
+          "magic",
+          "horror"
+        ],
+        "affinity": [
+          "forest",
+          "magic"
+        ],
+        "weirdness": 0.5,
+        "silliness": 0.45
+      },
+      {
+        "id": "undercutting-merchants",
+        "label": "Undercutting merchants",
+        "forms": {
+          "noun": "an undercutting rival",
+          "clause": "a rival trading house is undercutting your herring"
+        },
+        "tags": [
+          "baltic",
+          "trade",
+          "social"
+        ],
+        "affinity": [
+          "trade"
+        ],
+        "weirdness": 0.1,
+        "silliness": 0.25
+      },
+      {
+        "id": "freezing-pipes",
+        "label": "Freezing pipes",
+        "forms": {
+          "noun": "freezing pipes",
+          "clause": "the building's pipes are freezing one floor at a time"
+        },
+        "tags": [
+          "baltic",
+          "cold",
+          "building",
+          "mundane"
+        ],
+        "affinity": [
+          "building",
+          "cold"
+        ],
+        "weirdness": 0.15,
+        "silliness": 0.35
+      },
+      {
+        "id": "mosquito-government",
+        "label": "Mosquito government",
+        "forms": {
+          "noun": "midsummer mosquitoes",
+          "clause": "the midsummer mosquitoes are forming a government"
+        },
+        "tags": [
+          "baltic",
+          "animals",
+          "absurd",
+          "bureaucracy"
+        ],
+        "affinity": [
+          "nature"
+        ],
+        "weirdness": 0.75,
+        "silliness": 0.8
+      },
+      {
+        "id": "vanishing-herring",
+        "label": "Vanishing herring",
+        "forms": {
+          "noun": "vanishing herring",
+          "clause": "the herring have stopped coming and nobody knows why"
+        },
+        "tags": [
+          "baltic",
+          "water",
+          "mystery",
+          "animals"
+        ],
+        "affinity": [
+          "nautical",
+          "mystery"
+        ],
+        "weirdness": 0.3,
+        "silliness": 0.2
+      }
+    ],
+    "resource": [
+      {
+        "id": "firewood",
+        "label": "Firewood",
+        "forms": {
+          "noun": "firewood"
+        },
+        "tags": [
+          "baltic",
+          "cold",
+          "survival"
+        ],
+        "affinity": [
+          "cold",
+          "heat"
+        ],
+        "weirdness": 0.05,
+        "silliness": 0.15
+      },
+      {
+        "id": "smoked-herring",
+        "label": "Smoked herring",
+        "forms": {
+          "noun": "smoked herring"
+        },
+        "tags": [
+          "baltic",
+          "food"
+        ],
+        "affinity": [
+          "food",
+          "trade"
+        ],
+        "weirdness": 0.1,
+        "silliness": 0.35
+      },
+      {
+        "id": "raw-amber",
+        "label": "Raw amber",
+        "forms": {
+          "noun": "raw amber"
+        },
+        "tags": [
+          "baltic",
+          "trade"
+        ],
+        "affinity": [
+          "trade",
+          "crafting"
+        ],
+        "weirdness": 0.1,
+        "silliness": 0.2
+      },
+      {
+        "id": "daylight",
+        "label": "Daylight",
+        "forms": {
+          "noun": "daylight"
+        },
+        "tags": [
+          "baltic",
+          "cold",
+          "time",
+          "melancholy"
+        ],
+        "affinity": [
+          "cold",
+          "time"
+        ],
+        "weirdness": 0.3,
+        "silliness": 0.2
+      },
+      {
+        "id": "neighbourly-favours",
+        "label": "Neighbourly favours",
+        "forms": {
+          "noun": "neighbourly favours"
+        },
+        "tags": [
+          "baltic",
+          "social"
+        ],
+        "affinity": [
+          "social",
+          "town"
+        ],
+        "weirdness": 0.15,
+        "silliness": 0.35
+      }
+    ],
+    "mood": [
+      {
+        "id": "melancholy-and-cosy",
+        "label": "Melancholy and cosy",
+        "forms": {
+          "adj": "melancholy but cosy"
+        },
+        "tags": [
+          "baltic",
+          "melancholy",
+          "cozy"
+        ],
+        "affinity": [
+          "cold",
+          "cozy"
+        ],
+        "weirdness": 0.1,
+        "silliness": 0.2
+      },
+      {
+        "id": "stoically-cheerful",
+        "label": "Stoically cheerful",
+        "forms": {
+          "adj": "stoically cheerful"
+        },
+        "tags": [
+          "baltic",
+          "wholesome",
+          "comedy"
+        ],
+        "affinity": [
+          "cold"
+        ],
+        "weirdness": 0.2,
+        "silliness": 0.45
+      },
+      {
+        "id": "quietly-eerie",
+        "label": "Quietly eerie",
+        "forms": {
+          "adj": "quietly eerie"
+        },
+        "tags": [
+          "baltic",
+          "horror",
+          "tense"
+        ],
+        "affinity": [
+          "forest",
+          "horror"
+        ],
+        "weirdness": 0.15,
+        "silliness": 0.1
+      },
+      {
+        "id": "sun-drunk",
+        "label": "Sun-drunk",
+        "forms": {
+          "adj": "sun-drunk"
+        },
+        "tags": [
+          "baltic",
+          "comedy",
+          "wholesome"
+        ],
+        "affinity": [
+          "music",
+          "romance"
+        ],
+        "weirdness": 0.3,
+        "silliness": 0.55
+      },
+      {
+        "id": "dryly-funny",
+        "label": "Dryly funny",
+        "forms": {
+          "adj": "dryly funny"
+        },
+        "tags": [
+          "baltic",
+          "comedy",
+          "mundane"
+        ],
+        "affinity": [
+          "mundane"
+        ],
+        "weirdness": 0.15,
+        "silliness": 0.55
+      },
+      {
+        "id": "wistful",
+        "label": "Wistful",
+        "forms": {
+          "adj": "wistful"
+        },
+        "tags": [
+          "baltic",
+          "melancholy"
+        ],
+        "affinity": [
+          "radio",
+          "water"
+        ],
+        "weirdness": 0.05,
+        "silliness": 0.1
+      }
+    ],
+    "visual": [
+      {
+        "id": "woodcut-prints",
+        "label": "Woodcut prints",
+        "forms": {
+          "noun": "woodcut prints"
+        },
+        "tags": [
+          "baltic",
+          "art",
+          "historical"
+        ],
+        "affinity": [
+          "forest",
+          "historical"
+        ],
+        "weirdness": 0.2,
+        "silliness": 0.2
+      },
+      {
+        "id": "grey-sea-watercolours",
+        "label": "Grey-sea watercolours",
+        "forms": {
+          "noun": "muted watercolours of grey seas and birch trees"
+        },
+        "tags": [
+          "baltic",
+          "art",
+          "water",
+          "nature"
+        ],
+        "affinity": [
+          "water",
+          "melancholy"
+        ],
+        "weirdness": 0.1,
+        "silliness": 0.1
+      },
+      {
+        "id": "faded-postcards",
+        "label": "Faded postcards",
+        "forms": {
+          "noun": "faded holiday-postcard colours"
+        },
+        "tags": [
+          "baltic",
+          "art",
+          "retro"
+        ],
+        "affinity": [
+          "travel",
+          "cozy"
+        ],
+        "weirdness": 0.2,
+        "silliness": 0.35
+      },
+      {
+        "id": "low-winter-sun-pixels",
+        "label": "Low winter sun pixels",
+        "forms": {
+          "noun": "pixel art lit by a low winter sun"
+        },
+        "tags": [
+          "baltic",
+          "retro",
+          "cold"
+        ],
+        "affinity": [
+          "cold",
+          "melancholy"
+        ],
+        "weirdness": 0.1,
+        "silliness": 0.2
+      },
+      {
+        "id": "embroidered-patterns",
+        "label": "Embroidered patterns",
+        "forms": {
+          "noun": "embroidered folk patterns that stitch themselves together"
+        },
+        "tags": [
+          "baltic",
+          "art",
+          "crafting"
+        ],
+        "affinity": [
+          "cozy",
+          "crafting"
+        ],
+        "weirdness": 0.35,
+        "silliness": 0.35
+      }
+    ],
+    "twist": [
+      {
+        "id": "midnight-sun-all-game",
+        "label": "Midnight sun all game",
+        "forms": {
+          "clause": "the sun never sets for the entire game"
+        },
+        "tags": [
+          "baltic",
+          "time",
+          "weather"
+        ],
+        "affinity": [
+          "time"
+        ],
+        "weirdness": 0.35,
+        "silliness": 0.3
+      },
+      {
+        "id": "ferry-circling-for-decades",
+        "label": "Ferry circling for decades",
+        "forms": {
+          "clause": "the ferry has been circling for thirty years and nobody minds"
+        },
+        "tags": [
+          "baltic",
+          "nautical",
+          "absurd"
+        ],
+        "affinity": [
+          "nautical",
+          "travel"
+        ],
+        "weirdness": 0.55,
+        "silliness": 0.55
+      },
+      {
+        "id": "bureaucratic-folklore",
+        "label": "Bureaucratic folklore",
+        "forms": {
+          "clause": "all the forest folklore is true and extremely bureaucratic"
+        },
+        "tags": [
+          "baltic",
+          "forest",
+          "magic",
+          "bureaucracy"
+        ],
+        "affinity": [
+          "forest",
+          "bureaucracy"
+        ],
+        "weirdness": 0.6,
+        "silliness": 0.6
+      },
+      {
+        "id": "grandma-is-the-spirit",
+        "label": "Grandma is the spirit",
+        "forms": {
+          "clause": "your grandmother is secretly the forest spirit"
+        },
+        "tags": [
+          "baltic",
+          "family",
+          "magic"
+        ],
+        "affinity": [
+          "family",
+          "forest"
+        ],
+        "weirdness": 0.5,
+        "silliness": 0.45
+      },
+      {
+        "id": "memories-in-amber",
+        "label": "Memories in amber",
+        "forms": {
+          "clause": "every piece of amber holds a tiny, still-living memory"
+        },
+        "tags": [
+          "baltic",
+          "magic",
+          "mystery",
+          "time"
+        ],
+        "affinity": [
+          "mystery"
+        ],
+        "weirdness": 0.55,
+        "silliness": 0.2
+      },
+      {
+        "id": "radio-holds-back-the-ice",
+        "label": "Radio holds back the ice",
+        "forms": {
+          "clause": "the radio station is the only thing keeping the sea ice away"
+        },
+        "tags": [
+          "baltic",
+          "radio",
+          "cold",
+          "weird"
+        ],
+        "affinity": [
+          "radio",
+          "cold"
+        ],
+        "weirdness": 0.6,
+        "silliness": 0.3
+      },
+      {
+        "id": "organised-herring",
+        "label": "Organised herring",
+        "forms": {
+          "clause": "the herring are sentient and quietly organising"
+        },
+        "tags": [
+          "baltic",
+          "animals",
+          "absurd",
+          "water"
+        ],
+        "affinity": [
+          "water",
+          "nautical"
+        ],
+        "weirdness": 0.75,
+        "silliness": 0.75
+      },
+      {
+        "id": "sauna-skips-seasons",
+        "label": "Sauna skips seasons",
+        "forms": {
+          "clause": "every sauna session skips you forward a season"
+        },
+        "tags": [
+          "baltic",
+          "time",
+          "heat"
+        ],
+        "affinity": [
+          "heat",
+          "time"
+        ],
+        "weirdness": 0.6,
+        "silliness": 0.45
+      }
+    ],
+    "titleFirst": [
+      {
+        "id": "amber",
+        "label": "Amber",
+        "tags": [
+          "baltic",
+          "trade",
+          "water"
+        ],
+        "weirdness": 0.05,
+        "silliness": 0.1
+      },
+      {
+        "id": "herring",
+        "label": "Herring",
+        "tags": [
+          "baltic",
+          "food",
+          "water",
+          "comedy"
+        ],
+        "weirdness": 0.2,
+        "silliness": 0.5
+      },
+      {
+        "id": "birch",
+        "label": "Birch",
+        "tags": [
+          "baltic",
+          "forest",
+          "nature"
+        ],
+        "weirdness": 0.05,
+        "silliness": 0.1
+      },
+      {
+        "id": "midsummer",
+        "label": "Midsummer",
+        "tags": [
+          "baltic",
+          "magic",
+          "music",
+          "nature"
+        ],
+        "weirdness": 0.1,
+        "silliness": 0.2
+      },
+      {
+        "id": "northern",
+        "label": "Northern",
+        "tags": [
+          "baltic",
+          "cold"
+        ],
+        "weirdness": 0.05,
+        "silliness": 0.05
+      },
+      {
+        "id": "salt",
+        "label": "Salt",
+        "tags": [
+          "baltic",
+          "water",
+          "trade",
+          "nautical"
+        ],
+        "weirdness": 0.05,
+        "silliness": 0.1
+      },
+      {
+        "id": "pine",
+        "label": "Pine",
+        "tags": [
+          "baltic",
+          "forest",
+          "nature"
+        ],
+        "weirdness": 0.05,
+        "silliness": 0.1
+      },
+      {
+        "id": "grey",
+        "label": "Grey",
+        "tags": [
+          "baltic",
+          "melancholy",
+          "weather",
+          "water"
+        ],
+        "weirdness": 0.05,
+        "silliness": 0.05
+      },
+      {
+        "id": "lantern",
+        "label": "Lantern",
+        "tags": [
+          "baltic",
+          "radio",
+          "nautical",
+          "cozy"
+        ],
+        "weirdness": 0.05,
+        "silliness": 0.15
+      },
+      {
+        "id": "sauna",
+        "label": "Sauna",
+        "tags": [
+          "baltic",
+          "heat",
+          "social",
+          "comedy"
+        ],
+        "weirdness": 0.25,
+        "silliness": 0.5
+      },
+      {
+        "id": "dune",
+        "label": "Dune",
+        "tags": [
+          "baltic",
+          "water",
+          "nature"
+        ],
+        "weirdness": 0.05,
+        "silliness": 0.1
+      },
+      {
+        "id": "storm",
+        "label": "Storm",
+        "tags": [
+          "baltic",
+          "weather",
+          "nautical"
+        ],
+        "weirdness": 0.05,
+        "silliness": 0.1
+      },
+      {
+        "id": "fern",
+        "label": "Fern",
+        "tags": [
+          "baltic",
+          "forest",
+          "magic"
+        ],
+        "weirdness": 0.15,
+        "silliness": 0.15
+      },
+      {
+        "id": "winter",
+        "label": "Winter",
+        "tags": [
+          "baltic",
+          "cold",
+          "melancholy"
+        ],
+        "weirdness": 0.05,
+        "silliness": 0.05
+      },
+      {
+        "id": "harbour",
+        "label": "Harbour",
+        "tags": [
+          "baltic",
+          "nautical",
+          "trade",
+          "town"
+        ],
+        "weirdness": 0.05,
+        "silliness": 0.1
+      }
+    ],
+    "titleLast": [
+      {
+        "id": "archipelago",
+        "label": "Archipelago",
+        "tags": [
+          "baltic",
+          "exploration",
+          "nautical"
+        ],
+        "weirdness": 0.05,
+        "silliness": 0.1
+      },
+      {
+        "id": "bonfire",
+        "label": "Bonfire",
+        "tags": [
+          "baltic",
+          "music",
+          "magic",
+          "heat"
+        ],
+        "weirdness": 0.05,
+        "silliness": 0.15
+      },
+      {
+        "id": "ferry",
+        "label": "Ferry",
+        "tags": [
+          "baltic",
+          "nautical",
+          "travel"
+        ],
+        "weirdness": 0.1,
+        "silliness": 0.25
+      },
+      {
+        "id": "lighthouse",
+        "label": "Lighthouse",
+        "tags": [
+          "baltic",
+          "nautical",
+          "cold",
+          "radio"
+        ],
+        "weirdness": 0.05,
+        "silliness": 0.1
+      },
+      {
+        "id": "steam",
+        "label": "Steam",
+        "tags": [
+          "baltic",
+          "heat",
+          "social"
+        ],
+        "weirdness": 0.1,
+        "silliness": 0.2
+      },
+      {
+        "id": "haul",
+        "label": "Haul",
+        "tags": [
+          "baltic",
+          "nautical",
+          "trade"
+        ],
+        "weirdness": 0.05,
+        "silliness": 0.15
+      },
+      {
+        "id": "smokehouse",
+        "label": "Smokehouse",
+        "tags": [
+          "baltic",
+          "food",
+          "cooking"
+        ],
+        "weirdness": 0.15,
+        "silliness": 0.3
+      },
+      {
+        "id": "hymn",
+        "label": "Hymn",
+        "tags": [
+          "baltic",
+          "music",
+          "religion",
+          "melancholy"
+        ],
+        "weirdness": 0.1,
+        "silliness": 0.1
+      },
+      {
+        "id": "shore",
+        "label": "Shore",
+        "tags": [
+          "baltic",
+          "water",
+          "nature"
+        ],
+        "weirdness": 0.05,
+        "silliness": 0.05
+      },
+      {
+        "id": "dawn",
+        "label": "Dawn",
+        "tags": [
+          "baltic",
+          "time",
+          "nature"
+        ],
+        "weirdness": 0.05,
+        "silliness": 0.05
+      },
+      {
+        "id": "frequency",
+        "label": "Frequency",
+        "tags": [
+          "baltic",
+          "radio",
+          "music"
+        ],
+        "weirdness": 0.1,
+        "silliness": 0.1
+      },
+      {
+        "id": "ice",
+        "label": "Ice",
+        "tags": [
+          "baltic",
+          "cold",
+          "water"
+        ],
+        "weirdness": 0.05,
+        "silliness": 0.05
+      },
+      {
+        "id": "hansa",
+        "label": "Hansa",
+        "tags": [
+          "baltic",
+          "trade",
+          "historical"
+        ],
+        "weirdness": 0.1,
+        "silliness": 0.15
+      },
+      {
+        "id": "stairwell",
+        "label": "Stairwell",
+        "tags": [
+          "baltic",
+          "urban",
+          "mundane",
+          "social"
+        ],
+        "weirdness": 0.2,
+        "silliness": 0.35
+      },
+      {
+        "id": "long-night",
+        "label": "Long Night",
+        "tags": [
+          "baltic",
+          "cold",
+          "melancholy",
+          "horror"
+        ],
+        "weirdness": 0.1,
+        "silliness": 0.05
+      }
+    ],
+    "creep": [
+      {
+        "id": "midsummer-festival",
+        "label": "Midsummer festival",
+        "kind": "loop",
+        "complexity": 5,
+        "forms": {
+          "pitch": "Once a year, host a midsummer festival with bonfires, flower wreaths and questionable dancing.",
+          "connects": "A good festival pays out enough {resource.noun} to get you through winter."
+        },
+        "tags": [
+          "baltic",
+          "music",
+          "social"
+        ],
+        "affinity": [
+          "music",
+          "social",
+          "rural"
+        ],
+        "weirdness": 0.3,
+        "silliness": 0.5
+      },
+      {
+        "id": "sauna-bench-hierarchy",
+        "label": "Sauna bench hierarchy",
+        "kind": "system",
+        "complexity": 4,
+        "forms": {
+          "pitch": "Add a sauna hierarchy where sitting on the top bench is a political statement.",
+          "connects": "Top-bench regulars make it easier to {objective.verb}."
+        },
+        "tags": [
+          "baltic",
+          "heat",
+          "social"
+        ],
+        "affinity": [
+          "heat",
+          "social"
+        ],
+        "weirdness": 0.45,
+        "silliness": 0.6
+      },
+      {
+        "id": "fish-encyclopaedia",
+        "label": "Fish encyclopaedia",
+        "kind": "content",
+        "complexity": 3,
+        "forms": {
+          "pitch": "Catalogue every fish in the sea, including twelve kinds of herring that look exactly the same."
+        },
+        "tags": [
+          "baltic",
+          "water",
+          "animals"
+        ],
+        "affinity": [
+          "water",
+          "nautical"
+        ],
+        "weirdness": 0.3,
+        "silliness": 0.5
+      },
+      {
+        "id": "local-radio-commentary",
+        "label": "Local radio commentary",
+        "kind": "whyNot",
+        "complexity": 3,
+        "forms": {
+          "pitch": "The local radio host comments live on everything your {protagonist.noun} does."
+        },
+        "tags": [
+          "baltic",
+          "radio",
+          "comedy"
+        ],
+        "affinity": [
+          "radio"
+        ],
+        "weirdness": 0.45,
+        "silliness": 0.65
+      },
+      {
+        "id": "ice-road",
+        "label": "Ice road",
+        "kind": "system",
+        "complexity": 5,
+        "forms": {
+          "pitch": "When the sea freezes, an ice road opens between the islands, and it closes without warning.",
+          "connects": "It is the fastest way to {objective.verb}, and the fastest way to fall in."
+        },
+        "tags": [
+          "baltic",
+          "cold",
+          "travel"
+        ],
+        "affinity": [
+          "cold",
+          "water"
+        ],
+        "weirdness": 0.3,
+        "silliness": 0.25
+      },
+      {
+        "id": "mushroom-season",
+        "label": "Mushroom season",
+        "kind": "loop",
+        "complexity": 4,
+        "forms": {
+          "pitch": "Seasonal mushroom-foraging runs in the forest, against fiercely competitive grandmothers.",
+          "connects": "A good mushroom spot becomes a secret worth more than {resource.noun}."
+        },
+        "tags": [
+          "baltic",
+          "forest",
+          "nature",
+          "social"
+        ],
+        "affinity": [
+          "forest",
+          "nature"
+        ],
+        "weirdness": 0.35,
+        "silliness": 0.55
+      },
+      {
+        "id": "herring-opera",
+        "label": "Herring opera",
+        "kind": "whyNot",
+        "complexity": 6,
+        "forms": {
+          "pitch": "A fully voiced herring opera plays every time you land a catch."
+        },
+        "tags": [
+          "baltic",
+          "music",
+          "water",
+          "absurd"
+        ],
+        "affinity": [
+          "music",
+          "water"
+        ],
+        "weirdness": 0.75,
+        "silliness": 0.85
+      },
+      {
+        "id": "hanseatic-trade-network",
+        "label": "Hanseatic trade network",
+        "kind": "system",
+        "complexity": 7,
+        "forms": {
+          "pitch": "A full trade network of coastal towns with shifting prices for salt, amber and herring.",
+          "connects": "Every price swing changes what it takes to {objective.verb}."
+        },
+        "tags": [
+          "baltic",
+          "trade",
+          "strategy",
+          "historical"
+        ],
+        "affinity": [
+          "trade",
+          "nautical"
+        ],
+        "weirdness": 0.2,
+        "silliness": 0.2
+      }
+    ]
+  },
+  "templates": {
+    "hook": [
+      {
+        "id": "light-runs-out",
+        "text": "Somewhere on a cold northern coast, [a] {protagonist.noun} has to {objective.verb} before the daylight runs out.",
+        "weight": 0.9,
+        "tagsAny": [
+          "baltic"
+        ]
+      }
+    ],
+    "pitchThreat": [
+      {
+        "id": "before-the-ice",
+        "text": "Out here, {threat.clause}, and there's never enough {resource.noun} before the ice comes.",
+        "weight": 1,
+        "tagsAny": [
+          "baltic"
+        ]
+      }
+    ],
+    "mightWork": [
+      {
+        "id": "long-winters",
+        "text": "But long dark winters make for great cozy tension, and {mechanic.noun} fits that mood perfectly.",
+        "weight": 1,
+        "tagsAny": [
+          "baltic"
+        ]
+      }
+    ]
+  }
+}

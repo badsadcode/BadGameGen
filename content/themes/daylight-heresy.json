@@ -1,0 +1,22 @@
+{
+  "id": "daylight-heresy",
+  "name": "Daylight Heresy",
+  "description": "A light theme, for people who hate their eyes. Or work in offices.",
+  "dark": false,
+  "colors": {
+    "bg": "#f6f1f7",
+    "bgGlow": "#f1dcf0",
+    "surface": "#ffffff",
+    "surfaceRaised": "#fbf6fc",
+    "border": "#e2d3e6",
+    "text": "#24152b",
+    "textMuted": "#6f5b78",
+    "accent": "#b02aa8",
+    "accentStrong": "#d61c8c",
+    "accent2": "#6b3ad6",
+    "glow": "rgba(214,28,140,0.18)",
+    "success": "#1f9d61",
+    "warning": "#b97a00",
+    "danger": "#cf2440"
+  }
+}

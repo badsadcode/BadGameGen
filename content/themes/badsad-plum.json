@@ -1,0 +1,22 @@
+{
+  "id": "badsad-plum",
+  "name": "BadSad Plum",
+  "description": "The house style. Near-black plum, magenta and a little neon regret.",
+  "dark": true,
+  "colors": {
+    "bg": "#0f0a13",
+    "bgGlow": "#2a0f2e",
+    "surface": "#1a1220",
+    "surfaceRaised": "#241829",
+    "border": "#3a2541",
+    "text": "#f4ecf7",
+    "textMuted": "#a993b3",
+    "accent": "#d63fd0",
+    "accentStrong": "#ff4fb8",
+    "accent2": "#9b5cff",
+    "glow": "rgba(255,79,184,0.35)",
+    "success": "#5fdc9a",
+    "warning": "#ffc94d",
+    "danger": "#ff5d6c"
+  }
+}

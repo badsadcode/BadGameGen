@@ -1,0 +1,45 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '10.0.x'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Validate content packs
+        run: dotnet run --project src/BadGameGen.Cli -- validate
+      - name: Unit tests
+        run: dotnet test tests/BadGameGen.Core.Tests
+      - name: Frontend build
+        working-directory: frontend
+        run: npm ci && npm run build
+
+  windows-desktop:
+    runs-on: windows-latest
+    needs: test
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '10.0.x'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Build frontend
+        working-directory: frontend
+        run: npm ci && npm run build
+      - name: Publish desktop app
+        run: dotnet publish src/BadGameGen.Desktop -c Release -r win-x64 --self-contained true -o publish/BadGameGen
+      - uses: actions/upload-artifact@v4
+        with:
+          name: BadGameGen-win-x64
+          path: publish/BadGameGen

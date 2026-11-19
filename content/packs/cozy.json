@@ -1,0 +1,2475 @@
+{
+  "format": 1,
+  "id": "cozy",
+  "name": "Cozy Corner",
+  "version": "1.0.0",
+  "author": "Bad Ideas Works",
+  "description": "Warm drinks, small stakes and a goose who has made this personal.",
+  "items": {
+    "genre": [
+      {
+        "id": "cozy",
+        "label": "Cozy",
+        "forms": {
+          "adj": "cozy",
+          "noun": "cozy game"
+        },
+        "tags": [
+          "cozy",
+          "wholesome"
+        ],
+        "affinity": [
+          "farming",
+          "town",
+          "nature"
+        ],
+        "excludes": [
+          "grim",
+          "war"
+        ],
+        "weirdness": 0.1,
+        "silliness": 0.4
+      },
+      {
+        "id": "life-sim",
+        "label": "Life sim",
+        "forms": {
+          "adj": "life-sim",
+          "noun": "life sim"
+        },
+        "tags": [
+          "cozy",
+          "wholesome",
+          "social"
+        ],
+        "affinity": [
+          "social",
+          "town",
+          "family"
+        ],
+        "excludes": [
+          "grim",
+          "war"
+        ],
+        "weirdness": 0.1,
+        "silliness": 0.35
+      },
+      {
+        "id": "farming",
+        "label": "Farming",
+        "forms": {
+          "adj": "farming",
+          "noun": "farming game"
+        },
+        "tags": [
+          "cozy",
+          "farming",
+          "rural",
+          "plants"
+        ],
+        "affinity": [
+          "rural",
+          "nature",
+          "food"
+        ],
+        "excludes": [
+          "grim",
+          "war"
+        ],
+        "weirdness": 0.05,
+        "silliness": 0.3
+      },
+      {
+        "id": "slice-of-life",
+        "label": "Slice-of-life",
+        "forms": {
+          "adj": "slice-of-life",
+          "noun": "slice-of-life game"
+        },
+        "tags": [
+          "cozy",
+          "narrative",
+          "mundane"
+        ],
+        "affinity": [
+          "town",
+          "social",
+          "melancholy"
+        ],
+        "excludes": [
+          "grim",
+          "war"
+        ],
+        "weirdness": 0.1,
+        "silliness": 0.3
+      }
+    ],
+    "subgenre": [
+      {
+        "id": "village-sim",
+        "label": "Village sim",
+        "forms": {
+          "noun": "village sim"
+        },
+        "tags": [
+          "cozy",
+          "town",
+          "management",
+          "social"
+        ],
+        "affinity": [
+          "town",
+          "rural"
+        ],
+        "excludes": [
+          "grim",
+          "war"
+        ],
+        "weirdness": 0.1,
+        "silliness": 0.3
+      },
+      {
+        "id": "tidying-puzzler",
+        "label": "Tidying puzzler",
+        "forms": {
+          "noun": "tidying puzzler"
+        },
+        "tags": [
+          "cozy",
+          "puzzle",
+          "mundane"
+        ],
+        "affinity": [
+          "puzzle",
+          "family"
+        ],
+        "excludes": [
+          "grim",
+          "war"
+        ],
+        "weirdness": 0.25,
+        "silliness": 0.4
+      },
+      {
+        "id": "cafe-management",
+        "label": "Café management",
+        "forms": {
+          "noun": "café management game"
+        },
+        "tags": [
+          "cozy",
+          "management",
+          "food",
+          "cooking"
+        ],
+        "affinity": [
+          "food",
+          "town",
+          "urban"
+        ],
+        "excludes": [
+          "grim",
+          "war"
+        ],
+        "weirdness": 0.15,
+        "silliness": 0.35
+      },
+      {
+        "id": "gardening-sim",
+        "label": "Gardening sim",
+        "forms": {
+          "noun": "gardening sim"
+        },
+        "tags": [
+          "cozy",
+          "plants",
+          "farming",
+          "nature"
+        ],
+        "affinity": [
+          "plants",
+          "nature"
+        ],
+        "excludes": [
+          "grim",
+          "war"
+        ],
+        "weirdness": 0.1,
+        "silliness": 0.3
+      },
+      {
+        "id": "decorating-game",
+        "label": "Decorating game",
+        "forms": {
+          "noun": "decorating game"
+        },
+        "tags": [
+          "cozy",
+          "building",
+          "art"
+        ],
+        "affinity": [
+          "building",
+          "art"
+        ],
+        "excludes": [
+          "grim",
+          "war"
+        ],
+        "weirdness": 0.15,
+        "silliness": 0.35
+      }
+    ],
+    "era": [
+      {
+        "id": "first-snowfall",
+        "label": "First snowfall",
+        "forms": {
+          "in": "during the first snowfall of the year"
+        },
+        "tags": [
+          "cozy",
+          "cold",
+          "weather"
+        ],
+        "affinity": [
+          "cold",
+          "weather"
+        ],
+        "excludes": [
+          "grim",
+          "war"
+        ],
+        "weirdness": 0.1,
+        "silliness": 0.2
+      },
+      {
+        "id": "lazy-summer-holiday",
+        "label": "Lazy summer holiday",
+        "forms": {
+          "in": "over one long, lazy summer holiday"
+        },
+        "tags": [
+          "cozy",
+          "time",
+          "heat"
+        ],
+        "affinity": [
+          "school",
+          "family",
+          "nature"
+        ],
+        "excludes": [
+          "grim",
+          "war"
+        ],
+        "weirdness": 0.1,
+        "silliness": 0.3
+      },
+      {
+        "id": "endless-autumn",
+        "label": "Endless autumn",
+        "forms": {
+          "in": "in an autumn that lasts forever"
+        },
+        "tags": [
+          "cozy",
+          "time",
+          "weather"
+        ],
+        "affinity": [
+          "nature",
+          "forest",
+          "food"
+        ],
+        "excludes": [
+          "grim",
+          "war"
+        ],
+        "weirdness": 0.35,
+        "silliness": 0.3
+      },
+      {
+        "id": "sleepy-sundays",
+        "label": "Sleepy Sundays",
+        "forms": {
+          "in": "one sleepy Sunday at a time"
+        },
+        "tags": [
+          "cozy",
+          "time",
+          "mundane"
+        ],
+        "affinity": [
+          "town",
+          "food"
+        ],
+        "excludes": [
+          "grim",
+          "war"
+        ],
+        "weirdness": 0.3,
+        "silliness": 0.45
+      }
+    ],
+    "setting": [
+      {
+        "id": "sleepy-seaside-village",
+        "label": "Sleepy seaside village",
+        "forms": {
+          "noun": "sleepy seaside village",
+          "in": "in a sleepy seaside village"
+        },
+        "tags": [
+          "cozy",
+          "water",
+          "nautical",
+          "town"
+        ],
+        "affinity": [
+          "nautical",
+          "food",
+          "social"
+        ],
+        "excludes": [
+          "grim",
+          "war",
+          "desert",
+          "space"
+        ],
+        "weirdness": 0.05,
+        "silliness": 0.25
+      },
+      {
+        "id": "rainy-street-cat-cafe",
+        "label": "Rainy-street cat café",
+        "forms": {
+          "noun": "cat café on a rainy street",
+          "in": "in a little cat café on a rainy street"
+        },
+        "tags": [
+          "cozy",
+          "animals",
+          "food",
+          "urban"
+        ],
+        "affinity": [
+          "animals",
+          "food",
+          "cooking"
+        ],
+        "excludes": [
+          "grim",
+          "war"
+        ],
+        "weirdness": 0.2,
+        "silliness": 0.45
+      },
+      {
+        "id": "treetop-town",
+        "label": "Treetop town",
+        "forms": {
+          "noun": "town built in the treetops",
+          "in": "in a town built among the treetops"
+        },
+        "tags": [
+          "cozy",
+          "forest",
+          "nature",
+          "sky",
+          "town"
+        ],
+        "affinity": [
+          "forest",
+          "building",
+          "animals"
+        ],
+        "excludes": [
+          "grim",
+          "war"
+        ],
+        "weirdness": 0.4,
+        "silliness": 0.35
+      },
+      {
+        "id": "community-allotment",
+        "label": "Community allotment",
+        "forms": {
+          "noun": "community allotment",
+          "in": "on a busy community allotment"
+        },
+        "tags": [
+          "cozy",
+          "plants",
+          "farming",
+          "town"
+        ],
+        "affinity": [
+          "farming",
+          "plants",
+          "social"
+        ],
+        "excludes": [
+          "grim",
+          "war"
+        ],
+        "weirdness": 0.05,
+        "silliness": 0.35
+      },
+      {
+        "id": "one-shop-island",
+        "label": "One-shop island",
+        "forms": {
+          "noun": "tiny island with one shop and one ferry",
+          "in": "on a tiny island with one shop and one ferry"
+        },
+        "tags": [
+          "cozy",
+          "water",
+          "nautical",
+          "travel"
+        ],
+        "affinity": [
+          "water",
+          "baltic",
+          "trade"
+        ],
+        "excludes": [
+          "grim",
+          "war",
+          "desert",
+          "space"
+        ],
+        "weirdness": 0.25,
+        "silliness": 0.4
+      },
+      {
+        "id": "floating-teahouse",
+        "label": "Floating teahouse",
+        "forms": {
+          "noun": "floating teahouse",
+          "in": "aboard a floating teahouse on a lazy river"
+        },
+        "tags": [
+          "cozy",
+          "water",
+          "food"
+        ],
+        "affinity": [
+          "food",
+          "cooking",
+          "water"
+        ],
+        "excludes": [
+          "grim",
+          "war"
+        ],
+        "weirdness": 0.4,
+        "silliness": 0.35
+      },
+      {
+        "id": "snowed-in-cabin",
+        "label": "Snowed-in cabin",
+        "forms": {
+          "noun": "snowed-in mountain cabin",
+          "in": "in a snowed-in mountain cabin"
+        },
+        "tags": [
+          "cozy",
+          "cold",
+          "weather",
+          "rural"
+        ],
+        "affinity": [
+          "cold",
+          "survival",
+          "crafting"
+        ],
+        "excludes": [
+          "grim",
+          "war",
+          "heat",
+          "desert"
+        ],
+        "weirdness": 0.1,
+        "silliness": 0.25
+      },
+      {
+        "id": "never-closing-bookshop",
+        "label": "Never-closing bookshop",
+        "forms": {
+          "noun": "bookshop that never quite closes",
+          "in": "inside a bookshop that never quite closes"
+        },
+        "tags": [
+          "cozy",
+          "retail",
+          "magic",
+          "urban"
+        ],
+        "affinity": [
+          "mystery",
+          "magic",
+          "school"
+        ],
+        "excludes": [
+          "grim",
+          "war"
+        ],
+        "weirdness": 0.45,
+        "silliness": 0.35
+      },
+      {
+        "id": "overgrown-cottage-garden",
+        "label": "Overgrown cottage garden",
+        "forms": {
+          "noun": "overgrown cottage garden",
+          "in": "in an overgrown cottage garden"
+        },
+        "tags": [
+          "cozy",
+          "plants",
+          "nature",
+          "family"
+        ],
+        "affinity": [
+          "plants",
+          "animals",
+          "farming"
+        ],
+        "excludes": [
+          "grim",
+          "war"
+        ],
+        "weirdness": 0.05,
+        "silliness": 0.3
+      },
+      {
+        "id": "mushroom-village",
+        "label": "Mushroom village",
+        "forms": {
+          "noun": "village of chatty mushrooms",
+          "in": "in a village of chatty mushrooms"
+        },
+        "tags": [
+          "cozy",
+          "forest",
+          "fantasy",
+          "absurd"
+        ],
+        "affinity": [
+          "forest",
+          "fantasy",
+          "plants"
+        ],
+        "excludes": [
+          "grim",
+          "war"
+        ],
+        "weirdness": 0.75,
+        "silliness": 0.7
+      }
+    ],
+    "protagonist": [
+      {
+        "id": "retired-adventurer-baker",
+        "label": "Retired adventurer baker",
+        "forms": {
+          "noun": "retired adventurer who just wants to bake"
+        },
+        "tags": [
+          "cozy",
+          "fantasy",
+          "food",
+          "cooking"
+        ],
+        "affinity": [
+          "fantasy",
+          "food",
+          "town"
+        ],
+        "excludes": [
+          "grim",
+          "war"
+        ],
+        "weirdness": 0.35,
+        "silliness": 0.55
+      },
+      {
+        "id": "nervous-postal-worker",
+        "label": "Nervous postal worker",
+        "forms": {
+          "noun": "nervous new postal worker"
+        },
+        "tags": [
+          "cozy",
+          "mail",
+          "town"
+        ],
+        "affinity": [
+          "mail",
+          "town",
+          "social"
+        ],
+        "excludes": [
+          "grim",
+          "war"
+        ],
+        "weirdness": 0.1,
+        "silliness": 0.4
+      },
+      {
+        "id": "tiny-dragon",
+        "label": "Tiny dragon",
+        "forms": {
+          "noun": "dragon too small to be scary"
+        },
+        "tags": [
+          "cozy",
+          "fantasy",
+          "animals",
+          "comedy"
+        ],
+        "affinity": [
+          "fantasy",
+          "animals"
+        ],
+        "excludes": [
+          "grim",
+          "war"
+        ],
+        "weirdness": 0.55,
+        "silliness": 0.65
+      },
+      {
+        "id": "hedgehog-florist",
+        "label": "Hedgehog florist",
+        "forms": {
+          "noun": "hedgehog florist"
+        },
+        "tags": [
+          "cozy",
+          "animals",
+          "plants",
+          "retail"
+        ],
+        "affinity": [
+          "animals",
+          "plants",
+          "town"
+        ],
+        "excludes": [
+          "grim",
+          "war"
+        ],
+        "weirdness": 0.6,
+        "silliness": 0.6
+      },
+      {
+        "id": "grandmother-with-a-past",
+        "label": "Grandmother with a past",
+        "forms": {
+          "noun": "grandmother with a suspiciously exciting past"
+        },
+        "tags": [
+          "cozy",
+          "family",
+          "mystery"
+        ],
+        "affinity": [
+          "family",
+          "crime",
+          "mystery"
+        ],
+        "excludes": [
+          "grim",
+          "war"
+        ],
+        "weirdness": 0.35,
+        "silliness": 0.5
+      },
+      {
+        "id": "tea-stall-frog",
+        "label": "Tea-stall frog",
+        "forms": {
+          "noun": "frog who runs a tea stall"
+        },
+        "tags": [
+          "cozy",
+          "animals",
+          "food",
+          "retail"
+        ],
+        "affinity": [
+          "animals",
+          "food",
+          "water"
+        ],
+        "excludes": [
+          "grim",
+          "war"
+        ],
+        "weirdness": 0.65,
+        "silliness": 0.65
+      },
+      {
+        "id": "new-librarian",
+        "label": "New librarian",
+        "forms": {
+          "noun": "freshly hired small-town librarian"
+        },
+        "tags": [
+          "cozy",
+          "town",
+          "school"
+        ],
+        "affinity": [
+          "town",
+          "mystery",
+          "school"
+        ],
+        "excludes": [
+          "grim",
+          "war"
+        ],
+        "weirdness": 0.1,
+        "silliness": 0.3
+      },
+      {
+        "id": "earnest-beekeeper",
+        "label": "Earnest beekeeper",
+        "forms": {
+          "noun": "earnest beekeeper"
+        },
+        "tags": [
+          "cozy",
+          "animals",
+          "farming",
+          "nature"
+        ],
+        "affinity": [
+          "farming",
+          "nature",
+          "plants"
+        ],
+        "excludes": [
+          "grim",
+          "war"
+        ],
+        "weirdness": 0.1,
+        "silliness": 0.35
+      }
+    ],
+    "objective": [
+      {
+        "id": "make-everyone-at-home",
+        "label": "Make everyone at home",
+        "forms": {
+          "verb": "make the whole village feel at home"
+        },
+        "tags": [
+          "cozy",
+          "social",
+          "town"
+        ],
+        "affinity": [
+          "social",
+          "town"
+        ],
+        "excludes": [
+          "grim",
+          "war"
+        ],
+        "weirdness": 0.05,
+        "silliness": 0.3
+      },
+      {
+        "id": "restore-the-garden",
+        "label": "Restore the garden",
+        "forms": {
+          "verb": "restore the old community garden"
+        },
+        "tags": [
+          "cozy",
+          "plants",
+          "building"
+        ],
+        "affinity": [
+          "plants",
+          "farming",
+          "town"
+        ],
+        "excludes": [
+          "grim",
+          "war"
+        ],
+        "weirdness": 0.05,
+        "silliness": 0.25
+      },
+      {
+        "id": "best-autumn-festival",
+        "label": "Best autumn festival",
+        "forms": {
+          "verb": "throw the best autumn festival the valley has ever seen"
+        },
+        "tags": [
+          "cozy",
+          "social",
+          "food"
+        ],
+        "affinity": [
+          "town",
+          "food",
+          "farming"
+        ],
+        "excludes": [
+          "grim",
+          "war"
+        ],
+        "weirdness": 0.15,
+        "silliness": 0.45
+      },
+      {
+        "id": "befriend-every-animal",
+        "label": "Befriend every animal",
+        "forms": {
+          "verb": "befriend every animal on the island"
+        },
+        "tags": [
+          "cozy",
+          "animals",
+          "social"
+        ],
+        "affinity": [
+          "animals",
+          "nature",
+          "water"
+        ],
+        "excludes": [
+          "grim",
+          "war"
+        ],
+        "weirdness": 0.2,
+        "silliness": 0.45
+      },
+      {
+        "id": "cafe-through-winter",
+        "label": "Café through winter",
+        "forms": {
+          "verb": "keep the café open through the long winter"
+        },
+        "tags": [
+          "cozy",
+          "management",
+          "food",
+          "cold"
+        ],
+        "affinity": [
+          "food",
+          "cold",
+          "management"
+        ],
+        "excludes": [
+          "grim",
+          "war"
+        ],
+        "weirdness": 0.1,
+        "silliness": 0.25
+      },
+      {
+        "id": "perfect-houseplant-spot",
+        "label": "Perfect houseplant spot",
+        "forms": {
+          "verb": "find the perfect spot for every houseplant"
+        },
+        "tags": [
+          "cozy",
+          "plants",
+          "puzzle",
+          "mundane"
+        ],
+        "affinity": [
+          "plants",
+          "puzzle"
+        ],
+        "excludes": [
+          "grim",
+          "war"
+        ],
+        "weirdness": 0.35,
+        "silliness": 0.55
+      },
+      {
+        "id": "giant-vegetable",
+        "label": "Giant vegetable",
+        "forms": {
+          "verb": "win the annual giant vegetable contest"
+        },
+        "tags": [
+          "cozy",
+          "farming",
+          "sport",
+          "comedy"
+        ],
+        "affinity": [
+          "farming",
+          "rural",
+          "sport"
+        ],
+        "excludes": [
+          "grim",
+          "war"
+        ],
+        "weirdness": 0.3,
+        "silliness": 0.6
+      }
+    ],
+    "loop": [
+      {
+        "id": "water-chat-nap",
+        "label": "Water, chat, nap",
+        "forms": {
+          "verb": "water the plants, chat with the neighbours and nap in the sun"
+        },
+        "tags": [
+          "cozy",
+          "plants",
+          "social"
+        ],
+        "affinity": [
+          "plants",
+          "social",
+          "town"
+        ],
+        "excludes": [
+          "grim",
+          "war"
+        ],
+        "weirdness": 0.1,
+        "silliness": 0.4
+      },
+      {
+        "id": "bake-deliver-knit",
+        "label": "Bake, deliver, knit",
+        "forms": {
+          "verb": "bake in the morning, deliver in the afternoon and knit by the fire"
+        },
+        "tags": [
+          "cozy",
+          "cooking",
+          "food",
+          "crafting"
+        ],
+        "affinity": [
+          "food",
+          "mail",
+          "cold"
+        ],
+        "excludes": [
+          "grim",
+          "war"
+        ],
+        "weirdness": 0.1,
+        "silliness": 0.35
+      },
+      {
+        "id": "forage-brew-decorate",
+        "label": "Forage, brew, decorate",
+        "forms": {
+          "verb": "forage, brew tea and decorate"
+        },
+        "tags": [
+          "cozy",
+          "nature",
+          "crafting",
+          "building"
+        ],
+        "affinity": [
+          "forest",
+          "food",
+          "building"
+        ],
+        "excludes": [
+          "grim",
+          "war"
+        ],
+        "weirdness": 0.1,
+        "silliness": 0.3
+      },
+      {
+        "id": "tidy-and-discover",
+        "label": "Tidy and discover",
+        "forms": {
+          "verb": "tidy one room at a time and rediscover forgotten treasures"
+        },
+        "tags": [
+          "cozy",
+          "puzzle",
+          "mundane",
+          "exploration"
+        ],
+        "affinity": [
+          "family",
+          "puzzle",
+          "melancholy"
+        ],
+        "excludes": [
+          "grim",
+          "war"
+        ],
+        "weirdness": 0.15,
+        "silliness": 0.3
+      },
+      {
+        "id": "fish-garden-gossip",
+        "label": "Fish, garden, gossip",
+        "forms": {
+          "verb": "fish, garden and gossip"
+        },
+        "tags": [
+          "cozy",
+          "water",
+          "plants",
+          "social"
+        ],
+        "affinity": [
+          "water",
+          "farming",
+          "town"
+        ],
+        "excludes": [
+          "grim",
+          "war"
+        ],
+        "weirdness": 0.1,
+        "silliness": 0.45
+      },
+      {
+        "id": "serve-and-remember",
+        "label": "Serve and remember",
+        "forms": {
+          "verb": "serve regulars, learn their orders and remember their birthdays"
+        },
+        "tags": [
+          "cozy",
+          "food",
+          "social",
+          "management"
+        ],
+        "affinity": [
+          "food",
+          "social",
+          "retail"
+        ],
+        "excludes": [
+          "grim",
+          "war"
+        ],
+        "weirdness": 0.1,
+        "silliness": 0.3
+      }
+    ],
+    "mechanic": [
+      {
+        "id": "tea-blending",
+        "label": "Tea blending",
+        "forms": {
+          "noun": "tea blending",
+          "verb": "blend teas for very particular customers"
+        },
+        "tags": [
+          "cozy",
+          "food",
+          "crafting"
+        ],
+        "affinity": [
+          "food",
+          "cooking",
+          "plants"
+        ],
+        "excludes": [
+          "grim",
+          "war"
+        ],
+        "weirdness": 0.2,
+        "silliness": 0.35
+      },
+      {
+        "id": "furniture-arranging",
+        "label": "Furniture arranging",
+        "forms": {
+          "noun": "furniture arranging",
+          "verb": "nudge furniture around until it feels just right"
+        },
+        "tags": [
+          "cozy",
+          "building",
+          "puzzle"
+        ],
+        "affinity": [
+          "building",
+          "puzzle",
+          "art"
+        ],
+        "excludes": [
+          "grim",
+          "war"
+        ],
+        "weirdness": 0.15,
+        "silliness": 0.35
+      },
+      {
+        "id": "friendship-hearts",
+        "label": "Friendship hearts",
+        "forms": {
+          "noun": "friendship hearts",
+          "verb": "fill friendship hearts with thoughtful gifts"
+        },
+        "tags": [
+          "cozy",
+          "social"
+        ],
+        "affinity": [
+          "social",
+          "town",
+          "romance"
+        ],
+        "excludes": [
+          "grim",
+          "war"
+        ],
+        "weirdness": 0.1,
+        "silliness": 0.4
+      },
+      {
+        "id": "seasonal-crops",
+        "label": "Seasonal crops",
+        "forms": {
+          "noun": "seasonal gardening",
+          "verb": "plant crops that change with the seasons"
+        },
+        "tags": [
+          "cozy",
+          "farming",
+          "plants",
+          "time"
+        ],
+        "affinity": [
+          "farming",
+          "weather",
+          "plants"
+        ],
+        "excludes": [
+          "grim",
+          "war"
+        ],
+        "weirdness": 0.05,
+        "silliness": 0.25
+      },
+      {
+        "id": "scarf-knitting",
+        "label": "Scarf knitting",
+        "forms": {
+          "noun": "cozy knitting",
+          "verb": "knit scarves for anyone who looks a bit chilly"
+        },
+        "tags": [
+          "cozy",
+          "crafting",
+          "cold"
+        ],
+        "affinity": [
+          "crafting",
+          "cold",
+          "social"
+        ],
+        "excludes": [
+          "grim",
+          "war"
+        ],
+        "weirdness": 0.3,
+        "silliness": 0.5
+      },
+      {
+        "id": "letter-writing",
+        "label": "Letter writing",
+        "forms": {
+          "noun": "letter writing",
+          "verb": "write letters and wait eagerly for replies"
+        },
+        "tags": [
+          "cozy",
+          "mail",
+          "social",
+          "narrative"
+        ],
+        "affinity": [
+          "mail",
+          "social",
+          "narrative"
+        ],
+        "excludes": [
+          "grim",
+          "war"
+        ],
+        "weirdness": 0.1,
+        "silliness": 0.25
+      },
+      {
+        "id": "rhythmic-dishwashing",
+        "label": "Rhythmic dishwashing",
+        "forms": {
+          "noun": "rhythmic dishwashing",
+          "verb": "wash dishes in perfect, soapy rhythm"
+        },
+        "tags": [
+          "cozy",
+          "rhythm",
+          "mundane",
+          "food"
+        ],
+        "affinity": [
+          "rhythm",
+          "food",
+          "music"
+        ],
+        "excludes": [
+          "grim",
+          "war"
+        ],
+        "weirdness": 0.45,
+        "silliness": 0.6
+      }
+    ],
+    "threat": [
+      {
+        "id": "judgemental-cat",
+        "label": "Judgemental cat",
+        "forms": {
+          "noun": "the neighbour's judgemental cat",
+          "clause": "the neighbour's cat keeps judging your garden"
+        },
+        "tags": [
+          "cozy",
+          "animals",
+          "comedy"
+        ],
+        "affinity": [
+          "animals",
+          "plants",
+          "town"
+        ],
+        "excludes": [
+          "grim",
+          "war"
+        ],
+        "weirdness": 0.4,
+        "silliness": 0.7
+      },
+      {
+        "id": "threatened-drizzle",
+        "label": "Threatened drizzle",
+        "forms": {
+          "noun": "a looming drizzle",
+          "clause": "it keeps threatening to drizzle"
+        },
+        "tags": [
+          "cozy",
+          "weather",
+          "mundane"
+        ],
+        "affinity": [
+          "weather",
+          "nature"
+        ],
+        "excludes": [
+          "grim",
+          "war"
+        ],
+        "weirdness": 0.2,
+        "silliness": 0.5
+      },
+      {
+        "id": "fence-opinions",
+        "label": "Fence opinions",
+        "forms": {
+          "noun": "the very opinionated village council",
+          "clause": "the village council has strong opinions about your fence"
+        },
+        "tags": [
+          "cozy",
+          "bureaucracy",
+          "town",
+          "comedy"
+        ],
+        "affinity": [
+          "bureaucracy",
+          "town",
+          "building"
+        ],
+        "excludes": [
+          "grim",
+          "war"
+        ],
+        "weirdness": 0.35,
+        "silliness": 0.6
+      },
+      {
+        "id": "organised-slugs",
+        "label": "Organised slugs",
+        "forms": {
+          "noun": "a slug uprising",
+          "clause": "the slugs are getting organised"
+        },
+        "tags": [
+          "cozy",
+          "plants",
+          "animals",
+          "comedy"
+        ],
+        "affinity": [
+          "farming",
+          "plants",
+          "animals"
+        ],
+        "excludes": [
+          "grim",
+          "war"
+        ],
+        "weirdness": 0.55,
+        "silliness": 0.7
+      },
+      {
+        "id": "empty-houses",
+        "label": "Empty houses",
+        "forms": {
+          "noun": "the empty houses down the lane",
+          "clause": "half the houses down the lane are still empty"
+        },
+        "tags": [
+          "cozy",
+          "town",
+          "melancholy"
+        ],
+        "affinity": [
+          "town",
+          "social",
+          "melancholy"
+        ],
+        "excludes": [
+          "grim",
+          "war"
+        ],
+        "weirdness": 0.15,
+        "silliness": 0.1
+      },
+      {
+        "id": "rival-sourdough",
+        "label": "Rival sourdough",
+        "forms": {
+          "noun": "a rival baker's legendary sourdough",
+          "clause": "a rival baker's sourdough is the talk of the town"
+        },
+        "tags": [
+          "cozy",
+          "food",
+          "cooking",
+          "social"
+        ],
+        "affinity": [
+          "food",
+          "cooking",
+          "town"
+        ],
+        "excludes": [
+          "grim",
+          "war"
+        ],
+        "weirdness": 0.3,
+        "silliness": 0.6
+      },
+      {
+        "id": "early-winter",
+        "label": "Early winter",
+        "forms": {
+          "noun": "an early winter",
+          "clause": "winter is arriving a week early this year"
+        },
+        "tags": [
+          "cozy",
+          "cold",
+          "weather",
+          "time"
+        ],
+        "affinity": [
+          "cold",
+          "farming",
+          "survival"
+        ],
+        "excludes": [
+          "grim",
+          "war"
+        ],
+        "weirdness": 0.1,
+        "silliness": 0.2
+      },
+      {
+        "id": "goose-vendetta",
+        "label": "Goose vendetta",
+        "forms": {
+          "noun": "a goose with a vendetta",
+          "clause": "a goose has declared you its sworn enemy"
+        },
+        "tags": [
+          "cozy",
+          "animals",
+          "comedy",
+          "chaos"
+        ],
+        "affinity": [
+          "animals",
+          "rural",
+          "water"
+        ],
+        "excludes": [
+          "grim",
+          "war"
+        ],
+        "weirdness": 0.6,
+        "silliness": 0.85
+      }
+    ],
+    "mood": [
+      {
+        "id": "relentlessly-wholesome",
+        "label": "Relentlessly wholesome",
+        "forms": {
+          "adj": "relentlessly wholesome"
+        },
+        "tags": [
+          "cozy",
+          "wholesome"
+        ],
+        "excludes": [
+          "grim",
+          "war"
+        ],
+        "weirdness": 0.2,
+        "silliness": 0.5
+      },
+      {
+        "id": "warm-and-fuzzy",
+        "label": "Warm and fuzzy",
+        "forms": {
+          "adj": "warm and fuzzy"
+        },
+        "tags": [
+          "cozy",
+          "wholesome"
+        ],
+        "excludes": [
+          "grim",
+          "war"
+        ],
+        "weirdness": 0.1,
+        "silliness": 0.45
+      },
+      {
+        "id": "gently-melancholic",
+        "label": "Gently melancholic",
+        "forms": {
+          "adj": "gently melancholic"
+        },
+        "tags": [
+          "cozy",
+          "melancholy"
+        ],
+        "excludes": [
+          "grim",
+          "war"
+        ],
+        "weirdness": 0.15,
+        "silliness": 0.15
+      },
+      {
+        "id": "snug",
+        "label": "Snug",
+        "forms": {
+          "adj": "snug"
+        },
+        "tags": [
+          "cozy",
+          "wholesome"
+        ],
+        "excludes": [
+          "grim",
+          "war"
+        ],
+        "weirdness": 0.1,
+        "silliness": 0.35
+      },
+      {
+        "id": "slightly-mischievous",
+        "label": "Slightly mischievous",
+        "forms": {
+          "adj": "slightly mischievous"
+        },
+        "tags": [
+          "cozy",
+          "wholesome"
+        ],
+        "excludes": [
+          "grim",
+          "war"
+        ],
+        "weirdness": 0.25,
+        "silliness": 0.55
+      },
+      {
+        "id": "sleepy-and-soft",
+        "label": "Sleepy and soft",
+        "forms": {
+          "adj": "sleepy and soft"
+        },
+        "tags": [
+          "cozy",
+          "wholesome"
+        ],
+        "excludes": [
+          "grim",
+          "war"
+        ],
+        "weirdness": 0.2,
+        "silliness": 0.45
+      }
+    ],
+    "visual": [
+      {
+        "id": "watercolour-pastels",
+        "label": "Watercolour pastels",
+        "forms": {
+          "noun": "soft watercolour pastels"
+        },
+        "tags": [
+          "cozy",
+          "art"
+        ],
+        "affinity": [
+          "nature",
+          "plants"
+        ],
+        "excludes": [
+          "grim",
+          "war"
+        ],
+        "weirdness": 0.1,
+        "silliness": 0.3
+      },
+      {
+        "id": "felt-dioramas",
+        "label": "Felt dioramas",
+        "forms": {
+          "noun": "chunky felt-and-yarn dioramas"
+        },
+        "tags": [
+          "cozy",
+          "art",
+          "crafting"
+        ],
+        "affinity": [
+          "crafting",
+          "animals"
+        ],
+        "excludes": [
+          "grim",
+          "war"
+        ],
+        "weirdness": 0.35,
+        "silliness": 0.5
+      },
+      {
+        "id": "storybook",
+        "label": "Storybook",
+        "forms": {
+          "noun": "warm storybook illustrations"
+        },
+        "tags": [
+          "cozy",
+          "art"
+        ],
+        "affinity": [
+          "fantasy",
+          "family"
+        ],
+        "excludes": [
+          "grim",
+          "war"
+        ],
+        "weirdness": 0.1,
+        "silliness": 0.3
+      },
+      {
+        "id": "dollhouse-rooms",
+        "label": "Dollhouse rooms",
+        "forms": {
+          "noun": "tiny isometric dollhouse rooms"
+        },
+        "tags": [
+          "cozy",
+          "art",
+          "building"
+        ],
+        "affinity": [
+          "building",
+          "family"
+        ],
+        "excludes": [
+          "grim",
+          "war"
+        ],
+        "weirdness": 0.2,
+        "silliness": 0.4
+      },
+      {
+        "id": "steamy-gouache",
+        "label": "Steamy gouache",
+        "forms": {
+          "noun": "hand-painted gouache with steam rising from every cup"
+        },
+        "tags": [
+          "cozy",
+          "art",
+          "food"
+        ],
+        "affinity": [
+          "food",
+          "cooking",
+          "cold"
+        ],
+        "excludes": [
+          "grim",
+          "war"
+        ],
+        "weirdness": 0.25,
+        "silliness": 0.4
+      },
+      {
+        "id": "fingerprint-claymation",
+        "label": "Fingerprint claymation",
+        "forms": {
+          "noun": "claymation with visible fingerprints"
+        },
+        "tags": [
+          "cozy",
+          "art",
+          "comedy"
+        ],
+        "affinity": [
+          "comedy",
+          "animals"
+        ],
+        "excludes": [
+          "grim",
+          "war"
+        ],
+        "weirdness": 0.4,
+        "silliness": 0.55
+      }
+    ],
+    "twist": [
+      {
+        "id": "retired-villains",
+        "label": "Retired villains",
+        "forms": {
+          "clause": "every resident is secretly a retired villain"
+        },
+        "tags": [
+          "cozy",
+          "crime",
+          "comedy"
+        ],
+        "affinity": [
+          "crime",
+          "fantasy",
+          "town"
+        ],
+        "excludes": [
+          "grim",
+          "war"
+        ],
+        "weirdness": 0.6,
+        "silliness": 0.65
+      },
+      {
+        "id": "turtle-village",
+        "label": "Turtle village",
+        "forms": {
+          "clause": "the whole village sits on the back of a very large, very sleepy turtle"
+        },
+        "tags": [
+          "cozy",
+          "animals",
+          "absurd"
+        ],
+        "affinity": [
+          "animals",
+          "water",
+          "fantasy"
+        ],
+        "excludes": [
+          "grim",
+          "war"
+        ],
+        "weirdness": 0.8,
+        "silliness": 0.7
+      },
+      {
+        "id": "welcome-ghost",
+        "label": "Welcome ghost",
+        "forms": {
+          "clause": "you are the ghost haunting the café, and everyone is fine with it"
+        },
+        "tags": [
+          "cozy",
+          "death",
+          "food",
+          "absurd"
+        ],
+        "affinity": [
+          "death",
+          "food",
+          "social"
+        ],
+        "excludes": [
+          "grim",
+          "war"
+        ],
+        "weirdness": 0.7,
+        "silliness": 0.6
+      },
+      {
+        "id": "cat-mayor",
+        "label": "Cat mayor",
+        "forms": {
+          "clause": "the cat who judges your garden is actually the mayor"
+        },
+        "tags": [
+          "cozy",
+          "animals",
+          "bureaucracy",
+          "comedy"
+        ],
+        "affinity": [
+          "animals",
+          "town",
+          "bureaucracy"
+        ],
+        "excludes": [
+          "grim",
+          "war"
+        ],
+        "weirdness": 0.65,
+        "silliness": 0.8
+      },
+      {
+        "id": "gift-seasons",
+        "label": "Gift seasons",
+        "forms": {
+          "clause": "the seasons only change when someone receives a heartfelt gift"
+        },
+        "tags": [
+          "cozy",
+          "time",
+          "magic",
+          "social"
+        ],
+        "affinity": [
+          "magic",
+          "social",
+          "weather"
+        ],
+        "excludes": [
+          "grim",
+          "war"
+        ],
+        "weirdness": 0.55,
+        "silliness": 0.4
+      },
+      {
+        "id": "snow-globe",
+        "label": "Snow globe",
+        "forms": {
+          "clause": "the whole town is a snow globe on someone's mantelpiece"
+        },
+        "tags": [
+          "cozy",
+          "cosmic",
+          "cold",
+          "weird"
+        ],
+        "affinity": [
+          "cold",
+          "town",
+          "melancholy"
+        ],
+        "excludes": [
+          "grim",
+          "war"
+        ],
+        "weirdness": 0.75,
+        "silliness": 0.4
+      },
+      {
+        "id": "nobody-leaves",
+        "label": "Nobody leaves",
+        "forms": {
+          "clause": "nobody ever leaves the island, simply because nobody wants to"
+        },
+        "tags": [
+          "cozy",
+          "water",
+          "social"
+        ],
+        "affinity": [
+          "water",
+          "town",
+          "melancholy"
+        ],
+        "excludes": [
+          "grim",
+          "war"
+        ],
+        "weirdness": 0.4,
+        "silliness": 0.3
+      }
+    ],
+    "titleFirst": [
+      {
+        "id": "honey",
+        "label": "Honey",
+        "tags": [
+          "cozy",
+          "food",
+          "animals"
+        ],
+        "weirdness": 0.15,
+        "silliness": 0.35
+      },
+      {
+        "id": "little",
+        "label": "Little",
+        "tags": [
+          "cozy",
+          "family"
+        ],
+        "weirdness": 0.15,
+        "silliness": 0.35
+      },
+      {
+        "id": "snug",
+        "label": "Snug",
+        "tags": [
+          "cozy",
+          "cold"
+        ],
+        "weirdness": 0.15,
+        "silliness": 0.35
+      },
+      {
+        "id": "willow",
+        "label": "Willow",
+        "tags": [
+          "cozy",
+          "plants",
+          "nature"
+        ],
+        "weirdness": 0.15,
+        "silliness": 0.35
+      },
+      {
+        "id": "maple",
+        "label": "Maple",
+        "tags": [
+          "cozy",
+          "forest",
+          "food"
+        ],
+        "weirdness": 0.15,
+        "silliness": 0.35
+      },
+      {
+        "id": "teacup",
+        "label": "Teacup",
+        "tags": [
+          "cozy",
+          "food"
+        ],
+        "weirdness": 0.15,
+        "silliness": 0.35
+      },
+      {
+        "id": "sunny",
+        "label": "Sunny",
+        "tags": [
+          "cozy",
+          "weather"
+        ],
+        "weirdness": 0.15,
+        "silliness": 0.35
+      },
+      {
+        "id": "mossy",
+        "label": "Mossy",
+        "tags": [
+          "cozy",
+          "forest",
+          "nature"
+        ],
+        "weirdness": 0.15,
+        "silliness": 0.35
+      },
+      {
+        "id": "pebble",
+        "label": "Pebble",
+        "tags": [
+          "cozy",
+          "water"
+        ],
+        "weirdness": 0.15,
+        "silliness": 0.35
+      },
+      {
+        "id": "clover",
+        "label": "Clover",
+        "tags": [
+          "cozy",
+          "plants",
+          "farming"
+        ],
+        "weirdness": 0.15,
+        "silliness": 0.35
+      },
+      {
+        "id": "cinnamon",
+        "label": "Cinnamon",
+        "tags": [
+          "cozy",
+          "food",
+          "cooking"
+        ],
+        "weirdness": 0.15,
+        "silliness": 0.35
+      },
+      {
+        "id": "acorn",
+        "label": "Acorn",
+        "tags": [
+          "cozy",
+          "forest",
+          "animals"
+        ],
+        "weirdness": 0.15,
+        "silliness": 0.35
+      },
+      {
+        "id": "sleepy",
+        "label": "Sleepy",
+        "tags": [
+          "cozy",
+          "mundane"
+        ],
+        "weirdness": 0.15,
+        "silliness": 0.35
+      },
+      {
+        "id": "golden",
+        "label": "Golden",
+        "tags": [
+          "cozy",
+          "farming",
+          "weather"
+        ],
+        "weirdness": 0.15,
+        "silliness": 0.35
+      },
+      {
+        "id": "puddle",
+        "label": "Puddle",
+        "tags": [
+          "cozy",
+          "weather",
+          "water"
+        ],
+        "weirdness": 0.15,
+        "silliness": 0.35
+      }
+    ],
+    "titleLast": [
+      {
+        "id": "hollow",
+        "label": "Hollow",
+        "tags": [
+          "cozy",
+          "forest",
+          "nature"
+        ],
+        "weirdness": 0.15,
+        "silliness": 0.35
+      },
+      {
+        "id": "garden",
+        "label": "Garden",
+        "tags": [
+          "cozy",
+          "plants",
+          "farming"
+        ],
+        "weirdness": 0.15,
+        "silliness": 0.35
+      },
+      {
+        "id": "lane",
+        "label": "Lane",
+        "tags": [
+          "cozy",
+          "town"
+        ],
+        "weirdness": 0.15,
+        "silliness": 0.35
+      },
+      {
+        "id": "days",
+        "label": "Days",
+        "tags": [
+          "cozy",
+          "time"
+        ],
+        "weirdness": 0.15,
+        "silliness": 0.35
+      },
+      {
+        "id": "cottage",
+        "label": "Cottage",
+        "tags": [
+          "cozy",
+          "rural",
+          "family"
+        ],
+        "weirdness": 0.15,
+        "silliness": 0.35
+      },
+      {
+        "id": "cafe",
+        "label": "Café",
+        "tags": [
+          "cozy",
+          "food"
+        ],
+        "weirdness": 0.15,
+        "silliness": 0.35
+      },
+      {
+        "id": "meadow",
+        "label": "Meadow",
+        "tags": [
+          "cozy",
+          "nature",
+          "farming"
+        ],
+        "weirdness": 0.15,
+        "silliness": 0.35
+      },
+      {
+        "id": "valley",
+        "label": "Valley",
+        "tags": [
+          "cozy",
+          "rural",
+          "nature"
+        ],
+        "weirdness": 0.15,
+        "silliness": 0.35
+      },
+      {
+        "id": "harvest",
+        "label": "Harvest",
+        "tags": [
+          "cozy",
+          "farming",
+          "food"
+        ],
+        "weirdness": 0.15,
+        "silliness": 0.35
+      },
+      {
+        "id": "nook",
+        "label": "Nook",
+        "tags": [
+          "cozy",
+          "building"
+        ],
+        "weirdness": 0.15,
+        "silliness": 0.35
+      },
+      {
+        "id": "corner",
+        "label": "Corner",
+        "tags": [
+          "cozy",
+          "town"
+        ],
+        "weirdness": 0.15,
+        "silliness": 0.35
+      },
+      {
+        "id": "friends",
+        "label": "Friends",
+        "tags": [
+          "cozy",
+          "social",
+          "animals"
+        ],
+        "weirdness": 0.15,
+        "silliness": 0.35
+      },
+      {
+        "id": "kettle",
+        "label": "Kettle",
+        "tags": [
+          "cozy",
+          "food",
+          "cooking"
+        ],
+        "weirdness": 0.15,
+        "silliness": 0.35
+      },
+      {
+        "id": "seasons",
+        "label": "Seasons",
+        "tags": [
+          "cozy",
+          "time",
+          "weather"
+        ],
+        "weirdness": 0.15,
+        "silliness": 0.35
+      },
+      {
+        "id": "crossing",
+        "label": "Crossing",
+        "tags": [
+          "cozy",
+          "travel",
+          "water"
+        ],
+        "weirdness": 0.15,
+        "silliness": 0.35
+      }
+    ],
+    "creep": [
+      {
+        "id": "sunny-naps",
+        "label": "Sunny naps",
+        "kind": "system",
+        "complexity": 2,
+        "forms": {
+          "pitch": "A nap system: doze off in sunny spots for tiny, cumulative bonuses.",
+          "connects": "Well-rested players {loop.verb} a little faster, which feels like cheating but isn't."
+        },
+        "tags": [
+          "cozy",
+          "mundane",
+          "comedy"
+        ],
+        "affinity": [
+          "cozy",
+          "wholesome",
+          "animals"
+        ],
+        "excludes": [
+          "grim",
+          "war"
+        ],
+        "weirdness": 0.35,
+        "silliness": 0.6
+      },
+      {
+        "id": "birthdays-and-jam",
+        "label": "Birthdays and jam",
+        "kind": "system",
+        "complexity": 5,
+        "forms": {
+          "pitch": "Every resident {setting.in} gets a birthday, a favourite gift and a firm opinion about jam.",
+          "connects": "Remembering birthdays turns {resource.noun} into friendships, and friendships into help."
+        },
+        "tags": [
+          "cozy",
+          "social",
+          "food"
+        ],
+        "affinity": [
+          "social",
+          "town",
+          "cozy"
+        ],
+        "excludes": [
+          "grim",
+          "war"
+        ],
+        "weirdness": 0.35,
+        "silliness": 0.55
+      },
+      {
+        "id": "faraway-pen-pal",
+        "label": "Faraway pen pal",
+        "kind": "loop",
+        "complexity": 3,
+        "forms": {
+          "pitch": "Exchange letters with a lighthouse keeper on a faraway island.",
+          "connects": "Every reply arrives with seeds, a recipe or a small parcel of {resource.noun}."
+        },
+        "tags": [
+          "cozy",
+          "mail",
+          "social"
+        ],
+        "affinity": [
+          "mail",
+          "water",
+          "nautical",
+          "social"
+        ],
+        "excludes": [
+          "grim",
+          "war"
+        ],
+        "weirdness": 0.2,
+        "silliness": 0.35
+      },
+      {
+        "id": "little-cafe",
+        "label": "Little café",
+        "kind": "loop",
+        "complexity": 5,
+        "forms": {
+          "pitch": "Open a little café that turns your harvest into pastries.",
+          "connects": "Café profits fund every step toward your goal to {objective.verb}."
+        },
+        "tags": [
+          "cozy",
+          "food",
+          "cooking",
+          "management"
+        ],
+        "affinity": [
+          "food",
+          "farming",
+          "cooking",
+          "town"
+        ],
+        "excludes": [
+          "grim",
+          "war"
+        ],
+        "weirdness": 0.15,
+        "silliness": 0.35
+      },
+      {
+        "id": "helpers-scrapbook",
+        "label": "Helpers scrapbook",
+        "kind": "content",
+        "complexity": 3,
+        "forms": {
+          "pitch": "A scrapbook that fills itself with photos of everyone you've helped."
+        },
+        "tags": [
+          "cozy",
+          "art",
+          "social"
+        ],
+        "affinity": [
+          "social",
+          "cozy",
+          "family"
+        ],
+        "excludes": [
+          "grim",
+          "war"
+        ],
+        "weirdness": 0.15,
+        "silliness": 0.4
+      },
+      {
+        "id": "marrow-festival",
+        "label": "Marrow festival",
+        "kind": "content",
+        "complexity": 5,
+        "forms": {
+          "pitch": "Seasonal festivals with stalls, lanterns and a contest for the largest marrow.",
+          "connects": "Festival prizes reward a whole year of hard work, and the winner is never allowed to forget it."
+        },
+        "tags": [
+          "cozy",
+          "farming",
+          "social",
+          "food"
+        ],
+        "affinity": [
+          "farming",
+          "town",
+          "rural"
+        ],
+        "excludes": [
+          "grim",
+          "war"
+        ],
+        "weirdness": 0.3,
+        "silliness": 0.6
+      },
+      {
+        "id": "decorate-everything",
+        "label": "Decorate everything",
+        "kind": "content",
+        "complexity": 4,
+        "forms": {
+          "pitch": "A decorating mode for every room, shed and birdhouse {setting.in}."
+        },
+        "tags": [
+          "cozy",
+          "building",
+          "art"
+        ],
+        "affinity": [
+          "building",
+          "art",
+          "cozy"
+        ],
+        "excludes": [
+          "grim",
+          "war"
+        ],
+        "weirdness": 0.15,
+        "silliness": 0.4
+      },
+      {
+        "id": "sunday-bake-off",
+        "label": "Sunday bake-off",
+        "kind": "whyNot",
+        "complexity": 3,
+        "forms": {
+          "pitch": "A Sunday bake-off judged, without exception, by {threat.noun}."
+        },
+        "tags": [
+          "cozy",
+          "food",
+          "comedy"
+        ],
+        "affinity": [
+          "food",
+          "cooking",
+          "animals",
+          "comedy"
+        ],
+        "excludes": [
+          "grim",
+          "war"
+        ],
+        "weirdness": 0.6,
+        "silliness": 0.8
+      },
+      {
+        "id": "no-cat-limit",
+        "label": "No cat limit",
+        "kind": "whyNot",
+        "complexity": 2,
+        "forms": {
+          "pitch": "Let players adopt the cat. Then another one. There is no cat limit."
+        },
+        "tags": [
+          "cozy",
+          "animals",
+          "comedy"
+        ],
+        "affinity": [
+          "animals",
+          "cozy",
+          "wholesome"
+        ],
+        "excludes": [
+          "grim",
+          "war"
+        ],
+        "weirdness": 0.45,
+        "silliness": 0.8
+      },
+      {
+        "id": "gentle-weather-radio",
+        "label": "Gentle weather radio",
+        "kind": "whyNot",
+        "complexity": 1,
+        "forms": {
+          "pitch": "A weather radio that only plays gentle forecasts and lo-fi music."
+        },
+        "tags": [
+          "cozy",
+          "radio",
+          "music",
+          "weather"
+        ],
+        "affinity": [
+          "radio",
+          "music",
+          "weather"
+        ],
+        "excludes": [
+          "grim",
+          "war"
+        ],
+        "weirdness": 0.3,
+        "silliness": 0.5
+      }
+    ]
+  },
+  "templates": {
+    "hook": [
+      {
+        "id": "one-cup",
+        "text": "[a] {mood.adj} {genre.adj} {subgenre.noun} where [a] {protagonist.noun} tries to {objective.verb} {setting.in}, one cup of tea at a time.",
+        "weight": 1.5,
+        "tagsAny": [
+          "cozy"
+        ]
+      }
+    ],
+    "pitchThreat": [
+      {
+        "id": "only-danger",
+        "text": "The only real danger: {threat.clause}. Everything else can wait until after your nap.",
+        "weight": 1.5,
+        "tagsAny": [
+          "cozy"
+        ]
+      }
+    ],
+    "mightWork": [
+      {
+        "id": "soothing",
+        "text": "But [a] {setting.noun} is the kind of place people want to live in, and {mechanic.noun} is soothing enough to play for hours.",
+        "weight": 1.2,
+        "tagsAny": [
+          "cozy"
+        ]
+      }
+    ],
+    "scopeNote": [
+      {
+        "id": "cozy-scope",
+        "text": "Start with {mechanic.noun} and one tiny {setting.noun}. Add more cats later. There will always be more cats.",
+        "weight": 0.8,
+        "tagsAny": [
+          "cozy"
+        ]
+      }
+    ]
+  }
+}

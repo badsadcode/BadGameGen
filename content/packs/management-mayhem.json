@@ -1,0 +1,2231 @@
+{
+  "format": 1,
+  "id": "management-mayhem",
+  "name": "Management Mayhem",
+  "version": "1.0.0",
+  "author": "Bad Ideas Works",
+  "description": "Meetings about meetings, forms about forms, and a stapler with a chain of command.",
+  "items": {
+    "genre": [
+      {
+        "id": "corporate-thriller",
+        "label": "Corporate thriller",
+        "forms": {
+          "adj": "corporate",
+          "noun": "corporate thriller"
+        },
+        "tags": [
+          "management",
+          "office",
+          "tense",
+          "crime"
+        ],
+        "affinity": [
+          "office",
+          "crime"
+        ],
+        "weirdness": 0.2,
+        "silliness": 0.35
+      },
+      {
+        "id": "bureaucracy-sim",
+        "label": "Bureaucracy sim",
+        "forms": {
+          "adj": "bureaucratic",
+          "noun": "bureaucracy sim"
+        },
+        "tags": [
+          "management",
+          "bureaucracy",
+          "office"
+        ],
+        "affinity": [
+          "bureaucracy",
+          "office"
+        ],
+        "weirdness": 0.2,
+        "silliness": 0.45
+      },
+      {
+        "id": "spreadsheet-sim",
+        "label": "Spreadsheet sim",
+        "forms": {
+          "adj": "spreadsheet-driven",
+          "noun": "spreadsheet simulator"
+        },
+        "tags": [
+          "management",
+          "office",
+          "strategy"
+        ],
+        "affinity": [
+          "office",
+          "tech"
+        ],
+        "weirdness": 0.35,
+        "silliness": 0.55
+      },
+      {
+        "id": "logistics",
+        "label": "Logistics",
+        "forms": {
+          "adj": "logistics",
+          "noun": "logistics game"
+        },
+        "tags": [
+          "management",
+          "strategy",
+          "trade",
+          "puzzle"
+        ],
+        "affinity": [
+          "trade",
+          "trains",
+          "mail"
+        ],
+        "weirdness": 0.05,
+        "silliness": 0.25
+      }
+    ],
+    "subgenre": [
+      {
+        "id": "paperwork-puzzler",
+        "label": "Paperwork puzzler",
+        "forms": {
+          "noun": "paperwork puzzler"
+        },
+        "tags": [
+          "management",
+          "puzzle",
+          "bureaucracy",
+          "office"
+        ],
+        "affinity": [
+          "bureaucracy",
+          "office"
+        ],
+        "weirdness": 0.2,
+        "silliness": 0.45
+      },
+      {
+        "id": "tycoon-game",
+        "label": "Tycoon game",
+        "forms": {
+          "noun": "tycoon game"
+        },
+        "tags": [
+          "management",
+          "strategy",
+          "trade"
+        ],
+        "affinity": [
+          "trade",
+          "building"
+        ],
+        "weirdness": 0.05,
+        "silliness": 0.3
+      },
+      {
+        "id": "meeting-simulator",
+        "label": "Meeting simulator",
+        "forms": {
+          "noun": "meeting simulator"
+        },
+        "tags": [
+          "management",
+          "office",
+          "social",
+          "comedy"
+        ],
+        "affinity": [
+          "office",
+          "social"
+        ],
+        "weirdness": 0.5,
+        "silliness": 0.7
+      },
+      {
+        "id": "office-roguelike",
+        "label": "Office roguelike",
+        "forms": {
+          "noun": "office roguelike"
+        },
+        "tags": [
+          "management",
+          "office",
+          "action"
+        ],
+        "affinity": [
+          "office",
+          "chaos"
+        ],
+        "weirdness": 0.35,
+        "silliness": 0.55
+      }
+    ],
+    "setting": [
+      {
+        "id": "open-plan-office",
+        "label": "Open-plan office",
+        "forms": {
+          "noun": "open-plan office",
+          "in": "in an open-plan office with one working stapler"
+        },
+        "tags": [
+          "management",
+          "office",
+          "modern",
+          "mundane"
+        ],
+        "affinity": [
+          "office",
+          "social"
+        ],
+        "weirdness": 0.15,
+        "silliness": 0.45
+      },
+      {
+        "id": "permit-bureau",
+        "label": "Permit bureau",
+        "forms": {
+          "noun": "government permit bureau",
+          "in": "at a permit bureau that demands a form for every form"
+        },
+        "tags": [
+          "management",
+          "bureaucracy",
+          "office",
+          "town"
+        ],
+        "affinity": [
+          "bureaucracy",
+          "puzzle"
+        ],
+        "weirdness": 0.3,
+        "silliness": 0.5
+      },
+      {
+        "id": "enormous-warehouse",
+        "label": "Enormous warehouse",
+        "forms": {
+          "noun": "warehouse the size of a small country",
+          "in": "in a warehouse the size of a small country"
+        },
+        "tags": [
+          "management",
+          "building",
+          "trade",
+          "mail"
+        ],
+        "affinity": [
+          "trade",
+          "logistics"
+        ],
+        "weirdness": 0.3,
+        "silliness": 0.45
+      },
+      {
+        "id": "double-booked-conference-room",
+        "label": "Double-booked conference room",
+        "forms": {
+          "noun": "double-booked conference room",
+          "in": "in a conference room that was booked twice"
+        },
+        "tags": [
+          "management",
+          "office",
+          "social"
+        ],
+        "affinity": [
+          "office",
+          "social"
+        ],
+        "weirdness": 0.35,
+        "silliness": 0.6
+      },
+      {
+        "id": "team-building-retreat",
+        "label": "Team-building retreat",
+        "forms": {
+          "noun": "mandatory team-building retreat",
+          "in": "at a mandatory corporate team-building retreat in the woods"
+        },
+        "tags": [
+          "management",
+          "office",
+          "social",
+          "forest"
+        ],
+        "affinity": [
+          "social",
+          "comedy"
+        ],
+        "weirdness": 0.35,
+        "silliness": 0.65
+      },
+      {
+        "id": "post-sorting-centre",
+        "label": "Post sorting centre",
+        "forms": {
+          "noun": "regional post sorting centre",
+          "in": "in a regional post sorting centre"
+        },
+        "tags": [
+          "management",
+          "mail",
+          "puzzle",
+          "mundane"
+        ],
+        "affinity": [
+          "mail",
+          "puzzle"
+        ],
+        "weirdness": 0.15,
+        "silliness": 0.3
+      },
+      {
+        "id": "unaudited-archive",
+        "label": "Unaudited archive",
+        "forms": {
+          "noun": "basement archive",
+          "in": "in a basement archive nobody has audited in decades"
+        },
+        "tags": [
+          "management",
+          "bureaucracy",
+          "underground",
+          "mystery"
+        ],
+        "affinity": [
+          "mystery",
+          "horror"
+        ],
+        "weirdness": 0.35,
+        "silliness": 0.35
+      },
+      {
+        "id": "forty-seventh-floor",
+        "label": "Forty-seventh floor",
+        "forms": {
+          "noun": "forty-seventh floor of an office tower",
+          "in": "on the forty-seventh floor of an office tower with a broken lift"
+        },
+        "tags": [
+          "management",
+          "office",
+          "urban",
+          "modern"
+        ],
+        "affinity": [
+          "office",
+          "urban"
+        ],
+        "weirdness": 0.2,
+        "silliness": 0.4
+      },
+      {
+        "id": "baffling-call-centre",
+        "label": "Baffling call centre",
+        "forms": {
+          "noun": "call centre",
+          "in": "in a call centre for a product nobody understands"
+        },
+        "tags": [
+          "management",
+          "office",
+          "social",
+          "mundane"
+        ],
+        "affinity": [
+          "social",
+          "comedy"
+        ],
+        "weirdness": 0.3,
+        "silliness": 0.55
+      },
+      {
+        "id": "beanbag-startup",
+        "label": "Beanbag startup",
+        "forms": {
+          "noun": "startup that is mostly beanbags",
+          "in": "in a startup that is mostly beanbags and optimism"
+        },
+        "tags": [
+          "management",
+          "office",
+          "tech",
+          "modern"
+        ],
+        "affinity": [
+          "tech",
+          "internet",
+          "comedy"
+        ],
+        "weirdness": 0.4,
+        "silliness": 0.65
+      }
+    ],
+    "era": [
+      {
+        "id": "fax-machine-golden-age",
+        "label": "Fax-machine golden age",
+        "forms": {
+          "in": "in the golden age of the fax machine"
+        },
+        "tags": [
+          "management",
+          "historical",
+          "retro",
+          "office"
+        ],
+        "affinity": [
+          "retro"
+        ],
+        "weirdness": 0.2,
+        "silliness": 0.45
+      },
+      {
+        "id": "year-end-closing",
+        "label": "Year-end closing",
+        "forms": {
+          "in": "during year-end closing"
+        },
+        "tags": [
+          "management",
+          "office",
+          "time"
+        ],
+        "affinity": [
+          "office",
+          "time"
+        ],
+        "weirdness": 0.15,
+        "silliness": 0.35
+      },
+      {
+        "id": "week-before-the-merger",
+        "label": "Week before the merger",
+        "forms": {
+          "in": "in the week before the big merger"
+        },
+        "tags": [
+          "management",
+          "office",
+          "tense"
+        ],
+        "affinity": [
+          "office",
+          "crime"
+        ],
+        "weirdness": 0.2,
+        "silliness": 0.35
+      },
+      {
+        "id": "last-day-of-the-quarter",
+        "label": "Last day of the quarter",
+        "forms": {
+          "in": "on the last day of the fiscal quarter"
+        },
+        "tags": [
+          "management",
+          "office",
+          "time"
+        ],
+        "affinity": [
+          "office",
+          "time"
+        ],
+        "weirdness": 0.15,
+        "silliness": 0.4
+      }
+    ],
+    "protagonist": [
+      {
+        "id": "middle-manager",
+        "label": "Middle manager",
+        "forms": {
+          "noun": "middle manager"
+        },
+        "tags": [
+          "management",
+          "office",
+          "bureaucracy",
+          "mundane"
+        ],
+        "affinity": [
+          "office",
+          "social"
+        ],
+        "weirdness": 0.05,
+        "silliness": 0.4
+      },
+      {
+        "id": "first-day-temp",
+        "label": "First-day temp",
+        "forms": {
+          "noun": "temp on their very first day"
+        },
+        "tags": [
+          "management",
+          "office",
+          "mundane"
+        ],
+        "affinity": [
+          "office"
+        ],
+        "weirdness": 0.1,
+        "silliness": 0.4
+      },
+      {
+        "id": "ambitious-office-plant",
+        "label": "Ambitious office plant",
+        "forms": {
+          "noun": "office plant with ambitions"
+        },
+        "tags": [
+          "management",
+          "plants",
+          "office",
+          "absurd"
+        ],
+        "affinity": [
+          "plants",
+          "office"
+        ],
+        "weirdness": 0.8,
+        "silliness": 0.8
+      },
+      {
+        "id": "spreadsheet-wizard",
+        "label": "Spreadsheet wizard",
+        "forms": {
+          "noun": "spreadsheet wizard"
+        },
+        "tags": [
+          "management",
+          "office",
+          "tech",
+          "magic"
+        ],
+        "affinity": [
+          "office",
+          "tech"
+        ],
+        "weirdness": 0.3,
+        "silliness": 0.5
+      },
+      {
+        "id": "permit-clerk",
+        "label": "Permit clerk",
+        "forms": {
+          "noun": "permit clerk"
+        },
+        "tags": [
+          "management",
+          "bureaucracy",
+          "office"
+        ],
+        "affinity": [
+          "bureaucracy"
+        ],
+        "weirdness": 0.05,
+        "silliness": 0.3
+      },
+      {
+        "id": "accidental-ceo",
+        "label": "Accidental CEO",
+        "forms": {
+          "noun": "intern who was accidentally promoted to CEO"
+        },
+        "tags": [
+          "management",
+          "office",
+          "comedy"
+        ],
+        "affinity": [
+          "office",
+          "social"
+        ],
+        "weirdness": 0.5,
+        "silliness": 0.75
+      },
+      {
+        "id": "forklift-driver",
+        "label": "Forklift driver",
+        "forms": {
+          "noun": "warehouse forklift driver"
+        },
+        "tags": [
+          "management",
+          "mundane",
+          "trade"
+        ],
+        "affinity": [
+          "trade",
+          "puzzle"
+        ],
+        "weirdness": 0.05,
+        "silliness": 0.3
+      },
+      {
+        "id": "overworked-hr-representative",
+        "label": "Overworked HR representative",
+        "forms": {
+          "noun": "overworked HR representative"
+        },
+        "tags": [
+          "management",
+          "office",
+          "social"
+        ],
+        "affinity": [
+          "social",
+          "office"
+        ],
+        "weirdness": 0.15,
+        "silliness": 0.45
+      },
+      {
+        "id": "ambitious-printer",
+        "label": "Ambitious printer",
+        "forms": {
+          "noun": "office printer with a five-year plan"
+        },
+        "tags": [
+          "management",
+          "office",
+          "tech",
+          "robots",
+          "absurd"
+        ],
+        "affinity": [
+          "tech",
+          "office"
+        ],
+        "weirdness": 0.75,
+        "silliness": 0.8
+      }
+    ],
+    "objective": [
+      {
+        "id": "survive-until-friday",
+        "label": "Survive until Friday",
+        "forms": {
+          "verb": "survive until five o'clock on Friday"
+        },
+        "tags": [
+          "management",
+          "office",
+          "survival"
+        ],
+        "affinity": [
+          "office"
+        ],
+        "weirdness": 0.1,
+        "silliness": 0.45
+      },
+      {
+        "id": "hit-the-quarterly-targets",
+        "label": "Hit the quarterly targets",
+        "forms": {
+          "verb": "hit the quarterly targets without anyone reading the spreadsheet"
+        },
+        "tags": [
+          "management",
+          "office",
+          "strategy"
+        ],
+        "affinity": [
+          "office"
+        ],
+        "weirdness": 0.25,
+        "silliness": 0.5
+      },
+      {
+        "id": "get-one-permit",
+        "label": "Get one permit",
+        "forms": {
+          "verb": "get a single permit approved"
+        },
+        "tags": [
+          "management",
+          "bureaucracy",
+          "puzzle"
+        ],
+        "affinity": [
+          "bureaucracy"
+        ],
+        "weirdness": 0.2,
+        "silliness": 0.45
+      },
+      {
+        "id": "ship-before-the-rush",
+        "label": "Ship before the rush",
+        "forms": {
+          "verb": "ship every order before the holiday rush"
+        },
+        "tags": [
+          "management",
+          "trade",
+          "mail"
+        ],
+        "affinity": [
+          "mail",
+          "trade"
+        ],
+        "weirdness": 0.05,
+        "silliness": 0.25
+      },
+      {
+        "id": "end-the-endless-meeting",
+        "label": "End the endless meeting",
+        "forms": {
+          "verb": "end a meeting that has been running for six years"
+        },
+        "tags": [
+          "management",
+          "office",
+          "social",
+          "absurd"
+        ],
+        "affinity": [
+          "office"
+        ],
+        "weirdness": 0.65,
+        "silliness": 0.7
+      },
+      {
+        "id": "catch-the-yoghurt-thief",
+        "label": "Catch the yoghurt thief",
+        "forms": {
+          "verb": "find out who keeps stealing yoghurt from the office fridge"
+        },
+        "tags": [
+          "management",
+          "deduction",
+          "office",
+          "food"
+        ],
+        "affinity": [
+          "deduction",
+          "mystery"
+        ],
+        "weirdness": 0.3,
+        "silliness": 0.7
+      },
+      {
+        "id": "restructure-kindly",
+        "label": "Restructure kindly",
+        "forms": {
+          "verb": "restructure the company without firing anyone"
+        },
+        "tags": [
+          "management",
+          "social",
+          "strategy",
+          "office"
+        ],
+        "affinity": [
+          "office",
+          "social"
+        ],
+        "weirdness": 0.2,
+        "silliness": 0.3
+      },
+      {
+        "id": "make-sense-of-the-org-chart",
+        "label": "Make sense of the org chart",
+        "forms": {
+          "verb": "make the org chart make sense"
+        },
+        "tags": [
+          "management",
+          "puzzle",
+          "bureaucracy"
+        ],
+        "affinity": [
+          "puzzle",
+          "office"
+        ],
+        "weirdness": 0.35,
+        "silliness": 0.5
+      }
+    ],
+    "loop": [
+      {
+        "id": "inbox-meetings-pretend",
+        "label": "Inbox, meetings, pretend",
+        "forms": {
+          "verb": "triage the inbox, sit through meetings and look busy in between"
+        },
+        "tags": [
+          "management",
+          "office",
+          "mundane"
+        ],
+        "affinity": [
+          "office"
+        ],
+        "weirdness": 0.1,
+        "silliness": 0.5
+      },
+      {
+        "id": "stamp-file-lose",
+        "label": "Stamp, file, lose",
+        "forms": {
+          "verb": "stamp, file and occasionally lose documents from a growing queue"
+        },
+        "tags": [
+          "management",
+          "bureaucracy",
+          "puzzle"
+        ],
+        "affinity": [
+          "bureaucracy"
+        ],
+        "weirdness": 0.2,
+        "silliness": 0.5
+      },
+      {
+        "id": "pick-pack-ship",
+        "label": "Pick, pack, ship",
+        "forms": {
+          "verb": "pick, pack and ship orders against the clock"
+        },
+        "tags": [
+          "management",
+          "trade",
+          "mail",
+          "timing"
+        ],
+        "affinity": [
+          "mail",
+          "trade"
+        ],
+        "weirdness": 0.05,
+        "silliness": 0.25
+      },
+      {
+        "id": "meetings-about-meetings",
+        "label": "Meetings about meetings",
+        "forms": {
+          "verb": "schedule meetings to plan the next round of meetings"
+        },
+        "tags": [
+          "management",
+          "office",
+          "absurd"
+        ],
+        "affinity": [
+          "office"
+        ],
+        "weirdness": 0.55,
+        "silliness": 0.7
+      },
+      {
+        "id": "assign-slip-reassign",
+        "label": "Assign, slip, reassign",
+        "forms": {
+          "verb": "assign tasks, watch the deadlines slip and reassign everything"
+        },
+        "tags": [
+          "management",
+          "office",
+          "strategy"
+        ],
+        "affinity": [
+          "office"
+        ],
+        "weirdness": 0.15,
+        "silliness": 0.4
+      },
+      {
+        "id": "follow-the-script",
+        "label": "Follow the script",
+        "forms": {
+          "verb": "answer calls, follow the script and improvise when the script fails"
+        },
+        "tags": [
+          "management",
+          "social",
+          "office"
+        ],
+        "affinity": [
+          "social"
+        ],
+        "weirdness": 0.15,
+        "silliness": 0.45
+      }
+    ],
+    "mechanic": [
+      {
+        "id": "spreadsheet-formulas",
+        "label": "Spreadsheet formulas",
+        "forms": {
+          "noun": "spreadsheet formulas",
+          "verb": "write spreadsheet formulas that hold the whole company together"
+        },
+        "tags": [
+          "management",
+          "office",
+          "puzzle",
+          "tech"
+        ],
+        "affinity": [
+          "office",
+          "tech"
+        ],
+        "weirdness": 0.3,
+        "silliness": 0.45
+      },
+      {
+        "id": "calendar-packing",
+        "label": "Calendar packing",
+        "forms": {
+          "noun": "calendar packing",
+          "verb": "pack meetings into a calendar like overlapping puzzle pieces"
+        },
+        "tags": [
+          "management",
+          "puzzle",
+          "office",
+          "time"
+        ],
+        "affinity": [
+          "office",
+          "puzzle"
+        ],
+        "weirdness": 0.25,
+        "silliness": 0.45
+      },
+      {
+        "id": "rubber-stamping",
+        "label": "Rubber-stamping",
+        "forms": {
+          "noun": "rubber-stamping",
+          "verb": "stamp documents approved or denied at speed"
+        },
+        "tags": [
+          "management",
+          "bureaucracy",
+          "timing",
+          "deduction"
+        ],
+        "affinity": [
+          "bureaucracy"
+        ],
+        "weirdness": 0.15,
+        "silliness": 0.4
+      },
+      {
+        "id": "office-politics",
+        "label": "Office politics",
+        "forms": {
+          "noun": "office politics",
+          "verb": "trade favours, blame and credit with your coworkers"
+        },
+        "tags": [
+          "management",
+          "social",
+          "strategy",
+          "office"
+        ],
+        "affinity": [
+          "office",
+          "social"
+        ],
+        "weirdness": 0.15,
+        "silliness": 0.4
+      },
+      {
+        "id": "conveyor-routing",
+        "label": "Conveyor routing",
+        "forms": {
+          "noun": "conveyor routing",
+          "verb": "route parcels across a sprawling conveyor network"
+        },
+        "tags": [
+          "management",
+          "puzzle",
+          "building",
+          "mail"
+        ],
+        "affinity": [
+          "mail",
+          "puzzle"
+        ],
+        "weirdness": 0.1,
+        "silliness": 0.25
+      },
+      {
+        "id": "reply-all-untangling",
+        "label": "Reply-all untangling",
+        "forms": {
+          "noun": "reply-all untangling",
+          "verb": "untangle reply-all chains before they explode"
+        },
+        "tags": [
+          "management",
+          "internet",
+          "office",
+          "puzzle"
+        ],
+        "affinity": [
+          "office",
+          "internet"
+        ],
+        "weirdness": 0.4,
+        "silliness": 0.6
+      },
+      {
+        "id": "budget-allocation",
+        "label": "Budget allocation",
+        "forms": {
+          "noun": "budget allocation",
+          "verb": "split a shrinking budget between squabbling departments"
+        },
+        "tags": [
+          "management",
+          "strategy"
+        ],
+        "affinity": [
+          "office",
+          "bureaucracy"
+        ],
+        "weirdness": 0.1,
+        "silliness": 0.35
+      },
+      {
+        "id": "buzzword-combos",
+        "label": "Buzzword combos",
+        "forms": {
+          "noun": "buzzword combos",
+          "verb": "chain buzzwords together for presentation combos"
+        },
+        "tags": [
+          "management",
+          "office",
+          "comedy",
+          "rhythm"
+        ],
+        "affinity": [
+          "office",
+          "comedy"
+        ],
+        "weirdness": 0.6,
+        "silliness": 0.8
+      },
+      {
+        "id": "org-chart-drawing",
+        "label": "Org-chart drawing",
+        "forms": {
+          "noun": "org-chart drawing",
+          "verb": "draw reporting lines between very confused employees"
+        },
+        "tags": [
+          "management",
+          "puzzle",
+          "office"
+        ],
+        "affinity": [
+          "office",
+          "bureaucracy"
+        ],
+        "weirdness": 0.4,
+        "silliness": 0.55
+      }
+    ],
+    "progression": [
+      {
+        "id": "useless-titles",
+        "label": "Useless titles",
+        "forms": {
+          "verb": "climb the corporate ladder one meaningless job title at a time"
+        },
+        "tags": [
+          "management",
+          "office"
+        ],
+        "affinity": [
+          "office"
+        ],
+        "weirdness": 0.15,
+        "silliness": 0.55
+      },
+      {
+        "id": "better-chairs",
+        "label": "Better chairs",
+        "forms": {
+          "verb": "unlock bigger offices with better chairs"
+        },
+        "tags": [
+          "management",
+          "office",
+          "building"
+        ],
+        "affinity": [
+          "office"
+        ],
+        "weirdness": 0.15,
+        "silliness": 0.5
+      },
+      {
+        "id": "automate-yourself",
+        "label": "Automate yourself",
+        "forms": {
+          "verb": "automate your job until nobody notices you're gone"
+        },
+        "tags": [
+          "management",
+          "tech",
+          "office"
+        ],
+        "affinity": [
+          "tech",
+          "office"
+        ],
+        "weirdness": 0.4,
+        "silliness": 0.55
+      },
+      {
+        "id": "more-conveyors",
+        "label": "More conveyors",
+        "forms": {
+          "verb": "expand the warehouse with ever more conveyor belts"
+        },
+        "tags": [
+          "management",
+          "building",
+          "mail"
+        ],
+        "affinity": [
+          "building",
+          "mail"
+        ],
+        "weirdness": 0.1,
+        "silliness": 0.3
+      }
+    ],
+    "threat": [
+      {
+        "id": "the-audit",
+        "label": "The audit",
+        "forms": {
+          "noun": "the annual audit",
+          "clause": "the auditors arrive on Monday"
+        },
+        "tags": [
+          "management",
+          "bureaucracy",
+          "tense"
+        ],
+        "affinity": [
+          "bureaucracy"
+        ],
+        "weirdness": 0.1,
+        "silliness": 0.35
+      },
+      {
+        "id": "reply-all-storm",
+        "label": "Reply-all storm",
+        "forms": {
+          "noun": "a reply-all storm",
+          "clause": "a reply-all storm is taking down the email server"
+        },
+        "tags": [
+          "management",
+          "internet",
+          "chaos",
+          "office"
+        ],
+        "affinity": [
+          "office",
+          "internet"
+        ],
+        "weirdness": 0.35,
+        "silliness": 0.6
+      },
+      {
+        "id": "restructuring-consultant",
+        "label": "Restructuring consultant",
+        "forms": {
+          "noun": "restructuring",
+          "clause": "a consultant is drawing a new org chart and you are not on it"
+        },
+        "tags": [
+          "management",
+          "office",
+          "tense"
+        ],
+        "affinity": [
+          "office"
+        ],
+        "weirdness": 0.2,
+        "silliness": 0.4
+      },
+      {
+        "id": "yesterday-s-deadline",
+        "label": "Yesterday's deadline",
+        "forms": {
+          "noun": "the deadline",
+          "clause": "the deadline has been moved up to yesterday"
+        },
+        "tags": [
+          "management",
+          "time",
+          "office"
+        ],
+        "affinity": [
+          "office",
+          "time"
+        ],
+        "weirdness": 0.25,
+        "silliness": 0.45
+      },
+      {
+        "id": "resentful-printer",
+        "label": "Resentful printer",
+        "forms": {
+          "noun": "a resentful printer",
+          "clause": "the printer has become sentient and it holds grudges"
+        },
+        "tags": [
+          "management",
+          "tech",
+          "robots",
+          "office",
+          "absurd"
+        ],
+        "affinity": [
+          "office",
+          "tech"
+        ],
+        "weirdness": 0.7,
+        "silliness": 0.75
+      },
+      {
+        "id": "synergy-budget-cuts",
+        "label": "Synergy budget cuts",
+        "forms": {
+          "noun": "budget cuts",
+          "clause": "the budget shrinks every time someone says \"synergy\""
+        },
+        "tags": [
+          "management",
+          "office",
+          "comedy"
+        ],
+        "affinity": [
+          "office",
+          "bureaucracy"
+        ],
+        "weirdness": 0.45,
+        "silliness": 0.7
+      },
+      {
+        "id": "breeding-meetings",
+        "label": "Breeding meetings",
+        "forms": {
+          "noun": "meeting creep",
+          "clause": "every meeting spawns two follow-up meetings"
+        },
+        "tags": [
+          "management",
+          "office",
+          "absurd"
+        ],
+        "affinity": [
+          "office",
+          "time"
+        ],
+        "weirdness": 0.5,
+        "silliness": 0.65
+      },
+      {
+        "id": "the-queue",
+        "label": "The queue",
+        "forms": {
+          "noun": "the queue",
+          "clause": "the queue outside the bureau never gets any shorter"
+        },
+        "tags": [
+          "management",
+          "bureaucracy",
+          "mundane"
+        ],
+        "affinity": [
+          "bureaucracy"
+        ],
+        "weirdness": 0.15,
+        "silliness": 0.4
+      }
+    ],
+    "resource": [
+      {
+        "id": "coffee",
+        "label": "Coffee",
+        "forms": {
+          "noun": "coffee"
+        },
+        "tags": [
+          "management",
+          "office",
+          "food"
+        ],
+        "affinity": [
+          "office"
+        ],
+        "weirdness": 0.05,
+        "silliness": 0.4
+      },
+      {
+        "id": "printer-toner",
+        "label": "Printer toner",
+        "forms": {
+          "noun": "printer toner"
+        },
+        "tags": [
+          "management",
+          "office",
+          "tech"
+        ],
+        "affinity": [
+          "office"
+        ],
+        "weirdness": 0.1,
+        "silliness": 0.45
+      },
+      {
+        "id": "budget",
+        "label": "Budget",
+        "forms": {
+          "noun": "budget"
+        },
+        "tags": [
+          "management",
+          "office",
+          "strategy"
+        ],
+        "affinity": [
+          "office"
+        ],
+        "weirdness": 0.05,
+        "silliness": 0.25
+      },
+      {
+        "id": "political-capital",
+        "label": "Political capital",
+        "forms": {
+          "noun": "political capital"
+        },
+        "tags": [
+          "management",
+          "social",
+          "office"
+        ],
+        "affinity": [
+          "social"
+        ],
+        "weirdness": 0.15,
+        "silliness": 0.35
+      },
+      {
+        "id": "approved-holiday-days",
+        "label": "Approved holiday days",
+        "forms": {
+          "noun": "approved holiday days"
+        },
+        "tags": [
+          "management",
+          "office",
+          "time"
+        ],
+        "affinity": [
+          "office"
+        ],
+        "weirdness": 0.2,
+        "silliness": 0.5
+      }
+    ],
+    "mood": [
+      {
+        "id": "deadpan",
+        "label": "Deadpan",
+        "forms": {
+          "adj": "deadpan"
+        },
+        "tags": [
+          "management",
+          "comedy",
+          "mundane"
+        ],
+        "affinity": [
+          "office"
+        ],
+        "weirdness": 0.1,
+        "silliness": 0.5
+      },
+      {
+        "id": "passive-aggressive",
+        "label": "Passive-aggressive",
+        "forms": {
+          "adj": "passive-aggressive"
+        },
+        "tags": [
+          "management",
+          "comedy",
+          "social"
+        ],
+        "affinity": [
+          "office",
+          "social"
+        ],
+        "weirdness": 0.25,
+        "silliness": 0.65
+      },
+      {
+        "id": "corporate-cheerful",
+        "label": "Corporate-cheerful",
+        "forms": {
+          "adj": "corporate-cheerful"
+        },
+        "tags": [
+          "management",
+          "comedy",
+          "absurd"
+        ],
+        "affinity": [
+          "office"
+        ],
+        "weirdness": 0.3,
+        "silliness": 0.7
+      },
+      {
+        "id": "labyrinthine",
+        "label": "Labyrinthine",
+        "forms": {
+          "adj": "labyrinthine"
+        },
+        "tags": [
+          "management",
+          "bureaucracy",
+          "weird"
+        ],
+        "affinity": [
+          "bureaucracy",
+          "mystery"
+        ],
+        "weirdness": 0.35,
+        "silliness": 0.3
+      },
+      {
+        "id": "soul-crushingly-upbeat",
+        "label": "Soul-crushingly upbeat",
+        "forms": {
+          "adj": "soul-crushingly upbeat"
+        },
+        "tags": [
+          "management",
+          "comedy",
+          "grim"
+        ],
+        "affinity": [
+          "office"
+        ],
+        "weirdness": 0.4,
+        "silliness": 0.75
+      },
+      {
+        "id": "quietly-desperate",
+        "label": "Quietly desperate",
+        "forms": {
+          "adj": "quietly desperate"
+        },
+        "tags": [
+          "management",
+          "melancholy",
+          "tense"
+        ],
+        "affinity": [
+          "office",
+          "survival"
+        ],
+        "weirdness": 0.15,
+        "silliness": 0.3
+      }
+    ],
+    "visual": [
+      {
+        "id": "beige-clip-art",
+        "label": "Beige clip art",
+        "forms": {
+          "noun": "beige office clip art"
+        },
+        "tags": [
+          "management",
+          "art",
+          "retro",
+          "office"
+        ],
+        "affinity": [
+          "office",
+          "comedy"
+        ],
+        "weirdness": 0.3,
+        "silliness": 0.65
+      },
+      {
+        "id": "cells-and-pie-charts",
+        "label": "Cells and pie charts",
+        "forms": {
+          "noun": "spreadsheet cells and pie charts"
+        },
+        "tags": [
+          "management",
+          "office",
+          "tech"
+        ],
+        "affinity": [
+          "office"
+        ],
+        "weirdness": 0.45,
+        "silliness": 0.55
+      },
+      {
+        "id": "old-presentation-slides",
+        "label": "Old presentation slides",
+        "forms": {
+          "noun": "early-2000s presentation slides with spinning transitions"
+        },
+        "tags": [
+          "management",
+          "retro",
+          "office"
+        ],
+        "affinity": [
+          "office",
+          "comedy"
+        ],
+        "weirdness": 0.4,
+        "silliness": 0.7
+      },
+      {
+        "id": "fluorescent-isometric-cubicles",
+        "label": "Fluorescent isometric cubicles",
+        "forms": {
+          "noun": "fluorescent-lit isometric cubicles"
+        },
+        "tags": [
+          "management",
+          "office",
+          "art"
+        ],
+        "affinity": [
+          "office"
+        ],
+        "weirdness": 0.15,
+        "silliness": 0.3
+      },
+      {
+        "id": "photocopied-collage",
+        "label": "Photocopied collage",
+        "forms": {
+          "noun": "photocopied zine collage"
+        },
+        "tags": [
+          "management",
+          "art",
+          "office"
+        ],
+        "affinity": [
+          "bureaucracy"
+        ],
+        "weirdness": 0.3,
+        "silliness": 0.45
+      }
+    ],
+    "twist": [
+      {
+        "id": "no-product",
+        "label": "No product",
+        "forms": {
+          "clause": "the company has no product and never did"
+        },
+        "tags": [
+          "management",
+          "office",
+          "absurd"
+        ],
+        "affinity": [
+          "office"
+        ],
+        "weirdness": 0.5,
+        "silliness": 0.6
+      },
+      {
+        "id": "fired-on-day-one",
+        "label": "Fired on day one",
+        "forms": {
+          "clause": "you were fired on day one but nobody told security"
+        },
+        "tags": [
+          "management",
+          "office",
+          "comedy"
+        ],
+        "affinity": [
+          "office"
+        ],
+        "weirdness": 0.45,
+        "silliness": 0.65
+      },
+      {
+        "id": "spreadsheet-in-charge",
+        "label": "Spreadsheet in charge",
+        "forms": {
+          "clause": "the spreadsheet is running the company and it has demands"
+        },
+        "tags": [
+          "management",
+          "tech",
+          "office",
+          "weird"
+        ],
+        "affinity": [
+          "office",
+          "tech"
+        ],
+        "weirdness": 0.6,
+        "silliness": 0.6
+      },
+      {
+        "id": "regional-manager-simulation",
+        "label": "Regional manager simulation",
+        "forms": {
+          "clause": "the whole office is a simulation run by a bored regional manager"
+        },
+        "tags": [
+          "management",
+          "office",
+          "weird"
+        ],
+        "affinity": [
+          "office"
+        ],
+        "weirdness": 0.65,
+        "silliness": 0.55
+      },
+      {
+        "id": "forms-become-law",
+        "label": "Forms become law",
+        "forms": {
+          "clause": "every form you approve becomes law in a small country"
+        },
+        "tags": [
+          "management",
+          "bureaucracy",
+          "absurd"
+        ],
+        "affinity": [
+          "bureaucracy"
+        ],
+        "weirdness": 0.65,
+        "silliness": 0.6
+      },
+      {
+        "id": "coffee-machine-ceo",
+        "label": "Coffee machine CEO",
+        "forms": {
+          "clause": "the coffee machine is the real CEO"
+        },
+        "tags": [
+          "management",
+          "office",
+          "absurd",
+          "tech"
+        ],
+        "affinity": [
+          "office"
+        ],
+        "weirdness": 0.7,
+        "silliness": 0.8
+      },
+      {
+        "id": "building-is-a-filing-cabinet",
+        "label": "Building is a filing cabinet",
+        "forms": {
+          "clause": "the entire building is one enormous filing cabinet"
+        },
+        "tags": [
+          "management",
+          "bureaucracy",
+          "building",
+          "weird"
+        ],
+        "affinity": [
+          "bureaucracy"
+        ],
+        "weirdness": 0.7,
+        "silliness": 0.55
+      },
+      {
+        "id": "still-in-the-meeting",
+        "label": "Still in the meeting",
+        "forms": {
+          "clause": "the meeting never ended and you've been in it the whole time"
+        },
+        "tags": [
+          "management",
+          "office",
+          "time",
+          "weird"
+        ],
+        "affinity": [
+          "office",
+          "time"
+        ],
+        "weirdness": 0.65,
+        "silliness": 0.55
+      }
+    ],
+    "titleFirst": [
+      {
+        "id": "quarterly",
+        "label": "Quarterly",
+        "tags": [
+          "management",
+          "office",
+          "time"
+        ],
+        "weirdness": 0.05,
+        "silliness": 0.3
+      },
+      {
+        "id": "corporate",
+        "label": "Corporate",
+        "tags": [
+          "management",
+          "office",
+          "tense"
+        ],
+        "weirdness": 0.05,
+        "silliness": 0.25
+      },
+      {
+        "id": "paper",
+        "label": "Paper",
+        "tags": [
+          "management",
+          "bureaucracy",
+          "office"
+        ],
+        "weirdness": 0.1,
+        "silliness": 0.3
+      },
+      {
+        "id": "middle",
+        "label": "Middle",
+        "tags": [
+          "management",
+          "office",
+          "mundane"
+        ],
+        "weirdness": 0.1,
+        "silliness": 0.35
+      },
+      {
+        "id": "beige",
+        "label": "Beige",
+        "tags": [
+          "management",
+          "office",
+          "mundane",
+          "comedy"
+        ],
+        "weirdness": 0.2,
+        "silliness": 0.5
+      },
+      {
+        "id": "office",
+        "label": "Office",
+        "tags": [
+          "management",
+          "office"
+        ],
+        "weirdness": 0.05,
+        "silliness": 0.3
+      },
+      {
+        "id": "overtime",
+        "label": "Overtime",
+        "tags": [
+          "management",
+          "office",
+          "time",
+          "tense"
+        ],
+        "weirdness": 0.05,
+        "silliness": 0.3
+      },
+      {
+        "id": "cubicle",
+        "label": "Cubicle",
+        "tags": [
+          "management",
+          "office",
+          "mundane"
+        ],
+        "weirdness": 0.1,
+        "silliness": 0.4
+      },
+      {
+        "id": "fiscal",
+        "label": "Fiscal",
+        "tags": [
+          "management",
+          "office",
+          "bureaucracy"
+        ],
+        "weirdness": 0.1,
+        "silliness": 0.3
+      },
+      {
+        "id": "red-tape",
+        "label": "Red-Tape",
+        "tags": [
+          "management",
+          "bureaucracy"
+        ],
+        "weirdness": 0.15,
+        "silliness": 0.4
+      },
+      {
+        "id": "monday",
+        "label": "Monday",
+        "tags": [
+          "management",
+          "office",
+          "mundane",
+          "melancholy"
+        ],
+        "weirdness": 0.1,
+        "silliness": 0.45
+      },
+      {
+        "id": "mandatory",
+        "label": "Mandatory",
+        "tags": [
+          "management",
+          "bureaucracy",
+          "office"
+        ],
+        "weirdness": 0.1,
+        "silliness": 0.4
+      },
+      {
+        "id": "urgent",
+        "label": "Urgent",
+        "tags": [
+          "management",
+          "office",
+          "tense",
+          "time"
+        ],
+        "weirdness": 0.05,
+        "silliness": 0.35
+      },
+      {
+        "id": "executive",
+        "label": "Executive",
+        "tags": [
+          "management",
+          "office",
+          "strategy"
+        ],
+        "weirdness": 0.05,
+        "silliness": 0.25
+      },
+      {
+        "id": "approved",
+        "label": "Approved",
+        "tags": [
+          "management",
+          "bureaucracy",
+          "comedy"
+        ],
+        "weirdness": 0.15,
+        "silliness": 0.4
+      }
+    ],
+    "titleLast": [
+      {
+        "id": "report",
+        "label": "Report",
+        "tags": [
+          "management",
+          "office"
+        ],
+        "weirdness": 0.05,
+        "silliness": 0.25
+      },
+      {
+        "id": "meeting",
+        "label": "Meeting",
+        "tags": [
+          "management",
+          "office",
+          "social"
+        ],
+        "weirdness": 0.1,
+        "silliness": 0.4
+      },
+      {
+        "id": "audit",
+        "label": "Audit",
+        "tags": [
+          "management",
+          "bureaucracy",
+          "tense"
+        ],
+        "weirdness": 0.05,
+        "silliness": 0.25
+      },
+      {
+        "id": "review",
+        "label": "Review",
+        "tags": [
+          "management",
+          "office"
+        ],
+        "weirdness": 0.05,
+        "silliness": 0.3
+      },
+      {
+        "id": "department",
+        "label": "Department",
+        "tags": [
+          "management",
+          "office",
+          "bureaucracy"
+        ],
+        "weirdness": 0.05,
+        "silliness": 0.3
+      },
+      {
+        "id": "pipeline",
+        "label": "Pipeline",
+        "tags": [
+          "management",
+          "trade",
+          "office"
+        ],
+        "weirdness": 0.1,
+        "silliness": 0.3
+      },
+      {
+        "id": "deadline",
+        "label": "Deadline",
+        "tags": [
+          "management",
+          "office",
+          "time",
+          "tense"
+        ],
+        "weirdness": 0.05,
+        "silliness": 0.25
+      },
+      {
+        "id": "synergy",
+        "label": "Synergy",
+        "tags": [
+          "management",
+          "office",
+          "comedy",
+          "absurd"
+        ],
+        "weirdness": 0.3,
+        "silliness": 0.65
+      },
+      {
+        "id": "memo",
+        "label": "Memo",
+        "tags": [
+          "management",
+          "office",
+          "bureaucracy"
+        ],
+        "weirdness": 0.05,
+        "silliness": 0.3
+      },
+      {
+        "id": "spreadsheet",
+        "label": "Spreadsheet",
+        "tags": [
+          "management",
+          "office",
+          "tech"
+        ],
+        "weirdness": 0.15,
+        "silliness": 0.4
+      },
+      {
+        "id": "stamp",
+        "label": "Stamp",
+        "tags": [
+          "management",
+          "bureaucracy"
+        ],
+        "weirdness": 0.1,
+        "silliness": 0.35
+      },
+      {
+        "id": "merger",
+        "label": "Merger",
+        "tags": [
+          "management",
+          "office",
+          "tense"
+        ],
+        "weirdness": 0.05,
+        "silliness": 0.25
+      },
+      {
+        "id": "paperwork",
+        "label": "Paperwork",
+        "tags": [
+          "management",
+          "bureaucracy"
+        ],
+        "weirdness": 0.1,
+        "silliness": 0.4
+      },
+      {
+        "id": "escalation",
+        "label": "Escalation",
+        "tags": [
+          "management",
+          "office",
+          "tense"
+        ],
+        "weirdness": 0.1,
+        "silliness": 0.35
+      },
+      {
+        "id": "inbox",
+        "label": "Inbox",
+        "tags": [
+          "management",
+          "office",
+          "internet"
+        ],
+        "weirdness": 0.1,
+        "silliness": 0.4
+      }
+    ],
+    "creep": [
+      {
+        "id": "coffee-economy",
+        "label": "Coffee economy",
+        "kind": "system",
+        "complexity": 5,
+        "forms": {
+          "pitch": "Coffee becomes a currency, with its own exchange rate and a black market by the lifts.",
+          "connects": "Every deal for {resource.noun} now involves a latte."
+        },
+        "tags": [
+          "management",
+          "office",
+          "trade",
+          "food"
+        ],
+        "affinity": [
+          "office",
+          "trade"
+        ],
+        "weirdness": 0.45,
+        "silliness": 0.65
+      },
+      {
+        "id": "team-building-retreats",
+        "label": "Team-building retreats",
+        "kind": "loop",
+        "complexity": 6,
+        "forms": {
+          "pitch": "Quarterly team-building retreats with trust falls, escape rooms and lukewarm buffets.",
+          "connects": "Surviving a retreat makes it easier to {objective.verb}."
+        },
+        "tags": [
+          "management",
+          "social",
+          "office"
+        ],
+        "affinity": [
+          "social",
+          "office"
+        ],
+        "weirdness": 0.35,
+        "silliness": 0.65
+      },
+      {
+        "id": "birthday-cards",
+        "label": "Birthday cards",
+        "kind": "whyNot",
+        "complexity": 3,
+        "forms": {
+          "pitch": "Every coworker has a birthday, and you must sign every card with a unique message."
+        },
+        "tags": [
+          "management",
+          "office",
+          "social",
+          "comedy"
+        ],
+        "affinity": [
+          "office",
+          "social"
+        ],
+        "weirdness": 0.4,
+        "silliness": 0.7
+      },
+      {
+        "id": "hr-complaint-system",
+        "label": "HR complaint system",
+        "kind": "system",
+        "complexity": 5,
+        "forms": {
+          "pitch": "A full HR complaint system where coworkers file grievances about your {mechanic.noun}.",
+          "connects": "Unresolved complaints make {threat.noun} hit harder."
+        },
+        "tags": [
+          "management",
+          "office",
+          "social",
+          "bureaucracy"
+        ],
+        "affinity": [
+          "office",
+          "bureaucracy"
+        ],
+        "weirdness": 0.4,
+        "silliness": 0.55
+      },
+      {
+        "id": "five-hundred-forms",
+        "label": "Five hundred forms",
+        "kind": "content",
+        "complexity": 6,
+        "forms": {
+          "pitch": "Add five hundred new form types, each with a slightly different stamp."
+        },
+        "tags": [
+          "management",
+          "bureaucracy"
+        ],
+        "affinity": [
+          "bureaucracy"
+        ],
+        "weirdness": 0.45,
+        "silliness": 0.6
+      },
+      {
+        "id": "union-negotiations",
+        "label": "Union negotiations",
+        "kind": "loop",
+        "complexity": 6,
+        "forms": {
+          "pitch": "Negotiate with the staff union every quarter over breaks, pay and the good chairs.",
+          "connects": "A strike makes {threat.noun} unbearable."
+        },
+        "tags": [
+          "management",
+          "social",
+          "strategy"
+        ],
+        "affinity": [
+          "social",
+          "office"
+        ],
+        "weirdness": 0.25,
+        "silliness": 0.4
+      },
+      {
+        "id": "office-plant-storyline",
+        "label": "Office plant storyline",
+        "kind": "whyNot",
+        "complexity": 4,
+        "forms": {
+          "pitch": "The office plant gets a full narrative arc with branching endings."
+        },
+        "tags": [
+          "management",
+          "plants",
+          "narrative",
+          "absurd"
+        ],
+        "affinity": [
+          "plants",
+          "office"
+        ],
+        "weirdness": 0.65,
+        "silliness": 0.75
+      },
+      {
+        "id": "commute-minigame",
+        "label": "Commute minigame",
+        "kind": "system",
+        "complexity": 4,
+        "forms": {
+          "pitch": "Commute in every morning through a traffic minigame that sets your mood for the day.",
+          "connects": "A bad commute makes it harder to {loop.verb}."
+        },
+        "tags": [
+          "management",
+          "cars",
+          "timing",
+          "mundane"
+        ],
+        "affinity": [
+          "cars",
+          "urban"
+        ],
+        "weirdness": 0.3,
+        "silliness": 0.5
+      }
+    ]
+  },
+  "templates": {
+    "hook": [
+      {
+        "id": "inbox-on-fire",
+        "text": "Your calendar is full, your inbox is on fire, and as [a] {protagonist.noun} you still have to {objective.verb}.",
+        "weight": 0.9,
+        "tagsAny": [
+          "office",
+          "bureaucracy"
+        ]
+      }
+    ],
+    "badIdea": [
+      {
+        "id": "at-home",
+        "text": "People already do {mechanic.noun} at work. Now they can do it at home, in their free time, for money.",
+        "weight": 1,
+        "tagsAny": [
+          "office",
+          "bureaucracy"
+        ]
+      }
+    ],
+    "mightWork": [
+      {
+        "id": "shared-pain",
+        "text": "But everyone has worked somewhere like this, and {mechanic.noun} turns that shared pain into a punchline.",
+        "weight": 1,
+        "tagsAny": [
+          "office",
+          "bureaucracy"
+        ]
+      }
+    ]
+  }
+}

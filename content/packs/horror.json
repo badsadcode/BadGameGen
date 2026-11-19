@@ -1,0 +1,2439 @@
+{
+  "format": 1,
+  "id": "horror",
+  "name": "Horror Bits",
+  "version": "1.0.0",
+  "author": "Bad Ideas Works",
+  "description": "Things that go bump, scream, or knock very politely in the night.",
+  "items": {
+    "genre": [
+      {
+        "id": "survival-horror",
+        "label": "Survival horror",
+        "forms": {
+          "adj": "survival horror",
+          "noun": "survival horror game"
+        },
+        "tags": [
+          "horror",
+          "survival",
+          "tense"
+        ],
+        "affinity": [
+          "survival",
+          "grim"
+        ],
+        "excludes": [
+          "wholesome"
+        ],
+        "weirdness": 0.1,
+        "silliness": 0.15
+      },
+      {
+        "id": "psychological-horror",
+        "label": "Psychological horror",
+        "forms": {
+          "adj": "psychological horror",
+          "noun": "psychological horror game"
+        },
+        "tags": [
+          "horror",
+          "tense",
+          "mystery"
+        ],
+        "affinity": [
+          "narrative",
+          "melancholy"
+        ],
+        "excludes": [
+          "wholesome"
+        ],
+        "weirdness": 0.3,
+        "silliness": 0.1
+      },
+      {
+        "id": "cosmic-horror",
+        "label": "Cosmic horror",
+        "forms": {
+          "adj": "cosmic horror",
+          "noun": "cosmic horror game"
+        },
+        "tags": [
+          "horror",
+          "cosmic",
+          "weird"
+        ],
+        "affinity": [
+          "cosmic",
+          "water",
+          "science"
+        ],
+        "excludes": [
+          "wholesome"
+        ],
+        "weirdness": 0.6,
+        "silliness": 0.15
+      },
+      {
+        "id": "folk-horror",
+        "label": "Folk horror",
+        "forms": {
+          "adj": "folk horror",
+          "noun": "folk horror game"
+        },
+        "tags": [
+          "horror",
+          "rural",
+          "nature"
+        ],
+        "affinity": [
+          "rural",
+          "forest",
+          "religion"
+        ],
+        "excludes": [
+          "wholesome"
+        ],
+        "weirdness": 0.4,
+        "silliness": 0.2
+      }
+    ],
+    "subgenre": [
+      {
+        "id": "haunted-house-sim",
+        "label": "Haunted house sim",
+        "forms": {
+          "noun": "haunted house management sim"
+        },
+        "tags": [
+          "horror",
+          "management",
+          "building"
+        ],
+        "affinity": [
+          "management",
+          "building"
+        ],
+        "excludes": [
+          "wholesome"
+        ],
+        "weirdness": 0.5,
+        "silliness": 0.5
+      },
+      {
+        "id": "found-footage-walking-sim",
+        "label": "Found-footage walking sim",
+        "forms": {
+          "noun": "found-footage walking sim"
+        },
+        "tags": [
+          "horror",
+          "exploration",
+          "narrative"
+        ],
+        "affinity": [
+          "exploration",
+          "mystery"
+        ],
+        "excludes": [
+          "wholesome"
+        ],
+        "weirdness": 0.25,
+        "silliness": 0.2
+      },
+      {
+        "id": "seance-puzzler",
+        "label": "Séance puzzler",
+        "forms": {
+          "noun": "séance puzzler"
+        },
+        "tags": [
+          "horror",
+          "puzzle",
+          "death"
+        ],
+        "affinity": [
+          "puzzle",
+          "death",
+          "mystery"
+        ],
+        "excludes": [
+          "wholesome"
+        ],
+        "weirdness": 0.5,
+        "silliness": 0.4
+      },
+      {
+        "id": "hide-and-seek-stealth-game",
+        "label": "Hide-and-seek stealth game",
+        "forms": {
+          "noun": "hide-and-seek stealth game"
+        },
+        "tags": [
+          "horror",
+          "stealth",
+          "tense"
+        ],
+        "affinity": [
+          "stealth"
+        ],
+        "excludes": [
+          "wholesome"
+        ],
+        "weirdness": 0.2,
+        "silliness": 0.3
+      }
+    ],
+    "era": [
+      {
+        "id": "endless-winter",
+        "label": "Endless winter",
+        "forms": {
+          "in": "during a winter that never ended"
+        },
+        "tags": [
+          "horror",
+          "cold",
+          "weather"
+        ],
+        "affinity": [
+          "cold",
+          "survival"
+        ],
+        "excludes": [
+          "wholesome"
+        ],
+        "weirdness": 0.4,
+        "silliness": 0.1
+      },
+      {
+        "id": "longest-night",
+        "label": "Longest night",
+        "forms": {
+          "in": "on the longest night of the year"
+        },
+        "tags": [
+          "horror",
+          "time"
+        ],
+        "affinity": [
+          "survival",
+          "tense"
+        ],
+        "excludes": [
+          "wholesome"
+        ],
+        "weirdness": 0.2,
+        "silliness": 0.1
+      },
+      {
+        "id": "1987-blackout",
+        "label": "1987 blackout",
+        "forms": {
+          "in": "in 1987, the year the lights went out"
+        },
+        "tags": [
+          "horror",
+          "historical",
+          "modern"
+        ],
+        "affinity": [
+          "radio",
+          "tech"
+        ],
+        "excludes": [
+          "wholesome"
+        ],
+        "weirdness": 0.3,
+        "silliness": 0.15
+      },
+      {
+        "id": "blood-moon",
+        "label": "Blood moon",
+        "forms": {
+          "in": "on the night of the blood moon"
+        },
+        "tags": [
+          "horror",
+          "cosmic",
+          "religion"
+        ],
+        "affinity": [
+          "cosmic",
+          "folk",
+          "rural"
+        ],
+        "excludes": [
+          "wholesome"
+        ],
+        "weirdness": 0.45,
+        "silliness": 0.2
+      }
+    ],
+    "setting": [
+      {
+        "id": "abandoned-hospital-wing",
+        "label": "Abandoned hospital wing",
+        "forms": {
+          "noun": "abandoned hospital wing",
+          "in": "in the abandoned east wing of a hospital"
+        },
+        "tags": [
+          "horror",
+          "health",
+          "grim"
+        ],
+        "affinity": [
+          "stealth",
+          "survival"
+        ],
+        "excludes": [
+          "wholesome"
+        ],
+        "weirdness": 0.2,
+        "silliness": 0.1
+      },
+      {
+        "id": "fog-bound-lighthouse",
+        "label": "Fog-bound lighthouse",
+        "forms": {
+          "noun": "fog-bound lighthouse",
+          "in": "inside a fog-bound lighthouse"
+        },
+        "tags": [
+          "horror",
+          "nautical",
+          "water",
+          "cold"
+        ],
+        "affinity": [
+          "radio",
+          "baltic",
+          "mystery"
+        ],
+        "excludes": [
+          "wholesome",
+          "desert",
+          "space"
+        ],
+        "weirdness": 0.25,
+        "silliness": 0.1
+      },
+      {
+        "id": "one-light-motel",
+        "label": "One-light motel",
+        "forms": {
+          "noun": "roadside motel with one working light",
+          "in": "at a roadside motel where only one light works"
+        },
+        "tags": [
+          "horror",
+          "rural",
+          "travel",
+          "cars"
+        ],
+        "affinity": [
+          "crime",
+          "mystery"
+        ],
+        "excludes": [
+          "wholesome"
+        ],
+        "weirdness": 0.3,
+        "silliness": 0.25
+      },
+      {
+        "id": "mall-after-closing",
+        "label": "Mall after closing",
+        "forms": {
+          "noun": "shopping mall after closing time",
+          "in": "in a shopping mall after closing time"
+        },
+        "tags": [
+          "horror",
+          "retail",
+          "urban",
+          "modern"
+        ],
+        "affinity": [
+          "stealth",
+          "comedy"
+        ],
+        "excludes": [
+          "wholesome"
+        ],
+        "weirdness": 0.35,
+        "silliness": 0.35
+      },
+      {
+        "id": "festival-village",
+        "label": "Festival village",
+        "forms": {
+          "noun": "remote village with a suspicious harvest festival",
+          "in": "in a remote village preparing a suspicious harvest festival"
+        },
+        "tags": [
+          "horror",
+          "rural",
+          "religion",
+          "farming"
+        ],
+        "affinity": [
+          "folk",
+          "nature",
+          "mystery"
+        ],
+        "excludes": [
+          "wholesome"
+        ],
+        "weirdness": 0.45,
+        "silliness": 0.35
+      },
+      {
+        "id": "haunted-open-plan-office",
+        "label": "Haunted open-plan office",
+        "forms": {
+          "noun": "haunted open-plan office",
+          "in": "in a haunted open-plan office"
+        },
+        "tags": [
+          "horror",
+          "office",
+          "bureaucracy",
+          "comedy"
+        ],
+        "affinity": [
+          "office",
+          "bureaucracy",
+          "absurd"
+        ],
+        "excludes": [
+          "wholesome"
+        ],
+        "weirdness": 0.6,
+        "silliness": 0.65
+      },
+      {
+        "id": "snowed-in-research-station",
+        "label": "Snowed-in research station",
+        "forms": {
+          "noun": "snowed-in polar research station",
+          "in": "at a snowed-in polar research station"
+        },
+        "tags": [
+          "horror",
+          "cold",
+          "science"
+        ],
+        "affinity": [
+          "science",
+          "survival",
+          "cosmic",
+          "radio"
+        ],
+        "excludes": [
+          "wholesome",
+          "desert",
+          "heat"
+        ],
+        "weirdness": 0.3,
+        "silliness": 0.1
+      },
+      {
+        "id": "silent-submarine",
+        "label": "Silent submarine",
+        "forms": {
+          "noun": "submarine that went silent last week",
+          "in": "aboard a submarine that went silent last week"
+        },
+        "tags": [
+          "horror",
+          "nautical",
+          "water",
+          "underground"
+        ],
+        "affinity": [
+          "cosmic",
+          "tech",
+          "survival"
+        ],
+        "excludes": [
+          "wholesome",
+          "desert"
+        ],
+        "weirdness": 0.4,
+        "silliness": 0.15
+      },
+      {
+        "id": "crumbling-manor",
+        "label": "Crumbling manor",
+        "forms": {
+          "noun": "crumbling Victorian manor",
+          "in": "in a crumbling Victorian manor"
+        },
+        "tags": [
+          "horror",
+          "historical",
+          "family"
+        ],
+        "affinity": [
+          "mystery",
+          "death",
+          "family"
+        ],
+        "excludes": [
+          "wholesome"
+        ],
+        "weirdness": 0.25,
+        "silliness": 0.2
+      },
+      {
+        "id": "endless-night-ferry",
+        "label": "Endless night ferry",
+        "forms": {
+          "noun": "night ferry that never reaches port",
+          "in": "aboard a night ferry that never reaches port"
+        },
+        "tags": [
+          "horror",
+          "nautical",
+          "baltic",
+          "water",
+          "travel"
+        ],
+        "affinity": [
+          "cold",
+          "baltic",
+          "mystery"
+        ],
+        "excludes": [
+          "wholesome"
+        ],
+        "weirdness": 0.55,
+        "silliness": 0.25
+      },
+      {
+        "id": "perfectly-normal-cul-de-sac",
+        "label": "Perfectly normal cul-de-sac",
+        "forms": {
+          "noun": "perfectly normal cul-de-sac",
+          "in": "on a perfectly normal cul-de-sac"
+        },
+        "tags": [
+          "horror",
+          "modern",
+          "town",
+          "absurd"
+        ],
+        "affinity": [
+          "social",
+          "family",
+          "comedy"
+        ],
+        "excludes": [
+          "wholesome"
+        ],
+        "weirdness": 0.5,
+        "silliness": 0.45
+      }
+    ],
+    "protagonist": [
+      {
+        "id": "night-guard",
+        "label": "Night guard",
+        "forms": {
+          "noun": "night-shift security guard"
+        },
+        "tags": [
+          "horror",
+          "office",
+          "stealth"
+        ],
+        "affinity": [
+          "retail",
+          "office",
+          "tech"
+        ],
+        "excludes": [
+          "wholesome"
+        ],
+        "weirdness": 0.1,
+        "silliness": 0.25
+      },
+      {
+        "id": "paranormal-intern",
+        "label": "Paranormal intern",
+        "forms": {
+          "noun": "unpaid paranormal investigation intern"
+        },
+        "tags": [
+          "horror",
+          "comedy",
+          "mystery"
+        ],
+        "affinity": [
+          "mystery",
+          "office",
+          "comedy"
+        ],
+        "excludes": [
+          "wholesome"
+        ],
+        "weirdness": 0.45,
+        "silliness": 0.6
+      },
+      {
+        "id": "semi-retired-exorcist",
+        "label": "Semi-retired exorcist",
+        "forms": {
+          "noun": "semi-retired exorcist"
+        },
+        "tags": [
+          "horror",
+          "religion",
+          "death"
+        ],
+        "affinity": [
+          "religion",
+          "death",
+          "folk"
+        ],
+        "excludes": [
+          "wholesome"
+        ],
+        "weirdness": 0.35,
+        "silliness": 0.45
+      },
+      {
+        "id": "oblivious-ghost",
+        "label": "Oblivious ghost",
+        "forms": {
+          "noun": "ghost who doesn't know they're dead"
+        },
+        "tags": [
+          "horror",
+          "death",
+          "weird"
+        ],
+        "affinity": [
+          "death",
+          "mystery",
+          "melancholy"
+        ],
+        "excludes": [
+          "wholesome"
+        ],
+        "weirdness": 0.6,
+        "silliness": 0.45
+      },
+      {
+        "id": "babysitter",
+        "label": "Babysitter",
+        "forms": {
+          "noun": "teenage babysitter on a very long shift"
+        },
+        "tags": [
+          "horror",
+          "family",
+          "modern"
+        ],
+        "affinity": [
+          "family",
+          "stealth",
+          "town"
+        ],
+        "excludes": [
+          "wholesome"
+        ],
+        "weirdness": 0.15,
+        "silliness": 0.3
+      },
+      {
+        "id": "forgetful-lighthouse-keeper",
+        "label": "Forgetful lighthouse keeper",
+        "forms": {
+          "noun": "lighthouse keeper with a patchy memory"
+        },
+        "tags": [
+          "horror",
+          "nautical",
+          "mystery"
+        ],
+        "affinity": [
+          "nautical",
+          "water",
+          "cold",
+          "mystery"
+        ],
+        "excludes": [
+          "wholesome"
+        ],
+        "weirdness": 0.3,
+        "silliness": 0.2
+      },
+      {
+        "id": "small-town-mortician",
+        "label": "Small-town mortician",
+        "forms": {
+          "noun": "small-town mortician"
+        },
+        "tags": [
+          "horror",
+          "death",
+          "town"
+        ],
+        "affinity": [
+          "death",
+          "town",
+          "mystery"
+        ],
+        "excludes": [
+          "wholesome"
+        ],
+        "weirdness": 0.3,
+        "silliness": 0.35
+      },
+      {
+        "id": "call-in-radio-host",
+        "label": "Call-in radio host",
+        "forms": {
+          "noun": "late-night call-in radio host"
+        },
+        "tags": [
+          "horror",
+          "radio",
+          "music"
+        ],
+        "affinity": [
+          "radio",
+          "communication",
+          "mystery"
+        ],
+        "excludes": [
+          "wholesome"
+        ],
+        "weirdness": 0.35,
+        "silliness": 0.3
+      },
+      {
+        "id": "haunted-house-estate-agent",
+        "label": "Haunted-house estate agent",
+        "forms": {
+          "noun": "estate agent who only sells haunted houses"
+        },
+        "tags": [
+          "horror",
+          "retail",
+          "comedy",
+          "bureaucracy"
+        ],
+        "affinity": [
+          "trade",
+          "management",
+          "absurd"
+        ],
+        "excludes": [
+          "wholesome"
+        ],
+        "weirdness": 0.6,
+        "silliness": 0.7
+      },
+      {
+        "id": "under-bed-monster",
+        "label": "Under-bed monster",
+        "forms": {
+          "noun": "monster who lives under a teenager's bed"
+        },
+        "tags": [
+          "horror",
+          "weird",
+          "comedy",
+          "family"
+        ],
+        "affinity": [
+          "stealth",
+          "family",
+          "absurd"
+        ],
+        "excludes": [
+          "wholesome"
+        ],
+        "weirdness": 0.75,
+        "silliness": 0.7
+      }
+    ],
+    "objective": [
+      {
+        "id": "survive-till-sunrise",
+        "label": "Survive till sunrise",
+        "forms": {
+          "verb": "survive until sunrise"
+        },
+        "tags": [
+          "horror",
+          "survival",
+          "time"
+        ],
+        "affinity": [
+          "survival",
+          "tense"
+        ],
+        "excludes": [
+          "wholesome"
+        ],
+        "weirdness": 0.05,
+        "silliness": 0.1
+      },
+      {
+        "id": "find-the-breathing",
+        "label": "Find the breathing",
+        "forms": {
+          "verb": "find out what's breathing inside the walls"
+        },
+        "tags": [
+          "horror",
+          "mystery",
+          "deduction"
+        ],
+        "affinity": [
+          "mystery",
+          "building"
+        ],
+        "excludes": [
+          "wholesome"
+        ],
+        "weirdness": 0.4,
+        "silliness": 0.25
+      },
+      {
+        "id": "escape-before-lockdown",
+        "label": "Escape before lockdown",
+        "forms": {
+          "verb": "escape before the doors lock for good"
+        },
+        "tags": [
+          "horror",
+          "puzzle",
+          "tense"
+        ],
+        "affinity": [
+          "puzzle",
+          "stealth"
+        ],
+        "excludes": [
+          "wholesome"
+        ],
+        "weirdness": 0.2,
+        "silliness": 0.15
+      },
+      {
+        "id": "lay-the-dead-to-rest",
+        "label": "Lay the dead to rest",
+        "forms": {
+          "verb": "lay the restless dead to rest"
+        },
+        "tags": [
+          "horror",
+          "death",
+          "religion"
+        ],
+        "affinity": [
+          "death",
+          "narrative",
+          "melancholy"
+        ],
+        "excludes": [
+          "wholesome"
+        ],
+        "weirdness": 0.35,
+        "silliness": 0.15
+      },
+      {
+        "id": "sell-before-the-full-moon",
+        "label": "Sell before the full moon",
+        "forms": {
+          "verb": "sell the haunted house before the next full moon"
+        },
+        "tags": [
+          "horror",
+          "trade",
+          "comedy"
+        ],
+        "affinity": [
+          "trade",
+          "management",
+          "absurd"
+        ],
+        "excludes": [
+          "wholesome"
+        ],
+        "weirdness": 0.55,
+        "silliness": 0.6
+      },
+      {
+        "id": "keep-the-lights-on",
+        "label": "Keep the lights on",
+        "forms": {
+          "verb": "keep the lights on until help arrives"
+        },
+        "tags": [
+          "horror",
+          "survival",
+          "tech"
+        ],
+        "affinity": [
+          "survival",
+          "tech",
+          "management"
+        ],
+        "excludes": [
+          "wholesome"
+        ],
+        "weirdness": 0.15,
+        "silliness": 0.15
+      },
+      {
+        "id": "perfect-ritual",
+        "label": "Perfect ritual",
+        "forms": {
+          "verb": "finish the ritual without mispronouncing a single word"
+        },
+        "tags": [
+          "horror",
+          "religion",
+          "puzzle",
+          "comedy"
+        ],
+        "affinity": [
+          "religion",
+          "puzzle",
+          "cosmic"
+        ],
+        "excludes": [
+          "wholesome"
+        ],
+        "weirdness": 0.5,
+        "silliness": 0.5
+      },
+      {
+        "id": "remember-who-you-were",
+        "label": "Remember who you were",
+        "forms": {
+          "verb": "remember who you were before the fog"
+        },
+        "tags": [
+          "horror",
+          "mystery",
+          "narrative"
+        ],
+        "affinity": [
+          "narrative",
+          "melancholy",
+          "death"
+        ],
+        "excludes": [
+          "wholesome"
+        ],
+        "weirdness": 0.4,
+        "silliness": 0.1
+      }
+    ],
+    "loop": [
+      {
+        "id": "candle-and-hide",
+        "label": "Candle and hide",
+        "forms": {
+          "verb": "explore by candlelight and hide when the footsteps start"
+        },
+        "tags": [
+          "horror",
+          "exploration",
+          "stealth"
+        ],
+        "affinity": [
+          "stealth",
+          "exploration"
+        ],
+        "excludes": [
+          "wholesome"
+        ],
+        "weirdness": 0.15,
+        "silliness": 0.15
+      },
+      {
+        "id": "investigate-and-piece-together",
+        "label": "Investigate and piece together",
+        "forms": {
+          "verb": "investigate by night and piece the clues together by day"
+        },
+        "tags": [
+          "horror",
+          "mystery",
+          "deduction"
+        ],
+        "affinity": [
+          "mystery",
+          "deduction"
+        ],
+        "excludes": [
+          "wholesome"
+        ],
+        "weirdness": 0.15,
+        "silliness": 0.1
+      },
+      {
+        "id": "patrol-check-pray",
+        "label": "Patrol, check, pray",
+        "forms": {
+          "verb": "patrol the halls, check the cameras and pray"
+        },
+        "tags": [
+          "horror",
+          "stealth",
+          "tense"
+        ],
+        "affinity": [
+          "office",
+          "retail",
+          "tech"
+        ],
+        "excludes": [
+          "wholesome"
+        ],
+        "weirdness": 0.2,
+        "silliness": 0.35
+      },
+      {
+        "id": "light-count-seal",
+        "label": "Light, count, seal",
+        "forms": {
+          "verb": "light the lamps, count the survivors and seal the doors"
+        },
+        "tags": [
+          "horror",
+          "survival",
+          "management"
+        ],
+        "affinity": [
+          "survival",
+          "management",
+          "building"
+        ],
+        "excludes": [
+          "wholesome"
+        ],
+        "weirdness": 0.2,
+        "silliness": 0.15
+      },
+      {
+        "id": "sneak-listen-panic",
+        "label": "Sneak, listen, panic",
+        "forms": {
+          "verb": "sneak, listen, panic and try again"
+        },
+        "tags": [
+          "horror",
+          "stealth",
+          "comedy"
+        ],
+        "affinity": [
+          "stealth",
+          "chaos"
+        ],
+        "excludes": [
+          "wholesome"
+        ],
+        "weirdness": 0.3,
+        "silliness": 0.5
+      },
+      {
+        "id": "record-and-review",
+        "label": "Record and review",
+        "forms": {
+          "verb": "set up recording gear at dusk and review the footage at dawn"
+        },
+        "tags": [
+          "horror",
+          "tech",
+          "deduction"
+        ],
+        "affinity": [
+          "tech",
+          "mystery",
+          "radio"
+        ],
+        "excludes": [
+          "wholesome"
+        ],
+        "weirdness": 0.25,
+        "silliness": 0.15
+      }
+    ],
+    "mechanic": [
+      {
+        "id": "sanity-management",
+        "label": "Sanity management",
+        "forms": {
+          "noun": "sanity management",
+          "verb": "keep your grip on reality while the walls whisper"
+        },
+        "tags": [
+          "horror",
+          "management",
+          "tense"
+        ],
+        "affinity": [
+          "cosmic",
+          "narrative"
+        ],
+        "excludes": [
+          "wholesome"
+        ],
+        "weirdness": 0.4,
+        "silliness": 0.2
+      },
+      {
+        "id": "security-cameras",
+        "label": "Security cameras",
+        "forms": {
+          "noun": "security-camera monitoring",
+          "verb": "flick between grainy security cameras"
+        },
+        "tags": [
+          "horror",
+          "tech",
+          "stealth"
+        ],
+        "affinity": [
+          "office",
+          "retail",
+          "tech"
+        ],
+        "excludes": [
+          "wholesome"
+        ],
+        "weirdness": 0.15,
+        "silliness": 0.2
+      },
+      {
+        "id": "wardrobe-hiding",
+        "label": "Wardrobe hiding",
+        "forms": {
+          "noun": "wardrobe hiding",
+          "verb": "hide in wardrobes and hold your breath"
+        },
+        "tags": [
+          "horror",
+          "stealth"
+        ],
+        "affinity": [
+          "stealth",
+          "family"
+        ],
+        "excludes": [
+          "wholesome"
+        ],
+        "weirdness": 0.25,
+        "silliness": 0.35
+      },
+      {
+        "id": "spirit-board-chats",
+        "label": "Spirit-board chats",
+        "forms": {
+          "noun": "spirit-board conversations",
+          "verb": "ask the dead questions on a spirit board"
+        },
+        "tags": [
+          "horror",
+          "death",
+          "puzzle",
+          "social"
+        ],
+        "affinity": [
+          "death",
+          "puzzle",
+          "religion"
+        ],
+        "excludes": [
+          "wholesome"
+        ],
+        "weirdness": 0.5,
+        "silliness": 0.4
+      },
+      {
+        "id": "flashlight-rationing",
+        "label": "Flashlight rationing",
+        "forms": {
+          "noun": "flashlight rationing",
+          "verb": "ration the last of a flickering flashlight"
+        },
+        "tags": [
+          "horror",
+          "survival",
+          "management"
+        ],
+        "affinity": [
+          "survival",
+          "tech",
+          "underground"
+        ],
+        "excludes": [
+          "wholesome"
+        ],
+        "weirdness": 0.1,
+        "silliness": 0.15
+      },
+      {
+        "id": "thunder-stealth",
+        "label": "Thunder stealth",
+        "forms": {
+          "noun": "thunder-timed stealth",
+          "verb": "move only when the thunder covers your footsteps"
+        },
+        "tags": [
+          "horror",
+          "stealth",
+          "timing",
+          "weather"
+        ],
+        "affinity": [
+          "stealth",
+          "weather",
+          "rhythm"
+        ],
+        "excludes": [
+          "wholesome"
+        ],
+        "weirdness": 0.35,
+        "silliness": 0.2
+      },
+      {
+        "id": "salt-circles",
+        "label": "Salt circles",
+        "forms": {
+          "noun": "salt-circle drawing",
+          "verb": "draw protective salt circles before it's too late"
+        },
+        "tags": [
+          "horror",
+          "magic",
+          "religion",
+          "timing"
+        ],
+        "affinity": [
+          "magic",
+          "folk",
+          "religion"
+        ],
+        "excludes": [
+          "wholesome"
+        ],
+        "weirdness": 0.4,
+        "silliness": 0.3
+      },
+      {
+        "id": "revealing-photos",
+        "label": "Revealing photos",
+        "forms": {
+          "noun": "spirit photography",
+          "verb": "snap instant photos that show what the eye can't"
+        },
+        "tags": [
+          "horror",
+          "art",
+          "mystery"
+        ],
+        "affinity": [
+          "mystery",
+          "exploration",
+          "art"
+        ],
+        "excludes": [
+          "wholesome"
+        ],
+        "weirdness": 0.4,
+        "silliness": 0.25
+      }
+    ],
+    "threat": [
+      {
+        "id": "something-in-the-walls",
+        "label": "Something in the walls",
+        "forms": {
+          "noun": "something in the walls",
+          "clause": "something in the walls is learning your routine"
+        },
+        "tags": [
+          "horror",
+          "building",
+          "mystery"
+        ],
+        "affinity": [
+          "building",
+          "town"
+        ],
+        "excludes": [
+          "wholesome"
+        ],
+        "weirdness": 0.35,
+        "silliness": 0.15
+      },
+      {
+        "id": "too-wide-smile",
+        "label": "Too-wide smile",
+        "forms": {
+          "noun": "the thing wearing your neighbour's face",
+          "clause": "the neighbour has been smiling a little too widely lately"
+        },
+        "tags": [
+          "horror",
+          "social",
+          "town",
+          "weird"
+        ],
+        "affinity": [
+          "town",
+          "social",
+          "family"
+        ],
+        "excludes": [
+          "wholesome"
+        ],
+        "weirdness": 0.6,
+        "silliness": 0.3
+      },
+      {
+        "id": "swallowing-fog",
+        "label": "Swallowing fog",
+        "forms": {
+          "noun": "an endless fog",
+          "clause": "the fog swallows another street every night"
+        },
+        "tags": [
+          "horror",
+          "weather",
+          "cosmic"
+        ],
+        "affinity": [
+          "weather",
+          "water",
+          "cold",
+          "baltic"
+        ],
+        "excludes": [
+          "wholesome"
+        ],
+        "weirdness": 0.35,
+        "silliness": 0.1
+      },
+      {
+        "id": "patient-ghost",
+        "label": "Patient ghost",
+        "forms": {
+          "noun": "a very patient ghost",
+          "clause": "a ghost waits patiently at the end of every hallway"
+        },
+        "tags": [
+          "horror",
+          "death"
+        ],
+        "affinity": [
+          "death",
+          "building",
+          "mystery"
+        ],
+        "excludes": [
+          "wholesome"
+        ],
+        "weirdness": 0.4,
+        "silliness": 0.35
+      },
+      {
+        "id": "hungry-dark",
+        "label": "Hungry dark",
+        "forms": {
+          "noun": "the hungry dark",
+          "clause": "the dark gets hungrier every time a bulb blows"
+        },
+        "tags": [
+          "horror",
+          "survival",
+          "cosmic"
+        ],
+        "affinity": [
+          "survival",
+          "underground",
+          "tech"
+        ],
+        "excludes": [
+          "wholesome"
+        ],
+        "weirdness": 0.45,
+        "silliness": 0.15
+      },
+      {
+        "id": "friendly-cult",
+        "label": "Friendly cult",
+        "forms": {
+          "noun": "a cult with an excellent newsletter",
+          "clause": "the local cult keeps sending you very friendly invitations"
+        },
+        "tags": [
+          "horror",
+          "religion",
+          "comedy",
+          "social"
+        ],
+        "affinity": [
+          "religion",
+          "town",
+          "rural",
+          "comedy"
+        ],
+        "excludes": [
+          "wholesome"
+        ],
+        "weirdness": 0.65,
+        "silliness": 0.75
+      },
+      {
+        "id": "prophetic-printer",
+        "label": "Prophetic printer",
+        "forms": {
+          "noun": "a printer that predicts deaths",
+          "clause": "the office printer keeps printing tomorrow's obituaries"
+        },
+        "tags": [
+          "horror",
+          "office",
+          "tech",
+          "absurd"
+        ],
+        "affinity": [
+          "office",
+          "bureaucracy",
+          "tech"
+        ],
+        "excludes": [
+          "wholesome"
+        ],
+        "weirdness": 0.8,
+        "silliness": 0.7
+      },
+      {
+        "id": "polite-knocking",
+        "label": "Polite knocking",
+        "forms": {
+          "noun": "the thing in the basement",
+          "clause": "something in the basement keeps knocking, very politely"
+        },
+        "tags": [
+          "horror",
+          "underground",
+          "comedy"
+        ],
+        "affinity": [
+          "building",
+          "family",
+          "underground"
+        ],
+        "excludes": [
+          "wholesome"
+        ],
+        "weirdness": 0.5,
+        "silliness": 0.5
+      }
+    ],
+    "mood": [
+      {
+        "id": "dread-soaked",
+        "label": "Dread-soaked",
+        "forms": {
+          "adj": "dread-soaked"
+        },
+        "tags": [
+          "horror",
+          "tense"
+        ],
+        "excludes": [
+          "wholesome"
+        ],
+        "weirdness": 0.2,
+        "silliness": 0.05
+      },
+      {
+        "id": "darkly-funny",
+        "label": "Darkly funny",
+        "forms": {
+          "adj": "creepy but darkly funny"
+        },
+        "tags": [
+          "horror",
+          "comedy"
+        ],
+        "weirdness": 0.4,
+        "silliness": 0.6
+      },
+      {
+        "id": "unsettling",
+        "label": "Unsettling",
+        "forms": {
+          "adj": "quietly unsettling"
+        },
+        "tags": [
+          "horror",
+          "tense"
+        ],
+        "excludes": [
+          "wholesome"
+        ],
+        "weirdness": 0.25,
+        "silliness": 0.1
+      },
+      {
+        "id": "fun-size-spooky",
+        "label": "Fun-size spooky",
+        "forms": {
+          "adj": "fun-size spooky"
+        },
+        "tags": [
+          "horror",
+          "comedy"
+        ],
+        "weirdness": 0.4,
+        "silliness": 0.7
+      },
+      {
+        "id": "grimly-hilarious",
+        "label": "Grimly hilarious",
+        "forms": {
+          "adj": "grimly hilarious"
+        },
+        "tags": [
+          "horror",
+          "comedy"
+        ],
+        "weirdness": 0.45,
+        "silliness": 0.75
+      },
+      {
+        "id": "suffocating",
+        "label": "Suffocating",
+        "forms": {
+          "adj": "suffocating"
+        },
+        "tags": [
+          "horror",
+          "tense"
+        ],
+        "excludes": [
+          "wholesome"
+        ],
+        "weirdness": 0.2,
+        "silliness": 0.05
+      }
+    ],
+    "visual": [
+      {
+        "id": "vhs-found-footage",
+        "label": "VHS found footage",
+        "forms": {
+          "noun": "grainy found-footage VHS with tracking errors"
+        },
+        "tags": [
+          "horror",
+          "retro",
+          "modern"
+        ],
+        "affinity": [
+          "mystery",
+          "tech"
+        ],
+        "excludes": [
+          "wholesome"
+        ],
+        "weirdness": 0.3,
+        "silliness": 0.15
+      },
+      {
+        "id": "foggy-low-poly",
+        "label": "Foggy low-poly",
+        "forms": {
+          "noun": "flickering low-poly drowned in fog"
+        },
+        "tags": [
+          "horror",
+          "retro"
+        ],
+        "affinity": [
+          "cold",
+          "weather"
+        ],
+        "excludes": [
+          "wholesome"
+        ],
+        "weirdness": 0.25,
+        "silliness": 0.2
+      },
+      {
+        "id": "moving-photographs",
+        "label": "Moving photographs",
+        "forms": {
+          "noun": "black-and-white photographs that move when you look away"
+        },
+        "tags": [
+          "horror",
+          "art",
+          "weird"
+        ],
+        "affinity": [
+          "historical",
+          "death"
+        ],
+        "excludes": [
+          "wholesome"
+        ],
+        "weirdness": 0.6,
+        "silliness": 0.2
+      },
+      {
+        "id": "candlelit-oil-paint",
+        "label": "Candlelit oil paint",
+        "forms": {
+          "noun": "candlelit oil-painting textures"
+        },
+        "tags": [
+          "horror",
+          "art",
+          "historical"
+        ],
+        "affinity": [
+          "historical",
+          "medieval",
+          "religion"
+        ],
+        "excludes": [
+          "wholesome"
+        ],
+        "weirdness": 0.35,
+        "silliness": 0.1
+      },
+      {
+        "id": "night-vision-green",
+        "label": "Night-vision green",
+        "forms": {
+          "noun": "harsh night-vision green"
+        },
+        "tags": [
+          "horror",
+          "tech"
+        ],
+        "affinity": [
+          "stealth",
+          "tech"
+        ],
+        "excludes": [
+          "wholesome"
+        ],
+        "weirdness": 0.25,
+        "silliness": 0.15
+      },
+      {
+        "id": "puppet-theatre",
+        "label": "Puppet theatre",
+        "forms": {
+          "noun": "a creaky puppet-theatre style with visible strings"
+        },
+        "tags": [
+          "horror",
+          "art",
+          "weird"
+        ],
+        "affinity": [
+          "absurd",
+          "folk",
+          "family"
+        ],
+        "excludes": [
+          "wholesome"
+        ],
+        "weirdness": 0.65,
+        "silliness": 0.45
+      }
+    ],
+    "twist": [
+      {
+        "id": "ghost-all-along",
+        "label": "Ghost all along",
+        "forms": {
+          "clause": "you were the ghost all along"
+        },
+        "tags": [
+          "horror",
+          "death"
+        ],
+        "affinity": [
+          "death",
+          "mystery"
+        ],
+        "excludes": [
+          "wholesome"
+        ],
+        "weirdness": 0.35,
+        "silliness": 0.2
+      },
+      {
+        "id": "library-book",
+        "label": "Library book",
+        "forms": {
+          "clause": "the monster is just trying to return an overdue library book"
+        },
+        "tags": [
+          "horror",
+          "comedy",
+          "absurd"
+        ],
+        "affinity": [
+          "comedy",
+          "school",
+          "town"
+        ],
+        "weirdness": 0.8,
+        "silliness": 0.85
+      },
+      {
+        "id": "lonely-house",
+        "label": "Lonely house",
+        "forms": {
+          "clause": "the house itself is alive, and very lonely"
+        },
+        "tags": [
+          "horror",
+          "building",
+          "melancholy"
+        ],
+        "affinity": [
+          "building",
+          "family",
+          "melancholy"
+        ],
+        "excludes": [
+          "wholesome"
+        ],
+        "weirdness": 0.6,
+        "silliness": 0.3
+      },
+      {
+        "id": "remembering-mirrors",
+        "label": "Remembering mirrors",
+        "forms": {
+          "clause": "every save point is a mirror, and the mirrors remember"
+        },
+        "tags": [
+          "horror",
+          "mystery"
+        ],
+        "affinity": [
+          "mystery",
+          "magic"
+        ],
+        "excludes": [
+          "wholesome"
+        ],
+        "weirdness": 0.55,
+        "silliness": 0.15
+      },
+      {
+        "id": "radio-voice",
+        "label": "Radio voice",
+        "forms": {
+          "clause": "the helpful voice on the radio is the thing hunting you"
+        },
+        "tags": [
+          "horror",
+          "radio"
+        ],
+        "affinity": [
+          "radio",
+          "communication"
+        ],
+        "excludes": [
+          "wholesome"
+        ],
+        "weirdness": 0.4,
+        "silliness": 0.15
+      },
+      {
+        "id": "copies",
+        "label": "Copies",
+        "forms": {
+          "clause": "the survivors you rescue are slowly being replaced by copies"
+        },
+        "tags": [
+          "horror",
+          "social",
+          "weird"
+        ],
+        "affinity": [
+          "social",
+          "survival",
+          "scifi"
+        ],
+        "excludes": [
+          "wholesome"
+        ],
+        "weirdness": 0.55,
+        "silliness": 0.15
+      },
+      {
+        "id": "cult-was-right",
+        "label": "Cult was right",
+        "forms": {
+          "clause": "the cult is right, and the world really does end on Tuesday"
+        },
+        "tags": [
+          "horror",
+          "religion",
+          "cosmic",
+          "comedy"
+        ],
+        "affinity": [
+          "religion",
+          "cosmic",
+          "time"
+        ],
+        "excludes": [
+          "wholesome"
+        ],
+        "weirdness": 0.6,
+        "silliness": 0.55
+      },
+      {
+        "id": "dying-helps",
+        "label": "Dying helps",
+        "forms": {
+          "clause": "dying makes the ghosts friendlier"
+        },
+        "tags": [
+          "horror",
+          "death",
+          "comedy"
+        ],
+        "affinity": [
+          "death",
+          "social"
+        ],
+        "excludes": [
+          "wholesome"
+        ],
+        "weirdness": 0.55,
+        "silliness": 0.6
+      }
+    ],
+    "titleFirst": [
+      {
+        "id": "hollow",
+        "label": "Hollow",
+        "tags": [
+          "horror",
+          "mystery"
+        ],
+        "weirdness": 0.2,
+        "silliness": 0.15
+      },
+      {
+        "id": "silent",
+        "label": "Silent",
+        "tags": [
+          "horror",
+          "tense"
+        ],
+        "weirdness": 0.2,
+        "silliness": 0.15
+      },
+      {
+        "id": "midnight",
+        "label": "Midnight",
+        "tags": [
+          "horror",
+          "time"
+        ],
+        "weirdness": 0.2,
+        "silliness": 0.15
+      },
+      {
+        "id": "crimson",
+        "label": "Crimson",
+        "tags": [
+          "horror",
+          "grim"
+        ],
+        "weirdness": 0.2,
+        "silliness": 0.15
+      },
+      {
+        "id": "whispering",
+        "label": "Whispering",
+        "tags": [
+          "horror",
+          "mystery"
+        ],
+        "weirdness": 0.2,
+        "silliness": 0.15
+      },
+      {
+        "id": "grave",
+        "label": "Grave",
+        "tags": [
+          "horror",
+          "death"
+        ],
+        "weirdness": 0.2,
+        "silliness": 0.15
+      },
+      {
+        "id": "pale",
+        "label": "Pale",
+        "tags": [
+          "horror",
+          "death",
+          "cold"
+        ],
+        "weirdness": 0.2,
+        "silliness": 0.15
+      },
+      {
+        "id": "rotten",
+        "label": "Rotten",
+        "tags": [
+          "horror",
+          "grim"
+        ],
+        "weirdness": 0.2,
+        "silliness": 0.15
+      },
+      {
+        "id": "dead",
+        "label": "Dead",
+        "tags": [
+          "horror",
+          "death"
+        ],
+        "weirdness": 0.2,
+        "silliness": 0.15
+      },
+      {
+        "id": "black",
+        "label": "Black",
+        "tags": [
+          "horror",
+          "grim"
+        ],
+        "weirdness": 0.2,
+        "silliness": 0.15
+      },
+      {
+        "id": "haunted",
+        "label": "Haunted",
+        "tags": [
+          "horror",
+          "death",
+          "building"
+        ],
+        "weirdness": 0.2,
+        "silliness": 0.15
+      },
+      {
+        "id": "cursed",
+        "label": "Cursed",
+        "tags": [
+          "horror",
+          "magic"
+        ],
+        "weirdness": 0.2,
+        "silliness": 0.15
+      },
+      {
+        "id": "shivering",
+        "label": "Shivering",
+        "tags": [
+          "horror",
+          "cold"
+        ],
+        "weirdness": 0.2,
+        "silliness": 0.15
+      },
+      {
+        "id": "ashen",
+        "label": "Ashen",
+        "tags": [
+          "horror",
+          "death",
+          "fire"
+        ],
+        "weirdness": 0.2,
+        "silliness": 0.15
+      },
+      {
+        "id": "creeping",
+        "label": "Creeping",
+        "tags": [
+          "horror",
+          "tense",
+          "nature"
+        ],
+        "weirdness": 0.2,
+        "silliness": 0.15
+      }
+    ],
+    "titleLast": [
+      {
+        "id": "hallway",
+        "label": "Hallway",
+        "tags": [
+          "horror",
+          "building"
+        ],
+        "weirdness": 0.2,
+        "silliness": 0.15
+      },
+      {
+        "id": "static",
+        "label": "Static",
+        "tags": [
+          "horror",
+          "radio",
+          "tech"
+        ],
+        "weirdness": 0.2,
+        "silliness": 0.15
+      },
+      {
+        "id": "lantern",
+        "label": "Lantern",
+        "tags": [
+          "horror",
+          "survival"
+        ],
+        "weirdness": 0.2,
+        "silliness": 0.15
+      },
+      {
+        "id": "below",
+        "label": "Below",
+        "tags": [
+          "horror",
+          "underground"
+        ],
+        "weirdness": 0.2,
+        "silliness": 0.15
+      },
+      {
+        "id": "seance",
+        "label": "Séance",
+        "tags": [
+          "horror",
+          "death",
+          "religion"
+        ],
+        "weirdness": 0.2,
+        "silliness": 0.15
+      },
+      {
+        "id": "vigil",
+        "label": "Vigil",
+        "tags": [
+          "horror",
+          "religion",
+          "death"
+        ],
+        "weirdness": 0.2,
+        "silliness": 0.15
+      },
+      {
+        "id": "basement",
+        "label": "Basement",
+        "tags": [
+          "horror",
+          "underground",
+          "building"
+        ],
+        "weirdness": 0.2,
+        "silliness": 0.15
+      },
+      {
+        "id": "rites",
+        "label": "Rites",
+        "tags": [
+          "horror",
+          "religion",
+          "folk"
+        ],
+        "weirdness": 0.2,
+        "silliness": 0.15
+      },
+      {
+        "id": "echoes",
+        "label": "Echoes",
+        "tags": [
+          "horror",
+          "mystery"
+        ],
+        "weirdness": 0.2,
+        "silliness": 0.15
+      },
+      {
+        "id": "visitor",
+        "label": "Visitor",
+        "tags": [
+          "horror",
+          "mystery"
+        ],
+        "weirdness": 0.2,
+        "silliness": 0.15
+      },
+      {
+        "id": "hour",
+        "label": "Hour",
+        "tags": [
+          "horror",
+          "time"
+        ],
+        "weirdness": 0.2,
+        "silliness": 0.15
+      },
+      {
+        "id": "fog",
+        "label": "Fog",
+        "tags": [
+          "horror",
+          "weather",
+          "cold"
+        ],
+        "weirdness": 0.2,
+        "silliness": 0.15
+      },
+      {
+        "id": "wardrobe",
+        "label": "Wardrobe",
+        "tags": [
+          "horror",
+          "stealth",
+          "family"
+        ],
+        "weirdness": 0.2,
+        "silliness": 0.15
+      },
+      {
+        "id": "night-shift",
+        "label": "Night Shift",
+        "tags": [
+          "horror",
+          "office"
+        ],
+        "weirdness": 0.2,
+        "silliness": 0.15
+      },
+      {
+        "id": "knock",
+        "label": "Knock",
+        "tags": [
+          "horror",
+          "building"
+        ],
+        "weirdness": 0.2,
+        "silliness": 0.15
+      }
+    ],
+    "creep": [
+      {
+        "id": "sanity-bleeds-into-ui",
+        "label": "Sanity bleeds into UI",
+        "kind": "system",
+        "complexity": 5,
+        "forms": {
+          "pitch": "A sanity meter that also affects the menus, the subtitles and eventually the credits.",
+          "connects": "The worse it gets, the less you can trust your own {mechanic.noun}."
+        },
+        "tags": [
+          "horror",
+          "tense",
+          "weird"
+        ],
+        "affinity": [
+          "horror",
+          "cosmic",
+          "narrative"
+        ],
+        "excludes": [
+          "wholesome"
+        ],
+        "weirdness": 0.6,
+        "silliness": 0.45
+      },
+      {
+        "id": "unhinged-diary",
+        "label": "Unhinged diary",
+        "kind": "system",
+        "complexity": 3,
+        "forms": {
+          "pitch": "Your {protagonist.noun} keeps a diary, and the entries get more unhinged every night.",
+          "connects": "Diary entries hide clues about {threat.noun} that you only spot on a re-read."
+        },
+        "tags": [
+          "horror",
+          "narrative",
+          "mystery"
+        ],
+        "affinity": [
+          "horror",
+          "mystery",
+          "narrative"
+        ],
+        "excludes": [
+          "wholesome"
+        ],
+        "weirdness": 0.45,
+        "silliness": 0.45
+      },
+      {
+        "id": "dead-hotline",
+        "label": "Dead hotline",
+        "kind": "system",
+        "complexity": 4,
+        "forms": {
+          "pitch": "A hotline for the dead: callers give you hints, most of them wrong.",
+          "connects": "Trusting the right caller saves {resource.noun}; trusting the wrong one feeds {threat.noun}."
+        },
+        "tags": [
+          "horror",
+          "radio",
+          "death"
+        ],
+        "affinity": [
+          "radio",
+          "death",
+          "mystery"
+        ],
+        "excludes": [
+          "wholesome"
+        ],
+        "weirdness": 0.6,
+        "silliness": 0.5
+      },
+      {
+        "id": "exorcism-conjugation",
+        "label": "Exorcism conjugation",
+        "kind": "loop",
+        "complexity": 5,
+        "forms": {
+          "pitch": "An exorcism minigame with forty-two Latin verbs to conjugate under pressure.",
+          "connects": "Every successful rite clears a room and buys you a little peace from {threat.noun}."
+        },
+        "tags": [
+          "horror",
+          "religion",
+          "puzzle",
+          "comedy"
+        ],
+        "affinity": [
+          "religion",
+          "puzzle",
+          "death"
+        ],
+        "excludes": [
+          "wholesome"
+        ],
+        "weirdness": 0.65,
+        "silliness": 0.7
+      },
+      {
+        "id": "scare-tours",
+        "label": "Scare tours",
+        "kind": "loop",
+        "complexity": 6,
+        "forms": {
+          "pitch": "Run haunted tours {setting.in} and scare paying visitors for extra {resource.noun}.",
+          "connects": "Screams pay the bills, and the bills keep the lights on against {threat.noun}."
+        },
+        "tags": [
+          "horror",
+          "management",
+          "trade",
+          "comedy"
+        ],
+        "affinity": [
+          "management",
+          "trade",
+          "building"
+        ],
+        "excludes": [
+          "wholesome"
+        ],
+        "weirdness": 0.6,
+        "silliness": 0.65
+      },
+      {
+        "id": "jump-scare-editor",
+        "label": "Jump-scare editor",
+        "kind": "content",
+        "complexity": 6,
+        "forms": {
+          "pitch": "A jump-scare editor so players can ambush each other's saves.",
+          "connects": "Community scares keep the core loop terrifying long after you know the map."
+        },
+        "tags": [
+          "horror",
+          "social",
+          "building"
+        ],
+        "affinity": [
+          "social",
+          "building",
+          "comedy"
+        ],
+        "excludes": [
+          "wholesome"
+        ],
+        "weirdness": 0.45,
+        "silliness": 0.6
+      },
+      {
+        "id": "sixty-cursed-dolls",
+        "label": "Sixty cursed dolls",
+        "kind": "content",
+        "complexity": 4,
+        "forms": {
+          "pitch": "Sixty collectible cursed dolls, each with a backstory and a grudge.",
+          "connects": "Every doll you find makes the {setting.noun} a little worse, which is exactly the point."
+        },
+        "tags": [
+          "horror",
+          "death",
+          "comedy"
+        ],
+        "affinity": [
+          "horror",
+          "family",
+          "mystery"
+        ],
+        "excludes": [
+          "wholesome"
+        ],
+        "weirdness": 0.55,
+        "silliness": 0.6
+      },
+      {
+        "id": "passive-aggressive-notes",
+        "label": "Passive-aggressive notes",
+        "kind": "whyNot",
+        "complexity": 2,
+        "forms": {
+          "pitch": "Let {threat.noun} leave passive-aggressive notes whenever you escape."
+        },
+        "tags": [
+          "horror",
+          "comedy",
+          "absurd"
+        ],
+        "affinity": [
+          "comedy",
+          "absurd",
+          "office"
+        ],
+        "excludes": [
+          "wholesome"
+        ],
+        "weirdness": 0.7,
+        "silliness": 0.85
+      },
+      {
+        "id": "ghost-matchmaking",
+        "label": "Ghost matchmaking",
+        "kind": "whyNot",
+        "complexity": 3,
+        "forms": {
+          "pitch": "A ghost-matchmaking side story: find every spirit {setting.in} a nice afterlife partner."
+        },
+        "tags": [
+          "horror",
+          "romance",
+          "death",
+          "comedy"
+        ],
+        "affinity": [
+          "romance",
+          "death",
+          "social"
+        ],
+        "excludes": [
+          "wholesome"
+        ],
+        "weirdness": 0.75,
+        "silliness": 0.8
+      },
+      {
+        "id": "monster-petting",
+        "label": "Monster petting",
+        "kind": "whyNot",
+        "complexity": 2,
+        "forms": {
+          "pitch": "A comfort setting that lets you pet the monster. It purrs. The game becomes ten percent less scary."
+        },
+        "tags": [
+          "horror",
+          "animals",
+          "comedy"
+        ],
+        "affinity": [
+          "comedy",
+          "animals"
+        ],
+        "weirdness": 0.7,
+        "silliness": 0.85
+      }
+    ]
+  },
+  "templates": {
+    "hook": [
+      {
+        "id": "something-watching",
+        "text": "[a] {mood.adj} {genre.adj} {subgenre.noun}: [a] {protagonist.noun} must {objective.verb} {setting.in}, and something is watching.",
+        "weight": 1.5,
+        "tagsAny": [
+          "horror"
+        ]
+      }
+    ],
+    "pitchThreat": [
+      {
+        "id": "lock-the-doors",
+        "text": "Lock the doors and count your {resource.noun}, because {threat.clause}.",
+        "weight": 1.5,
+        "tagsAny": [
+          "horror"
+        ]
+      }
+    ],
+    "badIdea": [
+      {
+        "id": "scream",
+        "text": "Mixing {mechanic.noun} with {threat.noun} means playtesters will scream, though not always for the right reasons.",
+        "weight": 1.2,
+        "tagsAny": [
+          "horror"
+        ]
+      }
+    ],
+    "mightWork": [
+      {
+        "id": "hold-breath",
+        "text": "But [a] {setting.noun} is a perfect place to be afraid, and {mechanic.noun} will have players holding their breath.",
+        "weight": 1.2,
+        "tagsAny": [
+          "horror"
+        ]
+      }
+    ]
+  }
+}
