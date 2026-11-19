@@ -7,7 +7,10 @@
   <ItemGroup>
     <ProjectReference Include="..\BadGameGen.App\BadGameGen.App.csproj" />
   </ItemGroup>
-  <ItemGroup>
+  <ItemGroup Condition="'$(PublishSingleFile)' != 'true'">
     <None Include="..\..\content\**\*.json" Link="content\%(RecursiveDir)%(Filename)%(Extension)" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+  <ItemGroup Condition="'$(PublishSingleFile)' == 'true'">
+    <EmbeddedResource Include="..\..\content\**\*.json" LogicalName="bundle/content/%(RecursiveDir)%(Filename)%(Extension)" />
   </ItemGroup>
 </Project>

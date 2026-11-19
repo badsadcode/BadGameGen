@@ -71,7 +71,7 @@ export interface ThemeDef { id: string; name: string; description: string; dark:
 
 export interface AppSettings {
   theme: string; disabledPacks: string[]; outputMode: OutputMode; lastRecipe?: Recipe | null
-  totalGenerated: number; reduceMotion: boolean
+  totalGenerated: number; reduceMotion: boolean; noorMode: boolean; themeBeforeNoor?: string | null
 }
 
 export interface BootstrapInfo {

@@ -15,6 +15,12 @@ public sealed class AppSettings
     public Recipe? LastRecipe { get; set; }
     public int TotalGenerated { get; set; }
     public bool ReduceMotion { get; set; }
+    /// <summary>
+    /// Noor Mode 💜: Feature Creep is permanently on, every idea gets an extra proposal and a
+    /// purple heart, and the theme switches to Noor's Purple Heart (restored when turned off).
+    /// </summary>
+    public bool NoorMode { get; set; }
+    public string? ThemeBeforeNoor { get; set; }
 }
 
 public sealed class SettingsStore

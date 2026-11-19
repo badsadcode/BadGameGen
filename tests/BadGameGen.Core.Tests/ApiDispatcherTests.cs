@@ -82,6 +82,18 @@ public sealed class ApiDispatcherTests : IDisposable
     }
 
     [Fact]
+    public void NoorMode_SwitchesThemeAndRestoresIt()
+    {
+        Call("settings.update", new { theme = "toxic-swamp" });
+        var on = Call("settings.update", new { noorMode = true });
+        Assert.True(on.GetProperty("noorMode").GetBoolean());
+        Assert.Equal("noors-purple-heart", on.GetProperty("theme").GetString());
+        var off = Call("settings.update", new { noorMode = false });
+        Assert.False(off.GetProperty("noorMode").GetBoolean());
+        Assert.Equal("toxic-swamp", off.GetProperty("theme").GetString());
+    }
+
+    [Fact]
     public void Errors_AreReportedNotThrown()
     {
         var response = JsonDocument.Parse(_api.HandleJson("""{ "id": 5, "method": "nope" }""")).RootElement;

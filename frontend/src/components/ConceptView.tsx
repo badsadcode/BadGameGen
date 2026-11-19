@@ -7,6 +7,7 @@ import { useStudio } from '../store'
 import type { Concept, CreepProposal } from '../types'
 import { CoverArt } from './CoverArt'
 import { Popover, Segmented } from './ui'
+import { NoorBubble } from './Noor'
 
 export function ConceptView() {
   const { concept, busy, outputMode, setOutputMode, a, isSaved, linkedEntryId, canBack, canForward } = useStudio()
@@ -102,7 +103,7 @@ export function ConceptView() {
 }
 
 function TitleLine({ concept }: { concept: Concept }) {
-  const { a } = useStudio()
+  const { a, noorMode } = useStudio()
   const [editing, setEditing] = useState(false)
   const [text, setText] = useState(concept.title)
   const input = useRef<HTMLInputElement>(null)
@@ -120,6 +121,7 @@ function TitleLine({ concept }: { concept: Concept }) {
   return (
     <div className="title-line">
       <h1 className={`concept-title slam ${size}`} onDoubleClick={() => setEditing(true)} title="Double-click to rename">{concept.title}</h1>
+      {noorMode && <span className="title-heart" title="Noor approves">💜</span>}
       <div className="title-tools">
         <button className="icon-btn sm" title="Rename" onClick={() => setEditing(true)}><Pencil size={14} /></button>
         <button className={`icon-btn sm ${locked ? 'active' : ''}`} title={locked ? 'Unlock title' : 'Lock title'} onClick={a.toggleTitleLock}>{locked ? <Lock size={14} /> : <LockOpen size={14} />}</button>
@@ -130,13 +132,13 @@ function TitleLine({ concept }: { concept: Concept }) {
 }
 
 function CreepSection({ concept }: { concept: Concept }) {
-  const { a } = useStudio()
+  const { a, noorMode } = useStudio()
   const meter = concept.creepMeter
   const visible = concept.creep
   return (
     <section className="creep-section" aria-label="Feature Creep additions">
       <header>
-        <h4>😈 Feature Creep <span className="muted small">kept separate from the core pitch</span></h4>
+        <h4>{noorMode ? '💜' : '😈'} Feature Creep <span className="muted small">{noorMode ? 'curated by Noor' : 'kept separate from the core pitch'}</span></h4>
         {meter && (
           <div className="creep-meter" title={`Creep meter: ${meter.score}%`}>
             <div className="meter-bar"><span style={{ width: `${Math.min(100, meter.score)}%` }} className={meter.score >= 80 ? 'danger' : meter.score >= 50 ? 'warn' : ''} /></div>
@@ -144,6 +146,7 @@ function CreepSection({ concept }: { concept: Concept }) {
           </div>
         )}
       </header>
+      {noorMode && <NoorBubble codename={concept.codename} />}
       {meter?.warning && <p className="scope-warning"><AlertTriangle size={14} /> {meter.warning}</p>}
       <ul className="creep-list">
         {visible.map((c) => <CreepItem key={c.slot + c.itemId} c={c} onAction={(act) => a.creep(c.slot, act)} />)}

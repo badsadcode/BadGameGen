@@ -17,6 +17,7 @@
     "glow": "rgba(195,155,255,0.35)",
     "success": "#6fe3b0",
     "warning": "#ffd479",
-    "danger": "#ff6d8a"
+    "danger": "#ff6d8a",
+    "onAccent": "#1b1030"
   }
 }

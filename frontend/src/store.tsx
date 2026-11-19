@@ -2,6 +2,7 @@ import { createContext, useCallback, useContext, useEffect, useMemo, useRef, use
 import { api } from './api'
 import type { BootstrapInfo, Concept, OutputMode, Recipe, VaultEntry } from './types'
 import { applyTheme, cloneRecipe, copyText, dailySeed, defaultRecipe, download, normalizeRecipe, randomSeed } from './lib/util'
+import { noorCreepSlots } from './lib/noor'
 
 /**
  * All generator state and actions.
@@ -29,6 +30,10 @@ interface Studio {
   outputMode: OutputMode
   setOutputMode: (m: OutputMode) => void
   setTheme: (id: string) => void
+  noorMode: boolean
+  setNoorMode: (on: boolean) => void
+  /** Increments on every new idea in Noor Mode; drives the heart burst. */
+  heartBurst: number
   vault: VaultEntry[]
   refreshVault: () => Promise<void>
   linkedEntryId: string | null
@@ -93,6 +98,8 @@ export function StudioProvider({ initial, children }: { initial: BootstrapInfo; 
   const [notes, setNotesState] = useState('')
   const [toasts, setToasts] = useState<Toast[]>([])
   const [history, setHistory] = useState<{ list: Concept[]; index: number }>({ list: [], index: -1 })
+  const [heartBurst, setHeartBurst] = useState(0)
+  const noorRef = useRef(initial.settings.noorMode); noorRef.current = boot.settings.noorMode
 
   // Refs so async actions always see the latest values.
   const conceptRef = useRef(concept); conceptRef.current = concept
@@ -126,6 +133,7 @@ export function StudioProvider({ initial, children }: { initial: BootstrapInfo; 
         return { list, index: list.length - 1 }
       })
       if (!keepLink) { setLinkedEntryId(null); setSavedSnapshot(null); setNotesState('') }
+      if (noorRef.current && !keepLink) setHeartBurst((n) => n + 1)
     } catch (e) {
       toast((e as Error).message, 'error')
     } finally {
@@ -145,8 +153,12 @@ export function StudioProvider({ initial, children }: { initial: BootstrapInfo; 
   const base = useCallback((): Recipe => {
     const c = controlsRef.current
     const r = cloneRecipe(conceptRef.current?.recipe ?? c)
-    return { ...r, chaos: c.chaos, scope: c.scope, silliness: c.silliness, pins: { ...c.pins }, exclusions: [...c.exclusions], featureCreep: c.featureCreep, creepKinds: [...c.creepKinds] }
+    return { ...r, chaos: c.chaos, scope: c.scope, silliness: c.silliness, pins: { ...c.pins }, exclusions: [...c.exclusions], featureCreep: c.featureCreep || noorRef.current, creepKinds: [...c.creepKinds] }
   }, [])
+
+  /** Creep slots for a brand-new idea: empty lets the host pick its default; Noor Mode adds one more. */
+  const freshCreep = (r: Recipe) =>
+    noorRef.current ? Array.from({ length: noorCreepSlots(r.scope) }, () => ({ nonce: 0, status: 'proposed' as const })) : []
 
   /** Hold every unlocked field of the current concept steady. */
   const keepAll = (r: Recipe, except?: string) => {
@@ -158,7 +170,7 @@ export function StudioProvider({ initial, children }: { initial: BootstrapInfo; 
   const a = useMemo<Actions>(() => ({
     generateTrouble: () => {
       const r = base()
-      r.seed = randomSeed(); r.rerolls = {}; r.keep = {}; r.creep = []
+      r.seed = randomSeed(); r.rerolls = {}; r.keep = {}; r.creep = freshCreep(r)
       void run(r)
     },
     rerollUnlocked: () => {
@@ -217,12 +229,12 @@ export function StudioProvider({ initial, children }: { initial: BootstrapInfo; 
         return
       }
       const r = base()
-      r.seed = text || randomSeed(); r.rerolls = {}; r.keep = {}; r.creep = []
+      r.seed = text || randomSeed(); r.rerolls = {}; r.keep = {}; r.creep = freshCreep(r)
       void run(r)
     },
     daily: () => {
       const r = base()
-      r.seed = dailySeed(); r.rerolls = {}; r.keep = {}; r.creep = []; r.pins = {}
+      r.seed = dailySeed(); r.rerolls = {}; r.keep = {}; r.pins = {}; r.creep = freshCreep(r)
       void run(r)
       toast("Today's bad idea. Same for everyone with the same packs.")
     },
@@ -234,6 +246,7 @@ export function StudioProvider({ initial, children }: { initial: BootstrapInfo; 
       void run(r, true)
     },
     toggleCreep: () => {
+      if (noorRef.current) { toast("Nice try. Noor Mode is on, and Feature Creep is not optional. 💜"); return }
       const on = !controlsRef.current.featureCreep
       controlsRef.current = { ...controlsRef.current, featureCreep: on }
       const r = keepAll(base())
@@ -307,7 +320,8 @@ export function StudioProvider({ initial, children }: { initial: BootstrapInfo; 
       const c = conceptRef.current
       if (!c) return
       const r = await api.exportConcept(c, 'markdown')
-      await copyText(notesRef.current ? `${r.content}\n## Notes\n\n${notesRef.current}\n` : r.content)
+      const noor = noorRef.current ? '\n💜 Feature creep approved by Noor.\n' : ''
+      await copyText((notesRef.current ? `${r.content}\n## Notes\n\n${notesRef.current}\n` : r.content) + noor)
       toast('Markdown copied. Paste responsibly.', 'success')
     },
     exportAs: async (format) => {
@@ -346,10 +360,30 @@ export function StudioProvider({ initial, children }: { initial: BootstrapInfo; 
     void api.updateSettings({ theme: id }).then((settings) => setBoot((b) => ({ ...b, settings })))
   }, [])
 
+  const setNoorMode = useCallback((on: boolean) => {
+    void api.updateSettings({ noorMode: on }).then((settings) => {
+      noorRef.current = on
+      setBoot((b) => ({ ...b, settings }))
+      if (on) {
+        toast('💜 Noor Mode activated. Sage has been notified. Sage is sighing.', 'success')
+        setHeartBurst((n) => n + 1)
+        // Creep on, plus Noor's extra proposal, applied to the current idea.
+        const r = base()
+        r.featureCreep = true
+        while (r.creep.length < noorCreepSlots(r.scope)) r.creep.push({ nonce: 0, status: 'proposed' })
+        controlsRef.current = { ...controlsRef.current, featureCreep: true }
+        void run(keepAll(r), true)
+      } else {
+        toast('Noor Mode off. She left a heart on your desk anyway. 💜')
+      }
+    })
+  }, [base, run, toast])
+
   const isSaved = !!linkedEntryId && !!concept && savedSnapshot === JSON.stringify(concept)
 
   const value: Studio = {
     boot, refreshBoot, page, setPage, concept, controls, busy, outputMode, setOutputMode, setTheme,
+    noorMode: boot.settings.noorMode, setNoorMode, heartBurst,
     vault, refreshVault, linkedEntryId, isSaved, notes, setNotes, toasts, toast,
     canBack: history.index > 0, canForward: history.index < history.list.length - 1, a,
   }

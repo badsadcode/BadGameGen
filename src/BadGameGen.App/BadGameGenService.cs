@@ -265,6 +265,8 @@ public sealed class BadGameGenService
         }
     }
 
+    public const string NoorTheme = "noors-purple-heart";
+
     public AppSettings UpdateSettings(JsonElement patch)
     {
         Settings.Update(s =>
@@ -272,6 +274,20 @@ public sealed class BadGameGenService
             if (patch.TryGetProperty("theme", out var theme) && theme.ValueKind == JsonValueKind.String) s.Theme = theme.GetString()!;
             if (patch.TryGetProperty("outputMode", out var mode) && mode.GetString() is "oneliner" or "pitch" or "expanded") s.OutputMode = mode.GetString()!;
             if (patch.TryGetProperty("reduceMotion", out var rm) && rm.ValueKind is JsonValueKind.True or JsonValueKind.False) s.ReduceMotion = rm.GetBoolean();
+            if (patch.TryGetProperty("noorMode", out var nm) && nm.ValueKind is JsonValueKind.True or JsonValueKind.False && nm.GetBoolean() != s.NoorMode)
+            {
+                s.NoorMode = nm.GetBoolean();
+                if (s.NoorMode)
+                {
+                    s.ThemeBeforeNoor = s.Theme;
+                    if (_themes.Any(t => t.Id == NoorTheme)) s.Theme = NoorTheme;
+                }
+                else
+                {
+                    s.Theme = s.ThemeBeforeNoor ?? "badsad-plum";
+                    s.ThemeBeforeNoor = null;
+                }
+            }
         });
         return Settings.Current;
     }

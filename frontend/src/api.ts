@@ -47,7 +47,7 @@ async function call<T>(method: string, params?: unknown): Promise<T> {
 export const api = {
   bootstrap: () => call<BootstrapInfo>('app.bootstrap'),
   reload: () => call<BootstrapInfo>('app.reload'),
-  updateSettings: (patch: Partial<Pick<AppSettings, 'theme' | 'outputMode' | 'reduceMotion'>>) => call<AppSettings>('settings.update', patch),
+  updateSettings: (patch: Partial<Pick<AppSettings, 'theme' | 'outputMode' | 'reduceMotion' | 'noorMode'>>) => call<AppSettings>('settings.update', patch),
 
   generate: (recipe: Recipe) => call<Concept>('concept.generate', { recipe }),
   options: (category: string, query?: string) => call<OptionDto[]>('category.options', { category, query }),

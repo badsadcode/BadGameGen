@@ -481,3 +481,27 @@ button.count-pill:hover { box-shadow: 0 0 12px var(--c-glow); }
 [data-theme='light'] .statusbar { background: var(--c-surface); }
 [data-theme='light'] .creep-card { background: radial-gradient(120% 140% at 0% 0%, color-mix(in srgb, var(--c-accent) 14%, transparent), transparent 60%), var(--c-surface); }
 [data-theme='light'] .panel { box-shadow: 0 8px 24px -16px rgba(60, 20, 70, 0.35); }
+
+/* ---------------------------------------------------------------- Noor Mode 💜 */
+
+.title-heart { font-size: 2.2rem; transform: rotate(12deg); filter: drop-shadow(0 0 10px var(--c-glow)); animation: heartbeat 1.6s ease-in-out infinite; }
+.noor-bubble {
+  display: flex; align-items: center; gap: 12px; padding: 10px 14px; border-radius: 14px 14px 14px 4px;
+  background: color-mix(in srgb, #9d6bff 16%, var(--c-surface)); border: 1px solid color-mix(in srgb, #c39bff 55%, transparent);
+}
+.noor-bubble p { margin: 0; font-size: 0.95rem; }
+.noor-bubble strong { color: #c39bff; }
+.noor-avatar { flex: none; filter: drop-shadow(0 0 8px rgba(157, 107, 255, 0.45)); }
+.creep-card.noor .noor-avatar { animation: heartbeat 1.6s ease-in-out infinite; }
+.creep-card.noor .toggle { opacity: 0.85; cursor: not-allowed; }
+.noor-status { color: #c39bff; font-weight: 600; }
+.noor-row strong { color: #c39bff; }
+.noor-row kbd { margin: 0 1px; }
+.heart-burst { position: fixed; inset: 0; pointer-events: none; z-index: 70; overflow: hidden; }
+.heart-burst span { position: absolute; bottom: -50px; animation: float-heart 2.1s ease-out forwards; opacity: 0; }
+@keyframes float-heart {
+  0% { transform: translate(0, 0) scale(0.6) rotate(0deg); opacity: 0; }
+  12% { opacity: 1; }
+  100% { transform: translate(var(--drift), -85vh) scale(1.15) rotate(25deg); opacity: 0; }
+}
+@keyframes heartbeat { 0%, 100% { transform: scale(1); } 15% { transform: scale(1.12); } 30% { transform: scale(1); } 45% { transform: scale(1.08); } }

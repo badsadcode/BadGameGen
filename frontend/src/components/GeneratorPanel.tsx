@@ -5,6 +5,7 @@ import { useStudio } from '../store'
 import type { ConceptPick, CreepKind, OptionDto } from '../types'
 import { iconFor } from './icons'
 import { Logo } from './Logo'
+import { NoorAvatar } from './Noor'
 import { Popover, Segmented, Slider, Toggle } from './ui'
 import { copyText } from '../lib/util'
 
@@ -141,19 +142,19 @@ const CREEP_KINDS: { kind: CreepKind; label: string }[] = [
 ]
 
 function FeatureCreepCard() {
-  const { controls, a } = useStudio()
-  const on = controls.featureCreep
+  const { controls, a, noorMode } = useStudio()
+  const on = controls.featureCreep || noorMode
   const toggleKind = (kind: CreepKind) => {
     const kinds = controls.creepKinds.includes(kind) ? controls.creepKinds.filter((k) => k !== kind) : [...controls.creepKinds, kind]
     if (kinds.length > 0) a.setCreepKinds(kinds)
   }
   return (
-    <section className={`creep-card ${on ? 'on' : ''}`} aria-label="Feature Creep Mode">
+    <section className={`creep-card ${on ? 'on' : ''} ${noorMode ? 'noor' : ''}`} aria-label="Feature Creep Mode">
       <div className="creep-card-head">
-        <Logo size={46} className="creep-cat" />
+        {noorMode ? <NoorAvatar size={46} /> : <Logo size={46} className="creep-cat" />}
         <div className="creep-title">
           <h3>Feature Creep Mode</h3>
-          <p>“Just one more system...”</p>
+          <p>{noorMode ? 'Noor Mode: not optional. 💜' : '“Just one more system...”'}</p>
         </div>
         <Toggle on={on} onChange={a.toggleCreep} label="Feature Creep Mode" />
       </div>

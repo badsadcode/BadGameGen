@@ -37,9 +37,15 @@ jobs:
       - name: Build frontend
         working-directory: frontend
         run: npm ci && npm run build
-      - name: Publish desktop app
-        run: dotnet publish src/BadGameGen.Desktop -c Release -r win-x64 --self-contained true -o publish/BadGameGen
+      - name: Publish single-file executables
+        shell: pwsh
+        run: |
+          $common = @("-c", "Release", "-r", "win-x64", "--self-contained", "true", "-p:PublishSingleFile=true", "-p:EnableCompressionInSingleFile=true", "-p:DebugType=None")
+          dotnet publish src/BadGameGen.Desktop @common -p:IncludeNativeLibrariesForSelfExtract=true -o release/desktop
+          dotnet publish src/BadGameGen.Cli @common -o release/cli
       - uses: actions/upload-artifact@v4
         with:
           name: BadGameGen-win-x64
-          path: publish/BadGameGen
+          path: |
+            release/desktop/BadGameGen.exe
+            release/cli/bgg.exe

@@ -4,7 +4,7 @@ import { Segmented, Toggle } from '../components/ui'
 import { Logo } from '../components/Logo'
 
 export function SettingsPage() {
-  const { boot, setTheme, outputMode, setOutputMode, refreshBoot } = useStudio()
+  const { boot, setTheme, outputMode, setOutputMode, refreshBoot, noorMode, setNoorMode } = useStudio()
   const setReduceMotion = async (v: boolean) => { const settings = await api.updateSettings({ reduceMotion: v }); await refreshBoot({ ...boot, settings }) }
   return (
     <div className="page settings-page">
@@ -33,6 +33,8 @@ export function SettingsPage() {
         <div className="setting-row"><div><strong>Default output</strong><p className="muted small">How much text a concept shows by default.</p></div>
           <Segmented ariaLabel="Default output" value={outputMode} onChange={setOutputMode}
             options={[{ value: 'oneliner', label: 'One-liner' }, { value: 'pitch', label: 'Short pitch' }, { value: 'expanded', label: 'Expanded' }]} /></div>
+        <div className="setting-row noor-row"><div><strong>💜 Noor Mode</strong><p className="muted small">Feature Creep becomes permanent, every idea gets one extra proposal, a purple heart and Noor's commentary. Sage was not consulted. (Psst: type <kbd>n</kbd><kbd>o</kbd><kbd>o</kbd><kbd>r</kbd> on the Generator.)</p></div>
+          <Toggle on={noorMode} onChange={() => setNoorMode(!noorMode)} label="Noor Mode" /></div>
         <div className="setting-row"><div><strong>Reduce motion</strong><p className="muted small">Turns off the title slam and other wobbles.</p></div>
           <Toggle on={boot.settings.reduceMotion} onChange={() => void setReduceMotion(!boot.settings.reduceMotion)} label="Reduce motion" /></div>
         <div className="setting-row"><div><strong>Data folder</strong><p className="muted small">Vault, settings, imported packs and themes live here.</p></div><code className="path">{boot.dataDir}</code></div>

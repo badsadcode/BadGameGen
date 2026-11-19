@@ -3,7 +3,7 @@ import { useStudio } from '../store'
 import { Logo } from './Logo'
 
 export function StatusBar() {
-  const { concept, boot, outputMode } = useStudio()
+  const { concept, boot, outputMode, noorMode } = useStudio()
   const active = boot.packs.filter((p) => p.enabled)
   const creep = concept?.recipe.featureCreep
   const modeLabel = { oneliner: 'One-liner', pitch: 'Short pitch', expanded: 'Expanded' }[outputMode]
@@ -15,6 +15,8 @@ export function StatusBar() {
       <span className="sep" />
       <span>{modeLabel} · {concept?.scopeName ?? ''}</span>
       <span className="grow" />
+      {noorMode && <span className="noor-status">💜 Noor Mode</span>}
+      {noorMode && <span className="sep" />}
       <span className={`creep-status ${creep ? 'on' : ''}`}><Logo size={20} /> Feature Creep: {creep ? 'ON' : 'off'}</span>
       <span className="sep" />
       <span><Layers size={15} /> v{boot.appVersion}</span>

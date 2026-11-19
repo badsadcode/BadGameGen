@@ -19,6 +19,7 @@ public sealed class MainForm : Form
     private readonly WebView2 _web = new() { Dock = DockStyle.Fill, DefaultBackgroundColor = Color.FromArgb(15, 10, 19) };
     private readonly ApiDispatcher _api;
     private readonly string _dataDir;
+    private readonly string _appRoot;
 
     public MainForm()
     {
@@ -28,11 +29,13 @@ public sealed class MainForm : Form
         MinimumSize = new Size(1100, 720);
         StartPosition = FormStartPosition.CenterScreen;
         BackColor = Color.FromArgb(15, 10, 19);
-        try { Icon = new Icon(Path.Combine(AppContext.BaseDirectory, "app.ico")); } catch (IOException) { } catch (ArgumentException) { }
+        // The icon is embedded in the exe (ApplicationIcon), so this also works for single-file builds.
+        try { Icon = Icon.ExtractAssociatedIcon(Environment.ProcessPath!); } catch (ArgumentException) { } catch (IOException) { }
         Controls.Add(_web);
 
         _dataDir = AppPaths.DefaultDataDir();
-        var service = new BadGameGenService(new AppPaths(AppPaths.FindContentDir(), _dataDir));
+        _appRoot = BundledContent.ResolveAppRoot(typeof(MainForm).Assembly, _dataDir);
+        var service = new BadGameGenService(new AppPaths(Path.Combine(_appRoot, "content"), _dataDir));
         _api = new ApiDispatcher(service);
         Load += async (_, _) => await InitializeWebViewAsync();
     }
@@ -63,7 +66,7 @@ public sealed class MainForm : Form
         }
 
         var core = _web.CoreWebView2;
-        var wwwroot = Path.Combine(AppContext.BaseDirectory, "wwwroot");
+        var wwwroot = Path.Combine(_appRoot, "wwwroot");
         core.SetVirtualHostNameToFolderMapping(AppHost, wwwroot, CoreWebView2HostResourceAccessKind.DenyCors);
 #if !DEBUG
         core.Settings.AreDevToolsEnabled = false;

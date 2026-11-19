@@ -35,6 +35,9 @@ idea is reproducible from its seed.
 - **Colour schemes.** BadSad Plum, Frost Signal, Toxic Swamp, Noor's Purple Heart 💜, Arcade
   Sunset and Daylight Heresy (a light theme, for people who hate their eyes). Themes are JSON,
   so you can add your own.
+- **💜 Noor Mode.** Feature Creep becomes permanent, every idea gets an extra proposal, a
+  purple heart and commentary from Noor, and the theme turns purple. Toggle it in Settings, or
+  type `n` `o` `o` `r` on the Generator.
 - **Extras.** Bad Idea of the Day, procedural cover art, session history (back/forward),
   keyboard shortcuts (press `?`), stats, and a command-line companion.
 
@@ -42,22 +45,31 @@ idea is reproducible from its seed.
 
 ### Windows desktop app
 
-Requirements: .NET 10 SDK, Node.js 20+, and the WebView2 runtime (already installed on
-Windows 10 and 11).
+**Just want to run it?** Use `BadGameGen.exe`, a single self-contained file with no installer
+and no .NET install needed. On first launch it unpacks its packs, themes and UI into
+`%LOCALAPPDATA%\BadGameGen\app\`. Your vault, settings, imported packs and custom themes
+live in `%LOCALAPPDATA%\BadGameGen`. It needs the Microsoft Edge WebView2 runtime, which comes
+with Windows 10 and 11.
+
+> The exe isn't code-signed yet, so Windows SmartScreen may say "Windows protected your PC".
+> Click **More info → Run anyway**.
+
+**Building the exes yourself** (needs the .NET 10 SDK and Node.js 20+):
 
 ```powershell
 powershell -ExecutionPolicy Bypass -File scripts/publish-windows.ps1
-publish\BadGameGen\BadGameGen.exe
+# → release/BadGameGen.exe and release/bgg.exe
 ```
 
-Or, for development:
+The same works from Linux or macOS with `scripts/publish-windows.sh`, and CI builds both exes
+on every push (Actions → BadGameGen-win-x64 artifact).
+
+For development, run the loose-file build:
 
 ```powershell
 cd frontend; npm install; npm run build; cd ..
 dotnet run --project src/BadGameGen.Desktop
 ```
-
-User data (the vault, settings, imported packs and themes) lives in `%LOCALAPPDATA%\BadGameGen`.
 
 ### Browser (dev server, any OS)
 
@@ -85,7 +97,7 @@ dotnet run --project src/BadGameGen.Cli -- validate my-pack.json
 dotnet test tests/BadGameGen.Core.Tests
 ```
 
-97 tests cover:
+98 tests cover:
 - determinism, seed normalisation and pack-order independence
 - locks, keeps, rerolls and exclusions
 - chaos, silliness and scope behaviour

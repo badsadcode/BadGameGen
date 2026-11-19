@@ -18,6 +18,9 @@
 - **Creep kind filters.** The four chips on the Feature Creep card.
 - **Keyboard-first.** `G` generate, `R` reroll, `F` creep, `S` save, `?` for the rest.
 - **CLI** (`bgg`). For batch generation, plus pack validation in CI.
+- **💜 Noor Mode** (v0.1.1). Permanent Feature Creep, one extra proposal per idea, purple-heart
+  bursts, Noor's commentary and her theme. Secret activation: type `noor` on the Generator.
+- **Single-file exes** (v0.1.1). `BadGameGen.exe` and `bgg.exe` carry everything inside them.
 
 ## v0.2.x: smarter combinations
 
@@ -46,7 +49,6 @@
 - **Mashup:** breed two vault ideas into a child concept that inherits locked fields from each.
   *Very* on brand.
 - **Pitch roulette for streams:** a big-screen mode that spins ingredients like a slot machine.
-- **Noor Mode** 💜: Feature Creep is permanently on, and every idea gets a purple heart.
 
 ## Out of scope (per the brief)
 

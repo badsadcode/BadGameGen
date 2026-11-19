@@ -11,8 +11,20 @@ public sealed record AppPaths(string ContentDir, string DataDir)
     public string SettingsPath => Path.Combine(DataDir, "settings.json");
 
     /// <summary>Per-user data folder: %LOCALAPPDATA%\BadGameGen on Windows, ~/.local/share/BadGameGen elsewhere.</summary>
-    public static string DefaultDataDir() =>
-        Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "BadGameGen");
+    public static string DefaultDataDir()
+    {
+        // GetFolderPath can return "" in unusual environments; never fall back to a path
+        // relative to wherever the exe was launched from.
+        var local = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
+        if (string.IsNullOrWhiteSpace(local) || !Path.IsPathRooted(local))
+        {
+            var home = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile);
+            local = string.IsNullOrWhiteSpace(home) || !Path.IsPathRooted(home)
+                ? Path.GetTempPath()
+                : Path.Combine(home, ".local", "share");
+        }
+        return Path.Combine(local, "BadGameGen");
+    }
 
     /// <summary>Finds content/ next to the binary, else walks up from the working directory (dev).</summary>
     public static string FindContentDir()

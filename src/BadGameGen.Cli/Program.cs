@@ -108,6 +108,10 @@ switch (command)
 
 static string FindContentDir()
 {
+    // Single-file bgg.exe carries its packs inside; unpack them if there are no loose files.
+    var bundled = Path.Combine(BadGameGen.App.BundledContent.ResolveAppRoot(typeof(Program).Assembly, BadGameGen.App.AppPaths.DefaultDataDir()), "content", "packs");
+    if (Directory.Exists(bundled)) return bundled;
+
     // Next to the binary (published), else walk up to the repository's content/packs.
     var local = Path.Combine(AppContext.BaseDirectory, "content", "packs");
     if (Directory.Exists(local)) return local;
