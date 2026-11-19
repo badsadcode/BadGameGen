@@ -19,9 +19,9 @@ export function GeneratorPanel() {
   const picks = concept?.picks ?? []
   const category = (key: string) => boot.categories.find((c) => c.key === key)
 
-  const rows = (fields: string[]) => fields.flatMap((field) =>
+  const rows = (fields: string[], showAlts: boolean) => fields.flatMap((field) =>
     picks.filter((p) => p.field === field).map((p, i, all) => (
-      <IngredientRow key={p.slot} pick={p}
+      <IngredientRow key={p.slot} pick={p} showAlts={showAlts}
         label={field === 'secondary' ? `Support ${all.length > 1 ? i + 1 : ''}` : field === 'mood' ? 'Tone' : field === 'visual' ? 'Visuals' : category(p.category)?.displayName ?? field}
         icon={category(p.category)?.icon ?? 'sparkles'} />
     )))
@@ -36,11 +36,11 @@ export function GeneratorPanel() {
         <button className="icon-btn" title="Bad idea of the day" onClick={a.daily}><Sun size={18} /></button>
       </div>
 
-      <div className="ingredients">{rows(MAIN_FIELDS)}</div>
+      <div className="ingredients">{rows(MAIN_FIELDS, true)}</div>
       <button className="more-toggle" onClick={() => setShowMore((s) => !s)} aria-expanded={showMore}>
         <ChevronDown size={16} className={showMore ? 'rot' : ''} /> {showMore ? 'Fewer ingredients' : `More ingredients (${picks.filter((p) => MORE_FIELDS.includes(p.field)).length})`}
       </button>
-      {showMore && <div className="ingredients">{rows(MORE_FIELDS)}</div>}
+      {showMore && <div className="ingredients">{rows(MORE_FIELDS, false)}</div>}
       {controls.exclusions.length > 0 && (
         <button className="link small" onClick={a.clearExclusions}>Un-banish {controls.exclusions.length} excluded item{controls.exclusions.length > 1 ? 's' : ''}</button>
       )}
@@ -88,14 +88,16 @@ function SeedField() {
   )
 }
 
-function IngredientRow({ pick, label, icon }: { pick: ConceptPick; label: string; icon: string }) {
-  const { a, controls, changes } = useStudio()
+function IngredientRow({ pick, label, icon, showAlts }: { pick: ConceptPick; label: string; icon: string; showAlts: boolean }) {
+  const { a, controls, changes, concept, hoverSlot, setHoverSlot } = useStudio()
   const changed = changes.slots.has(pick.slot)
+  const alts = showAlts ? (concept?.alternatives?.[pick.slot] ?? []).slice(0, 2) : []
   const [open, setOpen] = useState(false)
   const Icon = iconFor(icon)
   const locked = !!controls.pins[pick.slot]
   return (
-    <div className="ingredient">
+    <div className={`ingredient ${hoverSlot === pick.slot ? 'linked' : ''}`}
+      onMouseEnter={() => setHoverSlot(pick.slot)} onMouseLeave={() => setHoverSlot(null)}>
       <span className="ingredient-label"><Icon size={17} /> {label}</span>
       <div className="ingredient-value">
         <button key={changed ? changes.stamp : 'same'} className={`chip pick ${locked ? 'locked' : ''} ${changed ? 'flash' : ''}`} onClick={() => setOpen((o) => !o)} title="Choose a specific one">
@@ -111,11 +113,18 @@ function IngredientRow({ pick, label, icon }: { pick: ConceptPick; label: string
         {locked ? <Lock size={15} /> : <LockOpen size={15} />}
       </button>
       <button className="icon-btn sm" title="Reroll just this" onClick={() => a.rerollSlot(pick.slot)}><RefreshCw size={15} /></button>
+      {alts.length > 0 && (
+        <div className="alts" aria-label={`Alternatives for ${label}`}>
+          {alts.map((alt) => (
+            <button key={alt.itemId} className="alt-chip" title={`Swap to ${alt.label}`} onClick={() => a.pickItem(pick.slot, alt.itemId)}>{alt.label}</button>
+          ))}
+        </div>
+      )}
     </div>
   )
 }
 
-function ItemPicker({ category, current, onPick, onExclude }: { category: string; current: string; onPick: (id: string) => void; onExclude: () => void }) {
+export function ItemPicker({ category, current, onPick, onExclude }: { category: string; current: string; onPick: (id: string) => void; onExclude: () => void }) {
   const [query, setQuery] = useState('')
   const [options, setOptions] = useState<OptionDto[]>([])
   useEffect(() => {

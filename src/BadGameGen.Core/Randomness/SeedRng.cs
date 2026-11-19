@@ -79,6 +79,15 @@ public sealed class SeedRng
         return best;
     }
 
+    /// <summary>Candidate indices ordered by race key (most "deserving" first); zero weights excluded.</summary>
+    public static List<int> RaceOrder(IReadOnlyList<double> weights, Func<int, string> keyOf, string seed, string stream, int nonce) =>
+        Enumerable.Range(0, weights.Count)
+            .Where(i => weights[i] > 0 && double.IsFinite(weights[i]))
+            .Select(i => (i, key: -Math.Log(KeyedUniform(seed, stream, nonce, keyOf(i))) / weights[i]))
+            .OrderBy(x => x.key).ThenBy(x => x.i)
+            .Select(x => x.i)
+            .ToList();
+
     public ulong NextULong()
     {
         _state += 0x9E3779B97F4A7C15UL;

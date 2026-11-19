@@ -52,6 +52,9 @@ interface Studio {
   changes: Changes
   /** Sliders/scope changed since the current idea was made (they apply to the next one). */
   pendingSliders: boolean
+  /** Slot under the pointer, in the pitch or the ingredient list; both sides highlight it. */
+  hoverSlot: string | null
+  setHoverSlot: (slot: string | null) => void
   a: Actions
 }
 
@@ -114,6 +117,7 @@ export function StudioProvider({ initial, children }: { initial: BootstrapInfo; 
   })
   const [changes, setChanges] = useState<Changes>({ stamp: 0, slots: new Set(), title: false, pitch: false, creep: new Set() })
   const [heartBurst, setHeartBurst] = useState(0)
+  const [hoverSlot, setHoverSlot] = useState<string | null>(null)
   const noorRef = useRef(initial.settings.noorMode); noorRef.current = boot.settings.noorMode
 
   // Refs so async actions always see the latest values.
@@ -231,8 +235,12 @@ export function StudioProvider({ initial, children }: { initial: BootstrapInfo; 
       void run(keepAll(r), true)
     },
     pickItem: (slot, itemId) => {
+      // Choosing an item sets it without locking it; the padlock is what locks.
       const r = keepAll(base(), slot)
-      r.pins[slot] = itemId
+      const wasLocked = !!r.pins[slot]
+      delete r.pins[slot]
+      if (wasLocked) r.pins[slot] = itemId
+      else r.keep[slot] = itemId
       void run(r, true)
     },
     excludeItem: (itemId) => {
@@ -438,7 +446,7 @@ export function StudioProvider({ initial, children }: { initial: BootstrapInfo; 
     noorMode: boot.settings.noorMode, setNoorMode, heartBurst,
     vault, refreshVault, linkedEntryId, isSaved, notes, setNotes, toasts, toast,
     canBack: history.index > 0, canForward: history.index < history.list.length - 1, a,
-    history: history.list, historyIndex: history.index, goToHistory, changes, pendingSliders,
+    history: history.list, historyIndex: history.index, goToHistory, changes, pendingSliders, hoverSlot, setHoverSlot,
   }
   return <Ctx.Provider value={value}>{children}</Ctx.Provider>
 }

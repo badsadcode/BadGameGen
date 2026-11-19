@@ -13,6 +13,12 @@ public sealed class Concept
     public string Title { get; set; } = "";
     public string Hook { get; set; } = "";
     public string Pitch { get; set; } = "";
+    /// <summary>Hook split into parts tagged with the slot that produced them (click-to-edit).</summary>
+    public List<TextPart> HookParts { get; set; } = new();
+    /// <summary>Pitch split into parts tagged with the slot that produced them (click-to-edit).</summary>
+    public List<TextPart> PitchParts { get; set; } = new();
+    /// <summary>Slot → a few good alternatives that fit the rest of the concept.</summary>
+    public Dictionary<string, List<AltOption>> Alternatives { get; set; } = new();
     public List<ConceptSection> Expanded { get; set; } = new();
     public string BadIdea { get; set; } = "";
     public string MightWork { get; set; } = "";
@@ -25,6 +31,8 @@ public sealed class Concept
     public List<PackRef> Library { get; set; } = new();
     public List<string> Warnings { get; set; } = new();
 }
+
+public sealed record AltOption(string ItemId, string Label);
 
 public sealed class ConceptSection
 {
@@ -58,6 +66,12 @@ public sealed class CreepProposal
     public string KindLabel { get; set; } = "";
     public string Name { get; set; } = "";
     public string Pitch { get; set; } = "";
+    /// <summary>Hook split into parts tagged with the slot that produced them (click-to-edit).</summary>
+    public List<TextPart> HookParts { get; set; } = new();
+    /// <summary>Pitch split into parts tagged with the slot that produced them (click-to-edit).</summary>
+    public List<TextPart> PitchParts { get; set; } = new();
+    /// <summary>Slot → a few good alternatives that fit the rest of the concept.</summary>
+    public Dictionary<string, List<AltOption>> Alternatives { get; set; } = new();
     public string? Connects { get; set; }
     public int Complexity { get; set; }
     public string Status { get; set; } = CreepStatus.Proposed;

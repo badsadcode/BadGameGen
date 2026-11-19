@@ -65,7 +65,7 @@ public sealed class Generator
         var ctx = new TemplateContext();
         foreach (var slot in slots)
             if (picks.TryGetValue(slot.Key, out var p))
-                ctx.Add(slot.Field, p.Item);
+                ctx.Add(slot.Field, p.Item, slot.Key);
 
         var conceptTags = new HashSet<string>(picks.Values.SelectMany(p => p.Item.Tags));
         // Themed templates need the theme to be a real presence (2+ picks), not a single stray item.
@@ -103,10 +103,16 @@ public sealed class Generator
             Warnings = warnings,
         };
 
-        concept.Hook = RenderSection(TemplateSections.Hook, ctx, recipe, themeTags, wording) ?? "";
-        concept.Pitch = string.Join(" ", TemplateSections.PitchOrder
-            .Select(s => RenderSection(s, ctx, recipe, themeTags, wording))
-            .Where(s => !string.IsNullOrWhiteSpace(s)));
+        concept.HookParts = RenderSectionParts(TemplateSections.Hook, ctx, recipe, themeTags, wording) ?? [];
+        concept.Hook = string.Concat(concept.HookParts.Select(p => p.Text));
+        foreach (var section in TemplateSections.PitchOrder)
+        {
+            var parts = RenderSectionParts(section, ctx, recipe, themeTags, wording);
+            if (parts == null || parts.Count == 0) continue;
+            if (concept.PitchParts.Count > 0) concept.PitchParts.Add(new TextPart(" ", null));
+            concept.PitchParts.AddRange(parts);
+        }
+        concept.Pitch = string.Concat(concept.PitchParts.Select(p => p.Text));
         concept.BadIdea = RenderSection(TemplateSections.BadIdea, ctx, recipe, themeTags, wording) ?? "";
         concept.MightWork = RenderSection(TemplateSections.MightWork, ctx, recipe, themeTags, wording) ?? "";
         concept.Expanded = BuildExpanded(ctx, recipe, themeTags, wording);
@@ -126,6 +132,7 @@ public sealed class Generator
             });
         }
         concept.Chips = BuildChips(picks, recipe);
+        concept.Alternatives = BuildAlternatives(slots, picks, recipe, excluded);
 
         if (recipe.FeatureCreep)
         {
@@ -223,6 +230,18 @@ public sealed class Generator
 
     private string? RenderSection(string section, TemplateContext ctx, Recipe r, HashSet<string> tags, int nonce)
     {
+        var template = ChooseTemplate(section, ctx, r, tags, nonce);
+        return template == null ? null : TemplateEngine.Render(template.Text, ctx);
+    }
+
+    private List<TextPart>? RenderSectionParts(string section, TemplateContext ctx, Recipe r, HashSet<string> tags, int nonce)
+    {
+        var template = ChooseTemplate(section, ctx, r, tags, nonce);
+        return template == null ? null : TemplateEngine.RenderParts(template.Text, ctx);
+    }
+
+    private TemplateDef? ChooseTemplate(string section, TemplateContext ctx, Recipe r, HashSet<string> tags, int nonce)
+    {
         var eligible = _lib.Templates(section)
             .Where(t => (t.Scopes == null || t.Scopes.Contains(r.Scope))
                         && (t.TagsAny == null || t.TagsAny.Count == 0 || t.TagsAny.Any(tags.Contains))
@@ -232,8 +251,32 @@ public sealed class Generator
         // Tag-specific templates are more interesting, so they get a boost when eligible.
         var weights = eligible.Select(t => t.Weight * (t.TagsAny is { Count: > 0 } ? 2.0 : 1.0)).ToList();
         int index = SeedRng.Race(weights, i => eligible[i].FullId, r.Seed, "tpl:" + section, nonce);
-        var template = eligible[Math.Max(index, 0)];
-        return TemplateEngine.Render(template.Text, ctx);
+        return eligible[Math.Max(index, 0)];
+    }
+
+    /// <summary>
+    /// For each slot, a few alternatives that fit the rest of the concept (same scoring as
+    /// generation, ranked by a seeded race so they're reproducible). Shown as one-click swaps.
+    /// </summary>
+    private Dictionary<string, List<AltOption>> BuildAlternatives(
+        IReadOnlyList<SlotDef> slots, Dictionary<string, (ContentItem Item, bool Pinned)> picks, Recipe r, HashSet<string> excluded)
+    {
+        const int Count = 3;
+        var result = new Dictionary<string, List<AltOption>>();
+        var used = picks.Values.Select(p => p.Item).ToHashSet();
+        foreach (var slot in slots)
+        {
+            if (!picks.TryGetValue(slot.Key, out var current)) continue;
+            var placed = picks.Where(kv => kv.Key != slot.Key).Select(kv => kv.Value.Item).ToList();
+            var candidates = _lib.Items(slot.Category).Where(i => !used.Contains(i) && !excluded.Contains(i.FullId)).ToList();
+            var weights = candidates.Select(c => Score(c, placed, r)).ToList();
+            var order = SeedRng.RaceOrder(weights, i => candidates[i].FullId, r.Seed, "alt:" + slot.Key, r.RerollCount(slot.Key));
+            // Different packs can have items with the same name; never offer "X instead of X".
+            var seenLabels = new HashSet<string>(StringComparer.OrdinalIgnoreCase) { current.Item.Label };
+            result[slot.Key] = order.Select(i => candidates[i]).Where(c => seenLabels.Add(c.Label))
+                .Take(Count).Select(c => new AltOption(c.FullId, c.Label)).ToList();
+        }
+        return result;
     }
 
     private List<ConceptSection> BuildExpanded(TemplateContext ctx, Recipe r, HashSet<string> tags, int wording)

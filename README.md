@@ -17,6 +17,11 @@ idea is reproducible from its seed.
 - **Reproducible.** The same seed with the same packs gives the same idea, forever. Seeds can be
   words ("crab office"). Recipe codes (`BGG1-…`) capture every lock, reroll and creep decision,
   so you can share an idea exactly.
+- **Click any phrase to change it.** Every phrase in the hook and pitch that came from an
+  ingredient is clickable: swap it for a suggested alternative, reroll it, lock it, choose a
+  specific one or banish it. Hovering a phrase highlights its ingredient row, and vice versa.
+- **One-click alternatives.** Each main ingredient shows two suggestions that fit the rest of
+  the idea. Choosing one changes exactly that ingredient (and doesn't lock it).
 - **Lock, pick, reroll, banish.** Lock any ingredient, pick one by hand, reroll just that one, or
   exclude it for good. Rerolling one field never disturbs the others.
 - **Chaos, Scope, Serious↔Silly.** Chaos goes from grounded to audacious (high chaos lets
@@ -102,12 +107,13 @@ dotnet run --project src/BadGameGen.Cli -- validate my-pack.json
 dotnet test tests/BadGameGen.Core.Tests
 ```
 
-105 tests cover:
+111 tests cover:
 - determinism, seed normalisation and pack-order independence
 - locks, keeps, rerolls and exclusions
 - chaos, silliness and scope behaviour
 - Feature Creep (accept, reject, reroll, append, kind filters, meter)
-- templates and articles
+- templates and articles, plus click-to-edit phrase tracking (tagged text always matches the
+  plain text) and alternatives
 - pack validation, the vault (including corrupt-file recovery), exporters and recipe codes
 - the RPC API
 - the editable library (updates, edits kept, deletions remembered, line-ending tolerance)

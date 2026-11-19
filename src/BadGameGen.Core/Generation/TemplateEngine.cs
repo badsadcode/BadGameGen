@@ -122,6 +122,56 @@ public static partial class TemplateEngine
         return Polish(raw);
     }
 
+    // ---- Phrase spans: which words came from which ingredient (for click-to-edit) ----
+    // While rendering for parts, each value is wrapped as  SpanStart, (char)(SpanIdBase + n), value, SpanEnd.
+    // Private-use characters are not letters, digits or whitespace, so Polish() leaves them alone.
+    public const char SpanStart = '\uE000';
+    public const char SpanEnd = '\uE002';
+    public const int SpanIdBase = 0xE100;
+    public static bool IsMarker(char c) => c >= '\uE000' && c <= '\uE8FF';
+
+    /// <summary>
+    /// Renders a template into parts tagged with the slot that produced them. Guaranteed to read
+    /// exactly like <see cref="Render"/>: if the tagged version differs in any way (some polishing
+    /// rule interacted with a marker) the whole sentence is returned as one untagged part.
+    /// </summary>
+    public static List<TextPart> RenderParts(string text, TemplateContext ctx)
+    {
+        var plain = Render(text, ctx);
+        ctx.Marking = true;
+        string marked;
+        try
+        {
+            marked = Polish(RefRegex().Replace(text, m => ctx.Resolve(m.Groups[1].Value, m.Groups[3].Success ? m.Groups[3].Value : "label", m.Groups[2].Success)));
+        }
+        finally { ctx.Marking = false; }
+
+        var parts = new List<TextPart>();
+        var buffer = new StringBuilder();
+        string? slot = null;
+        for (int i = 0; i < marked.Length; i++)
+        {
+            char c = marked[i];
+            if (c == SpanStart && i + 1 < marked.Length)
+            {
+                Flush();
+                int id = marked[++i] - SpanIdBase;
+                slot = id >= 0 && id < ctx.MarkedSlots.Count ? ctx.MarkedSlots[id] : null;
+            }
+            else if (c == SpanEnd) { Flush(); slot = null; }
+            else if (!IsMarker(c)) buffer.Append(c);
+        }
+        Flush();
+        if (string.Concat(parts.Select(p => p.Text)) != plain) return [new TextPart(plain, null)];
+        return parts;
+
+        void Flush()
+        {
+            if (buffer.Length > 0) parts.Add(new TextPart(buffer.ToString(), slot));
+            buffer.Clear();
+        }
+    }
+
     /// <summary>Fixes articles, spacing and sentence capitalisation.</summary>
     public static string Polish(string text)
     {
@@ -141,7 +191,7 @@ public static partial class TemplateEngine
     /// <summary>"a" or "an" for the following word, with common English exceptions.</summary>
     public static string Article(string nextWord)
     {
-        var word = nextWord.TrimStart('"', '\'', '(', '“', '‘');
+        var word = new string(nextWord.Where(c => !IsMarker(c)).ToArray()).TrimStart('"', '\'', '(', '“', '‘');
         if (word.Length == 0) return "a";
         var letters = new string(word.TakeWhile(char.IsLetterOrDigit).ToArray());
         if (letters.Length == 0) return "a";
@@ -218,22 +268,29 @@ public static partial class TemplateEngine
     };
 }
 
+/// <summary>A piece of rendered text, tagged with the slot ("setting", "secondary#1") that produced it.</summary>
+public sealed record TextPart(string Text, string? Slot);
+
 /// <summary>Values available to templates while rendering one concept.</summary>
 public sealed class TemplateContext
 {
-    private readonly Dictionary<string, List<ContentItem>> _fields = new();
+    private readonly Dictionary<string, List<(ContentItem Item, string? Slot)>> _fields = new();
     public string? Title { get; set; }
 
-    public void Set(string field, ContentItem item) => _fields[field] = [item];
+    /// <summary>When true, Resolve wraps values in span markers (see TemplateEngine.RenderParts).</summary>
+    internal bool Marking { get; set; }
+    internal List<string> MarkedSlots { get; } = new();
 
-    public void Add(string field, ContentItem item)
+    public void Set(string field, ContentItem item, string? slot = null) => _fields[field] = [(item, slot)];
+
+    public void Add(string field, ContentItem item, string? slot = null)
     {
         if (!_fields.TryGetValue(field, out var list)) _fields[field] = list = new();
-        list.Add(item);
+        list.Add((item, slot));
     }
 
     public IReadOnlyList<ContentItem> GetAll(string field) =>
-        _fields.TryGetValue(field, out var list) ? list : [];
+        _fields.TryGetValue(field, out var list) ? list.Select(x => x.Item).ToList() : [];
 
     public bool Has(string field) =>
         field == "title" ? Title != null : _fields.TryGetValue(field, out var l) && l.Count > 0;
@@ -243,7 +300,16 @@ public sealed class TemplateContext
         if (field == "title") return Title ?? "";
         if (!_fields.TryGetValue(field, out var items) || items.Count == 0) return "";
         return isList
-            ? TemplateEngine.JoinList(items.Select(i => i.Form(form)).ToList())
-            : items[0].Form(form);
+            ? TemplateEngine.JoinList(items.Select(i => Mark(i.Item.Form(form), i.Slot)).ToList())
+            : Mark(items[0].Item.Form(form), items[0].Slot);
+    }
+
+    private string Mark(string value, string? slot)
+    {
+        // Empty values stay unmarked so spacing/punctuation cleanup works exactly as without marks.
+        if (!Marking || slot == null || value.Length == 0) return value;
+        int id = MarkedSlots.IndexOf(slot);
+        if (id < 0) { MarkedSlots.Add(slot); id = MarkedSlots.Count - 1; }
+        return $"{TemplateEngine.SpanStart}{(char)(TemplateEngine.SpanIdBase + id)}{value}{TemplateEngine.SpanEnd}";
     }
 }

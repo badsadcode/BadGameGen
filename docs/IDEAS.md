@@ -23,6 +23,9 @@
 - **Comfort pass** (v0.1.2): laptop-friendly layout, "what changed" highlights, sliders that set
   up the *next* idea, a "Just made" history that survives restarts, collapsible notes and art,
   and labelled Keep/Nope buttons on creep proposals.
+- **Click-to-edit phrases** (v0.1.3): every ingredient phrase in the pitch is clickable
+  (swap, reroll, lock, choose, banish), with hover-linking to the ingredient rows.
+- **Inline alternatives** (v0.1.3): two one-click suggestions under each main ingredient.
 - **Editable library** (v0.1.2): packs live as JSON in a visible folder, reload live, and
   updates never overwrite your edits.
 - **Single-file exes** (v0.1.1). `BadGameGen.exe` and `bgg.exe` carry everything inside them.

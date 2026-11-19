@@ -25,6 +25,8 @@ export interface Recipe {
 export interface ConceptPick {
   slot: string; field: string; category: string; itemId: string; label: string; packId: string; pinned: boolean
 }
+export interface TextPart { text: string; slot?: string | null }
+export interface AltOption { itemId: string; label: string }
 export interface ConceptChip { label: string; kind: string }
 export interface ConceptSection { key: string; heading: string; body: string }
 export interface CreepProposal {
@@ -40,6 +42,10 @@ export interface Concept {
   title: string
   hook: string
   pitch: string
+  /** Hook/pitch split into parts tagged with the slot that produced them. Absent on old saves. */
+  hookParts?: TextPart[]
+  pitchParts?: TextPart[]
+  alternatives?: Record<string, AltOption[]>
   expanded: ConceptSection[]
   badIdea: string
   mightWork: string

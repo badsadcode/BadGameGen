@@ -94,6 +94,22 @@ mechanics, progression or multiplayer. Absurd scope gets four supporting mechani
   sizes, write times) and reloads when anything changed, so edits show up live.
 - Hidden files (names starting with `.`) are never loaded as packs.
 
+## Click-to-edit phrases and alternatives
+
+- `TemplateEngine.RenderParts` renders a template while wrapping each value in private-use
+  Unicode markers (`U+E000`, an id char, the value, `U+E002`). The markers aren't letters, digits
+  or whitespace, so `Polish()` (articles, spacing, capitals) passes over them. The result is then
+  split into `TextPart(text, slot)` pieces.
+- **Safety net:** if the tagged text, minus markers, doesn't match the plain `Render()` output
+  exactly, that sentence falls back to one untagged part. A test keeps fallbacks under 5%.
+- `Concept.HookParts` and `PitchParts` hold the parts. `Hook` and `Pitch` are their
+  concatenation.
+- `Concept.Alternatives[slot]` holds up to 3 items. They're ranked with the same `Score()` as
+  generation, with the other picks as context, using a seeded race (`alt:<slot>` stream), so
+  they're reproducible. Same-label duplicates from other packs are skipped.
+- Choosing an alternative or a picker item **keeps** it (it isn't **pinned**). Only the padlock
+  pins.
+
 ## Persistence
 
 - **Vault** (`Vault/VaultStore.cs`) is one JSON file, written atomically (temp file + rename).

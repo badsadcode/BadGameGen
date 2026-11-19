@@ -8,6 +8,7 @@ import type { Concept, CreepProposal } from '../types'
 import { CoverArt } from './CoverArt'
 import { Popover, Segmented } from './ui'
 import { NoorBubble } from './Noor'
+import { Phrases } from './Phrases'
 
 export function ConceptView() {
   const { concept, busy, outputMode, setOutputMode, a, isSaved, linkedEntryId, canBack, canForward, changes } = useStudio()
@@ -33,7 +34,7 @@ export function ConceptView() {
       </div>
 
       <TitleLine concept={concept} key={concept.codename + concept.title} />
-      <p className={`hook ${changes.pitch ? 'flash-text' : ''}`} key={'h' + concept.hook}>{concept.hook}</p>
+      <p className={`hook ${changes.pitch ? 'flash-text' : ''}`} key={'h' + concept.hook}><Phrases parts={concept.hookParts} fallback={concept.hook} /></p>
 
       <div className="concept-body">
         {showArt
@@ -51,7 +52,7 @@ export function ConceptView() {
           <button className="link small" onClick={a.reword} title="Same ingredients, different sentences (W)"><Wand2 size={14} /> Reword</button>
         </div>
 
-        {outputMode !== 'oneliner' && <p className={`pitch ${changes.pitch ? 'flash-text' : ''}`} key={'p' + concept.pitch}>{concept.pitch}</p>}
+        {outputMode !== 'oneliner' && <p className={`pitch ${changes.pitch ? 'flash-text' : ''}`} key={'p' + concept.pitch}><Phrases parts={concept.pitchParts} fallback={concept.pitch} /></p>}
         {outputMode === 'expanded' && (
           <dl className="expanded">
             {concept.expanded.map((s) => (
@@ -79,8 +80,8 @@ export function ConceptView() {
 
       <div className="action-bar">
         <button className="btn primary big" onClick={a.generateTrouble} title="New seed, keeps locks (G or Space)"><Zap size={20} /> Generate Trouble</button>
-        <button className="btn" onClick={a.rerollUnlocked} title="Same seed, reroll every unlocked field (R)"><RefreshCw size={17} /><span className="btn-label"> Reroll</span></button>
-        <button className="btn" onClick={() => void a.copyMarkdown()} title="Copy as Markdown (C)"><Copy size={17} /><span className="btn-label"> Copy MD</span></button>
+        <button className="btn" onClick={a.rerollUnlocked} title="Same seed, reroll every unlocked field (R)"><RefreshCw size={17} /><span className="btn-label">Reroll</span></button>
+        <button className="btn" onClick={() => void a.copyMarkdown()} title="Copy as Markdown (C)"><Copy size={17} /><span className="btn-label">Copy MD</span></button>
         <div className="export-wrap">
           <button className="btn icon-only" title="Export / share" onClick={() => setExportOpen((o) => !o)}><Download size={17} /></button>
           <Popover open={exportOpen} onClose={() => setExportOpen(false)} className="menu-pop">
@@ -95,11 +96,11 @@ export function ConceptView() {
           <button className="btn saved" disabled><BookmarkCheck size={17} /> Saved</button>
         ) : linkedEntryId ? (
           <>
-            <button className="btn" onClick={() => void a.updateSaved()} title="Overwrite the saved idea with this version"><Bookmark size={17} /> Update<span className="btn-label-long"> saved</span></button>
-            <button className="btn" onClick={() => void a.save()} title="Save as a new idea (S)">New<span className="btn-label-long"> copy</span></button>
+            <button className="btn" onClick={() => void a.updateSaved()} title="Overwrite the saved idea with this version"><Bookmark size={17} /> Update<span className="btn-label-long">saved</span></button>
+            <button className="btn" onClick={() => void a.save()} title="Save as a new idea (S)">New<span className="btn-label-long">copy</span></button>
           </>
         ) : (
-          <button className="btn" onClick={() => void a.save()} title="Save to Vault (S)"><Bookmark size={17} /> Save<span className="btn-label-long"> to Vault</span></button>
+          <button className="btn" onClick={() => void a.save()} title="Save to Vault (S)"><Bookmark size={17} /> Save<span className="btn-label-long">to Vault</span></button>
         )}
       </div>
     </main>
