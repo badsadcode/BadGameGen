@@ -20,6 +20,11 @@
 - **CLI** (`bgg`). For batch generation, plus pack validation in CI.
 - **💜 Noor Mode** (v0.1.1). Permanent Feature Creep, one extra proposal per idea, purple-heart
   bursts, Noor's commentary and her theme. Secret activation: type `noor` on the Generator.
+- **Comfort pass** (v0.1.2): laptop-friendly layout, "what changed" highlights, sliders that set
+  up the *next* idea, a "Just made" history that survives restarts, collapsible notes and art,
+  and labelled Keep/Nope buttons on creep proposals.
+- **Editable library** (v0.1.2): packs live as JSON in a visible folder, reload live, and
+  updates never overwrite your edits.
 - **Single-file exes** (v0.1.1). `BadGameGen.exe` and `bgg.exe` carry everything inside them.
 
 ## v0.2.x: smarter combinations

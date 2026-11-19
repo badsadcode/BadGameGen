@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import {
-  AlertTriangle, Bookmark, BookmarkCheck, Check, ChevronLeft, ChevronRight, Copy, Download, FlaskConical,
+  AlertTriangle, Bookmark, BookmarkCheck, Check, ChevronLeft, ChevronRight, Copy, Download, Eye, EyeOff, FlaskConical,
   Lock, LockOpen, Pencil, RefreshCw, Share2, Undo2, Wand2, X, Zap,
 } from 'lucide-react'
 import { useStudio } from '../store'
@@ -10,8 +10,10 @@ import { Popover, Segmented } from './ui'
 import { NoorBubble } from './Noor'
 
 export function ConceptView() {
-  const { concept, busy, outputMode, setOutputMode, a, isSaved, linkedEntryId, canBack, canForward } = useStudio()
+  const { concept, busy, outputMode, setOutputMode, a, isSaved, linkedEntryId, canBack, canForward, changes } = useStudio()
   const [exportOpen, setExportOpen] = useState(false)
+  const [showArt, setShowArt] = useState(() => { try { return localStorage.getItem('bgg.showArt') !== '0' } catch { return true } })
+  const toggleArt = () => setShowArt((v) => { try { localStorage.setItem('bgg.showArt', v ? '0' : '1') } catch { /* fine */ } return !v })
   if (!concept) return <main className="panel center-panel loading-panel"><div className="spinner" /> Brewing trouble…</main>
 
   const chaos = Math.round(concept.recipe.chaos * 100)
@@ -31,10 +33,12 @@ export function ConceptView() {
       </div>
 
       <TitleLine concept={concept} key={concept.codename + concept.title} />
-      <p className="hook">{concept.hook}</p>
+      <p className={`hook ${changes.pitch ? 'flash-text' : ''}`} key={'h' + concept.hook}>{concept.hook}</p>
 
       <div className="concept-body">
-        <div className="cover-wrap"><CoverArt concept={concept} /></div>
+        {showArt
+          ? <div className="cover-wrap"><CoverArt concept={concept} /><button className="cover-toggle" onClick={toggleArt} title="Hide cover art (more room for text)"><EyeOff size={14} /></button></div>
+          : <button className="link small cover-show" onClick={toggleArt}><Eye size={14} /> Show cover art</button>}
 
         <div className="chips-row">
           {concept.chips.map((c) => <span key={c.kind + c.label} className={`tag tag-${c.kind}`}>{c.label}</span>)}
@@ -47,7 +51,7 @@ export function ConceptView() {
           <button className="link small" onClick={a.reword} title="Same ingredients, different sentences (W)"><Wand2 size={14} /> Reword</button>
         </div>
 
-        {outputMode !== 'oneliner' && <p className="pitch">{concept.pitch}</p>}
+        {outputMode !== 'oneliner' && <p className={`pitch ${changes.pitch ? 'flash-text' : ''}`} key={'p' + concept.pitch}>{concept.pitch}</p>}
         {outputMode === 'expanded' && (
           <dl className="expanded">
             {concept.expanded.map((s) => (
@@ -75,8 +79,8 @@ export function ConceptView() {
 
       <div className="action-bar">
         <button className="btn primary big" onClick={a.generateTrouble} title="New seed, keeps locks (G or Space)"><Zap size={20} /> Generate Trouble</button>
-        <button className="btn" onClick={a.rerollUnlocked} title="Same seed, reroll every unlocked field (R)"><RefreshCw size={17} /> Reroll</button>
-        <button className="btn" onClick={() => void a.copyMarkdown()} title="Copy as Markdown (C)"><Copy size={17} /> Copy MD</button>
+        <button className="btn" onClick={a.rerollUnlocked} title="Same seed, reroll every unlocked field (R)"><RefreshCw size={17} /><span className="btn-label"> Reroll</span></button>
+        <button className="btn" onClick={() => void a.copyMarkdown()} title="Copy as Markdown (C)"><Copy size={17} /><span className="btn-label"> Copy MD</span></button>
         <div className="export-wrap">
           <button className="btn icon-only" title="Export / share" onClick={() => setExportOpen((o) => !o)}><Download size={17} /></button>
           <Popover open={exportOpen} onClose={() => setExportOpen(false)} className="menu-pop">
@@ -91,11 +95,11 @@ export function ConceptView() {
           <button className="btn saved" disabled><BookmarkCheck size={17} /> Saved</button>
         ) : linkedEntryId ? (
           <>
-            <button className="btn" onClick={() => void a.updateSaved()} title="Overwrite the saved idea with this version"><Bookmark size={17} /> Update saved</button>
-            <button className="btn" onClick={() => void a.save()} title="Save as a new idea (S)">Save as new</button>
+            <button className="btn" onClick={() => void a.updateSaved()} title="Overwrite the saved idea with this version"><Bookmark size={17} /> Update<span className="btn-label-long"> saved</span></button>
+            <button className="btn" onClick={() => void a.save()} title="Save as a new idea (S)">New<span className="btn-label-long"> copy</span></button>
           </>
         ) : (
-          <button className="btn" onClick={() => void a.save()} title="Save to Vault (S)"><Bookmark size={17} /> Save to Vault</button>
+          <button className="btn" onClick={() => void a.save()} title="Save to Vault (S)"><Bookmark size={17} /> Save<span className="btn-label-long"> to Vault</span></button>
         )}
       </div>
     </main>
@@ -132,7 +136,7 @@ function TitleLine({ concept }: { concept: Concept }) {
 }
 
 function CreepSection({ concept }: { concept: Concept }) {
-  const { a, noorMode } = useStudio()
+  const { a, noorMode, changes } = useStudio()
   const meter = concept.creepMeter
   const visible = concept.creep
   return (
@@ -149,7 +153,7 @@ function CreepSection({ concept }: { concept: Concept }) {
       {noorMode && <NoorBubble codename={concept.codename} />}
       {meter?.warning && <p className="scope-warning"><AlertTriangle size={14} /> {meter.warning}</p>}
       <ul className="creep-list">
-        {visible.map((c) => <CreepItem key={c.slot + c.itemId} c={c} onAction={(act) => a.creep(c.slot, act)} />)}
+        {visible.map((c) => <CreepItem key={c.slot + c.itemId} c={c} fresh={changes.creep.has(c.slot)} onAction={(act) => a.creep(c.slot, act)} />)}
         {visible.length === 0 && <li className="muted small">All proposals rejected. Your producer weeps with joy.</li>}
       </ul>
       <button className="btn ghost small" onClick={a.anotherThing}><Wand2 size={15} /> And another thing...</button>
@@ -157,20 +161,20 @@ function CreepSection({ concept }: { concept: Concept }) {
   )
 }
 
-function CreepItem({ c, onAction }: { c: CreepProposal; onAction: (a: 'accept' | 'reject' | 'reroll' | 'undo') => void }) {
+function CreepItem({ c, fresh, onAction }: { c: CreepProposal; fresh: boolean; onAction: (a: 'accept' | 'reject' | 'reroll' | 'undo') => void }) {
   const accepted = c.status === 'accepted'
   return (
-    <li className={`creep-item ${accepted ? 'accepted' : ''}`}>
+    <li className={`creep-item ${accepted ? 'accepted' : ''} ${fresh ? 'flash-box' : ''}`}>
       <div className="creep-item-head">
         <span className={`kind kind-${c.kind}`}>{c.kindLabel}</span>
         <strong>{c.name}</strong>
         <span className="complexity" title={`Complexity ${c.complexity}/10`}>{'●'.repeat(Math.ceil(c.complexity / 2))}<span className="dim">{'●'.repeat(5 - Math.ceil(c.complexity / 2))}</span></span>
         <div className="creep-actions">
           {accepted
-            ? <button className="icon-btn sm" title="Undo accept" onClick={() => onAction('undo')}><Undo2 size={14} /></button>
-            : <button className="icon-btn sm good" title="Accept" onClick={() => onAction('accept')}><Check size={14} /></button>}
-          <button className="icon-btn sm" title="Reroll this proposal" onClick={() => onAction('reroll')}><RefreshCw size={14} /></button>
-          <button className="icon-btn sm bad" title="Reject" onClick={() => onAction('reject')}><X size={14} /></button>
+            ? <button className="mini-btn" title="Undo accept" onClick={() => onAction('undo')}><Undo2 size={13} /> Kept</button>
+            : <button className="mini-btn good" title="Accept this feature" onClick={() => onAction('accept')}><Check size={13} /> Keep</button>}
+          <button className="icon-btn sm" title="Suggest something else" onClick={() => onAction('reroll')}><RefreshCw size={14} /></button>
+          <button className="mini-btn bad" title="Reject this feature" onClick={() => onAction('reject')}><X size={13} /> Nope</button>
         </div>
       </div>
       <p>{c.pitch}{c.connects && <span className="connects"> {c.connects}</span>}</p>

@@ -5,7 +5,8 @@ public sealed record AppPaths(string ContentDir, string DataDir)
 {
     public string BuiltInPacksDir => Path.Combine(ContentDir, "packs");
     public string BuiltInThemesDir => Path.Combine(ContentDir, "themes");
-    public string UserPacksDir => Path.Combine(DataDir, "packs");
+    /// <summary>The editable pack library: built-in copies + imported packs. See <see cref="Library"/>.</summary>
+    public string LibraryDir => Path.Combine(DataDir, "packs");
     public string UserThemesDir => Path.Combine(DataDir, "themes");
     public string VaultPath => Path.Combine(DataDir, "vault.json");
     public string SettingsPath => Path.Combine(DataDir, "settings.json");

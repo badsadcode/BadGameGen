@@ -64,6 +64,7 @@ export interface OptionDto { id: string; label: string; packId: string; tags: st
 export interface PackInfo {
   id: string; name: string; version: string; author: string; description: string; fileName: string
   isBuiltIn: boolean; enabled: boolean; usable: boolean; errors: string[]; warnings: string[]
+  edited: boolean; updateAvailable: boolean; filePath: string
   counts: Record<string, number>; templateCount: number
 }
 
@@ -78,6 +79,7 @@ export interface BootstrapInfo {
   appVersion: string; generatorVersion: string; categories: CategoryDto[]; scopeNames: string[]
   packs: PackInfo[]; librarySignature: PackRef[]; themes: ThemeDef[]; themeErrors: string[]
   settings: AppSettings; dataDir: string; vaultNotice?: string | null
+  libraryDir: string; removedBuiltIns: string[]; canOpenFolders: boolean
 }
 
 export interface StatsDto {
@@ -87,6 +89,7 @@ export interface StatsDto {
 }
 
 export interface ExportResult { fileName: string; mime: string; content: string }
+export interface LibraryCheck { changed: boolean; bootstrap?: BootstrapInfo | null; broken: string[] }
 export interface ImportResult { ok: boolean; packId?: string | null; errors: string[]; warnings: string[] }
 
 export interface PackContents {

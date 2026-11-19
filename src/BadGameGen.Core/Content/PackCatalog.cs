@@ -17,7 +17,8 @@ public sealed class PackCatalog
         foreach (var (dir, builtIn) in sources)
         {
             if (!Directory.Exists(dir)) continue;
-            foreach (var file in Directory.EnumerateFiles(dir, "*.json").Order(StringComparer.Ordinal))
+            // Hidden files (".builtin-packs.json" etc.) are bookkeeping, not packs.
+            foreach (var file in Directory.EnumerateFiles(dir, "*.json").Where(f => !Path.GetFileName(f).StartsWith('.')).Order(StringComparer.Ordinal))
             {
                 var result = PackLoader.LoadFile(file, builtIn);
                 if (result.Pack is { } pack && !string.IsNullOrEmpty(pack.Id))

@@ -14,7 +14,7 @@ const MAIN_FIELDS = ['genre', 'setting', 'mechanic', 'mood', 'visual', 'twist']
 const MORE_FIELDS = ['subgenre', 'era', 'protagonist', 'perspective', 'objective', 'loop', 'secondary', 'progression', 'threat', 'resource', 'multiplayer']
 
 export function GeneratorPanel() {
-  const { concept, controls, boot, a } = useStudio()
+  const { concept, controls, boot, a, pendingSliders } = useStudio()
   const [showMore, setShowMore] = useState(false)
   const picks = concept?.picks ?? []
   const category = (key: string) => boot.categories.find((c) => c.key === key)
@@ -61,6 +61,12 @@ export function GeneratorPanel() {
         <label className="control-label"><span className="ico">🎲</span> Seed</label>
         <SeedField />
       </div>
+      {pendingSliders && (
+        <div className="pending-sliders" role="status">
+          <span>New settings apply to your next idea.</span>
+          <button className="link small" onClick={a.applySliders}>Apply to this one</button>
+        </div>
+      )}
 
       <FeatureCreepCard />
     </aside>
@@ -83,7 +89,8 @@ function SeedField() {
 }
 
 function IngredientRow({ pick, label, icon }: { pick: ConceptPick; label: string; icon: string }) {
-  const { a, controls } = useStudio()
+  const { a, controls, changes } = useStudio()
+  const changed = changes.slots.has(pick.slot)
   const [open, setOpen] = useState(false)
   const Icon = iconFor(icon)
   const locked = !!controls.pins[pick.slot]
@@ -91,7 +98,7 @@ function IngredientRow({ pick, label, icon }: { pick: ConceptPick; label: string
     <div className="ingredient">
       <span className="ingredient-label"><Icon size={17} /> {label}</span>
       <div className="ingredient-value">
-        <button className={`chip pick ${locked ? 'locked' : ''}`} onClick={() => setOpen((o) => !o)} title="Choose a specific one">
+        <button key={changed ? changes.stamp : 'same'} className={`chip pick ${locked ? 'locked' : ''} ${changed ? 'flash' : ''}`} onClick={() => setOpen((o) => !o)} title="Choose a specific one">
           <span className="chip-text">{pick.label}</span><ChevronDown size={14} />
         </button>
         <Popover open={open} onClose={() => setOpen(false)} className="picker-pop">

@@ -44,8 +44,18 @@ interface Studio {
   toast: (text: string, kind?: Toast['kind']) => void
   canBack: boolean
   canForward: boolean
+  /** Ideas generated recently (persisted across restarts), newest last. */
+  history: Concept[]
+  historyIndex: number
+  goToHistory: (index: number) => void
+  /** What the last edit changed, for the brief highlight. `stamp` re-triggers the animation. */
+  changes: Changes
+  /** Sliders/scope changed since the current idea was made (they apply to the next one). */
+  pendingSliders: boolean
   a: Actions
 }
+
+export interface Changes { stamp: number; slots: Set<string>; title: boolean; pitch: boolean; creep: Set<number> }
 
 interface Actions {
   generateTrouble: () => void
@@ -62,6 +72,7 @@ interface Actions {
   setSeed: (seed: string) => void
   daily: () => void
   setSliders: (patch: Partial<Pick<Recipe, 'chaos' | 'scope' | 'silliness'>>) => void
+  applySliders: () => void
   toggleCreep: () => void
   setCreepKinds: (kinds: Recipe['creepKinds']) => void
   creep: (slot: number, action: 'accept' | 'reject' | 'reroll' | 'undo') => void
@@ -97,7 +108,11 @@ export function StudioProvider({ initial, children }: { initial: BootstrapInfo; 
   const [savedSnapshot, setSavedSnapshot] = useState<string | null>(null)
   const [notes, setNotesState] = useState('')
   const [toasts, setToasts] = useState<Toast[]>([])
-  const [history, setHistory] = useState<{ list: Concept[]; index: number }>({ list: [], index: -1 })
+  const [history, setHistory] = useState<{ list: Concept[]; index: number }>(() => {
+    const list = loadHistory()
+    return { list, index: list.length - 1 }
+  })
+  const [changes, setChanges] = useState<Changes>({ stamp: 0, slots: new Set(), title: false, pitch: false, creep: new Set() })
   const [heartBurst, setHeartBurst] = useState(0)
   const noorRef = useRef(initial.settings.noorMode); noorRef.current = boot.settings.noorMode
 
@@ -121,15 +136,36 @@ export function StudioProvider({ initial, children }: { initial: BootstrapInfo; 
   useEffect(() => { void refreshVault() }, [refreshVault])
   useEffect(() => { if (boot.vaultNotice) toast(boot.vaultNotice, 'error') }, [boot.vaultNotice, toast])
 
+  // Keep recent ideas across restarts, so a skipped gem is never lost.
+  useEffect(() => { saveHistory(history.list) }, [history.list])
+
+  // Watch the editable library: edits made in any text editor show up within a few seconds.
+  useEffect(() => {
+    const timer = window.setInterval(async () => {
+      if (document.hidden) return
+      try {
+        const r = await api.checkLibrary()
+        if (!r.changed || !r.bootstrap) return
+        setBoot(r.bootstrap)
+        if (r.broken.length) toast(`Pack problem after edit: ${r.broken[0]}`, 'error')
+        else toast('Library changed on disk and was reloaded. Changes apply to your next idea.', 'success')
+      } catch { /* host busy or gone; try again next tick */ }
+    }, 2500)
+    return () => window.clearInterval(timer)
+  }, [toast])
+
   /** Generates a recipe and makes it current. `keepLink` = this is an edit of the same idea. */
   const run = useCallback(async (recipe: Recipe, keepLink = false) => {
     setBusy(true)
     try {
       const c = await api.generate(recipe)
+      const prev = conceptRef.current
+      if (keepLink && prev) setChanges(diffConcepts(prev, c))
       setConcept(c)
       setControls(normalizeRecipe(c.recipe))
       setHistory((h) => {
-        const list = [...h.list.slice(0, h.index + 1), c].slice(-50)
+        // Always append (never truncate "forward" ideas): the history doubles as "Just made".
+        const list = [...h.list, c].slice(-50)
         return { list, index: list.length - 1 }
       })
       if (!keepLink) { setLinkedEntryId(null); setSavedSnapshot(null); setNotesState('') }
@@ -239,8 +275,11 @@ export function StudioProvider({ initial, children }: { initial: BootstrapInfo; 
       toast("Today's bad idea. Same for everyone with the same packs.")
     },
     setSliders: (patch) => {
+      // Sliders set up the NEXT idea; they don't silently replace the current one.
       setControls((c) => ({ ...c, ...patch }))
       controlsRef.current = { ...controlsRef.current, ...patch }
+    },
+    applySliders: () => {
       const r = base()
       r.keep = {}
       void run(r, true)
@@ -295,7 +334,7 @@ export function StudioProvider({ initial, children }: { initial: BootstrapInfo; 
       setLinkedEntryId(entry.id)
       setSavedSnapshot(JSON.stringify(c))
       setNotesState(entry.notes)
-      setHistory((h) => { const list = [...h.list.slice(0, h.index + 1), c].slice(-50); return { list, index: list.length - 1 } })
+      setHistory((h) => { const list = [...h.list, c].slice(-50); return { list, index: list.length - 1 } })
       setPage('generator')
     },
     save: async () => {
@@ -379,6 +418,19 @@ export function StudioProvider({ initial, children }: { initial: BootstrapInfo; 
     })
   }, [base, run, toast])
 
+  const goToHistory = useCallback((index: number) => {
+    setHistory((h) => {
+      const c = h.list[index]
+      if (!c) return h
+      setConcept(c); setControls(normalizeRecipe(c.recipe))
+      setLinkedEntryId(null); setSavedSnapshot(null); setNotesState('')
+      return { ...h, index }
+    })
+  }, [])
+
+  const pendingSliders = !!concept && (Math.abs(concept.recipe.chaos - controls.chaos) > 0.001
+    || concept.recipe.scope !== controls.scope || Math.abs(concept.recipe.silliness - controls.silliness) > 0.001)
+
   const isSaved = !!linkedEntryId && !!concept && savedSnapshot === JSON.stringify(concept)
 
   const value: Studio = {
@@ -386,6 +438,34 @@ export function StudioProvider({ initial, children }: { initial: BootstrapInfo; 
     noorMode: boot.settings.noorMode, setNoorMode, heartBurst,
     vault, refreshVault, linkedEntryId, isSaved, notes, setNotes, toasts, toast,
     canBack: history.index > 0, canForward: history.index < history.list.length - 1, a,
+    history: history.list, historyIndex: history.index, goToHistory, changes, pendingSliders,
   }
   return <Ctx.Provider value={value}>{children}</Ctx.Provider>
+}
+
+const HISTORY_KEY = 'bgg.history.v1'
+
+function loadHistory(): Concept[] {
+  try {
+    const raw = localStorage.getItem(HISTORY_KEY)
+    const list = raw ? (JSON.parse(raw) as Concept[]) : []
+    return Array.isArray(list) ? list.filter((c) => c && c.recipe && c.title) : []
+  } catch { return [] }
+}
+
+function saveHistory(list: Concept[]) {
+  try { localStorage.setItem(HISTORY_KEY, JSON.stringify(list.slice(-50))) } catch { /* storage full or blocked: history is a convenience */ }
+}
+
+/** Which parts of a concept changed between two versions of the same idea. */
+function diffConcepts(prev: Concept, next: Concept): Changes {
+  const before = new Map(prev.picks.map((p) => [p.slot, p.itemId]))
+  const prevCreep = new Map(prev.creep.map((c) => [c.slot, c.itemId]))
+  return {
+    stamp: Date.now(),
+    slots: new Set(next.picks.filter((p) => before.get(p.slot) !== p.itemId).map((p) => p.slot)),
+    title: prev.title !== next.title,
+    pitch: prev.pitch !== next.pitch || prev.hook !== next.hook,
+    creep: new Set(next.creep.filter((c) => prevCreep.get(c.slot) !== c.itemId).map((c) => c.slot)),
+  }
 }

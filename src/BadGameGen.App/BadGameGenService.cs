@@ -15,6 +15,11 @@ public sealed class PackInfo
     public string Description { get; set; } = "";
     public string FileName { get; set; } = "";
     public bool IsBuiltIn { get; set; }
+    /// <summary>Built-in pack whose library copy the user has edited.</summary>
+    public bool Edited { get; set; }
+    /// <summary>Edited built-in pack for which the app ships a newer version.</summary>
+    public bool UpdateAvailable { get; set; }
+    public string FilePath { get; set; } = "";
     public bool Enabled { get; set; }
     public bool Usable { get; set; }
     public List<string> Errors { get; set; } = new();
@@ -38,6 +43,10 @@ public sealed class BootstrapInfo
     public List<string> ThemeErrors { get; set; } = new();
     public AppSettings Settings { get; set; } = new();
     public string DataDir { get; set; } = "";
+    public string LibraryDir { get; set; } = "";
+    public List<string> RemovedBuiltIns { get; set; } = new();
+    /// <summary>True when the host can open folders in the OS file manager (desktop app).</summary>
+    public bool CanOpenFolders { get; set; }
     public string? VaultNotice { get; set; }
 }
 
@@ -56,6 +65,7 @@ public sealed class StatsDto
 
 public sealed record ExportResult(string FileName, string Mime, string Content);
 public sealed record ImportResult(bool Ok, string? PackId, List<string> Errors, List<string> Warnings);
+public sealed record LibraryCheck(bool Changed, BootstrapInfo? Bootstrap, List<string> Broken);
 
 /// <summary>
 /// Application services shared by the desktop shell, the dev server and tests.
@@ -73,6 +83,11 @@ public sealed class BadGameGenService
     private Generator _generator = new(new ContentLibrary([]));
     private List<ThemeDef> _themes = new();
     private List<string> _themeErrors = new();
+    private readonly Library _packLibrary;
+    private string _fingerprint = "";
+
+    /// <summary>Set by the desktop shell to open a folder (or select a file) in Explorer.</summary>
+    public Action<string>? OpenInShell { get; set; }
 
     public SettingsStore Settings { get; }
     public VaultStore Vault { get; }
@@ -81,10 +96,11 @@ public sealed class BadGameGenService
     {
         _paths = paths;
         Directory.CreateDirectory(paths.DataDir);
-        Directory.CreateDirectory(paths.UserPacksDir);
         Directory.CreateDirectory(paths.UserThemesDir);
         Settings = new SettingsStore(paths.SettingsPath);
         Vault = new VaultStore(paths.VaultPath);
+        _packLibrary = new Library(paths.BuiltInPacksDir, paths.LibraryDir);
+        _packLibrary.Sync();
         Reload();
     }
 
@@ -93,7 +109,13 @@ public sealed class BadGameGenService
     {
         lock (_gate)
         {
-            _catalog = PackCatalog.Load([(_paths.BuiltInPacksDir, true), (_paths.UserPacksDir, false)]);
+            // Everything comes from the editable library folder; shipped packs only seed it.
+            var loaded = PackCatalog.Load([(_paths.LibraryDir, false)]);
+            _catalog = new PackCatalog(loaded.Results.Select(r => new PackLoadResult
+            {
+                Pack = r.Pack, Source = r.Source, IsBuiltIn = _packLibrary.IsBuiltInFile(Path.GetFileName(r.Source)),
+            }.WithMessages(r)).ToList());
+            _fingerprint = Library.Fingerprint(_paths.LibraryDir, _paths.UserThemesDir);
             (_themes, _themeErrors) = ThemeCatalog.Load([(_paths.BuiltInThemesDir, true), (_paths.UserThemesDir, false)]);
             RebuildLibrary();
         }
@@ -122,6 +144,9 @@ public sealed class BadGameGenService
                 ThemeErrors = _themeErrors,
                 Settings = Settings.Current,
                 DataDir = _paths.DataDir,
+                LibraryDir = _paths.LibraryDir,
+                RemovedBuiltIns = _packLibrary.RemovedBuiltIns(),
+                CanOpenFolders = OpenInShell != null,
                 VaultNotice = Vault.RecoveryNotice,
             };
         }
@@ -134,6 +159,9 @@ public sealed class BadGameGenService
             var disabled = new HashSet<string>(Settings.Current.DisabledPacks);
             return _catalog.Results.Select(r => new PackInfo
             {
+                Edited = _packLibrary.State(Path.GetFileName(r.Source))?.Edited ?? false,
+                UpdateAvailable = _packLibrary.State(Path.GetFileName(r.Source))?.UpdateAvailable ?? false,
+                FilePath = r.Source,
                 Id = r.Pack?.Id ?? Path.GetFileNameWithoutExtension(r.Source),
                 Name = string.IsNullOrWhiteSpace(r.Pack?.Name) ? Path.GetFileName(r.Source) : r.Pack!.Name,
                 Version = r.Pack?.Version ?? "",
@@ -205,22 +233,73 @@ public sealed class BadGameGenService
             var existing = _catalog.Results.FirstOrDefault(r => r.Pack?.Id == id);
             if (existing is { IsBuiltIn: true })
                 return new ImportResult(false, id, [$"'{id}' is a built-in pack id. Give your pack a different id."], result.Warnings);
-            File.WriteAllText(Path.Combine(_paths.UserPacksDir, id + ".json"), json);
+            File.WriteAllText(Path.Combine(_paths.LibraryDir, id + ".json"), json);
         }
         Reload();
         return new ImportResult(true, id, [], result.Warnings);
     }
 
-    public bool DeleteUserPack(string id)
+    /// <summary>Removes a pack file from the library. Built-ins can be restored later.</summary>
+    public bool RemovePack(string id)
     {
         lock (_gate)
         {
-            var existing = _catalog.Results.FirstOrDefault(r => r.Pack?.Id == id && !r.IsBuiltIn);
+            var existing = _catalog.Results.FirstOrDefault(r => r.Pack?.Id == id || Path.GetFileNameWithoutExtension(r.Source) == id);
             if (existing == null) return false;
-            File.Delete(existing.Source);
+            _packLibrary.Remove(Path.GetFileName(existing.Source));
         }
         Reload();
         return true;
+    }
+
+    /// <summary>Discards edits to a built-in pack and takes the shipped version.</summary>
+    public void ResetPack(string id)
+    {
+        lock (_gate)
+        {
+            // Match by file name too: a pack broken by an edit has no readable id, and that is
+            // exactly when you need Reset.
+            var existing = _catalog.Results.FirstOrDefault(r => r.IsBuiltIn && (r.Pack?.Id == id || Path.GetFileNameWithoutExtension(r.Source) == id))
+                ?? throw new ArgumentException($"'{id}' is not a built-in pack.");
+            _packLibrary.ResetToBuiltIn(Path.GetFileName(existing.Source));
+        }
+        Reload();
+    }
+
+    public void RestoreBuiltIns()
+    {
+        _packLibrary.RestoreRemoved();
+        Reload();
+    }
+
+    /// <summary>Opens the library, data or themes folder (or a pack file's folder) in the OS file manager.</summary>
+    public object OpenFolder(string which, string? packId)
+    {
+        string path = which switch
+        {
+            "library" => _paths.LibraryDir,
+            "themes" => _paths.UserThemesDir,
+            "data" => _paths.DataDir,
+            "pack" => _catalog.Results.FirstOrDefault(r => r.Pack?.Id == packId)?.Source ?? throw new KeyNotFoundException("Pack not found."),
+            _ => throw new ArgumentException($"Unknown folder '{which}'."),
+        };
+        if (OpenInShell == null) return new { opened = false, path };
+        OpenInShell(path);
+        return new { opened = true, path };
+    }
+
+    /// <summary>
+    /// Polled by the frontend: if any pack or theme file changed on disk since the last load,
+    /// reload and return the fresh bootstrap plus the names of packs that are now broken.
+    /// </summary>
+    public LibraryCheck CheckLibrary()
+    {
+        lock (_gate)
+            if (Library.Fingerprint(_paths.LibraryDir, _paths.UserThemesDir) == _fingerprint)
+                return new LibraryCheck(false, null, []);
+        Reload();
+        var broken = PackInfos().Where(p => !p.Usable).Select(p => $"{p.FileName}: {p.Errors.FirstOrDefault()}").ToList();
+        return new LibraryCheck(true, Bootstrap(), broken);
     }
 
     public ExportResult Export(Concept concept, string format, string? notes, string? title)

@@ -36,6 +36,14 @@ public sealed class MainForm : Form
         _dataDir = AppPaths.DefaultDataDir();
         _appRoot = BundledContent.ResolveAppRoot(typeof(MainForm).Assembly, _dataDir);
         var service = new BadGameGenService(new AppPaths(Path.Combine(_appRoot, "content"), _dataDir));
+        // Lets the app's "Open library folder" / "Show file" buttons open Windows Explorer.
+        service.OpenInShell = path =>
+        {
+            var psi = File.Exists(path)
+                ? new ProcessStartInfo("explorer.exe", $"/select,\"{path}\"")
+                : new ProcessStartInfo("explorer.exe", $"\"{path}\"");
+            Process.Start(psi);
+        };
         _api = new ApiDispatcher(service);
         Load += async (_, _) => await InitializeWebViewAsync();
     }

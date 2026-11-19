@@ -70,6 +70,7 @@ public sealed class ApiDispatcher
     private sealed record ExportParams(Concept? Concept, string? EntryId, string Format);
     private sealed record PackEnabledParams(string Id, bool Enabled);
     private sealed record ImportParams(string FileName, string Content);
+    private sealed record OpenFolderParams(string Which, string? PackId);
 
     private object? Dispatch(string method, JsonElement p)
     {
@@ -115,7 +116,11 @@ public sealed class ApiDispatcher
             case "packs.contents": return _svc.PackContents(P<IdParams>(p).Id) ?? throw new KeyNotFoundException("Pack not found.");
             case "packs.setEnabled": { var e = P<PackEnabledParams>(p); return _svc.SetPackEnabled(e.Id, e.Enabled); }
             case "packs.import": { var i = P<ImportParams>(p); return _svc.ImportPack(i.FileName, i.Content); }
-            case "packs.delete": return new { deleted = _svc.DeleteUserPack(P<IdParams>(p).Id) };
+            case "packs.delete": return new { deleted = _svc.RemovePack(P<IdParams>(p).Id) };
+            case "packs.reset": _svc.ResetPack(P<IdParams>(p).Id); return _svc.Bootstrap();
+            case "packs.restoreBuiltIns": _svc.RestoreBuiltIns(); return _svc.Bootstrap();
+            case "library.check": return _svc.CheckLibrary();
+            case "system.openFolder": { var o = P<OpenFolderParams>(p); return _svc.OpenFolder(o.Which, o.PackId); }
 
             case "stats.get": return _svc.Stats();
             default: throw new ArgumentException($"Unknown method '{method}'.");

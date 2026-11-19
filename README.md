@@ -29,6 +29,11 @@ idea is reproducible from its seed.
 - **Idea Vault.** Saved ideas keep a full snapshot, so they stay readable even after packs
   change. Search, favorites, tags, notes, rename, duplicate, delete with confirmation, and export
   to Markdown, plain text or JSON.
+- **Editable library.** All packs, built-in ones included, live as plain JSON in your library
+  folder (`%LOCALAPPDATA%\BadGameGen\packs`; use **Packs → Open library folder**). Edit one in
+  any text editor and the app reloads it within seconds. If you break the JSON, it tells you the
+  file and line. Updates never overwrite your edits: edited built-ins are marked and can be reset
+  to the shipped version at any time.
 - **Content packs.** 8 built-in packs with about 1,600 ingredients: Core, Horror Bits, Cozy
   Corner, Fantasy Follies, Sci-Fi Sundries, Baltic Bangers, Management Mayhem and Games of the
   Week. You can import your own; they're validated on the way in.
@@ -97,7 +102,7 @@ dotnet run --project src/BadGameGen.Cli -- validate my-pack.json
 dotnet test tests/BadGameGen.Core.Tests
 ```
 
-98 tests cover:
+105 tests cover:
 - determinism, seed normalisation and pack-order independence
 - locks, keeps, rerolls and exclusions
 - chaos, silliness and scope behaviour
@@ -105,6 +110,7 @@ dotnet test tests/BadGameGen.Core.Tests
 - templates and articles
 - pack validation, the vault (including corrupt-file recovery), exporters and recipe codes
 - the RPC API
+- the editable library (updates, edits kept, deletions remembered, line-ending tolerance)
 - a smoke test that generates 400 concepts across every slider combination and fails on any
   template debris
 

@@ -79,6 +79,21 @@ mechanics, progression or multiplayer. Absurd scope gets four supporting mechani
   titles.
 - Pack templates and creep forms are validated at load time against the known fields and forms.
 
+## The editable library (`App/Library.cs`)
+
+- All packs load from one folder: `<data>/packs`. Packs shipped with the app (embedded in the
+  exe, or in `content/packs` in dev) are only the factory defaults that **seed** that folder.
+- `.builtin-packs.json` records the hash of each built-in version we installed. On every start:
+  - A built-in that's missing and was never installed gets copied in.
+  - An unedited built-in (its hash matches the installed one) is updated if the app ships a newer
+    version.
+  - An edited built-in is left alone and flagged "update available".
+  - A built-in the user deleted stays deleted until "Restore".
+- Hashes ignore line endings, so re-saving a file in Notepad doesn't count as an edit.
+- `library.check` is polled by the frontend every 2.5 s. It compares a cheap fingerprint (names,
+  sizes, write times) and reloads when anything changed, so edits show up live.
+- Hidden files (names starting with `.`) are never loaded as packs.
+
 ## Persistence
 
 - **Vault** (`Vault/VaultStore.cs`) is one JSON file, written atomically (temp file + rename).

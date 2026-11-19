@@ -32,6 +32,8 @@ public sealed class ApiDispatcherTests : IDisposable
         Assert.True(boot.GetProperty("themes").GetArrayLength() >= 5);
         Assert.Empty(boot.GetProperty("themeErrors").EnumerateArray());
         Assert.Equal(5, boot.GetProperty("scopeNames").GetArrayLength());
+        // Every pack in a fresh library loads cleanly (and bookkeeping files aren't mistaken for packs).
+        Assert.All(boot.GetProperty("packs").EnumerateArray(), p => Assert.True(p.GetProperty("usable").GetBoolean(), p.GetProperty("fileName").GetString()));
     }
 
     [Fact]
@@ -91,6 +93,27 @@ public sealed class ApiDispatcherTests : IDisposable
         var off = Call("settings.update", new { noorMode = false });
         Assert.False(off.GetProperty("noorMode").GetBoolean());
         Assert.Equal("toxic-swamp", off.GetProperty("theme").GetString());
+    }
+
+    [Fact]
+    public void EditingALibraryFile_IsDetectedAndReloaded()
+    {
+        Assert.False(Call("library.check").GetProperty("changed").GetBoolean());
+        var core = Path.Combine(_data.FullName, "packs", "core.json");
+        File.WriteAllText(core, File.ReadAllText(core).Replace("\"name\": \"Core Library\"", "\"name\": \"Tom's Core\""));
+        File.SetLastWriteTimeUtc(core, DateTime.UtcNow.AddSeconds(5));
+        var check = Call("library.check");
+        Assert.True(check.GetProperty("changed").GetBoolean());
+        var pack = check.GetProperty("bootstrap").GetProperty("packs").EnumerateArray().First(p => p.GetProperty("id").GetString() == "core");
+        Assert.Equal("Tom's Core", pack.GetProperty("name").GetString());
+        Assert.True(pack.GetProperty("edited").GetBoolean());
+
+        File.WriteAllText(core, "{ broken");
+        File.SetLastWriteTimeUtc(core, DateTime.UtcNow.AddSeconds(10));
+        Assert.NotEmpty(Call("library.check").GetProperty("broken").EnumerateArray());
+
+        Call("packs.reset", new { id = "core" });
+        Assert.Contains(Call("packs.list").EnumerateArray(), p => p.GetProperty("id").GetString() == "core" && p.GetProperty("usable").GetBoolean() && !p.GetProperty("edited").GetBoolean());
     }
 
     [Fact]

@@ -1,5 +1,5 @@
 import type {
-  AppSettings, BootstrapInfo, Concept, ExportResult, ImportResult, OptionDto, PackContents,
+  AppSettings, BootstrapInfo, Concept, ExportResult, ImportResult, LibraryCheck, OptionDto, PackContents,
   PackInfo, Recipe, StatsDto, VaultEntry,
 } from './types'
 
@@ -69,6 +69,12 @@ export const api = {
   setPackEnabled: (id: string, enabled: boolean) => call<PackInfo[]>('packs.setEnabled', { id, enabled }),
   importPack: (fileName: string, content: string) => call<ImportResult>('packs.import', { fileName, content }),
   deletePack: (id: string) => call<{ deleted: boolean }>('packs.delete', { id }),
+  resetPack: (id: string) => call<BootstrapInfo>('packs.reset', { id }),
+  restoreBuiltIns: () => call<BootstrapInfo>('packs.restoreBuiltIns'),
+  /** Cheap poll: reloads and returns fresh state when pack/theme files changed on disk. */
+  checkLibrary: () => call<LibraryCheck>('library.check'),
+  openFolder: (which: 'library' | 'themes' | 'data' | 'pack', packId?: string) =>
+    call<{ opened: boolean; path: string }>('system.openFolder', { which, packId }),
 
   stats: () => call<StatsDto>('stats.get'),
 }

@@ -13,6 +13,14 @@ public sealed class PackLoadResult
     public List<string> Errors { get; } = new();
     public List<string> Warnings { get; } = new();
     public bool IsUsable => Pack != null && Errors.Count == 0;
+
+    /// <summary>Copies errors and warnings from another result (used when re-labelling results).</summary>
+    public PackLoadResult WithMessages(PackLoadResult other)
+    {
+        Errors.AddRange(other.Errors);
+        Warnings.AddRange(other.Warnings);
+        return this;
+    }
 }
 
 public static partial class PackLoader
@@ -54,7 +62,9 @@ public static partial class PackLoader
         catch (JsonException ex)
         {
             var bad = new PackLoadResult { Source = source, IsBuiltIn = isBuiltIn };
-            bad.Errors.Add($"Invalid JSON (line {ex.LineNumber + 1}): {ex.Message}");
+            // Keep the human part of the message; drop .NET's " Path: $ | LineNumber: ..." suffix.
+            var reason = ex.Message.Split(" Path:")[0].Split(" LineNumber:")[0].TrimEnd(' ', '|', '.');
+            bad.Errors.Add($"Invalid JSON at line {ex.LineNumber + 1}, column {ex.BytePositionInLine + 1}: {reason}.");
             return bad;
         }
         if (pack == null)
